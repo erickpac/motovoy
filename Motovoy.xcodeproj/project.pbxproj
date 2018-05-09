@@ -79,6 +79,7 @@
 				B97B862A20A292560039A575 /* Sections */,
 				B97B862920A292500039A575 /* Views */,
 				B97B862820A292470039A575 /* Models */,
+				B97B862C20A292B70039A575 /* Services */,
 				B97B862720A292400039A575 /* Helpers */,
 				B97B862B20A292610039A575 /* Resources */,
 			);
@@ -95,7 +96,6 @@
 		B97B862820A292470039A575 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B97B862C20A292B70039A575 /* Services */,
 			);
 			path = Models;
 			sourceTree = "<group>";
