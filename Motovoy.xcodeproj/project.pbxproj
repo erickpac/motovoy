@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309C44820A2946800C6D721 /* AppDelegate.swift */; };
-		8309C44B20A2946800C6D721 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309C44A20A2946800C6D721 /* ViewController.swift */; };
 		8309C44E20A2946800C6D721 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309C44C20A2946800C6D721 /* Main.storyboard */; };
 		8309C45020A2946800C6D721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8309C44F20A2946800C6D721 /* Assets.xcassets */; };
 		8309C45320A2946800C6D721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309C45120A2946800C6D721 /* LaunchScreen.storyboard */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		8309C44520A2946800C6D721 /* motovoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = motovoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8309C44820A2946800C6D721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8309C44A20A2946800C6D721 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8309C44D20A2946800C6D721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8309C44F20A2946800C6D721 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8309C45220A2946800C6D721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,12 +59,12 @@
 		8309C44720A2946800C6D721 /* motovoy */ = {
 			isa = PBXGroup;
 			children = (
-				8309C44820A2946800C6D721 /* AppDelegate.swift */,
-				8309C44A20A2946800C6D721 /* ViewController.swift */,
-				8309C44C20A2946800C6D721 /* Main.storyboard */,
-				8309C44F20A2946800C6D721 /* Assets.xcassets */,
-				8309C45120A2946800C6D721 /* LaunchScreen.storyboard */,
-				8309C45420A2946800C6D721 /* Info.plist */,
+				B98DA0E920A295A4000E3AAE /* Sections */,
+				B98DA0EA20A295AB000E3AAE /* Model */,
+				B98DA0EC20A295BC000E3AAE /* Views */,
+				B98DA0EB20A295B4000E3AAE /* Services */,
+				B98DA0ED20A295C3000E3AAE /* Helpers */,
+				B98DA0EE20A295E0000E3AAE /* Resources */,
 			);
 			path = motovoy;
 			sourceTree = "<group>";
@@ -78,6 +76,53 @@
 				F2DB45D4B8187B125B1108D4 /* Pods-motovoy.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B98DA0E920A295A4000E3AAE /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		B98DA0EA20A295AB000E3AAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B98DA0EB20A295B4000E3AAE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B98DA0EC20A295BC000E3AAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8309C44C20A2946800C6D721 /* Main.storyboard */,
+				8309C45120A2946800C6D721 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B98DA0ED20A295C3000E3AAE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B98DA0EE20A295E0000E3AAE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8309C44820A2946800C6D721 /* AppDelegate.swift */,
+				8309C44F20A2946800C6D721 /* Assets.xcassets */,
+				8309C45420A2946800C6D721 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		DB61EE5495CF11EB75585C76 /* Frameworks */ = {
@@ -217,7 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8309C44B20A2946800C6D721 /* ViewController.swift in Sources */,
 				8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
