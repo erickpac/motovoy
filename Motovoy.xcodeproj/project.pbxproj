@@ -12,6 +12,9 @@
 		8309C45020A2946800C6D721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8309C44F20A2946800C6D721 /* Assets.xcassets */; };
 		8309C45320A2946800C6D721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309C45120A2946800C6D721 /* LaunchScreen.storyboard */; };
 		B4880FE079159604E19862DF /* Pods_motovoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA6D36DD4A7C96499A01999 /* Pods_motovoy.framework */; };
+		B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A1D20A2A43E001DF9B2 /* CustomerAddressModel.swift */; };
+		B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A2220A2A683001DF9B2 /* LoginViewController.swift */; };
+		B9093A2620A2A6AC001DF9B2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A2520A2A6AC001DF9B2 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		8309C45220A2946800C6D721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8309C45420A2946800C6D721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BA6D36DD4A7C96499A01999 /* Pods_motovoy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_motovoy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9093A1D20A2A43E001DF9B2 /* CustomerAddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerAddressModel.swift; sourceTree = "<group>"; };
+		B9093A2220A2A683001DF9B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B9093A2520A2A6AC001DF9B2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C140E38354689D155919E370 /* Pods-motovoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motovoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-motovoy/Pods-motovoy.debug.xcconfig"; sourceTree = "<group>"; };
 		F2DB45D4B8187B125B1108D4 /* Pods-motovoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motovoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-motovoy/Pods-motovoy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,11 +65,10 @@
 		8309C44720A2946800C6D721 /* motovoy */ = {
 			isa = PBXGroup;
 			children = (
-				B98DA0E920A295A4000E3AAE /* Sections */,
-				B98DA0EA20A295AB000E3AAE /* Models */,
+				B9093A2020A2A667001DF9B2 /* Sections */,
 				B98DA0EC20A295BC000E3AAE /* Views */,
-				B98DA0EB20A295B4000E3AAE /* Services */,
-				B98DA0ED20A295C3000E3AAE /* Helpers */,
+				B9093A1C20A29D67001DF9B2 /* Models */,
+				B9093A2420A2A694001DF9B2 /* Services */,
 				B98DA0EE20A295E0000E3AAE /* Resources */,
 			);
 			path = motovoy;
@@ -78,23 +83,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B98DA0E920A295A4000E3AAE /* Sections */ = {
+		B9093A1C20A29D67001DF9B2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Sections;
-			sourceTree = "<group>";
-		};
-		B98DA0EA20A295AB000E3AAE /* Models */ = {
-			isa = PBXGroup;
-			children = (
+				B9093A1F20A2A45D001DF9B2 /* Customer */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		B98DA0EB20A295B4000E3AAE /* Services */ = {
+		B9093A1F20A2A45D001DF9B2 /* Customer */ = {
 			isa = PBXGroup;
 			children = (
+				B9093A1D20A2A43E001DF9B2 /* CustomerAddressModel.swift */,
+			);
+			path = Customer;
+			sourceTree = "<group>";
+		};
+		B9093A2020A2A667001DF9B2 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				B9093A2120A2A66E001DF9B2 /* Login */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		B9093A2120A2A66E001DF9B2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B9093A2220A2A683001DF9B2 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B9093A2420A2A694001DF9B2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B9093A2520A2A6AC001DF9B2 /* APIManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -106,13 +130,6 @@
 				8309C45120A2946800C6D721 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		B98DA0ED20A295C3000E3AAE /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		B98DA0EE20A295E0000E3AAE /* Resources */ = {
@@ -262,6 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9093A2620A2A6AC001DF9B2 /* APIManager.swift in Sources */,
+				B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */,
+				B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */,
 				8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
