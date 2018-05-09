@@ -172,7 +172,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8309C44020A2946700C6D721 /* Build configuration list for PBXProject "motovoy" */;
+			buildConfigurationList = 8309C44020A2946700C6D721 /* Build configuration list for PBXProject "Motovoy" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -402,9 +402,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 264Z4X7CV7;
-				INFOPLIST_FILE = motovoy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nextdots.motovoy-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -418,9 +418,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 264Z4X7CV7;
-				INFOPLIST_FILE = motovoy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nextdots.motovoy-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -430,7 +430,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8309C44020A2946700C6D721 /* Build configuration list for PBXProject "motovoy" */ = {
+		8309C44020A2946700C6D721 /* Build configuration list for PBXProject "Motovoy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8309C45520A2946800C6D721 /* Debug */,
