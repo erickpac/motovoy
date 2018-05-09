@@ -15,6 +15,7 @@
 		B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A1D20A2A43E001DF9B2 /* CustomerAddressModel.swift */; };
 		B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A2220A2A683001DF9B2 /* LoginViewController.swift */; };
 		B9093A2620A2A6AC001DF9B2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A2520A2A6AC001DF9B2 /* APIManager.swift */; };
+		B9093A2820A2A911001DF9B2 /* LocalMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A2720A2A911001DF9B2 /* LocalMappable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B9093A1D20A2A43E001DF9B2 /* CustomerAddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerAddressModel.swift; sourceTree = "<group>"; };
 		B9093A2220A2A683001DF9B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B9093A2520A2A6AC001DF9B2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		B9093A2720A2A911001DF9B2 /* LocalMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMappable.swift; sourceTree = "<group>"; };
 		C140E38354689D155919E370 /* Pods-motovoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motovoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-motovoy/Pods-motovoy.debug.xcconfig"; sourceTree = "<group>"; };
 		F2DB45D4B8187B125B1108D4 /* Pods-motovoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motovoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-motovoy/Pods-motovoy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 		B9093A1C20A29D67001DF9B2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B9093A2720A2A911001DF9B2 /* LocalMappable.swift */,
 				B9093A1F20A2A45D001DF9B2 /* Customer */,
 			);
 			path = Models;
@@ -282,6 +285,7 @@
 				B9093A2620A2A6AC001DF9B2 /* APIManager.swift in Sources */,
 				B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */,
 				B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */,
+				B9093A2820A2A911001DF9B2 /* LocalMappable.swift in Sources */,
 				8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

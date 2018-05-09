@@ -6,7 +6,7 @@
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct CustomerAddress {
+struct CustomerAddress: LocalMappable {
     var id: Int?
     var clientId: Int?
     var name: String?
