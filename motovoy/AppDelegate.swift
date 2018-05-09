@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Motovoy
+//  motovoy
 //
-//  Created by Erick Pac on 5/8/18.
-//  Copyright © 2018 José Quintero. All rights reserved.
+//  Created by Jose Quintero on 5/8/18.
+//  Copyright © 2018 Nextdots. All rights reserved.
 //
 
 import UIKit

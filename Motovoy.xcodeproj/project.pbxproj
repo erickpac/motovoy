@@ -3,206 +3,178 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4B8EB923820E5B05837B9A9 /* Pods_Motovoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDB38021FED9BA35817E709 /* Pods_Motovoy.framework */; };
-		B92D639320A28C56000631FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D639220A28C56000631FF /* AppDelegate.swift */; };
-		B92D639820A28C56000631FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B92D639620A28C56000631FF /* Main.storyboard */; };
-		B92D639A20A28C56000631FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B92D639920A28C56000631FF /* Assets.xcassets */; };
-		B92D639D20A28C56000631FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B92D639B20A28C56000631FF /* LaunchScreen.storyboard */; };
+		8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309C44820A2946800C6D721 /* AppDelegate.swift */; };
+		8309C44B20A2946800C6D721 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309C44A20A2946800C6D721 /* ViewController.swift */; };
+		8309C44E20A2946800C6D721 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309C44C20A2946800C6D721 /* Main.storyboard */; };
+		8309C45020A2946800C6D721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8309C44F20A2946800C6D721 /* Assets.xcassets */; };
+		8309C45320A2946800C6D721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309C45120A2946800C6D721 /* LaunchScreen.storyboard */; };
+		B4880FE079159604E19862DF /* Pods_motovoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA6D36DD4A7C96499A01999 /* Pods_motovoy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		068B5267F5D6DE8298298F04 /* Pods-Motovoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motovoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Motovoy/Pods-Motovoy.debug.xcconfig"; sourceTree = "<group>"; };
-		2EDB38021FED9BA35817E709 /* Pods_Motovoy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motovoy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B92D638F20A28C55000631FF /* Motovoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motovoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B92D639220A28C56000631FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B92D639720A28C56000631FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B92D639920A28C56000631FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B92D639C20A28C56000631FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B92D639E20A28C56000631FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7D6755F10BD347EB0D7EED8 /* Pods-Motovoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motovoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Motovoy/Pods-Motovoy.release.xcconfig"; sourceTree = "<group>"; };
+		8309C44520A2946800C6D721 /* motovoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = motovoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8309C44820A2946800C6D721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8309C44A20A2946800C6D721 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8309C44D20A2946800C6D721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8309C44F20A2946800C6D721 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8309C45220A2946800C6D721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8309C45420A2946800C6D721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BA6D36DD4A7C96499A01999 /* Pods_motovoy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_motovoy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C140E38354689D155919E370 /* Pods-motovoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motovoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-motovoy/Pods-motovoy.debug.xcconfig"; sourceTree = "<group>"; };
+		F2DB45D4B8187B125B1108D4 /* Pods-motovoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motovoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-motovoy/Pods-motovoy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B92D638C20A28C55000631FF /* Frameworks */ = {
+		8309C44220A2946800C6D721 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4B8EB923820E5B05837B9A9 /* Pods_Motovoy.framework in Frameworks */,
+				B4880FE079159604E19862DF /* Pods_motovoy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6014E33EC9480E4FDA8996B9 /* Frameworks */ = {
+		8309C43C20A2946700C6D721 = {
 			isa = PBXGroup;
 			children = (
-				2EDB38021FED9BA35817E709 /* Pods_Motovoy.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6547064D2686CDBB41A2B44F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				068B5267F5D6DE8298298F04 /* Pods-Motovoy.debug.xcconfig */,
-				E7D6755F10BD347EB0D7EED8 /* Pods-Motovoy.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		B92D638620A28C55000631FF = {
-			isa = PBXGroup;
-			children = (
-				B92D639120A28C55000631FF /* Motovoy */,
-				B92D639020A28C55000631FF /* Products */,
-				6547064D2686CDBB41A2B44F /* Pods */,
-				6014E33EC9480E4FDA8996B9 /* Frameworks */,
+				8309C44720A2946800C6D721 /* motovoy */,
+				8309C44620A2946800C6D721 /* Products */,
+				8C43B3A23D93D6B20315AAC9 /* Pods */,
+				DB61EE5495CF11EB75585C76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		B92D639020A28C55000631FF /* Products */ = {
+		8309C44620A2946800C6D721 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B92D638F20A28C55000631FF /* Motovoy.app */,
+				8309C44520A2946800C6D721 /* motovoy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B92D639120A28C55000631FF /* Motovoy */ = {
+		8309C44720A2946800C6D721 /* motovoy */ = {
 			isa = PBXGroup;
 			children = (
-				B97B862A20A292560039A575 /* Sections */,
-				B97B862920A292500039A575 /* Views */,
-				B97B862820A292470039A575 /* Models */,
-				B97B862C20A292B70039A575 /* Services */,
-				B97B862720A292400039A575 /* Helpers */,
-				B97B862B20A292610039A575 /* Resources */,
+				8309C44820A2946800C6D721 /* AppDelegate.swift */,
+				8309C44A20A2946800C6D721 /* ViewController.swift */,
+				8309C44C20A2946800C6D721 /* Main.storyboard */,
+				8309C44F20A2946800C6D721 /* Assets.xcassets */,
+				8309C45120A2946800C6D721 /* LaunchScreen.storyboard */,
+				8309C45420A2946800C6D721 /* Info.plist */,
 			);
-			path = Motovoy;
+			path = motovoy;
 			sourceTree = "<group>";
 		};
-		B97B862720A292400039A575 /* Helpers */ = {
+		8C43B3A23D93D6B20315AAC9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				C140E38354689D155919E370 /* Pods-motovoy.debug.xcconfig */,
+				F2DB45D4B8187B125B1108D4 /* Pods-motovoy.release.xcconfig */,
 			);
-			path = Helpers;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		B97B862820A292470039A575 /* Models */ = {
+		DB61EE5495CF11EB75585C76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BA6D36DD4A7C96499A01999 /* Pods_motovoy.framework */,
 			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		B97B862920A292500039A575 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B92D639620A28C56000631FF /* Main.storyboard */,
-				B92D639B20A28C56000631FF /* LaunchScreen.storyboard */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		B97B862A20A292560039A575 /* Sections */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Sections;
-			sourceTree = "<group>";
-		};
-		B97B862B20A292610039A575 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B92D639220A28C56000631FF /* AppDelegate.swift */,
-				B92D639920A28C56000631FF /* Assets.xcassets */,
-				B92D639E20A28C56000631FF /* Info.plist */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		B97B862C20A292B70039A575 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B92D638E20A28C55000631FF /* Motovoy */ = {
+		8309C44420A2946800C6D721 /* motovoy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B92D63A120A28C56000631FF /* Build configuration list for PBXNativeTarget "Motovoy" */;
+			buildConfigurationList = 8309C45720A2946800C6D721 /* Build configuration list for PBXNativeTarget "motovoy" */;
 			buildPhases = (
-				397581106F2681EAC026FC3F /* [CP] Check Pods Manifest.lock */,
-				B92D638B20A28C55000631FF /* Sources */,
-				B92D638C20A28C55000631FF /* Frameworks */,
-				B92D638D20A28C55000631FF /* Resources */,
-				96E239AD0768B1A3FFBAAF69 /* [CP] Embed Pods Frameworks */,
+				B9662332ECF798AD63B4AC3B /* [CP] Check Pods Manifest.lock */,
+				8309C44120A2946800C6D721 /* Sources */,
+				8309C44220A2946800C6D721 /* Frameworks */,
+				8309C44320A2946800C6D721 /* Resources */,
+				C08EB29D6DA5922BC270BB1C /* [CP] Embed Pods Frameworks */,
+				64A31AF5BE9B125A5561310F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Motovoy;
-			productName = Motovoy;
-			productReference = B92D638F20A28C55000631FF /* Motovoy.app */;
+			name = motovoy;
+			productName = motovoy;
+			productReference = 8309C44520A2946800C6D721 /* motovoy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B92D638720A28C55000631FF /* Project object */ = {
+		8309C43D20A2946700C6D721 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "José Quintero";
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Nextdots;
 				TargetAttributes = {
-					B92D638E20A28C55000631FF = {
-						CreatedOnToolsVersion = 9.3;
+					8309C44420A2946800C6D721 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = B92D638A20A28C55000631FF /* Build configuration list for PBXProject "Motovoy" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 8309C44020A2946700C6D721 /* Build configuration list for PBXProject "motovoy" */;
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = B92D638620A28C55000631FF;
-			productRefGroup = B92D639020A28C55000631FF /* Products */;
+			mainGroup = 8309C43C20A2946700C6D721;
+			productRefGroup = 8309C44620A2946800C6D721 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B92D638E20A28C55000631FF /* Motovoy */,
+				8309C44420A2946800C6D721 /* motovoy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B92D638D20A28C55000631FF /* Resources */ = {
+		8309C44320A2946800C6D721 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B92D639D20A28C56000631FF /* LaunchScreen.storyboard in Resources */,
-				B92D639A20A28C56000631FF /* Assets.xcassets in Resources */,
-				B92D639820A28C56000631FF /* Main.storyboard in Resources */,
+				8309C45320A2946800C6D721 /* LaunchScreen.storyboard in Resources */,
+				8309C45020A2946800C6D721 /* Assets.xcassets in Resources */,
+				8309C44E20A2946800C6D721 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		397581106F2681EAC026FC3F /* [CP] Check Pods Manifest.lock */ = {
+		64A31AF5BE9B125A5561310F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-motovoy/Pods-motovoy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9662332ECF798AD63B4AC3B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,20 +185,20 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Motovoy-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-motovoy-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		96E239AD0768B1A3FFBAAF69 /* [CP] Embed Pods Frameworks */ = {
+		C08EB29D6DA5922BC270BB1C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Motovoy/Pods-Motovoy-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-motovoy/Pods-motovoy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -235,35 +207,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Motovoy/Pods-Motovoy-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-motovoy/Pods-motovoy-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B92D638B20A28C55000631FF /* Sources */ = {
+		8309C44120A2946800C6D721 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B92D639320A28C56000631FF /* AppDelegate.swift in Sources */,
+				8309C44B20A2946800C6D721 /* ViewController.swift in Sources */,
+				8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B92D639620A28C56000631FF /* Main.storyboard */ = {
+		8309C44C20A2946800C6D721 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B92D639720A28C56000631FF /* Base */,
+				8309C44D20A2946800C6D721 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B92D639B20A28C56000631FF /* LaunchScreen.storyboard */ = {
+		8309C45120A2946800C6D721 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B92D639C20A28C56000631FF /* Base */,
+				8309C45220A2946800C6D721 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -271,7 +244,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B92D639F20A28C56000631FF /* Debug */ = {
+		8309C45520A2946800C6D721 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -281,12 +254,10 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -294,7 +265,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -322,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -331,7 +301,7 @@
 			};
 			name = Debug;
 		};
-		B92D63A020A28C56000631FF /* Release */ = {
+		8309C45620A2946800C6D721 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -341,12 +311,10 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -354,7 +322,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -376,45 +343,40 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		B92D63A220A28C56000631FF /* Debug */ = {
+		8309C45820A2946800C6D721 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 068B5267F5D6DE8298298F04 /* Pods-Motovoy.debug.xcconfig */;
+			baseConfigurationReference = C140E38354689D155919E370 /* Pods-motovoy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Motovoy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jjqm.motovoy.Motovoy;
+				DEVELOPMENT_TEAM = 264Z4X7CV7;
+				INFOPLIST_FILE = motovoy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B92D63A320A28C56000631FF /* Release */ = {
+		8309C45920A2946800C6D721 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7D6755F10BD347EB0D7EED8 /* Pods-Motovoy.release.xcconfig */;
+			baseConfigurationReference = F2DB45D4B8187B125B1108D4 /* Pods-motovoy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Motovoy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jjqm.motovoy.Motovoy;
+				DEVELOPMENT_TEAM = 264Z4X7CV7;
+				INFOPLIST_FILE = motovoy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -424,25 +386,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B92D638A20A28C55000631FF /* Build configuration list for PBXProject "Motovoy" */ = {
+		8309C44020A2946700C6D721 /* Build configuration list for PBXProject "motovoy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B92D639F20A28C56000631FF /* Debug */,
-				B92D63A020A28C56000631FF /* Release */,
+				8309C45520A2946800C6D721 /* Debug */,
+				8309C45620A2946800C6D721 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B92D63A120A28C56000631FF /* Build configuration list for PBXNativeTarget "Motovoy" */ = {
+		8309C45720A2946800C6D721 /* Build configuration list for PBXNativeTarget "motovoy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B92D63A220A28C56000631FF /* Debug */,
-				B92D63A320A28C56000631FF /* Release */,
+				8309C45820A2946800C6D721 /* Debug */,
+				8309C45920A2946800C6D721 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B92D638720A28C55000631FF /* Project object */;
+	rootObject = 8309C43D20A2946700C6D721 /* Project object */;
 }
