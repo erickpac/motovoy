@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B4B8EB923820E5B05837B9A9 /* Pods_Motovoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDB38021FED9BA35817E709 /* Pods_Motovoy.framework */; };
 		B92D639320A28C56000631FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D639220A28C56000631FF /* AppDelegate.swift */; };
-		B92D639520A28C56000631FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D639420A28C56000631FF /* ViewController.swift */; };
 		B92D639820A28C56000631FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B92D639620A28C56000631FF /* Main.storyboard */; };
 		B92D639A20A28C56000631FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B92D639920A28C56000631FF /* Assets.xcassets */; };
 		B92D639D20A28C56000631FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B92D639B20A28C56000631FF /* LaunchScreen.storyboard */; };
@@ -20,7 +19,6 @@
 		2EDB38021FED9BA35817E709 /* Pods_Motovoy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motovoy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92D638F20A28C55000631FF /* Motovoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motovoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92D639220A28C56000631FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B92D639420A28C56000631FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B92D639720A28C56000631FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B92D639920A28C56000631FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B92D639C20A28C56000631FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,14 +76,61 @@
 		B92D639120A28C55000631FF /* Motovoy */ = {
 			isa = PBXGroup;
 			children = (
-				B92D639220A28C56000631FF /* AppDelegate.swift */,
-				B92D639420A28C56000631FF /* ViewController.swift */,
-				B92D639620A28C56000631FF /* Main.storyboard */,
-				B92D639920A28C56000631FF /* Assets.xcassets */,
-				B92D639B20A28C56000631FF /* LaunchScreen.storyboard */,
-				B92D639E20A28C56000631FF /* Info.plist */,
+				B97B862A20A292560039A575 /* Sections */,
+				B97B862920A292500039A575 /* Views */,
+				B97B862820A292470039A575 /* Models */,
+				B97B862720A292400039A575 /* Helpers */,
+				B97B862B20A292610039A575 /* Resources */,
 			);
 			path = Motovoy;
+			sourceTree = "<group>";
+		};
+		B97B862720A292400039A575 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B97B862820A292470039A575 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B97B862C20A292B70039A575 /* Services */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B97B862920A292500039A575 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B92D639620A28C56000631FF /* Main.storyboard */,
+				B92D639B20A28C56000631FF /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B97B862A20A292560039A575 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		B97B862B20A292610039A575 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B92D639220A28C56000631FF /* AppDelegate.swift */,
+				B92D639920A28C56000631FF /* Assets.xcassets */,
+				B92D639E20A28C56000631FF /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B97B862C20A292B70039A575 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +245,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B92D639520A28C56000631FF /* ViewController.swift in Sources */,
 				B92D639320A28C56000631FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +392,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Motovoy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjqm.motovoy.Motovoy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -363,7 +410,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Motovoy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjqm.motovoy.Motovoy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
