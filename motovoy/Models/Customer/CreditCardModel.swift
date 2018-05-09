@@ -6,4 +6,9 @@
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-
+struct CreditCard: Codable {
+    var name: String?
+    var number: String?
+    var expirationDate: String?
+    var securityCode: String? 
+}

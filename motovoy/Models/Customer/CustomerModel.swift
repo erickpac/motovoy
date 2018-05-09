@@ -12,7 +12,7 @@ struct Customer: LocalMappable {
     var email: String?
     var userId: Int?
     var nif: String?
-    var creditCards: String?
+    var creditCards: [CreditCard]?
     var detail: CustomerDetail?
     var status: Status?
     
