@@ -9,17 +9,19 @@
 import UIKit
 import Material
 
-class LoginViewController: UIViewController {
+class RegistrationViewController: UIViewController {
 
     @IBOutlet weak var titleBarView: UIView!
-    @IBOutlet weak var userField: TextField!
+    @IBOutlet weak var nameField: TextField!
+    @IBOutlet weak var emailField: TextField!
+    @IBOutlet weak var phoneField: TextField!
     @IBOutlet weak var passwordField: TextField!
     @IBOutlet weak var registerButton: FlatButton!
     @IBOutlet weak var loginButton: FlatButton!
     
 }
 
-extension LoginViewController {
+extension RegistrationViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +34,12 @@ extension LoginViewController {
         titleBarView.layer.shadowRadius = 10
         titleBarView.layer.shadowOpacity = 0.1
         
-        registerButton.borderColor = MColor.blue
-        registerButton.borderWidthPreset = .border4
+        loginButton.borderColor = MColor.blue
+        loginButton.borderWidthPreset = .border4
         
-        userField.dividerActiveColor = UIColor.lightGray
+        nameField.dividerActiveColor = UIColor.lightGray
+        emailField.dividerActiveColor = UIColor.lightGray
+        phoneField.dividerActiveColor = UIColor.lightGray
         passwordField.dividerActiveColor = UIColor.lightGray
     }
     

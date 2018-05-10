@@ -7,4 +7,6 @@ target 'motovoy' do
 
   # Pods for Motovoy
   pod 'Alamofire', '~> 4.7'
+  pod 'Material'
+  pod 'SwiftPhoneNumberFormatter'
 end

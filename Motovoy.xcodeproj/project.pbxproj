@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309C44820A2946800C6D721 /* AppDelegate.swift */; };
-		8309C44E20A2946800C6D721 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309C44C20A2946800C6D721 /* Main.storyboard */; };
 		8309C45020A2946800C6D721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8309C44F20A2946800C6D721 /* Assets.xcassets */; };
 		8309C45320A2946800C6D721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309C45120A2946800C6D721 /* LaunchScreen.storyboard */; };
+		83570DA320A2B1B20057D63D /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83570DA120A2B1B20057D63D /* Registration.storyboard */; };
+		83570DA620A414E00057D63D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83570DA520A414E00057D63D /* Color.swift */; };
+		83570DA920A42A300057D63D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83570DA820A42A300057D63D /* RegistrationViewController.swift */; };
+		83570DAC20A42E3B0057D63D /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83570DAB20A42E3B0057D63D /* RecoverPasswordViewController.swift */; };
+		83570DAF20A436AD0057D63D /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83570DAE20A436AD0057D63D /* PhoneTextField.swift */; };
 		B4880FE079159604E19862DF /* Pods_motovoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA6D36DD4A7C96499A01999 /* Pods_motovoy.framework */; };
 		B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A1D20A2A43E001DF9B2 /* CustomerAddressModel.swift */; };
 		B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A2220A2A683001DF9B2 /* LoginViewController.swift */; };
@@ -21,10 +25,14 @@
 /* Begin PBXFileReference section */
 		8309C44520A2946800C6D721 /* motovoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = motovoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8309C44820A2946800C6D721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8309C44D20A2946800C6D721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8309C44F20A2946800C6D721 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8309C45220A2946800C6D721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8309C45420A2946800C6D721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83570DA220A2B1B20057D63D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Registration.storyboard; sourceTree = "<group>"; };
+		83570DA520A414E00057D63D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		83570DA820A42A300057D63D /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		83570DAB20A42E3B0057D63D /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		83570DAE20A436AD0057D63D /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
 		8BA6D36DD4A7C96499A01999 /* Pods_motovoy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_motovoy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9093A1D20A2A43E001DF9B2 /* CustomerAddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerAddressModel.swift; sourceTree = "<group>"; };
 		B9093A2220A2A683001DF9B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +75,7 @@
 		8309C44720A2946800C6D721 /* motovoy */ = {
 			isa = PBXGroup;
 			children = (
+				83570DA420A414D20057D63D /* Helpers */,
 				B9093A2020A2A667001DF9B2 /* Sections */,
 				B98DA0EC20A295BC000E3AAE /* Views */,
 				B9093A1C20A29D67001DF9B2 /* Models */,
@@ -74,6 +83,39 @@
 				B98DA0EE20A295E0000E3AAE /* Resources */,
 			);
 			path = motovoy;
+			sourceTree = "<group>";
+		};
+		83570DA420A414D20057D63D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				83570DAD20A4369D0057D63D /* Controls */,
+				83570DA520A414E00057D63D /* Color.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		83570DA720A42A1D0057D63D /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				83570DA820A42A300057D63D /* RegistrationViewController.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		83570DAA20A42E1B0057D63D /* LostPassword */ = {
+			isa = PBXGroup;
+			children = (
+				83570DAB20A42E3B0057D63D /* RecoverPasswordViewController.swift */,
+			);
+			path = LostPassword;
+			sourceTree = "<group>";
+		};
+		83570DAD20A4369D0057D63D /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				83570DAE20A436AD0057D63D /* PhoneTextField.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 		8C43B3A23D93D6B20315AAC9 /* Pods */ = {
@@ -105,6 +147,8 @@
 		B9093A2020A2A667001DF9B2 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				83570DAA20A42E1B0057D63D /* LostPassword */,
+				83570DA720A42A1D0057D63D /* Registration */,
 				B9093A2120A2A66E001DF9B2 /* Login */,
 			);
 			path = Sections;
@@ -129,8 +173,8 @@
 		B98DA0EC20A295BC000E3AAE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8309C44C20A2946800C6D721 /* Main.storyboard */,
 				8309C45120A2946800C6D721 /* LaunchScreen.storyboard */,
+				83570DA120A2B1B20057D63D /* Registration.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,8 +260,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8309C45320A2946800C6D721 /* LaunchScreen.storyboard in Resources */,
+				83570DA320A2B1B20057D63D /* Registration.storyboard in Resources */,
 				8309C45020A2946800C6D721 /* Assets.xcassets in Resources */,
-				8309C44E20A2946800C6D721 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,10 +309,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-motovoy/Pods-motovoy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftPhoneNumberFormatter/SwiftPhoneNumberFormatter.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhoneNumberFormatter.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -283,30 +333,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9093A2620A2A6AC001DF9B2 /* APIManager.swift in Sources */,
+				83570DAF20A436AD0057D63D /* PhoneTextField.swift in Sources */,
 				B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */,
 				B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */,
 				B9093A2820A2A911001DF9B2 /* LocalMappable.swift in Sources */,
+				83570DA920A42A300057D63D /* RegistrationViewController.swift in Sources */,
 				8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */,
+				83570DAC20A42E3B0057D63D /* RecoverPasswordViewController.swift in Sources */,
+				83570DA620A414E00057D63D /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8309C44C20A2946800C6D721 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8309C44D20A2946800C6D721 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8309C45120A2946800C6D721 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8309C45220A2946800C6D721 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		83570DA120A2B1B20057D63D /* Registration.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83570DA220A2B1B20057D63D /* Base */,
+			);
+			name = Registration.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
