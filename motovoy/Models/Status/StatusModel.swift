@@ -9,4 +9,11 @@
 struct Status: Codable {
     var code: Int?
     var message: String?
+    var loginToken: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case code
+        case message
+        case loginToken = "login_token"
+    }
 }
