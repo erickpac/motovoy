@@ -1,12 +1,12 @@
 //
-//  CustomerModel.swift
+//  LoginModel.swift
 //  motovoy
 //
-//  Created by Erick Pac on 5/8/18.
+//  Created by Erick Pac on 5/9/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct Customer: Codable {
+struct Login: LocalMappable {
     var name: String?
     var mobile: String?
     var email: String?
@@ -15,6 +15,7 @@ struct Customer: Codable {
     var creditCards: [CustomerCreditCard]?
     var detail: CustomerDetail?
     var status: Status?
+    var motos: [Moto]?
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -25,5 +26,6 @@ struct Customer: Codable {
         case creditCards = "credit_cards"
         case detail = "client"
         case status
+        case motos
     }
 }

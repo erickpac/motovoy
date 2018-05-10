@@ -6,7 +6,7 @@
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct Moto: LocalMappable {
+struct Moto: Codable {
     var id: Int?
     var customerId: Int?
     var detailId: Int?

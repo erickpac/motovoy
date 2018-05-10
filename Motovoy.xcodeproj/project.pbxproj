@@ -23,6 +23,9 @@
 		B9924A5A20A3CB3A00021473 /* ErrorCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A5920A3CB3A00021473 /* ErrorCodes.swift */; };
 		B9924A5D20A3CED200021473 /* MotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A5C20A3CED200021473 /* MotoModel.swift */; };
 		B9924A5F20A3D2D800021473 /* MotoDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A5E20A3D2D800021473 /* MotoDetailModel.swift */; };
+		B9924A6220A4036200021473 /* MotoBrandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A6120A4036200021473 /* MotoBrandModel.swift */; };
+		B9924A6420A403C800021473 /* MotoModelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A6320A403C800021473 /* MotoModelModel.swift */; };
+		B9924A6720A4067800021473 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A6620A4067800021473 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		B9924A5920A3CB3A00021473 /* ErrorCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCodes.swift; sourceTree = "<group>"; };
 		B9924A5C20A3CED200021473 /* MotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotoModel.swift; sourceTree = "<group>"; };
 		B9924A5E20A3D2D800021473 /* MotoDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotoDetailModel.swift; sourceTree = "<group>"; };
+		B9924A6120A4036200021473 /* MotoBrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotoBrandModel.swift; sourceTree = "<group>"; };
+		B9924A6320A403C800021473 /* MotoModelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotoModelModel.swift; sourceTree = "<group>"; };
+		B9924A6620A4067800021473 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		C140E38354689D155919E370 /* Pods-motovoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motovoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-motovoy/Pods-motovoy.debug.xcconfig"; sourceTree = "<group>"; };
 		F2DB45D4B8187B125B1108D4 /* Pods-motovoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motovoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-motovoy/Pods-motovoy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,8 +111,10 @@
 			children = (
 				B9093A2720A2A911001DF9B2 /* LocalMappable.swift */,
 				B9093A2F20A2B0BB001DF9B2 /* Status */,
+				B9924A6520A4066500021473 /* Login */,
 				B9093A1F20A2A45D001DF9B2 /* Customer */,
 				B9924A5B20A3CEBE00021473 /* Moto */,
+				B9924A6020A4034B00021473 /* Brand */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,8 +202,25 @@
 			children = (
 				B9924A5C20A3CED200021473 /* MotoModel.swift */,
 				B9924A5E20A3D2D800021473 /* MotoDetailModel.swift */,
+				B9924A6320A403C800021473 /* MotoModelModel.swift */,
+				B9924A6120A4036200021473 /* MotoBrandModel.swift */,
 			);
 			path = Moto;
+			sourceTree = "<group>";
+		};
+		B9924A6020A4034B00021473 /* Brand */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Brand;
+			sourceTree = "<group>";
+		};
+		B9924A6520A4066500021473 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B9924A6620A4067800021473 /* LoginModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		DB61EE5495CF11EB75585C76 /* Frameworks */ = {
@@ -345,7 +370,10 @@
 				B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */,
 				B9924A5D20A3CED200021473 /* MotoModel.swift in Sources */,
 				B9093A3120A2B0C8001DF9B2 /* StatusModel.swift in Sources */,
+				B9924A6720A4067800021473 /* LoginModel.swift in Sources */,
 				B9093A2820A2A911001DF9B2 /* LocalMappable.swift in Sources */,
+				B9924A6220A4036200021473 /* MotoBrandModel.swift in Sources */,
+				B9924A6420A403C800021473 /* MotoModelModel.swift in Sources */,
 				8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -173,6 +173,7 @@ struct MotoDetail: Codable {
     var createdAt: String?
     var updatedAt: String?
     var deletedAt: String?
+    var motoModel: MotoModel?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -341,5 +342,6 @@ struct MotoDetail: Codable {
         case createdAt = "created_at"
         case updatedAt = "updated_at"
         case deletedAt = "deleted_at"
+        case motoModel = "moto_model"
     }
 }
