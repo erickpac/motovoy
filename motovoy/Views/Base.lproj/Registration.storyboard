@@ -54,7 +54,7 @@
                             <constraint firstItem="xRI-Ob-VMU" firstAttribute="bottom" secondItem="XI1-XL-PrF" secondAttribute="bottom" constant="20" id="Vcq-1h-GJn"/>
                             <constraint firstItem="1nr-KB-uu6" firstAttribute="leading" secondItem="kIH-1m-A6L" secondAttribute="leading" id="Vvd-1u-MbX"/>
                             <constraint firstItem="xRI-Ob-VMU" firstAttribute="trailing" secondItem="XI1-XL-PrF" secondAttribute="trailing" constant="16" id="c7O-96-hPH"/>
-                            <constraint firstItem="kOV-5M-pOi" firstAttribute="bottom" secondItem="xRI-Ob-VMU" secondAttribute="bottom" id="e7v-iA-ld4"/>
+                            <constraint firstItem="kOV-5M-pOi" firstAttribute="bottom" secondItem="RKs-9B-hx0" secondAttribute="bottom" id="e7v-iA-ld4"/>
                             <constraint firstItem="kOV-5M-pOi" firstAttribute="top" secondItem="RKs-9B-hx0" secondAttribute="top" id="f6u-8i-rZH"/>
                             <constraint firstItem="kIH-1m-A6L" firstAttribute="leading" secondItem="xRI-Ob-VMU" secondAttribute="leading" constant="20" id="jow-W3-TfF"/>
                             <constraint firstItem="1nr-KB-uu6" firstAttribute="top" secondItem="kIH-1m-A6L" secondAttribute="bottom" constant="8" id="l6z-d9-ORP"/>

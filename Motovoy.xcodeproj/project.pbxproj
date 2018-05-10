@@ -101,7 +101,6 @@
 				B9093A1C20A29D67001DF9B2 /* Models */,
 				B9093A2420A2A694001DF9B2 /* Services */,
 				B98DA0EE20A295E0000E3AAE /* Resources */,
-				B9924A5720A3CAFD00021473 /* Helpers */,
 			);
 			path = motovoy;
 			sourceTree = "<group>";
@@ -109,6 +108,7 @@
 		83570DA420A414D20057D63D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B9924A5820A3CB2100021473 /* Enums */,
 				83570DAD20A4369D0057D63D /* Controls */,
 				83570DA520A414E00057D63D /* Color.swift */,
 			);
@@ -223,14 +223,6 @@
 				8309C45420A2946800C6D721 /* Info.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		B9924A5720A3CAFD00021473 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				B9924A5820A3CB2100021473 /* Enums */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		B9924A5820A3CB2100021473 /* Enums */ = {
