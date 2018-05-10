@@ -6,9 +6,9 @@
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct CustomerAddress: LocalMappable {
+struct CustomerAddress: Codable {
     var id: Int?
-    var clientId: Int?
+    var customerId: Int?
     var name: String?
     var customerName: String?
     var address: String?
@@ -22,7 +22,7 @@ struct CustomerAddress: LocalMappable {
     
     enum CodingKeys: String, CodingKey {
         case id
-        case clientId = "client_id"
+        case customerId = "client_id"
         case name
         case customerName = "client_name"
         case address
