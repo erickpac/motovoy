@@ -20,7 +20,7 @@
 		B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A2B20A2AA78001DF9B2 /* CustomerCreditCardModel.swift */; };
 		B9093A2E20A2ACFA001DF9B2 /* CustomerDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A2D20A2ACFA001DF9B2 /* CustomerDetailModel.swift */; };
 		B9093A3120A2B0C8001DF9B2 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A3020A2B0C8001DF9B2 /* StatusModel.swift */; };
-		B9924A5A20A3CB3A00021473 /* ErrorCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A5920A3CB3A00021473 /* ErrorCodes.swift */; };
+		B9924A5A20A3CB3A00021473 /* UrlPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A5920A3CB3A00021473 /* UrlPath.swift */; };
 		B9924A5D20A3CED200021473 /* MotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A5C20A3CED200021473 /* MotoModel.swift */; };
 		B9924A5F20A3D2D800021473 /* MotoDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A5E20A3D2D800021473 /* MotoDetailModel.swift */; };
 		B9924A6220A4036200021473 /* MotoBrandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A6120A4036200021473 /* MotoBrandModel.swift */; };
@@ -44,7 +44,7 @@
 		B9093A2B20A2AA78001DF9B2 /* CustomerCreditCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCreditCardModel.swift; sourceTree = "<group>"; };
 		B9093A2D20A2ACFA001DF9B2 /* CustomerDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailModel.swift; sourceTree = "<group>"; };
 		B9093A3020A2B0C8001DF9B2 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
-		B9924A5920A3CB3A00021473 /* ErrorCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCodes.swift; sourceTree = "<group>"; };
+		B9924A5920A3CB3A00021473 /* UrlPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlPath.swift; sourceTree = "<group>"; };
 		B9924A5C20A3CED200021473 /* MotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotoModel.swift; sourceTree = "<group>"; };
 		B9924A5E20A3D2D800021473 /* MotoDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotoDetailModel.swift; sourceTree = "<group>"; };
 		B9924A6120A4036200021473 /* MotoBrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotoBrandModel.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 		B9924A5820A3CB2100021473 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				B9924A5920A3CB3A00021473 /* ErrorCodes.swift */,
+				B9924A5920A3CB3A00021473 /* UrlPath.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -366,7 +366,7 @@
 				B9924A5F20A3D2D800021473 /* MotoDetailModel.swift in Sources */,
 				B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */,
 				B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */,
-				B9924A5A20A3CB3A00021473 /* ErrorCodes.swift in Sources */,
+				B9924A5A20A3CB3A00021473 /* UrlPath.swift in Sources */,
 				B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */,
 				B9924A5D20A3CED200021473 /* MotoModel.swift in Sources */,
 				B9093A3120A2B0C8001DF9B2 /* StatusModel.swift in Sources */,
