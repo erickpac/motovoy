@@ -12,7 +12,7 @@ import Material
 class RecoverPasswordViewController: UIViewController {
 
     @IBOutlet weak var phoneField: TextField!
-    @IBOutlet weak var titleBarView: UIView!
+    @IBOutlet weak var titleBarView: NavigationShadowedView!
 
 }
 
@@ -24,11 +24,6 @@ extension RecoverPasswordViewController {
     }
     
     func configure() {
-        titleBarView.layer.shadowColor = UIColor.black.cgColor
-        titleBarView.layer.shadowOffset = CGSize(width: 0, height: 4)
-        titleBarView.layer.shadowRadius = 10
-        titleBarView.layer.shadowOpacity = 0.1
-        
         phoneField.dividerActiveColor = UIColor.lightGray
         phoneField.textAlignment = .center
     }

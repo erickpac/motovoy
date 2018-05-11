@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bike Selection View Controller-->
+        <scene sceneID="FiE-qx-9gO">
+            <objects>
+                <viewController storyboardIdentifier="BikeSelection" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="VLM-Sq-CyK" customClass="BikeSelectionViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SUq-YF-Zwh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3B-wu-EGa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="motionDismissViewController" destination="VLM-Sq-CyK" eventType="touchUpInside" id="C48-YB-1ny"/>
+                                </connections>
+                            </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5O-Im-ybs" customClass="NavigationShadowedView" customModule="motovoy" customModuleProvider="target">
+                                <rect key="frame" x="50" y="193.5" width="275" height="300"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Krv-l8-Aa3">
+                                        <rect key="frame" x="0.0" y="60" width="275" height="190"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BikeSelection" rowHeight="76" id="56c-GH-uis" customClass="BikeSelectionTableViewCell" customModule="motovoy" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="275" height="76"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="56c-GH-uis" id="9gA-nm-AIo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="76"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yct-nh-0Cj">
+                                                            <rect key="frame" x="27" y="11" width="221" height="54"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Yct-nh-0Cj" firstAttribute="bottom" secondItem="9gA-nm-AIo" secondAttribute="bottomMargin" id="4O6-bZ-iaK"/>
+                                                        <constraint firstItem="Yct-nh-0Cj" firstAttribute="leading" secondItem="9gA-nm-AIo" secondAttribute="leadingMargin" constant="12" id="flo-FE-Kbb"/>
+                                                        <constraint firstItem="Yct-nh-0Cj" firstAttribute="trailing" secondItem="9gA-nm-AIo" secondAttribute="trailingMargin" constant="-12" id="q9l-KF-XUI"/>
+                                                        <constraint firstItem="Yct-nh-0Cj" firstAttribute="top" secondItem="9gA-nm-AIo" secondAttribute="topMargin" id="ryv-M4-Czx"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="label" destination="Yct-nh-0Cj" id="6vD-ER-5c2"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECCIONAR MOTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2t-oy-XaH">
+                                        <rect key="frame" x="20" y="19.5" width="235" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="6Vn-GH-Osq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlA-hu-Xiz" customClass="NavigationShadowedView" customModule="motovoy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="249.5" width="275" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRe-V7-fSL">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="ANADIR NUEVA MOTO">
+                                                    <color key="titleColor" red="0.01176470588" green="0.3411764706" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="uRe-V7-fSL" firstAttribute="top" secondItem="DlA-hu-Xiz" secondAttribute="top" id="0PI-pd-x8n"/>
+                                            <constraint firstItem="uRe-V7-fSL" firstAttribute="leading" secondItem="DlA-hu-Xiz" secondAttribute="leading" id="Lki-lq-UjB"/>
+                                            <constraint firstAttribute="height" constant="50" id="RV5-Tx-8eP"/>
+                                            <constraint firstAttribute="trailing" secondItem="uRe-V7-fSL" secondAttribute="trailing" id="UZZ-2I-Toe"/>
+                                            <constraint firstAttribute="bottom" secondItem="uRe-V7-fSL" secondAttribute="bottom" id="uQC-Cp-iJz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="w2t-oy-XaH" secondAttribute="trailing" constant="20" id="7oD-kz-5Oo"/>
+                                    <constraint firstAttribute="bottom" secondItem="DlA-hu-Xiz" secondAttribute="bottom" id="9aU-W0-BnM"/>
+                                    <constraint firstItem="DlA-hu-Xiz" firstAttribute="leading" secondItem="Y5O-Im-ybs" secondAttribute="leading" id="FXc-wP-CDT"/>
+                                    <constraint firstItem="Krv-l8-Aa3" firstAttribute="top" secondItem="w2t-oy-XaH" secondAttribute="bottom" constant="20" id="Lh0-Wt-jzK"/>
+                                    <constraint firstItem="Krv-l8-Aa3" firstAttribute="leading" secondItem="Y5O-Im-ybs" secondAttribute="leading" id="Pfg-1K-8qz"/>
+                                    <constraint firstItem="w2t-oy-XaH" firstAttribute="top" secondItem="Y5O-Im-ybs" secondAttribute="top" constant="20" id="d3x-hW-88y"/>
+                                    <constraint firstAttribute="trailing" secondItem="Krv-l8-Aa3" secondAttribute="trailing" id="dJV-gL-f4P"/>
+                                    <constraint firstAttribute="height" constant="300" id="dZ3-z8-28v"/>
+                                    <constraint firstItem="DlA-hu-Xiz" firstAttribute="top" secondItem="Krv-l8-Aa3" secondAttribute="bottom" id="eYH-2r-Zex"/>
+                                    <constraint firstAttribute="trailing" secondItem="DlA-hu-Xiz" secondAttribute="trailing" id="iuH-LH-Ezb"/>
+                                    <constraint firstItem="w2t-oy-XaH" firstAttribute="leading" secondItem="Y5O-Im-ybs" secondAttribute="leading" constant="20" id="lCi-cp-XBf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e3B-wu-EGa" firstAttribute="leading" secondItem="IYx-tH-T3k" secondAttribute="leading" id="6rn-Fy-Ght"/>
+                            <constraint firstItem="Y5O-Im-ybs" firstAttribute="leading" secondItem="IYx-tH-T3k" secondAttribute="leading" constant="50" id="BPS-cy-UDn"/>
+                            <constraint firstItem="e3B-wu-EGa" firstAttribute="top" secondItem="SUq-YF-Zwh" secondAttribute="top" id="Cxy-YK-IsA"/>
+                            <constraint firstItem="Y5O-Im-ybs" firstAttribute="centerY" secondItem="IYx-tH-T3k" secondAttribute="centerY" placeholder="YES" id="OeG-5D-wgB"/>
+                            <constraint firstItem="Y5O-Im-ybs" firstAttribute="centerY" secondItem="IYx-tH-T3k" secondAttribute="centerY" priority="999" constant="500" id="Yon-92-8gJ"/>
+                            <constraint firstItem="IYx-tH-T3k" firstAttribute="trailing" secondItem="Y5O-Im-ybs" secondAttribute="trailing" constant="50" id="e44-XS-ETj"/>
+                            <constraint firstItem="e3B-wu-EGa" firstAttribute="bottom" secondItem="IYx-tH-T3k" secondAttribute="bottom" id="kGr-As-Ke0"/>
+                            <constraint firstItem="Y5O-Im-ybs" firstAttribute="centerX" secondItem="IYx-tH-T3k" secondAttribute="centerX" id="lmb-lH-OdR"/>
+                            <constraint firstItem="e3B-wu-EGa" firstAttribute="trailing" secondItem="IYx-tH-T3k" secondAttribute="trailing" id="yqO-4B-Ik1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IYx-tH-T3k"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="Y5O-Im-ybs" id="EuF-g0-MLB"/>
+                        <outlet property="centerConstraint" destination="Yon-92-8gJ" id="B9Z-KP-BLS"/>
+                        <outlet property="tableView" destination="Krv-l8-Aa3" id="dCu-Aj-QMZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Yo-b0-4sN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="236.13193403298354"/>
+        </scene>
+    </scenes>
+</document>

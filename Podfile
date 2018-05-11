@@ -9,4 +9,6 @@ target 'motovoy' do
   pod 'Alamofire', '~> 4.7'
   pod 'Material'
   pod 'SwiftPhoneNumberFormatter'
+  pod 'IQKeyboardManagerSwift'
+  pod 'ActiveLabel'
 end

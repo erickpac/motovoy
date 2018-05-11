@@ -11,7 +11,7 @@ import Material
 
 class RegistrationViewController: UIViewController {
 
-    @IBOutlet weak var titleBarView: UIView!
+    @IBOutlet weak var titleBarView: NavigationShadowedView!
     @IBOutlet weak var nameField: TextField!
     @IBOutlet weak var emailField: TextField!
     @IBOutlet weak var phoneField: TextField!
@@ -29,11 +29,6 @@ extension RegistrationViewController {
     }
     
     func configure() {
-        titleBarView.layer.shadowColor = UIColor.black.cgColor
-        titleBarView.layer.shadowOffset = CGSize(width: 0, height: 4)
-        titleBarView.layer.shadowRadius = 10
-        titleBarView.layer.shadowOpacity = 0.1
-        
         loginButton.borderColor = MColor.blue
         loginButton.borderWidthPreset = .border4
         
@@ -41,6 +36,14 @@ extension RegistrationViewController {
         emailField.dividerActiveColor = UIColor.lightGray
         phoneField.dividerActiveColor = UIColor.lightGray
         passwordField.dividerActiveColor = UIColor.lightGray
+    }
+    
+}
+
+extension RegistrationViewController {
+    
+    @IBAction func openMain() {
+        performSegue(withIdentifier: "Main", sender: nil)
     }
     
 }

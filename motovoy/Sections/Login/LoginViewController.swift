@@ -11,7 +11,7 @@ import Material
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var titleBarView: UIView!
+    @IBOutlet weak var titleBarView: NavigationShadowedView!
     @IBOutlet weak var userField: TextField!
     @IBOutlet weak var passwordField: TextField!
     @IBOutlet weak var registerButton: FlatButton!
@@ -27,11 +27,6 @@ extension LoginViewController {
     }
     
     func configure() {
-        titleBarView.layer.shadowColor = UIColor.black.cgColor
-        titleBarView.layer.shadowOffset = CGSize(width: 0, height: 4)
-        titleBarView.layer.shadowRadius = 10
-        titleBarView.layer.shadowOpacity = 0.1
-        
         registerButton.borderColor = MColor.blue
         registerButton.borderWidthPreset = .border4
         
