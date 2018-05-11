@@ -12,9 +12,11 @@ import CoreLocation
 class RegistrationPresenter {
     fileprivate let apiManager: APIManager
     fileprivate var registrationView: RegistrationView?
+    fileprivate let locationManager = CLLocationManager()
     
     init(apiManager: APIManager) {
         self.apiManager = apiManager
+        locationManager.requestWhenInUseAuthorization()
     }
     
     func attachView(_ view: RegistrationView) {
@@ -29,9 +31,6 @@ class RegistrationPresenter {
         var latitude: String = ""
         var longitude: String = ""
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse || CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways) {
-            let locationManager = CLLocationManager()
-            locationManager.requestWhenInUseAuthorization()
-            
             if let manager = locationManager.location {
                 latitude = String(format: "%f", manager.coordinate.latitude)
                 longitude = String(format: "%f", manager.coordinate.longitude)
