@@ -58,10 +58,10 @@ class RegistrationPresenter {
                         let _ = Utils.saveInUserDefaults(key: UserDefaultsKeys.USER_KEY, data: user)
                         self.registrationView?.showLoader(show: false)
                     } else {
+                        self.registrationView?.showLoader(show: false)
                         if let errorMessage = status.message {
                             self.registrationView?.errorMessage(message: errorMessage)
                         }
-                        self.registrationView?.showLoader(show: false)
                     }
                 }
             }

@@ -33,10 +33,10 @@ class RecoverPasswordPresenter {
                 if status.code == 200 {
                     self.recoverPasswordView?.showLoader(show: false)
                 } else {
+                    self.recoverPasswordView?.showLoader(show: false)
                     if let errorMessage = status.message {
                         self.recoverPasswordView?.errorMessage(message: errorMessage)
                     }
-                    self.recoverPasswordView?.showLoader(show: false)
                 }
             }
         }) { (error) in
