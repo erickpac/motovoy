@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerButton: FlatButton!
     @IBOutlet weak var loginButton: FlatButton!
     
-    // var's
+    // let's
     fileprivate let loginPresenter = LoginPresenter(apiManager: APIManager())
     
     // actions
@@ -54,15 +54,15 @@ extension LoginViewController {
 }
 
 extension LoginViewController: LoginView {
+    func loginSuccess() {
+        
+    }
+    
     func showLoader(show: Bool) {
         
     }
     
     func errorMessage(message: String) {
         
-    }
-    
-    func loginSuccess(user: User) {
-        loginButton.title = user.name
     }
 }

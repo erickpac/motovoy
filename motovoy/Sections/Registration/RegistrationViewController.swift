@@ -10,7 +10,7 @@ import UIKit
 import Material
 
 class RegistrationViewController: UIViewController {
-
+    // outlet's
     @IBOutlet weak var titleBarView: UIView!
     @IBOutlet weak var nameField: TextField!
     @IBOutlet weak var emailField: TextField!
@@ -19,13 +19,25 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var registerButton: FlatButton!
     @IBOutlet weak var loginButton: FlatButton!
     
+    // let's
+    fileprivate let registrationPresenter = RegistrationPresenter(apiManager: APIManager())
+    
+    // actions
+    @IBAction func registrationAction(_ sender: Any) {
+        let name: String = nameField.text!
+        let email: String = emailField.text!
+        let phone: String = phoneField.text!
+        let password: String = passwordField.text!
+        
+        registrationPresenter.registrationProcess(name: name, email: email, phone: phone, password: password)
+    }
 }
 
 extension RegistrationViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        registrationPresenter.attachView(self)
     }
     
     func configure() {
@@ -42,5 +54,18 @@ extension RegistrationViewController {
         phoneField.dividerActiveColor = UIColor.lightGray
         passwordField.dividerActiveColor = UIColor.lightGray
     }
+}
+
+extension RegistrationViewController: RegistrationView {
+    func showLoader(show: Bool) {
+        
+    }
     
+    func errorMessage(message: String) {
+        
+    }
+    
+    func registrationSuccess() {
+        
+    }
 }

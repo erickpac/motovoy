@@ -34,6 +34,8 @@
 		B9C3CA8920A50B6B0002C124 /* LoginProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8820A50B6B0002C124 /* LoginProtocolView.swift */; };
 		B9C3CA8B20A51D390002C124 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8A20A51D390002C124 /* UserDefaultsKeys.swift */; };
 		B9C3CA8D20A51D660002C124 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8C20A51D660002C124 /* Utils.swift */; };
+		B9C3CA8F20A525640002C124 /* RegistrationProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8E20A525640002C124 /* RegistrationProtocolView.swift */; };
+		B9C3CA9120A525D40002C124 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA9020A525D40002C124 /* RegistrationPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		B9C3CA8820A50B6B0002C124 /* LoginProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocolView.swift; sourceTree = "<group>"; };
 		B9C3CA8A20A51D390002C124 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		B9C3CA8C20A51D660002C124 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B9C3CA8E20A525640002C124 /* RegistrationProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationProtocolView.swift; sourceTree = "<group>"; };
+		B9C3CA9020A525D40002C124 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		C140E38354689D155919E370 /* Pods-motovoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motovoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-motovoy/Pods-motovoy.debug.xcconfig"; sourceTree = "<group>"; };
 		F2DB45D4B8187B125B1108D4 /* Pods-motovoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motovoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-motovoy/Pods-motovoy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +131,8 @@
 		83570DA720A42A1D0057D63D /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				B9C3CA8E20A525640002C124 /* RegistrationProtocolView.swift */,
+				B9C3CA9020A525D40002C124 /* RegistrationPresenter.swift */,
 				83570DA820A42A300057D63D /* RegistrationViewController.swift */,
 			);
 			path = Registration;
@@ -415,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9093A2620A2A6AC001DF9B2 /* APIManager.swift in Sources */,
+				B9C3CA8F20A525640002C124 /* RegistrationProtocolView.swift in Sources */,
 				83570DAF20A436AD0057D63D /* PhoneTextField.swift in Sources */,
 				B9093A2A20A2AA23001DF9B2 /* CustomerModel.swift in Sources */,
 				B9C3CA8920A50B6B0002C124 /* LoginProtocolView.swift in Sources */,
@@ -434,6 +441,7 @@
 				B9C3CA8B20A51D390002C124 /* UserDefaultsKeys.swift in Sources */,
 				B9924A6220A4036200021473 /* MotoBrandModel.swift in Sources */,
 				B9924A6420A403C800021473 /* MotoModelModel.swift in Sources */,
+				B9C3CA9120A525D40002C124 /* RegistrationPresenter.swift in Sources */,
 				8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */,
 				83570DAC20A42E3B0057D63D /* RecoverPasswordViewController.swift in Sources */,
 				83570DA620A414E00057D63D /* Color.swift in Sources */,
