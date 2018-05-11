@@ -24,7 +24,7 @@ class LoginPresenter {
         loginView = nil
     }
     
-    func loginProcess(emailPhone: String, password: String) {
+    func loginProcess(emailPhone: String, password: String) -> Void {
         var params: [String: Any]
         if (emailPhone.contains("@") && emailPhone.contains(".")) {
             params = ["email": emailPhone]
@@ -43,7 +43,7 @@ class LoginPresenter {
                 }
             }
         }) { (error) in
-            
+            print("error -> \(error.debugDescription)")
         }
     }
 }

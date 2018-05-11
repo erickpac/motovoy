@@ -27,7 +27,7 @@ class RegistrationPresenter {
         registrationView = nil
     }
     
-    func registrationProcess(name: String, email: String, phone: String, password: String) {
+    func registrationProcess(name: String, email: String, phone: String, password: String) -> Void {
         var latitude: String = ""
         var longitude: String = ""
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse || CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways) {
@@ -60,7 +60,7 @@ class RegistrationPresenter {
                 }
             }
         }) { (error) in
-            
+            print("error -> \(error.debugDescription)")
         }
     }
 }

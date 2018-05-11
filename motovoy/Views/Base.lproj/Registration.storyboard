@@ -606,7 +606,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iS8-yB-ngV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="296"/>
+            <point key="canvasLocation" x="1721" y="575"/>
         </scene>
         <!--Recover Password View Controller-->
         <scene sceneID="q7T-c6-CMM">
@@ -675,6 +675,9 @@ verificación por SMS.</string>
                                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="recoverAction:" destination="FC4-s5-qQd" eventType="touchUpInside" id="ofh-qQ-ZFA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -753,7 +756,7 @@ verificación por SMS.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2e-xX-oSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="-395.35232383808096"/>
+            <point key="canvasLocation" x="1721" y="-245"/>
         </scene>
     </scenes>
     <resources>
