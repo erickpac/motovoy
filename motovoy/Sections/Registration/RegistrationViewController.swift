@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import APESuperHUD
 
 class RegistrationViewController: UIViewController {
 
@@ -19,13 +20,27 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var registerButton: FlatButton!
     @IBOutlet weak var loginButton: FlatButton!
     
+    // let's
+    fileprivate let registrationPresenter = RegistrationPresenter(apiManager: APIManager())
+    
+    // actions
+    @IBAction func registrationAction(_ sender: Any) {
+        showLoader(show: true)
+        let name: String = nameField.text!
+        let email: String = emailField.text!
+        let phone: String = phoneField.text!
+        let password: String = passwordField.text!
+        
+        registrationPresenter.registrationProcess(name: name, email: email, phone: phone, password: password)
+    }
+		
 }
 
 extension RegistrationViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        registrationPresenter.attachView(self)
     }
     
     func configure() {
@@ -37,7 +52,24 @@ extension RegistrationViewController {
         phoneField.dividerActiveColor = UIColor.lightGray
         passwordField.dividerActiveColor = UIColor.lightGray
     }
+}
+
+extension RegistrationViewController: RegistrationView {
+    func showLoader(show: Bool) {
+        if show {
+            APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando...", presentingView: self.view)
+        } else {
+            APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+        }
+    }
     
+    func errorMessage(message: String) {
+        APESuperHUD.showOrUpdateHUD(icon: .sadFace, message: message, duration: 3.0, presentingView: self.view, completion: nil)
+    }
+    
+    func registrationSuccess() {
+        
+    }
 }
 
 extension RegistrationViewController {

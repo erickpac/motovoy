@@ -8,12 +8,22 @@
 
 import UIKit
 import Material
+import APESuperHUD
 
 class RecoverPasswordViewController: UIViewController {
-
+    // outlet's
     @IBOutlet weak var phoneField: TextField!
     @IBOutlet weak var titleBarView: NavigationShadowedView!
 
+    // let's
+    fileprivate let recoverPasswordPresenter = RecoverPasswordPresenter(apiManager: APIManager())
+    
+    // actions
+    @IBAction func recoverAction(_ sender: Any) {
+        showLoader(show: true)
+        let phone: String = phoneField.text!
+        recoverPasswordPresenter.recoverPasswordProcess(phone: phone)
+    }
 }
 
 extension RecoverPasswordViewController {
@@ -21,11 +31,30 @@ extension RecoverPasswordViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        recoverPasswordPresenter.attachView(self)
     }
     
     func configure() {
         phoneField.dividerActiveColor = UIColor.lightGray
         phoneField.textAlignment = .center
+        phoneField.text = "+34373737"
+    }
+}
+
+extension RecoverPasswordViewController: RecoverPasswordView {
+    func showLoader(show: Bool) {
+        if show {
+            APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando...", presentingView: self.view)
+        } else {
+            APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+        }
     }
     
+    func errorMessage(message: String) {
+        APESuperHUD.showOrUpdateHUD(icon: .sadFace, message: message, duration: 3.0, presentingView: self.view, completion: nil)
+    }
+    
+    func recoverySuccess() {
+        
+    }
 }
