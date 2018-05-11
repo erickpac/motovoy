@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol BikeSelectionDelegate {
-    func didSelect(bike: Moto)
-}
-
 class BikeSelectionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
