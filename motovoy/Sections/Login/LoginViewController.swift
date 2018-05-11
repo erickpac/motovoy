@@ -61,7 +61,7 @@ extension LoginViewController: LoginView {
     }
     
     func loginSuccess() {
-        
+        performSegue(withIdentifier: "ShowMain", sender: nil)
     }
     
     func errorMessage(message: String) {

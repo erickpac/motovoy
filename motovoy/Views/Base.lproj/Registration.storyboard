@@ -186,6 +186,9 @@
                                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginAction:" destination="qFv-i8-ilY" eventType="touchUpInside" id="jYX-gK-3by"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soy un usuario nuevo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ged-Tg-8KT">
                                                 <rect key="frame" x="20" y="402" width="335" height="21.5"/>
@@ -302,7 +305,7 @@
                         <outlet property="registerButton" destination="D2U-7Y-u5t" id="TOE-uv-7yv"/>
                         <outlet property="titleBarView" destination="bwe-Cp-T6Q" id="dpH-Rf-Iz3"/>
                         <outlet property="userField" destination="9r9-ko-ta5" id="m08-sg-yZE"/>
-                        <segue destination="PlR-58-gdi" kind="show" identifier="Main" id="KbB-D7-qXp"/>
+                        <segue destination="PlR-58-gdi" kind="show" identifier="ShowMain" id="KbB-D7-qXp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1y-Iw-blR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -391,7 +394,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="openMain" destination="clB-xr-Gkw" eventType="touchUpInside" id="WSD-L9-Ls2"/>
+                                                    <action selector="registrationAction:" destination="clB-xr-Gkw" eventType="touchUpInside" id="3Ey-72-JRQ"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ya tengo una cuenta" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4v-9g-mcB">
@@ -605,7 +608,7 @@
                         <outlet property="phoneField" destination="wyJ-AS-ZnW" id="Dsj-0v-bMd"/>
                         <outlet property="registerButton" destination="mXG-eK-iDN" id="zbb-ak-FmZ"/>
                         <outlet property="titleBarView" destination="gEh-Vf-0M4" id="nke-Ha-ofH"/>
-                        <segue destination="PlR-58-gdi" kind="show" identifier="Main" id="cC7-gM-u8T"/>
+                        <segue destination="PlR-58-gdi" kind="show" identifier="ShowMain" id="cC7-gM-u8T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iS8-yB-ngV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -687,6 +690,9 @@ verificación por SMS.</string>
                                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="recoverAction:" destination="FC4-s5-qQd" eventType="touchUpInside" id="KXf-bz-ap6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

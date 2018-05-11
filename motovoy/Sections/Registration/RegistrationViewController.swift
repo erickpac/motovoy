@@ -68,14 +68,6 @@ extension RegistrationViewController: RegistrationView {
     }
     
     func registrationSuccess() {
-        
+        performSegue(withIdentifier: "ShowMain", sender: nil)
     }
-}
-
-extension RegistrationViewController {
-    
-    @IBAction func openMain() {
-        performSegue(withIdentifier: "Main", sender: nil)
-    }
-    
 }
