@@ -39,11 +39,18 @@ class LoginPresenter {
                 if let status = userObject.status {
                     if status.code == 200 {
                         let _ = Utils.saveInUserDefaults(key: UserDefaultsKeys.USER_KEY, data: user)
+                        self.loginView?.showLoader(show: false)
+                    } else {
+                        if let errorMessage = status.message {
+                            self.loginView?.errorMessage(message: errorMessage)
+                        }
+                        self.loginView?.showLoader(show: false)
                     }
                 }
             }
         }) { (error) in
             print("error -> \(error.debugDescription)")
+            self.loginView?.showLoader(show: false)
         }
     }
 }

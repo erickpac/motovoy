@@ -56,11 +56,18 @@ class RegistrationPresenter {
                 if let status = userObject.status {
                     if status.code == 200 {
                         let _ = Utils.saveInUserDefaults(key: UserDefaultsKeys.USER_KEY, data: user)
+                        self.registrationView?.showLoader(show: false)
+                    } else {
+                        if let errorMessage = status.message {
+                            self.registrationView?.errorMessage(message: errorMessage)
+                        }
+                        self.registrationView?.showLoader(show: false)
                     }
                 }
             }
         }) { (error) in
             print("error -> \(error.debugDescription)")
+            self.registrationView?.showLoader(show: false)
         }
     }
 }

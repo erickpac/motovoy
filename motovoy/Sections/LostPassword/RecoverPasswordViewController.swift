@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import APESuperHUD
 
 class RecoverPasswordViewController: UIViewController {
     // outlet's
@@ -19,6 +20,7 @@ class RecoverPasswordViewController: UIViewController {
     
     // actions
     @IBAction func recoverAction(_ sender: Any) {
+        showLoader(show: true)
         let phone: String = phoneField.text!
         recoverPasswordPresenter.recoverPasswordProcess(phone: phone)
     }
@@ -46,11 +48,15 @@ extension RecoverPasswordViewController {
 
 extension RecoverPasswordViewController: RecoverPasswordView {
     func showLoader(show: Bool) {
-        
+        if show {
+            APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando...", presentingView: self.view)
+        } else {
+            APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+        }
     }
     
     func errorMessage(message: String) {
-        
+        APESuperHUD.showOrUpdateHUD(icon: .sadFace, message: message, duration: 3.0, presentingView: self.view, completion: nil)
     }
     
     func recoverySuccess() {

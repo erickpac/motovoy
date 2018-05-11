@@ -30,10 +30,18 @@ class RecoverPasswordPresenter {
         
         apiManager.postServiceModel(urlService: UrlPath.getConfirmationCode, params: params, onSuccess: { (user: User) in
             if let status = user.status {
-                
+                if status.code == 200 {
+                    self.recoverPasswordView?.showLoader(show: false)
+                } else {
+                    if let errorMessage = status.message {
+                        self.recoverPasswordView?.errorMessage(message: errorMessage)
+                    }
+                    self.recoverPasswordView?.showLoader(show: false)
+                }
             }
         }) { (error) in
             print("error -> \(error.debugDescription)")
+            self.recoverPasswordView?.showLoader(show: false)
         }
     }
 }

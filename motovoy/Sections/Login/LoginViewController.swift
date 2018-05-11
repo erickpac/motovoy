@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import APESuperHUD
 
 class LoginViewController: UIViewController {
     // outlet's
@@ -22,6 +23,7 @@ class LoginViewController: UIViewController {
     
     // actions
     @IBAction func loginAction(_ sender: Any) {
+        showLoader(show: true)
         let emailPhone: String = userField.text!
         let password: String = passwordField.text!
         loginPresenter.loginProcess(emailPhone: emailPhone, password: password)
@@ -54,15 +56,19 @@ extension LoginViewController {
 }
 
 extension LoginViewController: LoginView {
+    func showLoader(show: Bool) {
+        if show {
+            APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando...", presentingView: self.view)
+        } else {
+            APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+        }
+    }
+    
     func loginSuccess() {
         
     }
     
-    func showLoader(show: Bool) {
-        
-    }
-    
     func errorMessage(message: String) {
-        
+        APESuperHUD.showOrUpdateHUD(icon: .sadFace, message: message, duration: 3.0, presentingView: self.view, completion: nil)
     }
 }

@@ -9,4 +9,8 @@ target 'motovoy' do
   pod 'Alamofire', '~> 4.7'
   pod 'Material'
   pod 'SwiftPhoneNumberFormatter'
+  pod 'IQKeyboardManagerSwift'
+  
+  
+  pod 'APESuperHUD', :git => 'https://github.com/apegroup/APESuperHUD.git'
 end

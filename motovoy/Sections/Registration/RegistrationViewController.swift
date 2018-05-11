@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import APESuperHUD
 
 class RegistrationViewController: UIViewController {
     // outlet's
@@ -24,6 +25,7 @@ class RegistrationViewController: UIViewController {
     
     // actions
     @IBAction func registrationAction(_ sender: Any) {
+        showLoader(show: true)
         let name: String = nameField.text!
         let email: String = emailField.text!
         let phone: String = phoneField.text!
@@ -58,11 +60,15 @@ extension RegistrationViewController {
 
 extension RegistrationViewController: RegistrationView {
     func showLoader(show: Bool) {
-        
+        if show {
+            APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando...", presentingView: self.view)
+        } else {
+            APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+        }
     }
     
     func errorMessage(message: String) {
-        
+        APESuperHUD.showOrUpdateHUD(icon: .sadFace, message: message, duration: 3.0, presentingView: self.view, completion: nil)
     }
     
     func registrationSuccess() {
