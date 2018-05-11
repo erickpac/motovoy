@@ -11,5 +11,5 @@ enum UrlPath: String {
     case register = "/api/auth/register"
     case logout = "/api/logout"
     case confirmationCode = "/api/auth/confirmationCode"
-    case getConfirmationCode = "getConfirmationCode"
+    case getConfirmationCode = "/api/auth/getConfirmationCode"
 }

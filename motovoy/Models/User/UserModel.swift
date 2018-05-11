@@ -1,12 +1,12 @@
 //
-//  LoginModel.swift
+//  UserModel.swift
 //  motovoy
 //
 //  Created by Erick Pac on 5/9/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct Login: LocalMappable {
+struct User: LocalMappable {
     var name: String?
     var mobile: String?
     var email: String?

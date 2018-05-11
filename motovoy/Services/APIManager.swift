@@ -18,13 +18,41 @@ class APIManager {
         guard let urlType = URL(string: urlString) else { return }
         
         var customParams: [String: Any] = params
-        customParams["device_type"] = DEVICE_ID
-        customParams["device_id"] = DEVICE_TYPE
+        customParams["device_type"] = DEVICE_TYPE
+        customParams["device_id"] = DEVICE_ID
         
-        Alamofire.request(urlType, method: .post, parameters: params, encoding: JSONEncoding.default).responseString { (response) in
+        var urlRequest = URLRequest(url: urlType)
+        urlRequest.addValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        urlRequest.httpMethod = "POST"
+        urlRequest.httpBody = try! JSONSerialization.data(withJSONObject: customParams, options: [])
+        
+        Alamofire.request(urlRequest).responseString { (response) in
             switch response.result {
             case .success(let jsonString):
                 onSuccess(T(jsonString: jsonString)!)
+            case .failure(let error):
+                onFailure(error)
+            }
+        }
+    }
+    
+    func postServiceString(urlService: UrlPath, params: [String: Any], onSuccess: @escaping(_ response: String) -> Void, onFailure: @escaping(_ error: Error?) -> Void) -> Void {
+        let urlString: String = URL_SERVICE + urlService.rawValue
+        guard let urlType = URL(string: urlString) else { return }
+        
+        var customParams: [String: Any] = params
+        customParams["device_type"] = DEVICE_TYPE
+        customParams["device_id"] = DEVICE_ID
+        
+        var urlRequest = URLRequest(url: urlType)
+        urlRequest.addValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        urlRequest.httpMethod = "POST"
+        urlRequest.httpBody = try! JSONSerialization.data(withJSONObject: customParams, options: [])
+        
+        Alamofire.request(urlRequest).responseString { (response) in
+            switch response.result {
+            case .success(let jsonString):
+                onSuccess(jsonString)
                 break
             case .failure(let error):
                 onFailure(error)

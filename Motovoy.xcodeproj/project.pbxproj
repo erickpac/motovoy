@@ -29,7 +29,15 @@
 		B9924A5F20A3D2D800021473 /* MotoDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A5E20A3D2D800021473 /* MotoDetailModel.swift */; };
 		B9924A6220A4036200021473 /* MotoBrandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A6120A4036200021473 /* MotoBrandModel.swift */; };
 		B9924A6420A403C800021473 /* MotoModelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A6320A403C800021473 /* MotoModelModel.swift */; };
-		B9924A6720A4067800021473 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A6620A4067800021473 /* LoginModel.swift */; };
+		B9924A6720A4067800021473 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A6620A4067800021473 /* UserModel.swift */; };
+		B9C3CA8720A50B0B0002C124 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8620A50B0B0002C124 /* LoginPresenter.swift */; };
+		B9C3CA8920A50B6B0002C124 /* LoginProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8820A50B6B0002C124 /* LoginProtocolView.swift */; };
+		B9C3CA8B20A51D390002C124 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8A20A51D390002C124 /* UserDefaultsKeys.swift */; };
+		B9C3CA8D20A51D660002C124 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8C20A51D660002C124 /* Utils.swift */; };
+		B9C3CA8F20A525640002C124 /* RegistrationProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8E20A525640002C124 /* RegistrationProtocolView.swift */; };
+		B9C3CA9120A525D40002C124 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA9020A525D40002C124 /* RegistrationPresenter.swift */; };
+		B9F71F2120A53D0200043633 /* RecoverPasswordProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71F2020A53D0200043633 /* RecoverPasswordProtocolView.swift */; };
+		B9F71F2320A53D4000043633 /* RecoverPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71F2220A53D4000043633 /* RecoverPasswordPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +65,15 @@
 		B9924A5E20A3D2D800021473 /* MotoDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotoDetailModel.swift; sourceTree = "<group>"; };
 		B9924A6120A4036200021473 /* MotoBrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotoBrandModel.swift; sourceTree = "<group>"; };
 		B9924A6320A403C800021473 /* MotoModelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotoModelModel.swift; sourceTree = "<group>"; };
-		B9924A6620A4067800021473 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		B9924A6620A4067800021473 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B9C3CA8620A50B0B0002C124 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		B9C3CA8820A50B6B0002C124 /* LoginProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocolView.swift; sourceTree = "<group>"; };
+		B9C3CA8A20A51D390002C124 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		B9C3CA8C20A51D660002C124 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B9C3CA8E20A525640002C124 /* RegistrationProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationProtocolView.swift; sourceTree = "<group>"; };
+		B9C3CA9020A525D40002C124 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		B9F71F2020A53D0200043633 /* RecoverPasswordProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordProtocolView.swift; sourceTree = "<group>"; };
+		B9F71F2220A53D4000043633 /* RecoverPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordPresenter.swift; sourceTree = "<group>"; };
 		C140E38354689D155919E370 /* Pods-motovoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motovoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-motovoy/Pods-motovoy.debug.xcconfig"; sourceTree = "<group>"; };
 		F2DB45D4B8187B125B1108D4 /* Pods-motovoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motovoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-motovoy/Pods-motovoy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +127,7 @@
 				B9924A5820A3CB2100021473 /* Enums */,
 				83570DAD20A4369D0057D63D /* Controls */,
 				83570DA520A414E00057D63D /* Color.swift */,
+				B9C3CA8C20A51D660002C124 /* Utils.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -118,6 +135,8 @@
 		83570DA720A42A1D0057D63D /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				B9C3CA8E20A525640002C124 /* RegistrationProtocolView.swift */,
+				B9C3CA9020A525D40002C124 /* RegistrationPresenter.swift */,
 				83570DA820A42A300057D63D /* RegistrationViewController.swift */,
 			);
 			path = Registration;
@@ -126,6 +145,8 @@
 		83570DAA20A42E1B0057D63D /* LostPassword */ = {
 			isa = PBXGroup;
 			children = (
+				B9F71F2020A53D0200043633 /* RecoverPasswordProtocolView.swift */,
+				B9F71F2220A53D4000043633 /* RecoverPasswordPresenter.swift */,
 				83570DAB20A42E3B0057D63D /* RecoverPasswordViewController.swift */,
 			);
 			path = LostPassword;
@@ -153,7 +174,7 @@
 			children = (
 				B9093A2720A2A911001DF9B2 /* LocalMappable.swift */,
 				B9093A2F20A2B0BB001DF9B2 /* Status */,
-				B9924A6520A4066500021473 /* Login */,
+				B9924A6520A4066500021473 /* User */,
 				B9093A1F20A2A45D001DF9B2 /* Customer */,
 				B9924A5B20A3CEBE00021473 /* Moto */,
 				B9924A6020A4034B00021473 /* Brand */,
@@ -185,6 +206,8 @@
 		B9093A2120A2A66E001DF9B2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				B9C3CA8820A50B6B0002C124 /* LoginProtocolView.swift */,
+				B9C3CA8620A50B0B0002C124 /* LoginPresenter.swift */,
 				B9093A2220A2A683001DF9B2 /* LoginViewController.swift */,
 			);
 			path = Login;
@@ -229,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				B9924A5920A3CB3A00021473 /* UrlPath.swift */,
+				B9C3CA8A20A51D390002C124 /* UserDefaultsKeys.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -251,12 +275,12 @@
 			path = Brand;
 			sourceTree = "<group>";
 		};
-		B9924A6520A4066500021473 /* Login */ = {
+		B9924A6520A4066500021473 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				B9924A6620A4067800021473 /* LoginModel.swift */,
+				B9924A6620A4067800021473 /* UserModel.swift */,
 			);
-			path = Login;
+			path = User;
 			sourceTree = "<group>";
 		};
 		DB61EE5495CF11EB75585C76 /* Frameworks */ = {
@@ -403,21 +427,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9093A2620A2A6AC001DF9B2 /* APIManager.swift in Sources */,
+				B9C3CA8F20A525640002C124 /* RegistrationProtocolView.swift in Sources */,
 				83570DAF20A436AD0057D63D /* PhoneTextField.swift in Sources */,
 				B9093A2A20A2AA23001DF9B2 /* CustomerModel.swift in Sources */,
+				B9C3CA8920A50B6B0002C124 /* LoginProtocolView.swift in Sources */,
 				B9093A2E20A2ACFA001DF9B2 /* CustomerDetailModel.swift in Sources */,
+				B9C3CA8720A50B0B0002C124 /* LoginPresenter.swift in Sources */,
 				B9924A5F20A3D2D800021473 /* MotoDetailModel.swift in Sources */,
+				B9F71F2120A53D0200043633 /* RecoverPasswordProtocolView.swift in Sources */,
 				B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */,
 				B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */,
 				B9924A5A20A3CB3A00021473 /* UrlPath.swift in Sources */,
 				B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */,
 				B9924A5D20A3CED200021473 /* MotoModel.swift in Sources */,
 				B9093A3120A2B0C8001DF9B2 /* StatusModel.swift in Sources */,
-				B9924A6720A4067800021473 /* LoginModel.swift in Sources */,
+				B9924A6720A4067800021473 /* UserModel.swift in Sources */,
 				B9093A2820A2A911001DF9B2 /* LocalMappable.swift in Sources */,
+				B9C3CA8D20A51D660002C124 /* Utils.swift in Sources */,
 				83570DA920A42A300057D63D /* RegistrationViewController.swift in Sources */,
+				B9C3CA8B20A51D390002C124 /* UserDefaultsKeys.swift in Sources */,
+				B9F71F2320A53D4000043633 /* RecoverPasswordPresenter.swift in Sources */,
 				B9924A6220A4036200021473 /* MotoBrandModel.swift in Sources */,
 				B9924A6420A403C800021473 /* MotoModelModel.swift in Sources */,
+				B9C3CA9120A525D40002C124 /* RegistrationPresenter.swift in Sources */,
 				8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */,
 				83570DAC20A42E3B0057D63D /* RecoverPasswordViewController.swift in Sources */,
 				83570DA620A414E00057D63D /* Color.swift in Sources */,
@@ -563,10 +595,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 264Z4X7CV7;
+				DEVELOPMENT_TEAM = AUFZ67XMVW;
 				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nextdots.motovoy-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -579,10 +611,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 264Z4X7CV7;
+				DEVELOPMENT_TEAM = AUFZ67XMVW;
 				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nextdots.motovoy-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
