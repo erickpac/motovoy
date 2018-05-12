@@ -1,34 +1,33 @@
 //
-//  BikeSelectionViewController.swift
+//  OptionSelectionAlertViewController.swift
 //  motovoy
 //
-//  Created by Jose Quintero on 5/10/18.
+//  Created by Jose Quintero on 5/11/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
 import UIKit
 import Material
 
-class BikeSelectionViewController: UIViewController {
-
+class OptionSelectionAlertViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cardView: NavigationShadowedView!
     @IBOutlet var centerConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var button: UIButton!
+    
     var modalTitle: String? = "SELECCIONAR MOTO"
     var buttonTitle: String? = "ANADIR NUEVA MOTO"
     
-    var delegate: BikeSelectionDelegate? = nil
-    var data: [Moto]! {
+    var delegate: (() -> ())? = nil
+    var data: [String]! {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
         }
     }
-
-}
-
-extension BikeSelectionViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -38,6 +37,12 @@ extension BikeSelectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAlert()
+        configureTitles()
+    }
+    
+    func configureTitles() {
+        titleLabel.text = modalTitle
+        button.setTitle(buttonTitle, for: .normal)
     }
     
     func configureAlert() {
@@ -67,7 +72,7 @@ extension BikeSelectionViewController {
     
     @IBAction func createBike() {
         UIView.animate(withDuration: 0.3, animations: {
-            self.delegate?.createBike()
+//            self.delegate?.createBike()
             self.view.backgroundColor = UIColor.darkGray.withAlphaComponent(0)
             self.centerConstraint.constant = 500
             self.view.layoutIfNeeded()
@@ -77,10 +82,6 @@ extension BikeSelectionViewController {
             }
         }
     }
-    
-}
-
-extension BikeSelectionViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -92,13 +93,13 @@ extension BikeSelectionViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BikeSelection") as? BikeSelectionTableViewCell
-        cell?.data = data[indexPath.row]
+//        cell?.data = data[indexPath.row]
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let moto = data[indexPath.row]
-        delegate?.didSelect(bike: moto)
+//        let moto = data[indexPath.row]
+//        delegate?.didSelect(bike: moto)
     }
     
 }
