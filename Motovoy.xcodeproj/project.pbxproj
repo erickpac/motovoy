@@ -213,9 +213,16 @@
 			children = (
 				B969496220A68A7A005B75F7 /* MainGarageProtocolView.swift */,
 				83CD110520A65686006BB4B9 /* BikeCreation */,
-				83654CAB20A513E2009EE1E6 /* MainGarageViewController.swift */,
 			);
 			path = Garage;
+			sourceTree = "<group>";
+		};
+		83A19DF320A6BCF900AC980F /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				83654CAB20A513E2009EE1E6 /* MainGarageViewController.swift */,
+			);
+			path = Reservation;
 			sourceTree = "<group>";
 		};
 		83CD10EB20A5527A006BB4B9 /* Alerts */ = {
@@ -300,6 +307,7 @@
 		B9093A2020A2A667001DF9B2 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				83A19DF320A6BCF900AC980F /* Reservation */,
 				B969496420A68AC2005B75F7 /* Moto */,
 				83CD10EB20A5527A006BB4B9 /* Alerts */,
 				83654CAA20A513CE009EE1E6 /* Garage */,
