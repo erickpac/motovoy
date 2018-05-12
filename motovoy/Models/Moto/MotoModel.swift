@@ -12,7 +12,7 @@ struct Moto: Codable {
     var detailId: Int?
     var name: String?
     var matricula: String?
-    var numBastidor: Int?
+    var numBastidor: String?
     var matriculationDate: String?
     var insurance: String?
     var insuranceEndDate: String?
