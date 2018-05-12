@@ -6,7 +6,11 @@
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-protocol MainGarageView {
+protocol GarageView {
     func showLoader(show: Bool)
     func errorMessage(message: String)
+    func getBikeSuccess(bikes: [Bike])
+    func getHistorySuccess()
+    func updateBikeSuccess()
+    func deleteBikeSuccess()
 }

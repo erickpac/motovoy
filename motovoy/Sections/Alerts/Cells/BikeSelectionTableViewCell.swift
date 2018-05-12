@@ -12,7 +12,7 @@ class BikeSelectionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
     
-    var data: Moto! {
+    var data: Bike! {
         didSet {
             label.text = data.name ?? "{{moto_name}}"
         }

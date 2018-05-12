@@ -19,7 +19,7 @@ class BikeSelectionViewController: UIViewController {
     var buttonTitle: String? = "ANADIR NUEVA MOTO"
     
     var delegate: BikeSelectionDelegate? = nil
-    var data: [Moto]! {
+    var data: [Bike]! {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self

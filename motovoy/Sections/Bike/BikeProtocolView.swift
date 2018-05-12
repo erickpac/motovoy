@@ -9,5 +9,5 @@
 protocol BikeView {
     func showLoader(show: Bool)
     func errorMessage(message: String)
-    func getBikeSuccess(brandResources: BrandResources)
+    func getBikeResourcesSuccess(brandResources: BrandResources)
 }

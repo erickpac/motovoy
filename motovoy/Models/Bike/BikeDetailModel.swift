@@ -1,12 +1,12 @@
 //
-//  MotoDetailModel.swift
+//  BikeDetailModel.swift
 //  motovoy
 //
 //  Created by Erick Pac on 5/9/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct MotoDetail: Codable {
+struct BikeDetail: Codable {
     var id: Int?
     var motoModelId: Int?
     var motoCategoryId: Int?
@@ -173,7 +173,7 @@ struct MotoDetail: Codable {
     var createdAt: String?
     var updatedAt: String?
     var deletedAt: String?
-    var motoModel: MotoModel?
+    var motoModel: BikeModel?
     
     enum CodingKeys: String, CodingKey {
         case id

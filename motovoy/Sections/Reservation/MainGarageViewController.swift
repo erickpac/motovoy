@@ -9,7 +9,7 @@
 import UIKit
 
 protocol BikeSelectionDelegate {
-    func didSelect(bike: Moto)
+    func didSelect(bike: Bike)
     func createBike()
 }
 
@@ -17,7 +17,7 @@ class MainGarageViewController: UIViewController {
 
     @IBOutlet weak var mainLabel: ActiveLabel!
     
-    var currentBike: Moto? = nil
+    var currentBike: Bike? = nil
     var currentServices: [String] = ["servicio"]
 
 }
@@ -74,7 +74,7 @@ extension MainGarageViewController {
 
 extension MainGarageViewController: BikeSelectionDelegate {
     
-    func didSelect(bike: Moto) {
+    func didSelect(bike: Bike) {
         self.currentBike = bike
     }
     
