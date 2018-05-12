@@ -6,8 +6,6 @@
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-import Foundation
-
 class LoginPresenter {
     fileprivate let apiManager: APIManager
     fileprivate var loginView: LoginView?
@@ -50,8 +48,8 @@ class LoginPresenter {
                 }
             }
         }) { (error) in
-            print("error -> \(error.debugDescription)")
             self.loginView?.showLoader(show: false)
+            self.loginView?.errorMessage(message: error.debugDescription)
         }
     }
 }

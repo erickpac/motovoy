@@ -9,6 +9,8 @@
 import Foundation
 
 class Utils {
+    static var currentUser: User?
+    
     static func saveInUserDefaults(key: UserDefaultsKeys, data: Any) -> Bool {
         let userDefaults = UserDefaults.standard
         userDefaults.set(data, forKey: key.rawValue)
@@ -22,5 +24,19 @@ class Utils {
         }
         
         return nil
+    }
+    
+    static func getLoggedUser() -> User? {
+        guard let _  = currentUser else {
+            if let userString = Utils.getFromUserDefaults(key: UserDefaultsKeys.USER_KEY) as? String {
+                if let user = User(jsonString: userString) {
+                    currentUser = user
+                }
+            }
+            
+            return currentUser
+        }
+        
+        return currentUser
     }
 }

@@ -53,10 +53,25 @@ class APIManager {
             switch response.result {
             case .success(let jsonString):
                 onSuccess(jsonString)
-                break
             case .failure(let error):
                 onFailure(error)
-                break
+            }
+        }
+    }
+    
+    func getServiceModel<T: LocalMappable>(urlService: UrlPath, onSuccess: @escaping(_ response: T) -> Void, onFailure: @escaping(_ error: Error?) -> Void) -> Void {
+        let urlString: String = URL_SERVICE + urlService.rawValue
+        guard let urlType = URL(string: urlString) else { return }
+        
+        var urlRequest = URLRequest(url: urlType)
+        urlRequest.httpMethod = "GET"
+        
+        Alamofire.request(urlRequest).responseString { (response) in
+            switch response.result {
+            case .success(let jsonString):
+                onSuccess(T(jsonString: jsonString)!)
+            case .failure(let error):
+                onFailure(error)
             }
         }
     }

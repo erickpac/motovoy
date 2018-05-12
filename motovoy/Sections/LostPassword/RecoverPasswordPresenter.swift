@@ -6,8 +6,6 @@
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-import Foundation
-
 class RecoverPasswordPresenter {
     fileprivate let apiManager: APIManager
     fileprivate var recoverPasswordView: RecoverPasswordView?
@@ -40,8 +38,8 @@ class RecoverPasswordPresenter {
                 }
             }
         }) { (error) in
-            print("error -> \(error.debugDescription)")
             self.recoverPasswordView?.showLoader(show: false)
+            self.recoverPasswordView?.errorMessage(message: error.debugDescription)
         }
     }
 }
