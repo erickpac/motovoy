@@ -59,6 +59,9 @@
 		B9C3CA8D20A51D660002C124 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8C20A51D660002C124 /* Utils.swift */; };
 		B9C3CA8F20A525640002C124 /* RegistrationProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8E20A525640002C124 /* RegistrationProtocolView.swift */; };
 		B9C3CA9120A525D40002C124 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA9020A525D40002C124 /* RegistrationPresenter.swift */; };
+		B9ECC8CD20A6C05B00EBC8EC /* BikeSubmodelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8CC20A6C05B00EBC8EC /* BikeSubmodelModel.swift */; };
+		B9ECC8CF20A6C15E00EBC8EC /* BikeVehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8CE20A6C15E00EBC8EC /* BikeVehicleModel.swift */; };
+		B9ECC8D120A6C25A00EBC8EC /* GaragePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */; };
 		B9F71F2120A53D0200043633 /* RecoverPasswordProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71F2020A53D0200043633 /* RecoverPasswordProtocolView.swift */; };
 		B9F71F2320A53D4000043633 /* RecoverPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71F2220A53D4000043633 /* RecoverPasswordPresenter.swift */; };
 /* End PBXBuildFile section */
@@ -118,6 +121,9 @@
 		B9C3CA8C20A51D660002C124 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B9C3CA8E20A525640002C124 /* RegistrationProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationProtocolView.swift; sourceTree = "<group>"; };
 		B9C3CA9020A525D40002C124 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		B9ECC8CC20A6C05B00EBC8EC /* BikeSubmodelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeSubmodelModel.swift; sourceTree = "<group>"; };
+		B9ECC8CE20A6C15E00EBC8EC /* BikeVehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeVehicleModel.swift; sourceTree = "<group>"; };
+		B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaragePresenter.swift; sourceTree = "<group>"; };
 		B9F71F2020A53D0200043633 /* RecoverPasswordProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordProtocolView.swift; sourceTree = "<group>"; };
 		B9F71F2220A53D4000043633 /* RecoverPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordPresenter.swift; sourceTree = "<group>"; };
 		C140E38354689D155919E370 /* Pods-motovoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-motovoy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-motovoy/Pods-motovoy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				B969496220A68A7A005B75F7 /* GarageProtocolView.swift */,
+				B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */,
 			);
 			path = Garage;
 			sourceTree = "<group>";
@@ -382,6 +389,8 @@
 				B9924A5C20A3CED200021473 /* BikeModel.swift */,
 				B9924A5E20A3D2D800021473 /* BikeDetailModel.swift */,
 				B9924A6320A403C800021473 /* BikeModelModel.swift */,
+				B9ECC8CC20A6C05B00EBC8EC /* BikeSubmodelModel.swift */,
+				B9ECC8CE20A6C15E00EBC8EC /* BikeVehicleModel.swift */,
 				B9924A6120A4036200021473 /* BikeBrandModel.swift */,
 			);
 			path = Bike;
@@ -543,6 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9093A2620A2A6AC001DF9B2 /* APIManager.swift in Sources */,
+				B9ECC8D120A6C25A00EBC8EC /* GaragePresenter.swift in Sources */,
 				83654CA920A50BD7009EE1E6 /* NavigationShadowedView.swift in Sources */,
 				B9C3CA8F20A525640002C124 /* RegistrationProtocolView.swift in Sources */,
 				83570DAF20A436AD0057D63D /* PhoneTextField.swift in Sources */,
@@ -567,6 +577,7 @@
 				B9924A5D20A3CED200021473 /* BikeModel.swift in Sources */,
 				83654CAC20A513E2009EE1E6 /* MainGarageViewController.swift in Sources */,
 				B914ED9220A66245009A9291 /* BrandResourcesModel.swift in Sources */,
+				B9ECC8CF20A6C15E00EBC8EC /* BikeVehicleModel.swift in Sources */,
 				B914ED9020A661CC009A9291 /* BrandCategoryModel.swift in Sources */,
 				B9093A3120A2B0C8001DF9B2 /* StatusModel.swift in Sources */,
 				83CD10ED20A5528E006BB4B9 /* BikeSelectionViewController.swift in Sources */,
@@ -583,6 +594,7 @@
 				B9F71F2320A53D4000043633 /* RecoverPasswordPresenter.swift in Sources */,
 				B9924A6220A4036200021473 /* BikeBrandModel.swift in Sources */,
 				B9924A6420A403C800021473 /* BikeModelModel.swift in Sources */,
+				B9ECC8CD20A6C05B00EBC8EC /* BikeSubmodelModel.swift in Sources */,
 				B9C3CA9120A525D40002C124 /* RegistrationPresenter.swift in Sources */,
 				8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */,
 				83570DAC20A42E3B0057D63D /* RecoverPasswordViewController.swift in Sources */,
