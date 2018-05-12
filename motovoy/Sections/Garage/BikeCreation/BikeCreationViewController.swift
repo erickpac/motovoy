@@ -45,28 +45,27 @@ extension BikeCreationViewController {
         yearField.dividerActiveColor = UIColor.lightGray
         plateField.dividerActiveColor = UIColor.lightGray
         
-        brandField.delegate = self
-        modelField.delegate = self
-        cilinderField.delegate = self
-        yearField.delegate = self
+        brandField.inputView = UIView()
+        modelField.inputView = UIView()
+        cilinderField.inputView = UIView()
+        yearField.inputView = UIView()
     }
     
 }
 
 extension BikeCreationViewController: UITextFieldDelegate {
     
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        let presentPicker: () -> Bool =  {
-            self.performSegue(withIdentifier: "OptionSelectionSegue", sender: textField);
-            return false;
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let presentPicker: () -> () =  {
+            self.performSegue(withIdentifier: "OptionSelectionSegue", sender: textField)
         }
         
         switch textField {
-        case brandField: return presentPicker()
-        case modelField: return presentPicker()
-        case cilinderField: return presentPicker()
-        case yearField: return presentPicker()
-        default: return true
+        case brandField: presentPicker()
+        case modelField: presentPicker()
+        case cilinderField: presentPicker()
+        case yearField: presentPicker()
+        default: break;
         }
     }
     
@@ -74,10 +73,18 @@ extension BikeCreationViewController: UITextFieldDelegate {
         if segue.identifier == "OptionSelectionSegue" {
             let viewController = segue.destination as! OptionSelectionAlertViewController
             switch (sender as! TextField) {
-            case brandField: return viewController.modalTitle = "MARCA"
-            case modelField: return viewController.modalTitle = "MODELO"
-            case cilinderField: return viewController.modalTitle = "CILINDRAJE"
-            case yearField: return viewController.modalTitle = "AñO".uppercased()
+            case brandField:
+                viewController.modalTitle = "MARCA"
+                break;
+            case modelField:
+                viewController.modalTitle = "MODELO"
+                break;
+            case cilinderField:
+                viewController.modalTitle = "CILINDRAJE"
+                break;
+            case yearField:
+                viewController.modalTitle = "AñO".uppercased()
+                break;
             default: break;
             }
         }
