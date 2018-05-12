@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol BikeSelectionDelegate {
+    func didSelect(bike: Moto)
+    func createBike()
+}
+
 class MainGarageViewController: UIViewController {
 
     @IBOutlet weak var mainLabel: ActiveLabel!
@@ -71,6 +76,10 @@ extension MainGarageViewController: BikeSelectionDelegate {
     
     func didSelect(bike: Moto) {
         self.currentBike = bike
+    }
+    
+    func createBike() {
+        performSegue(withIdentifier: "BikeCreationSegue", sender: nil)
     }
     
 }

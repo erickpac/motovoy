@@ -27,6 +27,14 @@
             </objects>
             <point key="canvasLocation" x="-18" y="-65"/>
         </scene>
+        <!--BikeCreation-->
+        <scene sceneID="hm9-H5-tJm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Garage" referencedIdentifier="BikeCreation" id="eRb-gi-1xO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ExX-rp-pn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="-2197"/>
+        </scene>
         <!--BikeSelection-->
         <scene sceneID="ICH-lY-9xa">
             <objects>
@@ -164,6 +172,7 @@ en Barcelona.</string>
                     <connections>
                         <outlet property="mainLabel" destination="YNI-sm-Yvk" id="yZB-CM-5Og"/>
                         <segue destination="Rbp-0s-tc5" kind="presentation" identifier="BikeSelectionSegue" animates="NO" id="WKk-Ld-qYJ"/>
+                        <segue destination="eRb-gi-1xO" kind="show" identifier="BikeCreationSegue" id="Yos-AI-VMR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDw-SS-FrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
