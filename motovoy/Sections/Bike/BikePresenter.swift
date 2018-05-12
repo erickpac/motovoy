@@ -24,7 +24,7 @@ class BikePresenter {
     
     func getBrands(phone: String) -> Void {
         apiManager.getServiceModel(urlService: UrlPath.brandResources, onSuccess: { (brands: BrandResources) in
-            self.bikeView?.getBikeSuccess(brandResources: brands)
+            self.bikeView?.getBikeResourcesSuccess(brandResources: brands)
         }) { (error) in
             
         }

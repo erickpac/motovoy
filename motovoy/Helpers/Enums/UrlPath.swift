@@ -14,4 +14,6 @@ enum UrlPath: String {
     case getConfirmationCode = "/api/auth/getConfirmationCode"
     case brandResources = "/json/resources.json"
     case addEditBike = "/api/motos/addEditMoto"
+    case getBikes = "/api/motos/getMotos"
+    case deleteBike = "/api/motos/delete"
 }

@@ -34,6 +34,7 @@ struct BrandWorkshop: Codable {
         case country
         case phone
         case email
+        case cif
         case lat
         case lng
         case description

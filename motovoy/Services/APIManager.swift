@@ -12,6 +12,7 @@ class APIManager {
     let URL_SERVICE = "https://backend.motovoy.com"
     let DEVICE_TYPE = "iOS"
     let DEVICE_ID = "1"
+    let API_VERSION = "1"
     
     func postServiceModel<T: LocalMappable>(urlService: UrlPath, params: [String: Any], onSuccess: @escaping(_ response: T) -> Void, onFailure: @escaping(_ error: Error?) -> Void) -> Void {
         let urlString: String = URL_SERVICE + urlService.rawValue
@@ -20,6 +21,7 @@ class APIManager {
         var customParams: [String: Any] = params
         customParams["device_type"] = DEVICE_TYPE
         customParams["device_id"] = DEVICE_ID
+        customParams["api_version"] = API_VERSION
         
         var urlRequest = URLRequest(url: urlType)
         urlRequest.addValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
@@ -43,6 +45,7 @@ class APIManager {
         var customParams: [String: Any] = params
         customParams["device_type"] = DEVICE_TYPE
         customParams["device_id"] = DEVICE_ID
+        customParams["api_version"] = API_VERSION
         
         var urlRequest = URLRequest(url: urlType)
         urlRequest.addValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
