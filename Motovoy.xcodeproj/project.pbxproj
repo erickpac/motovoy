@@ -36,6 +36,12 @@
 		B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A2B20A2AA78001DF9B2 /* CustomerCreditCardModel.swift */; };
 		B9093A2E20A2ACFA001DF9B2 /* CustomerDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A2D20A2ACFA001DF9B2 /* CustomerDetailModel.swift */; };
 		B9093A3120A2B0C8001DF9B2 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A3020A2B0C8001DF9B2 /* StatusModel.swift */; };
+		B914ED8E20A66177009A9291 /* BrandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B914ED8D20A66177009A9291 /* BrandModel.swift */; };
+		B914ED9020A661CC009A9291 /* BrandCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B914ED8F20A661CC009A9291 /* BrandCategoryModel.swift */; };
+		B914ED9220A66245009A9291 /* BrandResourcesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B914ED9120A66245009A9291 /* BrandResourcesModel.swift */; };
+		B914ED9420A662F9009A9291 /* BrandWorkshopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B914ED9320A662F9009A9291 /* BrandWorkshopModel.swift */; };
+		B914ED9620A678D1009A9291 /* BrandVehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B914ED9520A678D1009A9291 /* BrandVehicleModel.swift */; };
+		B914ED9820A678FD009A9291 /* BrandModelObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B914ED9720A678FD009A9291 /* BrandModelObjectModel.swift */; };
 		B9924A5A20A3CB3A00021473 /* UrlPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A5920A3CB3A00021473 /* UrlPath.swift */; };
 		B9924A5D20A3CED200021473 /* MotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A5C20A3CED200021473 /* MotoModel.swift */; };
 		B9924A5F20A3D2D800021473 /* MotoDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A5E20A3D2D800021473 /* MotoDetailModel.swift */; };
@@ -83,6 +89,12 @@
 		B9093A2B20A2AA78001DF9B2 /* CustomerCreditCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCreditCardModel.swift; sourceTree = "<group>"; };
 		B9093A2D20A2ACFA001DF9B2 /* CustomerDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailModel.swift; sourceTree = "<group>"; };
 		B9093A3020A2B0C8001DF9B2 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
+		B914ED8D20A66177009A9291 /* BrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandModel.swift; sourceTree = "<group>"; };
+		B914ED8F20A661CC009A9291 /* BrandCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCategoryModel.swift; sourceTree = "<group>"; };
+		B914ED9120A66245009A9291 /* BrandResourcesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandResourcesModel.swift; sourceTree = "<group>"; };
+		B914ED9320A662F9009A9291 /* BrandWorkshopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandWorkshopModel.swift; sourceTree = "<group>"; };
+		B914ED9520A678D1009A9291 /* BrandVehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandVehicleModel.swift; sourceTree = "<group>"; };
+		B914ED9720A678FD009A9291 /* BrandModelObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandModelObjectModel.swift; sourceTree = "<group>"; };
 		B9924A5920A3CB3A00021473 /* UrlPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlPath.swift; sourceTree = "<group>"; };
 		B9924A5C20A3CED200021473 /* MotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotoModel.swift; sourceTree = "<group>"; };
 		B9924A5E20A3D2D800021473 /* MotoDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotoDetailModel.swift; sourceTree = "<group>"; };
@@ -344,6 +356,12 @@
 		B9924A6020A4034B00021473 /* Brand */ = {
 			isa = PBXGroup;
 			children = (
+				B914ED9120A66245009A9291 /* BrandResourcesModel.swift */,
+				B914ED8F20A661CC009A9291 /* BrandCategoryModel.swift */,
+				B914ED8D20A66177009A9291 /* BrandModel.swift */,
+				B914ED9720A678FD009A9291 /* BrandModelObjectModel.swift */,
+				B914ED9520A678D1009A9291 /* BrandVehicleModel.swift */,
+				B914ED9320A662F9009A9291 /* BrandWorkshopModel.swift */,
 			);
 			path = Brand;
 			sourceTree = "<group>";
@@ -505,16 +523,22 @@
 				B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */,
 				B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */,
 				B9924A5A20A3CB3A00021473 /* UrlPath.swift in Sources */,
+				B914ED9820A678FD009A9291 /* BrandModelObjectModel.swift in Sources */,
 				B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */,
 				B9924A5D20A3CED200021473 /* MotoModel.swift in Sources */,
 				83654CAC20A513E2009EE1E6 /* MainGarageViewController.swift in Sources */,
+				B914ED9220A66245009A9291 /* BrandResourcesModel.swift in Sources */,
+				B914ED9020A661CC009A9291 /* BrandCategoryModel.swift in Sources */,
 				B9093A3120A2B0C8001DF9B2 /* StatusModel.swift in Sources */,
 				83CD10ED20A5528E006BB4B9 /* BikeSelectionViewController.swift in Sources */,
 				B9093A2820A2A911001DF9B2 /* LocalMappable.swift in Sources */,
+				B914ED9420A662F9009A9291 /* BrandWorkshopModel.swift in Sources */,
 				B9C3CA8D20A51D660002C124 /* Utils.swift in Sources */,
 				83CD10FF20A562AD006BB4B9 /* ActiveBuilder.swift in Sources */,
 				83CD10F420A560E3006BB4B9 /* UserModel.swift in Sources */,
 				83CD110020A562AD006BB4B9 /* ActiveType.swift in Sources */,
+				B914ED8E20A66177009A9291 /* BrandModel.swift in Sources */,
+				B914ED9620A678D1009A9291 /* BrandVehicleModel.swift in Sources */,
 				83570DA920A42A300057D63D /* RegistrationViewController.swift in Sources */,
 				B9C3CA8B20A51D390002C124 /* UserDefaultsKeys.swift in Sources */,
 				B9F71F2320A53D4000043633 /* RecoverPasswordPresenter.swift in Sources */,
