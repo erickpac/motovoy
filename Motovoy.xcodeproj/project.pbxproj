@@ -45,6 +45,8 @@
 		B914ED9420A662F9009A9291 /* BrandWorkshopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B914ED9320A662F9009A9291 /* BrandWorkshopModel.swift */; };
 		B914ED9620A678D1009A9291 /* BrandVehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B914ED9520A678D1009A9291 /* BrandVehicleModel.swift */; };
 		B914ED9820A678FD009A9291 /* BrandModelObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B914ED9720A678FD009A9291 /* BrandModelObjectModel.swift */; };
+		B958836820A6CEE700FE38E5 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B958836720A6CEE700FE38E5 /* NotificationModel.swift */; };
+		B958837020A6D84600FE38E5 /* NotificationCustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B958836F20A6D84600FE38E5 /* NotificationCustomerModel.swift */; };
 		B969496320A68A7A005B75F7 /* GarageProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969496220A68A7A005B75F7 /* GarageProtocolView.swift */; };
 		B969496620A68AD2005B75F7 /* BikeProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969496520A68AD2005B75F7 /* BikeProtocolView.swift */; };
 		B969496820A68AF6005B75F7 /* BikePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969496720A68AF6005B75F7 /* BikePresenter.swift */; };
@@ -107,6 +109,8 @@
 		B914ED9320A662F9009A9291 /* BrandWorkshopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandWorkshopModel.swift; sourceTree = "<group>"; };
 		B914ED9520A678D1009A9291 /* BrandVehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandVehicleModel.swift; sourceTree = "<group>"; };
 		B914ED9720A678FD009A9291 /* BrandModelObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandModelObjectModel.swift; sourceTree = "<group>"; };
+		B958836720A6CEE700FE38E5 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		B958836F20A6D84600FE38E5 /* NotificationCustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCustomerModel.swift; sourceTree = "<group>"; };
 		B969496220A68A7A005B75F7 /* GarageProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageProtocolView.swift; sourceTree = "<group>"; };
 		B969496520A68AD2005B75F7 /* BikeProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeProtocolView.swift; sourceTree = "<group>"; };
 		B969496720A68AF6005B75F7 /* BikePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikePresenter.swift; sourceTree = "<group>"; };
@@ -287,6 +291,7 @@
 				B9093A1F20A2A45D001DF9B2 /* Customer */,
 				B9924A5B20A3CEBE00021473 /* Bike */,
 				B9924A6020A4034B00021473 /* Brand */,
+				B958836620A6CECE00FE38E5 /* Notifications */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -340,6 +345,15 @@
 				B9093A3020A2B0C8001DF9B2 /* StatusModel.swift */,
 			);
 			path = Status;
+			sourceTree = "<group>";
+		};
+		B958836620A6CECE00FE38E5 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				B958836720A6CEE700FE38E5 /* NotificationModel.swift */,
+				B958836F20A6D84600FE38E5 /* NotificationCustomerModel.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		B969496420A68AC2005B75F7 /* Bike */ = {
@@ -566,6 +580,7 @@
 				83CD10FE20A562AD006BB4B9 /* StringTrimExtension.swift in Sources */,
 				83CD110920A65AE4006BB4B9 /* OptionSelectionAlertViewController.swift in Sources */,
 				B9924A5F20A3D2D800021473 /* BikeDetailModel.swift in Sources */,
+				B958836820A6CEE700FE38E5 /* NotificationModel.swift in Sources */,
 				B969496820A68AF6005B75F7 /* BikePresenter.swift in Sources */,
 				B9F71F2120A53D0200043633 /* RecoverPasswordProtocolView.swift in Sources */,
 				B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */,
@@ -582,6 +597,7 @@
 				B9093A3120A2B0C8001DF9B2 /* StatusModel.swift in Sources */,
 				83CD10ED20A5528E006BB4B9 /* BikeSelectionViewController.swift in Sources */,
 				B9093A2820A2A911001DF9B2 /* LocalMappable.swift in Sources */,
+				B958837020A6D84600FE38E5 /* NotificationCustomerModel.swift in Sources */,
 				B914ED9420A662F9009A9291 /* BrandWorkshopModel.swift in Sources */,
 				B9C3CA8D20A51D660002C124 /* Utils.swift in Sources */,
 				83CD10FF20A562AD006BB4B9 /* ActiveBuilder.swift in Sources */,
@@ -767,10 +783,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 264Z4X7CV7;
+				DEVELOPMENT_TEAM = AUFZ67XMVW;
 				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.persona;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -783,10 +799,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 264Z4X7CV7;
+				DEVELOPMENT_TEAM = AUFZ67XMVW;
 				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.persona;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
