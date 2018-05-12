@@ -1,5 +1,5 @@
 //
-//  MainGarageProtocolView.swift
+//  GarageProtocolView.swift
 //  motovoy
 //
 //  Created by Erick Pac on 5/11/18.
