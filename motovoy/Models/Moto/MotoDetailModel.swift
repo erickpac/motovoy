@@ -13,7 +13,7 @@ struct MotoDetail: Codable {
     var validated: Int?
     var generalName: String?
     var generalType: String?
-    var generalLicenseType: String?
+    var generalLicenseType: Int?
     var generalSeats: Int?
     var generalYearStart: Int?
     var generalYearEnd: Int?
@@ -32,18 +32,18 @@ struct MotoDetail: Codable {
     var motorCylinders: Int?
     var motorValves: Int?
     var motorFeeding: Int?
-    var motorRefrigeration: Int?
-    var motorDiameterPerRace: Int?
-    var motorCompression: Int?
-    var motorMaxPower: Int?
-    var motorDeclaredMaxPair: Int?
+    var motorRefrigeration: String?
+    var motorDiameterPerRace: String?
+    var motorCompression: String?
+    var motorMaxPower: String?
+    var motorDeclaredMaxPair: String?
     var motorGas: Int?
     var motorAntipollutionRegulation: Int?
     var motorLimitation: Int?
     var motorAirFilterMaterial: Int?
     var ignitionIgnition: Int?
     var ignitionBattery: Int?
-    var transmisionGear: Int?
+    var transmisionGear: String?
     var transmisionSecondaryTransmition: Int?
     var transmisionTransmitionSwitch: Int?
     var transmisionGearNum: Int?
@@ -55,31 +55,31 @@ struct MotoDetail: Codable {
     var transmisionRelation4: Int?
     var transmisionRelation5: Int?
     var transmisionRelation6: Int?
-    var cyclePartChasis: Int?
-    var cyclePartFrontSuspensionType: Int?
+    var cyclePartChasis: String?
+    var cyclePartFrontSuspensionType: String?
     var cyclePartFrontSuspensionBarDiameter: Int?
     var cyclePartFrontSuspensionPath: Int?
-    var cyclePartRearSuspensionRocker: Int?
-    var cyclePartRearSuspensionType: Int?
+    var cyclePartRearSuspensionRocker: String?
+    var cyclePartRearSuspensionType: String?
     var cyclePartRearSuspensionPath: Int?
-    var cyclePartRearSuspensionRegulations: Int?
+    var cyclePartRearSuspensionRegulations: String?
     var cyclePartRearSuspensionAbs: Int?
     var cyclePartFrontBrakeSystem: Int?
     var cyclePartFrontBrakeNumber: Int?
     var cyclePartFrontBrakeDiscDiameter: Int?
     var cyclePartFrontBrakeAncoragePin: Int?
-    var cyclePartFrontBrakePinBrake: Int?
+    var cyclePartFrontBrakePinBrake: String?
     var cyclePartRearBrakeSystem: Int?
     var cyclePartRearBrakeNumber: Int?
     var cyclePartRearBrakeDiscDiameter: Int?
     var cyclePartRearBrakePinBrake: Int?
     var cyclePartFrontWheelTireDiameter: Int?
-    var cyclePartFrontWheelTireThroat: Int?
-    var cyclePartFrontWheelTireMaterial: Int?
+    var cyclePartFrontWheelTireThroat: String?
+    var cyclePartFrontWheelTireMaterial: String?
     var cyclePartFrontWheelPneumaticType: Int?
-    var cyclePartFrontWheelPneumaticBrand: Int?
-    var cyclePartFrontWheelPneumaticModel: Int?
-    var cyclePartFrontWheelWidth: Int?
+    var cyclePartFrontWheelPneumaticBrand: String?
+    var cyclePartFrontWheelPneumaticModel: String?
+    var cyclePartFrontWheelWidth: String?
     var cyclePartFrontWheelHeight: Int?
     var cyclePartFrontWheelDiameter: Int?
     var cyclePartFrontWheelWeight: Int?
@@ -87,12 +87,12 @@ struct MotoDetail: Codable {
     var cyclePartFrontWheelPneumaticPressure: Int?
     var cyclePartFrontWheelPneumaticNumber: Int?
     var cyclePartRearWheelTireDiameter: Int?
-    var cyclePartRearWheelTireThroat: Int?
-    var cyclePartRearWheelTireMaterial: Int?
+    var cyclePartRearWheelTireThroat: String?
+    var cyclePartRearWheelTireMaterial: String?
     var cyclePartRearWheelPneumaticType: Int?
-    var cyclePartRearWheelPneumaticBrand: Int?
-    var cyclePartRearWheelPneumaticModel: Int?
-    var cyclePartRearWheelWidth: Int?
+    var cyclePartRearWheelPneumaticBrand: String?
+    var cyclePartRearWheelPneumaticModel: String?
+    var cyclePartRearWheelWidth: String?
     var cyclePartRearWheelHeight: Int?
     var cyclePartRearWheelDiameter: Int?
     var cyclePartRearWheelWeight: Int?
