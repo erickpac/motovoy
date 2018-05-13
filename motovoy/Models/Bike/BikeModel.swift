@@ -6,46 +6,24 @@
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct Bike: Codable {
-    var id: Int?
-    var customerId: Int?
-    var detailId: Int?
+struct Bike: LocalMappable {
     var name: String?
-    var matricula: String?
-    var numBastidor: String?
-    var matriculationDate: String?
-    var insurance: String?
-    var insuranceEndDate: String?
-    var insuranceType: String?
-    var lastRevision: String?
-    var nextRevision: String?
-    var lastItv: String?
-    var itvEndDate: String?
-    var createdAt: String?
-    var updatedAt: String?
-    var deletedAt: String?
-    var detail: BikeDetail?
-    var subModel: Int?
+    var mobile: String?
+    var email: String?
+    var userId: Int?
+    var nif: String?
+    var creditCards: [CustomerCreditCard]?
+    var status: Status?
+    var moto: [BikeBody]?
     
     enum CodingKeys: String, CodingKey {
-        case id
-        case customerId = "client_id"
-        case detailId = "vehicle_id"
         case name
-        case matricula
-        case numBastidor = "num_bastidor"
-        case matriculationDate = "matriculation_date"
-        case insurance
-        case insuranceEndDate = "insurance_end_date"
-        case insuranceType = "insurance_type"
-        case lastRevision = "last_revision"
-        case nextRevision = "next_revision"
-        case lastItv = "last_itv"
-        case itvEndDate = "itv_end_date"
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
-        case deletedAt = "deleted_at"
-        case detail = "vehicle"
-        case subModel = "Submodel"
+        case mobile
+        case email
+        case userId = "user_id"
+        case nif
+        case creditCards = "credit_cards"
+        case status
+        case moto
     }
 }

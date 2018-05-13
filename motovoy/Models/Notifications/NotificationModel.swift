@@ -6,24 +6,24 @@
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct Notification: Codable {
-    var id: Int?
-    var type: String?
-    var notifiableId: Int?
-    var notifiableType: String?
-    var customer: NotificationCustomer?
-    var readAt: String?
-    var createdAt: String?
-    var updatedAt: String?
+struct Notification: LocalMappable {
+    var name: String?
+    var mobile: String?
+    var email: String?
+    var userId: Int?
+    var nif: String?
+    var creditCards: [CustomerCreditCard]?
+    var status: Status?
+    var notifications: [NotificationBody]?
     
     enum CodingKeys: String, CodingKey {
-        case id
-        case type
-        case notifiableId = "notifiable_id"
-        case notifiableType = "notifiable_type"
-        case customer = "data"
-        case readAt = "read_at"
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
+        case name
+        case mobile
+        case email
+        case userId = "user_id"
+        case nif
+        case creditCards = "credit_cards"
+        case status
+        case notifications
     }
 }

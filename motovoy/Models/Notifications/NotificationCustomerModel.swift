@@ -36,7 +36,7 @@ struct NotificationCustomer: Codable {
     var notificationPush: Bool?
     var notificationSms: Bool?
     var rememberToken: Bool?
-    var bike: Bike?
+    var bike: BikeBody?
     
     enum CodingKeys: String, CodingKey {
         case id

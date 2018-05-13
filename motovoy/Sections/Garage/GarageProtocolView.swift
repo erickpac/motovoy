@@ -9,7 +9,7 @@
 protocol GarageView {
     func showLoader(show: Bool)
     func errorMessage(message: String)
-    func getBikeSuccess(bikes: [Bike])
+    func getBikeSuccess(bikes: [BikeBody])
     func getHistorySuccess()
     func updateBikeSuccess()
     func deleteBikeSuccess()
