@@ -30,7 +30,7 @@ class BikePresenter {
         }
     }
     
-    func sendBikeData(name: String, brandId: String, model: Int, cylinderCapacity: Int, year: Int, registrationNumber: String) -> Void {
+    func sendNewBikeData(name: String, brandId: String, model: Int, cylinderCapacity: Int, year: Int, registrationNumber: String) -> Void {
         let params: [String: Any]
         var clientId: String = ""
         var loginToken: String = ""

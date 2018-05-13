@@ -21,19 +21,26 @@ class BikeCreationViewController: UIViewController {
     @IBOutlet weak var createButton: FlatButton!
     
     // let's
-    fileprivate let registrationPresenter = RegistrationPresenter(apiManager: APIManager())
+    fileprivate let bikePresenter = BikePresenter(apiManager: APIManager())
     
     // actions
     @IBAction func createAction(_ sender: Any) {
+        let name: String = nameField.text!
+        let brandId: String = brandField.text!
+        let model: Int = Int(modelField.text!) ?? 0
+        let cylinderCapacity: Int = Int(cilinderField.text!) ?? 0
+        let year: Int = Int(yearField.text!) ?? 0
+        let registrationNumber: String = plateField.text!
         
+        bikePresenter.sendNewBikeData(name: name, brandId: brandId, model: model, cylinderCapacity: cylinderCapacity, year: year, registrationNumber: registrationNumber)
     }
 }
 
 extension BikeCreationViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        bikePresenter.attachView(self)
     }
     
     func configure() {
@@ -43,17 +50,14 @@ extension BikeCreationViewController {
         cilinderField.dividerActiveColor = UIColor.lightGray
         yearField.dividerActiveColor = UIColor.lightGray
         plateField.dividerActiveColor = UIColor.lightGray
-        
         brandField.inputView = UIView()
         modelField.inputView = UIView()
         cilinderField.inputView = UIView()
         yearField.inputView = UIView()
     }
-    
 }
 
 extension BikeCreationViewController: UITextFieldDelegate {
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let presentPicker: () -> () =  {
             self.performSegue(withIdentifier: "OptionSelectionSegue", sender: textField)
@@ -88,5 +92,18 @@ extension BikeCreationViewController: UITextFieldDelegate {
             }
         }
     }
+}
+
+extension BikeCreationViewController: BikeView {
+    func showLoader(show: Bool) {
+        
+    }
     
+    func errorMessage(message: String) {
+        
+    }
+    
+    func getBikeResourcesSuccess(brandResources: BrandResources) {
+        
+    }
 }
