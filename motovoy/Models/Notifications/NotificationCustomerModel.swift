@@ -1,12 +1,12 @@
 //
-//  CustomerDetailModel.swift
+//  NotificationCustomerModel.swift
 //  motovoy
 //
-//  Created by Erick Pac on 5/8/18.
+//  Created by Erick Pac on 5/12/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct CustomerDetail: Codable {
+struct NotificationCustomer: Codable {
     var id: Int?
     var name: String?
     var surName: String?
@@ -36,6 +36,7 @@ struct CustomerDetail: Codable {
     var notificationPush: Bool?
     var notificationSms: Bool?
     var rememberToken: Bool?
+    var bike: BikeBody?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -67,5 +68,6 @@ struct CustomerDetail: Codable {
         case notificationPush = "notificaciones_push"
         case notificationSms = "notificaciones_sms"
         case rememberToken = "remember_token"
+        case bike = "object"
     }
 }

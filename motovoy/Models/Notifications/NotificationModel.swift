@@ -1,12 +1,12 @@
 //
-//  BikeModel.swift
+//  NotificationModel.swift
 //  motovoy
 //
-//  Created by Erick Pac on 5/9/18.
+//  Created by Erick Pac on 5/12/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct Bike: LocalMappable {
+struct Notification: LocalMappable {
     var name: String?
     var mobile: String?
     var email: String?
@@ -14,7 +14,7 @@ struct Bike: LocalMappable {
     var nif: String?
     var creditCards: [CustomerCreditCard]?
     var status: Status?
-    var moto: [BikeBody]?
+    var notifications: [NotificationBody]?
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -24,6 +24,6 @@ struct Bike: LocalMappable {
         case nif
         case creditCards = "credit_cards"
         case status
-        case moto
+        case notifications
     }
 }

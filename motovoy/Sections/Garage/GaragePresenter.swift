@@ -42,10 +42,10 @@ class GaragePresenter {
             "login_token": loginToken
         ]
         
-        apiManager.postServiceModel(urlService: UrlPath.getBikes, params: params, onSuccess: { (user: User) in
-            if let status = user.status {
+        apiManager.postServiceModel(urlService: UrlPath.getBikes, params: params, onSuccess: { (bike: Bike) in
+            if let status = bike.status {
                 if status.code == 200 {
-                    if let bikes = user.moto {
+                    if let bikes = bike.moto {
                         self.garageView?.getBikeSuccess(bikes: bikes)
                         self.garageView?.showLoader(show: false)
                     }
