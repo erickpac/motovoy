@@ -19,7 +19,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var registerButton: FlatButton!
     @IBOutlet weak var loginButton: FlatButton!
     
-    fileprivate let registrationPresenter = RegistrationPresenter(apiManager: APIManager())
+    fileprivate let registrationPresenter = RegistrationPresenter(apiManager: APIManager.default)
     
     @IBAction func registrationAction(_ sender: Any) {
         showLoader(show: true)
