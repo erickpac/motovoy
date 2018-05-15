@@ -18,15 +18,7 @@ class BaseNavigationViewController: UIViewController, BaseNavigationControllerDe
     var isReady: Bool = false
     
     func setReady() {
-        self.isReady = true
-        super.loadView()
-    }
-    
-    override func loadView() {
-        isReady = Utils.getLoggedUser() != nil
-        if (isReady) {
-            super.loadView()
-        }
+        isReady = true
     }
     
 }
