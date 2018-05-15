@@ -8,7 +8,7 @@
 
 import UIKit
 import Material
-import APESuperHUD
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var titleBarView: NavigationShadowedView!
@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: FlatButton!
     
     fileprivate let loginPresenter = LoginPresenter(apiManager: APIManager.default)
+    
+    var onLogin: ((UIViewController) -> ())? = nil
     
     @IBAction func loginAction(_ sender: Any) {
         showLoader(show: true)
@@ -50,17 +52,22 @@ extension LoginViewController {
 extension LoginViewController: LoginView {
     func showLoader(show: Bool) {
         if show {
-            APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando...", presentingView: self.view)
+            SVProgressHUD.show()
         } else {
-            APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+            SVProgressHUD.dismiss()
         }
     }
     
     func errorMessage(message: String) {
-        APESuperHUD.showOrUpdateHUD(icon: .sadFace, message: message, duration: 3.0, presentingView: self.view, completion: nil)
+        SVProgressHUD.showError(withStatus: message)
     }
     
     func loginSuccess() {
+        if (onLogin != nil) {
+            onLogin?(self)
+            return
+        }
+        
         performSegue(withIdentifier: "ShowMain", sender: nil)
     }
 }

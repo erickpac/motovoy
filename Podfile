@@ -10,5 +10,5 @@ target 'motovoy' do
   pod 'Material'
   pod 'SwiftPhoneNumberFormatter'
   pod 'IQKeyboardManagerSwift'
-  pod 'APESuperHUD', :git => 'https://github.com/apegroup/APESuperHUD.git'
+  pod 'SVProgressHUD'
 end
