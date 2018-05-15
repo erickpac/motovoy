@@ -11,24 +11,20 @@ import Material
 import APESuperHUD
 
 class LoginViewController: UIViewController {
-
     @IBOutlet weak var titleBarView: NavigationShadowedView!
     @IBOutlet weak var userField: TextField!
     @IBOutlet weak var passwordField: TextField!
     @IBOutlet weak var registerButton: FlatButton!
     @IBOutlet weak var loginButton: FlatButton!
     
-    // let's
     fileprivate let loginPresenter = LoginPresenter(apiManager: APIManager())
     
-    // actions
     @IBAction func loginAction(_ sender: Any) {
         showLoader(show: true)
         let emailPhone: String = userField.text!
         let password: String = passwordField.text!
         loginPresenter.loginProcess(emailPhone: emailPhone, password: password)
     }
-		
 }
 
 extension LoginViewController {

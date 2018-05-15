@@ -10,7 +10,6 @@ import UIKit
 import Material
 
 class BikeCreationViewController: UIViewController {
-
     @IBOutlet weak var titleBarView: NavigationShadowedView!
     @IBOutlet weak var nameField: TextField!
     @IBOutlet weak var brandField: TextField!
@@ -20,10 +19,8 @@ class BikeCreationViewController: UIViewController {
     @IBOutlet weak var plateField: TextField!
     @IBOutlet weak var createButton: FlatButton!
     
-    // let's
     fileprivate let bikePresenter = BikePresenter(apiManager: APIManager())
     
-    // actions
     @IBAction func createAction(_ sender: Any) {
         let name: String = nameField.text!
         let brandId: String = brandField.text!

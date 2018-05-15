@@ -11,7 +11,6 @@ import Material
 import APESuperHUD
 
 class RegistrationViewController: UIViewController {
-
     @IBOutlet weak var titleBarView: NavigationShadowedView!
     @IBOutlet weak var nameField: TextField!
     @IBOutlet weak var emailField: TextField!
@@ -20,10 +19,8 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var registerButton: FlatButton!
     @IBOutlet weak var loginButton: FlatButton!
     
-    // let's
     fileprivate let registrationPresenter = RegistrationPresenter(apiManager: APIManager())
     
-    // actions
     @IBAction func registrationAction(_ sender: Any) {
         showLoader(show: true)
         let name: String = nameField.text!
@@ -33,7 +30,6 @@ class RegistrationViewController: UIViewController {
         
         registrationPresenter.registrationProcess(name: name, email: email, phone: phone, password: password)
     }
-		
 }
 
 extension RegistrationViewController {

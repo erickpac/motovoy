@@ -11,14 +11,11 @@ import Material
 import APESuperHUD
 
 class RecoverPasswordViewController: UIViewController {
-    // outlet's
     @IBOutlet weak var phoneField: TextField!
     @IBOutlet weak var titleBarView: NavigationShadowedView!
 
-    // let's
     fileprivate let recoverPasswordPresenter = RecoverPasswordPresenter(apiManager: APIManager())
     
-    // actions
     @IBAction func recoverAction(_ sender: Any) {
         showLoader(show: true)
         let phone: String = phoneField.text!

@@ -10,16 +10,9 @@ import UIKit
 import APESuperHUD
 
 class MessagesViewController: UIViewController {
-    // outlet's
-    
-    
-    // let's
     fileprivate let messagesPresenter = MessagesPresenter(apiManager: APIManager())
-    
-    // var's
     var messages: [MessageBody]? = nil
     
-    // action's
     @IBAction func markAasReadAction(_ sender: Any) {
         messagesPresenter.markAsRead(idArray: [""])
     }
