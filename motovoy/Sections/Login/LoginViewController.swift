@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerButton: FlatButton!
     @IBOutlet weak var loginButton: FlatButton!
     
-    fileprivate let loginPresenter = LoginPresenter(apiManager: APIManager())
+    fileprivate let loginPresenter = LoginPresenter(apiManager: APIManager.default)
     
     @IBAction func loginAction(_ sender: Any) {
         showLoader(show: true)

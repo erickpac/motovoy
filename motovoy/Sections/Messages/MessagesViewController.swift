@@ -10,7 +10,7 @@ import UIKit
 import APESuperHUD
 
 class MessagesViewController: UIViewController {
-    fileprivate let messagesPresenter = MessagesPresenter(apiManager: APIManager())
+    fileprivate let messagesPresenter = MessagesPresenter(apiManager: APIManager.default)
     var messages: [MessageBody]? = nil
     
     @IBAction func markAasReadAction(_ sender: Any) {

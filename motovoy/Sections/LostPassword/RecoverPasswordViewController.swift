@@ -14,7 +14,7 @@ class RecoverPasswordViewController: UIViewController {
     @IBOutlet weak var phoneField: TextField!
     @IBOutlet weak var titleBarView: NavigationShadowedView!
 
-    fileprivate let recoverPasswordPresenter = RecoverPasswordPresenter(apiManager: APIManager())
+    fileprivate let recoverPasswordPresenter = RecoverPasswordPresenter(apiManager: APIManager.default)
     
     @IBAction func recoverAction(_ sender: Any) {
         showLoader(show: true)
