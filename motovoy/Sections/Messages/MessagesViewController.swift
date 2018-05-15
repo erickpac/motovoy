@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import APESuperHUD
+import SVProgressHUD
 
 class MessagesViewController: UIViewController {
     fileprivate let messagesPresenter = MessagesPresenter(apiManager: APIManager())
@@ -33,14 +33,14 @@ extension MessagesViewController {
 extension MessagesViewController: MessagesView {
     func showLoader(show: Bool) {
         if show {
-            APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando...", presentingView: self.view)
+            SVProgressHUD.show()
         } else {
-            APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+            SVProgressHUD.dismiss()
         }
     }
     
     func errorMessage(message: String) {
-        APESuperHUD.showOrUpdateHUD(icon: .sadFace, message: message, duration: 3.0, presentingView: self.view, completion: nil)
+        SVProgressHUD.showError(withStatus: message)
     }
     
     func getMessagesSuccess(messages: [MessageBody]) {

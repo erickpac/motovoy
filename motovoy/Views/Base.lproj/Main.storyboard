@@ -822,10 +822,10 @@ EN ESTE MOMENTO</string>
             </objects>
             <point key="canvasLocation" x="968.79999999999995" y="-754.72263868065977"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Navigation Tab View Controller-->
         <scene sceneID="sIi-zA-woo">
             <objects>
-                <tabBarController id="Px1-eD-Y7L" sceneMemberID="viewController">
+                <tabBarController id="Px1-eD-Y7L" customClass="MainNavigationTabViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uSI-u4-giG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

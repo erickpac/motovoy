@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8308B44720AB63090091AA2B /* GarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44620AB63090091AA2B /* GarageViewController.swift */; };
+		8308B44A20AB88000091AA2B /* MainNavigationTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44920AB88000091AA2B /* MainNavigationTabViewController.swift */; };
+		8308B44D20AB8AD80091AA2B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44C20AB8AD80091AA2B /* WelcomeViewController.swift */; };
 		8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309C44820A2946800C6D721 /* AppDelegate.swift */; };
 		8309C45020A2946800C6D721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8309C44F20A2946800C6D721 /* Assets.xcassets */; };
 		8309C45320A2946800C6D721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309C45120A2946800C6D721 /* LaunchScreen.storyboard */; };
@@ -83,6 +85,8 @@
 
 /* Begin PBXFileReference section */
 		8308B44620AB63090091AA2B /* GarageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageViewController.swift; sourceTree = "<group>"; };
+		8308B44920AB88000091AA2B /* MainNavigationTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationTabViewController.swift; sourceTree = "<group>"; };
+		8308B44C20AB8AD80091AA2B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8309C44520A2946800C6D721 /* motovoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = motovoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8309C44820A2946800C6D721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8309C44F20A2946800C6D721 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,6 +176,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8308B44820AB87C60091AA2B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8308B44920AB88000091AA2B /* MainNavigationTabViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8308B44B20AB8ACC0091AA2B /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				8308B44C20AB8AD80091AA2B /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		8309C43C20A2946700C6D721 = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +380,8 @@
 		B9093A2020A2A667001DF9B2 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				8308B44B20AB8ACC0091AA2B /* Welcome */,
+				8308B44820AB87C60091AA2B /* Main */,
 				83A19E2A20A7780800AC980F /* Messages */,
 				83A19DF720A6D2BE00AC980F /* Profile */,
 				83A19DF320A6BCF900AC980F /* Reservation */,
@@ -506,6 +528,7 @@
 				8309C44220A2946800C6D721 /* Frameworks */,
 				8309C44320A2946800C6D721 /* Resources */,
 				C08EB29D6DA5922BC270BB1C /* [CP] Embed Pods Frameworks */,
+				D38EC9A2931D0228662E614D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -593,25 +616,40 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-motovoy/Pods-motovoy-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/APESuperHUD/APESuperHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftPhoneNumberFormatter/SwiftPhoneNumberFormatter.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APESuperHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhoneNumberFormatter.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-motovoy/Pods-motovoy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D38EC9A2931D0228662E614D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-motovoy/Pods-motovoy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -650,6 +688,7 @@
 				B9924A5A20A3CB3A00021473 /* UrlPath.swift in Sources */,
 				B914ED9820A678FD009A9291 /* BrandModelObjectModel.swift in Sources */,
 				B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */,
+				8308B44A20AB88000091AA2B /* MainNavigationTabViewController.swift in Sources */,
 				B9924A5D20A3CED200021473 /* BikeModel.swift in Sources */,
 				83654CAC20A513E2009EE1E6 /* MainGarageViewController.swift in Sources */,
 				B914ED9220A66245009A9291 /* BrandResourcesModel.swift in Sources */,
@@ -677,6 +716,7 @@
 				B9ECC8CD20A6C05B00EBC8EC /* BikeSubmodelModel.swift in Sources */,
 				B9C3CA9120A525D40002C124 /* RegistrationPresenter.swift in Sources */,
 				8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */,
+				8308B44D20AB8AD80091AA2B /* WelcomeViewController.swift in Sources */,
 				83570DAC20A42E3B0057D63D /* RecoverPasswordViewController.swift in Sources */,
 				83A19DF920A6D2D300AC980F /* MainProfileViewController.swift in Sources */,
 				83CD10F020A553B9006BB4B9 /* BikeSelectionTableViewCell.swift in Sources */,
