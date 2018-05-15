@@ -539,7 +539,6 @@
 				8309C44220A2946800C6D721 /* Frameworks */,
 				8309C44320A2946800C6D721 /* Resources */,
 				C08EB29D6DA5922BC270BB1C /* [CP] Embed Pods Frameworks */,
-				D38EC9A2931D0228662E614D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -646,21 +645,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-motovoy/Pods-motovoy-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D38EC9A2931D0228662E614D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-motovoy/Pods-motovoy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
