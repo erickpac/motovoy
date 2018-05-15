@@ -15,10 +15,11 @@ struct BikeBody: Codable {
     var numBastidor: String?
     var matriculationDate: String?
     var insurance: String?
-    var insuranceEndDate: String?
+    var insuranceEndDate: LocalDate?
+    var kmTotal: Int?
     var insuranceType: String?
-    var lastRevision: String?
-    var nextRevision: String?
+    var lastRevision: LocalDate?
+    var nextRevision: LocalDate?
     var lastItv: String?
     var itvEndDate: String?
     var createdAt: String?
@@ -26,8 +27,8 @@ struct BikeBody: Codable {
     var deletedAt: String?
     var detail: BikeDetail?
     var subModel: BikeSubmodel?
-    var customer: Customer?
-    var customerBike: Customer?
+    var customer: CustomerDetail?
+    var customerBike: CustomerDetail?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -39,6 +40,7 @@ struct BikeBody: Codable {
         case matriculationDate = "matriculation_date"
         case insurance
         case insuranceEndDate = "insurance_end_date"
+        case kmTotal = "km_total"
         case insuranceType = "insurance_type"
         case lastRevision = "last_revision"
         case nextRevision = "next_revision"

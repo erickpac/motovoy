@@ -8,6 +8,7 @@
 
 struct CustomerDetail: Codable {
     var id: Int?
+    var model: String?
     var name: String?
     var surName: String?
     var fullName: String?
@@ -32,6 +33,7 @@ struct CustomerDetail: Codable {
     var longitude: String?
     var robinson: Int?
     var token: String?
+    var notifications: String?
     var notificationEmail: Bool?
     var notificationPush: Bool?
     var notificationSms: Bool?
@@ -63,6 +65,7 @@ struct CustomerDetail: Codable {
         case longitude = "lng"
         case robinson
         case token
+        case notifications
         case notificationEmail = "notificaciones_email"
         case notificationPush = "notificaciones_push"
         case notificationSms = "notificaciones_sms"

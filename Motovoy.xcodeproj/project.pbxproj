@@ -60,6 +60,7 @@
 		B958837020A6D84600FE38E5 /* MessageCustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B958836F20A6D84600FE38E5 /* MessageCustomerModel.swift */; };
 		B966D35320A7E912006F59A5 /* MessageBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966D35220A7E912006F59A5 /* MessageBodyModel.swift */; };
 		B966D35520A7EA68006F59A5 /* BIkeBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966D35420A7EA68006F59A5 /* BIkeBodyModel.swift */; };
+		B967A27320AB8601007E2C0C /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967A27220AB8601007E2C0C /* DateModel.swift */; };
 		B969496320A68A7A005B75F7 /* GarageProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969496220A68A7A005B75F7 /* GarageProtocolView.swift */; };
 		B969496620A68AD2005B75F7 /* BikeProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969496520A68AD2005B75F7 /* BikeProtocolView.swift */; };
 		B969496820A68AF6005B75F7 /* BikePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969496720A68AF6005B75F7 /* BikePresenter.swift */; };
@@ -137,6 +138,7 @@
 		B958836F20A6D84600FE38E5 /* MessageCustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCustomerModel.swift; sourceTree = "<group>"; };
 		B966D35220A7E912006F59A5 /* MessageBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBodyModel.swift; sourceTree = "<group>"; };
 		B966D35420A7EA68006F59A5 /* BIkeBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIkeBodyModel.swift; sourceTree = "<group>"; };
+		B967A27220AB8601007E2C0C /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
 		B969496220A68A7A005B75F7 /* GarageProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageProtocolView.swift; sourceTree = "<group>"; };
 		B969496520A68AD2005B75F7 /* BikeProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeProtocolView.swift; sourceTree = "<group>"; };
 		B969496720A68AF6005B75F7 /* BikePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikePresenter.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 			children = (
 				B9093A2720A2A911001DF9B2 /* LocalMappable.swift */,
 				B9093A2F20A2B0BB001DF9B2 /* Status */,
+				B967A27120AB85E4007E2C0C /* Date */,
 				B9924A6520A4066500021473 /* User */,
 				B9093A1F20A2A45D001DF9B2 /* Customer */,
 				B9924A5B20A3CEBE00021473 /* Bike */,
@@ -407,6 +410,14 @@
 				B958836F20A6D84600FE38E5 /* MessageCustomerModel.swift */,
 			);
 			path = Messages;
+			sourceTree = "<group>";
+		};
+		B967A27120AB85E4007E2C0C /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				B967A27220AB8601007E2C0C /* DateModel.swift */,
+			);
+			path = Date;
 			sourceTree = "<group>";
 		};
 		B969496420A68AC2005B75F7 /* Bike */ = {
@@ -676,6 +687,7 @@
 				B90DE28320A7EFB40086AE95 /* MessagesProtocolView.swift in Sources */,
 				B9ECC8CD20A6C05B00EBC8EC /* BikeSubmodelModel.swift in Sources */,
 				B9C3CA9120A525D40002C124 /* RegistrationPresenter.swift in Sources */,
+				B967A27320AB8601007E2C0C /* DateModel.swift in Sources */,
 				8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */,
 				83570DAC20A42E3B0057D63D /* RecoverPasswordViewController.swift in Sources */,
 				83A19DF920A6D2D300AC980F /* MainProfileViewController.swift in Sources */,

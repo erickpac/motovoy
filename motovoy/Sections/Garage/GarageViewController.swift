@@ -7,12 +7,11 @@
 //
 
 import UIKit
+import APESuperHUD
 
 class GarageViewController: UIViewController {
-
     @IBOutlet weak var emptyStateView: UIView!
     @IBOutlet weak var tableView: UITableView!
-    
     fileprivate let presenter = GaragePresenter(apiManager: APIManager.default)
     
     var bikes: [BikeBody] = [BikeBody]() {
@@ -22,27 +21,27 @@ class GarageViewController: UIViewController {
             tableView.reloadData()
         }
     }
-
 }
 
 extension GarageViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attachView(self)
-//        presenter.getBikes()
+        presenter.getBikes()
     }
-    
 }
 
 extension GarageViewController: GarageView {
-    
     func showLoader(show: Bool) {
-        
+        if show {
+            APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando...", presentingView: self.view)
+        } else {
+            APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+        }
     }
     
     func errorMessage(message: String) {
-        
+        APESuperHUD.showOrUpdateHUD(icon: .sadFace, message: message, duration: 3.0, presentingView: self.view, completion: nil)
     }
     
     func getBikeSuccess(bikes: [BikeBody]) {
@@ -60,11 +59,9 @@ extension GarageViewController: GarageView {
     func deleteBikeSuccess() {
         
     }
-    
 }
 
 extension GarageViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -78,5 +75,4 @@ extension GarageViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BikeShowcaseLastService")
         return cell!
     }
-    
 }
