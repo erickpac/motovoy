@@ -327,7 +327,7 @@ en Barcelona.</string>
         <!--GARAJE-->
         <scene sceneID="13y-be-WUC">
             <objects>
-                <viewController id="D1Q-xe-bwO" sceneMemberID="viewController">
+                <viewController id="D1Q-xe-bwO" customClass="GarageViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PaQ-Zl-mjf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -454,13 +454,6 @@ en Barcelona.</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUN NO TIENES MOTOS DISPONIBLES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdI-jn-bsh">
-                                <rect key="frame" x="0.0" y="70" width="375" height="548"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="370-HX-uts" customClass="NavigationShadowedView" customModule="motovoy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="-30" width="375" height="100"/>
                                 <subviews>
@@ -487,11 +480,7 @@ en Barcelona.</string>
                             <constraint firstItem="0x5-r3-NOu" firstAttribute="bottom" secondItem="L9U-BN-K8n" secondAttribute="bottom" id="51X-40-U4x"/>
                             <constraint firstItem="0x5-r3-NOu" firstAttribute="leading" secondItem="L9U-BN-K8n" secondAttribute="leading" id="7Dv-hV-4zg"/>
                             <constraint firstItem="370-HX-uts" firstAttribute="top" secondItem="L9U-BN-K8n" secondAttribute="top" constant="-50" id="Aia-NJ-vHi"/>
-                            <constraint firstItem="L9U-BN-K8n" firstAttribute="trailing" secondItem="JdI-jn-bsh" secondAttribute="trailing" id="B5d-d7-ZoE"/>
-                            <constraint firstItem="L9U-BN-K8n" firstAttribute="bottom" secondItem="JdI-jn-bsh" secondAttribute="bottom" id="F4X-Eb-c4g"/>
                             <constraint firstItem="370-HX-uts" firstAttribute="trailing" secondItem="L9U-BN-K8n" secondAttribute="trailing" id="M4P-Gf-9sy"/>
-                            <constraint firstItem="JdI-jn-bsh" firstAttribute="top" secondItem="370-HX-uts" secondAttribute="bottom" id="n9D-FK-37x"/>
-                            <constraint firstItem="JdI-jn-bsh" firstAttribute="leading" secondItem="L9U-BN-K8n" secondAttribute="leading" id="uNE-NE-12l"/>
                             <constraint firstItem="370-HX-uts" firstAttribute="leading" secondItem="L9U-BN-K8n" secondAttribute="leading" id="x2h-ju-VRJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L9U-BN-K8n"/>
@@ -499,10 +488,22 @@ en Barcelona.</string>
                     <tabBarItem key="tabBarItem" title="GARAJE" image="garajeOn" selectedImage="garajeOn" id="B6g-eg-mdx">
                         <color key="badgeColor" red="0.93725490199999995" green="0.56078431370000004" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="emptyStateView" destination="A5O-DJ-bjg" id="CJH-sx-Acj"/>
+                        <outlet property="tableView" destination="0x5-r3-NOu" id="e1R-nS-HVx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byA-on-ZAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUN NO TIENES MOTOS DISPONIBLES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A5O-DJ-bjg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="548"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </objects>
-            <point key="canvasLocation" x="-18.399999999999999" y="-1446.0269865067467"/>
+            <point key="canvasLocation" x="1537" y="-1778"/>
         </scene>
         <!--SERVICIOS-->
         <scene sceneID="MWp-2U-VZX">

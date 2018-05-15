@@ -9,6 +9,8 @@
 import Alamofire
 
 class APIManager {
+    static var `default` = APIManager()
+    
     let URL_SERVICE = "https://backend.motovoy.com"
     let DEVICE_TYPE = "iOS"
     let DEVICE_ID = "1"

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8308B44720AB63090091AA2B /* GarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44620AB63090091AA2B /* GarageViewController.swift */; };
 		8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309C44820A2946800C6D721 /* AppDelegate.swift */; };
 		8309C45020A2946800C6D721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8309C44F20A2946800C6D721 /* Assets.xcassets */; };
 		8309C45320A2946800C6D721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309C45120A2946800C6D721 /* LaunchScreen.storyboard */; };
@@ -81,6 +82,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8308B44620AB63090091AA2B /* GarageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageViewController.swift; sourceTree = "<group>"; };
 		8309C44520A2946800C6D721 /* motovoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = motovoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8309C44820A2946800C6D721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8309C44F20A2946800C6D721 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				B969496220A68A7A005B75F7 /* GarageProtocolView.swift */,
 				B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */,
+				8308B44620AB63090091AA2B /* GarageViewController.swift */,
 			);
 			path = Garage;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				83570DAC20A42E3B0057D63D /* RecoverPasswordViewController.swift in Sources */,
 				83A19DF920A6D2D300AC980F /* MainProfileViewController.swift in Sources */,
 				83CD10F020A553B9006BB4B9 /* BikeSelectionTableViewCell.swift in Sources */,
+				8308B44720AB63090091AA2B /* GarageViewController.swift in Sources */,
 				B90DE28920A7F14B0086AE95 /* ReservationPresenter.swift in Sources */,
 				83CD110720A6569C006BB4B9 /* BikeCreationViewController.swift in Sources */,
 				B966D35520A7EA68006F59A5 /* BIkeBodyModel.swift in Sources */,
@@ -855,10 +859,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AUFZ67XMVW;
+				DEVELOPMENT_TEAM = 264Z4X7CV7;
 				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.persona;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -871,10 +875,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AUFZ67XMVW;
+				DEVELOPMENT_TEAM = 264Z4X7CV7;
 				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.persona;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
