@@ -8,9 +8,26 @@
 
 import UIKit
 
-class BaseNavigationViewController: UIViewController {
+protocol BaseNavigationControllerDelegate {
+    var isReady: Bool { get set }
+    func setReady()
+}
+
+class BaseNavigationViewController: UIViewController, BaseNavigationControllerDelegate {
     
+    var isReady: Bool = false
     
+    func setReady() {
+        self.isReady = true
+        super.loadView()
+    }
+    
+    override func loadView() {
+        isReady = Utils.getLoggedUser() != nil
+        if (isReady) {
+            super.loadView()
+        }
+    }
     
 }
 
@@ -19,28 +36,35 @@ class MainNavigationTabViewController: UITabBarController {
     var ready: Bool = false
     
     override func viewDidLoad() {
-        for view in viewControllers ?? [] {
-            guard let v = view as? BaseNavigationViewController else {
-                return
-            }
-            v.setDelegate(self)
-        }
+        view.backgroundColor = UIColor.white
         super.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if Utils.getLoggedUser() == nil {
-            ready = false
-            let registrationSb = UIStoryboard.init(name: "Registration", bundle: nil)
-            let viewController = (registrationSb.instantiateInitialViewController() as! UINavigationController).topViewController as! WelcomeViewController
-            viewController.onLogin = { (controller: UIViewController) in
+            performSegue(withIdentifier: "RegistrationSegue", sender: nil)
+        }else {
+            configureControllers()
+            super.viewDidAppear(animated)
+        }
+    }
+    
+    func configureControllers() {
+        for view in self.viewControllers ?? [] {
+            guard let v = view as? BaseNavigationViewController else {
+                return
+            }
+            v.setReady()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? UINavigationController, let rootController = viewController.topViewController as? WelcomeViewController {
+            rootController.onLogin = { (controller: UIViewController) in
                 controller.dismiss(animated: true, completion: {
-                    
+                    self.configureControllers()
                 })
             }
-//            present(viewController, animated: true, completion: nil)
-        }else {
-            super.viewDidAppear(animated)
         }
     }
     

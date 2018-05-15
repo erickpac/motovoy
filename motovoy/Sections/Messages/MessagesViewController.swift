@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-class MessagesViewController: UIViewController {
+class MessagesViewController: BaseNavigationViewController {
     fileprivate let messagesPresenter = MessagesPresenter(apiManager: APIManager.default)
     var messages: [MessageBody]? = nil
     

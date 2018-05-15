@@ -13,15 +13,16 @@ protocol BikeSelectionDelegate {
     func createBike()
 }
 
-class MainGarageViewController: UIViewController {
+class MainGarageViewController: BaseNavigationViewController {
     @IBOutlet weak var mainLabel: ActiveLabel!
     var currentBike: Bike? = nil
     var currentServices: [String] = ["servicio"]
 }
 
 extension MainGarageViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func loadView() {
+        super.loadView()
         configure()
     }
     
