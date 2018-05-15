@@ -9,4 +9,6 @@
 protocol MessagesView {
     func showLoader(show: Bool)
     func errorMessage(message: String)
+    func getMessagesSuccess(messages: [MessageBody])
+    func markAasReadMessageSuccess()
 }

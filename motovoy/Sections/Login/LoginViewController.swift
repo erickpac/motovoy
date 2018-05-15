@@ -60,11 +60,11 @@ extension LoginViewController: LoginView {
         }
     }
     
-    func loginSuccess() {
-        performSegue(withIdentifier: "ShowMain", sender: nil)
-    }
-    
     func errorMessage(message: String) {
         APESuperHUD.showOrUpdateHUD(icon: .sadFace, message: message, duration: 3.0, presentingView: self.view, completion: nil)
+    }
+    
+    func loginSuccess() {
+        performSegue(withIdentifier: "ShowMain", sender: nil)
     }
 }

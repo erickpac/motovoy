@@ -1,12 +1,12 @@
 //
-//  NotificationCustomerModel.swift
+//  MessageCustomerModel.swift
 //  motovoy
 //
 //  Created by Erick Pac on 5/12/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct NotificationCustomer: Codable {
+struct MessageCustomer: Codable {
     var id: Int?
     var name: String?
     var surName: String?

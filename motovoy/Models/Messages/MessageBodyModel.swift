@@ -1,17 +1,17 @@
 //
-//  NotificationBodyModel.swift
+//  MessagesBodyModel.swift
 //  motovoy
 //
 //  Created by Erick Pac on 5/12/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct NotificationBody: LocalMappable {
-    var id: Int?
+struct MessageBody: Codable {
+    var id: String?
     var type: String?
     var notifiableId: Int?
     var notifiableType: String?
-    var customer: NotificationCustomer?
+    var customer: MessageCustomer?
     var readAt: String?
     var createdAt: String?
     var updatedAt: String?

@@ -32,7 +32,7 @@ class BikeCreationViewController: UIViewController {
         let year: Int = Int(yearField.text!) ?? 0
         let registrationNumber: String = plateField.text!
         
-        bikePresenter.sendNewBikeData(name: name, brandId: brandId, model: model, cylinderCapacity: cylinderCapacity, year: year, registrationNumber: registrationNumber)
+        bikePresenter.newBike(name: name, brandId: brandId, model: model, cylinderCapacity: cylinderCapacity, year: year, registrationNumber: registrationNumber)
     }
 }
 
