@@ -10,6 +10,7 @@
 		8308B44720AB63090091AA2B /* GarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44620AB63090091AA2B /* GarageViewController.swift */; };
 		8308B44A20AB88000091AA2B /* MainNavigationTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44920AB88000091AA2B /* MainNavigationTabViewController.swift */; };
 		8308B44D20AB8AD80091AA2B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44C20AB8AD80091AA2B /* WelcomeViewController.swift */; };
+		8308B45020AB92480091AA2B /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44F20AB92480091AA2B /* ServicesViewController.swift */; };
 		8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309C44820A2946800C6D721 /* AppDelegate.swift */; };
 		8309C45020A2946800C6D721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8309C44F20A2946800C6D721 /* Assets.xcassets */; };
 		8309C45320A2946800C6D721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309C45120A2946800C6D721 /* LaunchScreen.storyboard */; };
@@ -88,6 +89,7 @@
 		8308B44620AB63090091AA2B /* GarageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageViewController.swift; sourceTree = "<group>"; };
 		8308B44920AB88000091AA2B /* MainNavigationTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationTabViewController.swift; sourceTree = "<group>"; };
 		8308B44C20AB8AD80091AA2B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		8308B44F20AB92480091AA2B /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		8309C44520A2946800C6D721 /* motovoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = motovoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8309C44820A2946800C6D721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8309C44F20A2946800C6D721 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -192,6 +194,14 @@
 				8308B44C20AB8AD80091AA2B /* WelcomeViewController.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		8308B44E20AB92340091AA2B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8308B44F20AB92480091AA2B /* ServicesViewController.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		8309C43C20A2946700C6D721 = {
@@ -383,6 +393,7 @@
 		B9093A2020A2A667001DF9B2 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				8308B44E20AB92340091AA2B /* Services */,
 				8308B44B20AB8ACC0091AA2B /* Welcome */,
 				8308B44820AB87C60091AA2B /* Main */,
 				83A19E2A20A7780800AC980F /* Messages */,
@@ -728,6 +739,7 @@
 				B9C3CA9120A525D40002C124 /* RegistrationPresenter.swift in Sources */,
 				B967A27320AB8601007E2C0C /* DateModel.swift in Sources */,
 				8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */,
+				8308B45020AB92480091AA2B /* ServicesViewController.swift in Sources */,
 				8308B44D20AB8AD80091AA2B /* WelcomeViewController.swift in Sources */,
 				83570DAC20A42E3B0057D63D /* RecoverPasswordViewController.swift in Sources */,
 				83A19DF920A6D2D300AC980F /* MainProfileViewController.swift in Sources */,

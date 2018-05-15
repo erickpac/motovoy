@@ -9,7 +9,7 @@
 import UIKit
 import Material
 
-class MainProfileViewController: UIViewController {
+class MainProfileViewController: BaseNavigationViewController {
 
     @IBOutlet weak var container: UIView!
     

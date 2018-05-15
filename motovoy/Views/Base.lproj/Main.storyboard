@@ -15,7 +15,7 @@
         <!--MENSAJES-->
         <scene sceneID="VBt-fW-8VG">
             <objects>
-                <viewController id="dNq-hT-oKc" sceneMemberID="viewController">
+                <viewController id="dNq-hT-oKc" customClass="MessagesViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ncq-h8-DhW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -508,7 +508,7 @@ en Barcelona.</string>
         <!--SERVICIOS-->
         <scene sceneID="MWp-2U-VZX">
             <objects>
-                <viewController id="gr4-k4-aMt" sceneMemberID="viewController">
+                <viewController id="gr4-k4-aMt" customClass="ServicesViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MvT-uU-uqq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -822,6 +822,14 @@ EN ESTE MOMENTO</string>
             </objects>
             <point key="canvasLocation" x="968.79999999999995" y="-754.72263868065977"/>
         </scene>
+        <!--Registration-->
+        <scene sceneID="Ua2-tA-7dm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Registration" id="ncE-Az-ebF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p9p-C0-bwK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1322" y="-1550"/>
+        </scene>
         <!--Main Navigation Tab View Controller-->
         <scene sceneID="sIi-zA-woo">
             <objects>
@@ -839,6 +847,7 @@ EN ESTE MOMENTO</string>
                         <segue destination="gr4-k4-aMt" kind="relationship" relationship="viewControllers" id="0JW-on-W1t"/>
                         <segue destination="dNq-hT-oKc" kind="relationship" relationship="viewControllers" id="bqI-py-vBd"/>
                         <segue destination="6uT-2T-Icq" kind="relationship" relationship="viewControllers" id="pbe-qQ-zOI"/>
+                        <segue destination="ncE-Az-ebF" kind="presentation" identifier="RegistrationSegue" id="GzR-hn-XXc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXV-dk-jSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -848,7 +857,7 @@ EN ESTE MOMENTO</string>
         <!--PERFIL-->
         <scene sceneID="YYE-AP-YWl">
             <objects>
-                <viewController id="6uT-2T-Icq" sceneMemberID="viewController">
+                <viewController id="6uT-2T-Icq" customClass="ProfileViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kGA-14-Tme">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -892,7 +901,7 @@ EN ESTE MOMENTO</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8xN-pE-y8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18" y="620"/>
+            <point key="canvasLocation" x="969" y="766"/>
         </scene>
     </scenes>
     <resources>

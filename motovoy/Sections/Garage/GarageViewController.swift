@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import APESuperHUD
+import SVProgressHUD
 
-class GarageViewController: UIViewController {
+class GarageViewController: BaseNavigationViewController {
     @IBOutlet weak var emptyStateView: UIView!
     @IBOutlet weak var tableView: UITableView!
     fileprivate let presenter = GaragePresenter(apiManager: APIManager.default)
@@ -25,6 +25,10 @@ class GarageViewController: UIViewController {
 
 extension GarageViewController {
     override func viewDidLoad() {
+        if (!isReady) {
+            return
+        }
+        
         super.viewDidLoad()
         presenter.attachView(self)
         presenter.getBikes()
@@ -34,14 +38,14 @@ extension GarageViewController {
 extension GarageViewController: GarageView {
     func showLoader(show: Bool) {
         if show {
-            APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando...", presentingView: self.view)
+            SVProgressHUD.show()
         } else {
-            APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+            SVProgressHUD.dismiss()
         }
     }
     
     func errorMessage(message: String) {
-        APESuperHUD.showOrUpdateHUD(icon: .sadFace, message: message, duration: 3.0, presentingView: self.view, completion: nil)
+        SVProgressHUD.showError(withStatus: message)
     }
     
     func getBikeSuccess(bikes: [BikeBody]) {

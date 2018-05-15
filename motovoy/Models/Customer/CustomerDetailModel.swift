@@ -41,6 +41,7 @@ struct CustomerDetail: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id
+        case model
         case name
         case surName = "surnames"
         case fullName = "full_name"
