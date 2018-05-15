@@ -24,6 +24,15 @@ class APIManager {
         customParams["device_type"] = DEVICE_TYPE
         customParams["device_id"] = DEVICE_ID
         customParams["api_version"] = API_VERSION
+        if let user = Utils.getLoggedUser() {
+            if let userId = user.userId {
+                customParams["client_id"] = userId
+            }
+            
+            if let userToken = user.status?.loginToken {
+                customParams["login_token"] = userToken
+            }
+        }
         
         var urlRequest = URLRequest(url: urlType)
         urlRequest.addValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
@@ -48,6 +57,15 @@ class APIManager {
         customParams["device_type"] = DEVICE_TYPE
         customParams["device_id"] = DEVICE_ID
         customParams["api_version"] = API_VERSION
+        if let user = Utils.getLoggedUser() {
+            if let userId = user.userId {
+                customParams["client_id"] = userId
+            }
+            
+            if let userToken = user.status?.loginToken {
+                 customParams["login_token"] = userToken
+            }
+        }
         
         var urlRequest = URLRequest(url: urlType)
         urlRequest.addValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")

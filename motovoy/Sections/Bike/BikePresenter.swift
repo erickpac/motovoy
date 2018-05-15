@@ -30,29 +30,42 @@ class BikePresenter {
         }
     }
     
-    func sendNewBikeData(name: String, brandId: String, model: Int, cylinderCapacity: Int, year: Int, registrationNumber: String) -> Void {
+    func newBike(name: String, brandId: String, model: Int, cylinderCapacity: Int, year: Int, registrationNumber: String) -> Void {
         let params: [String: Any]
-        var clientId: String = ""
-        var loginToken: String = ""
-        
-        if let user = Utils.getLoggedUser() {
-            if let userId = user.userId {
-                clientId = String(userId)
-            }
-            
-            if let userToken = user.status?.loginToken {
-                loginToken = userToken
-            }
-        }
-        
         params = [
-            "client_id": clientId,
-            "login_token": loginToken,
             "name": name,
             "brand_id": brandId,
             "engine_displacement": cylinderCapacity,
             "year": year,
             "matricula": registrationNumber
+        ]
+        
+        apiManager.postServiceModel(urlService: UrlPath.addEditBike, params: params, onSuccess: { (user: User) in
+            if let status = user.status {
+                if status.code == 200 {
+                    self.bikeView?.showLoader(show: false)
+                } else {
+                    self.bikeView?.showLoader(show: false)
+                    if let errorMessage = status.message {
+                        self.bikeView?.errorMessage(message: errorMessage)
+                    }
+                }
+            }
+        }) { (error) in
+            self.bikeView?.showLoader(show: false)
+            self.bikeView?.errorMessage(message: error.debugDescription)
+        }
+    }
+    
+    func newCustomBike(brandName: String, modelName: String, motoName: String, registrationNumber: String, motorCC: String, year: Int) -> Void {
+        let params: [String: Any]
+        params = [
+            "brand_name": brandName,
+            "model_name": modelName,
+            "moto_name": motoName,
+            "matricula": registrationNumber,
+            "motor_cc": motorCC,
+            "year": year
         ]
         
         apiManager.postServiceModel(urlService: UrlPath.addEditBike, params: params, onSuccess: { (user: User) in

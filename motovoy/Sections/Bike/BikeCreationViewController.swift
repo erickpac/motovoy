@@ -10,7 +10,6 @@ import UIKit
 import Material
 
 class BikeCreationViewController: UIViewController {
-
     @IBOutlet weak var titleBarView: NavigationShadowedView!
     @IBOutlet weak var nameField: TextField!
     @IBOutlet weak var brandField: TextField!
@@ -20,10 +19,8 @@ class BikeCreationViewController: UIViewController {
     @IBOutlet weak var plateField: TextField!
     @IBOutlet weak var createButton: FlatButton!
     
-    // let's
     fileprivate let bikePresenter = BikePresenter(apiManager: APIManager())
     
-    // actions
     @IBAction func createAction(_ sender: Any) {
         let name: String = nameField.text!
         let brandId: String = brandField.text!
@@ -32,7 +29,7 @@ class BikeCreationViewController: UIViewController {
         let year: Int = Int(yearField.text!) ?? 0
         let registrationNumber: String = plateField.text!
         
-        bikePresenter.sendNewBikeData(name: name, brandId: brandId, model: model, cylinderCapacity: cylinderCapacity, year: year, registrationNumber: registrationNumber)
+        bikePresenter.newBike(name: name, brandId: brandId, model: model, cylinderCapacity: cylinderCapacity, year: year, registrationNumber: registrationNumber)
     }
 }
 
