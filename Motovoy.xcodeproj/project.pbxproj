@@ -11,6 +11,7 @@
 		8308B44A20AB88000091AA2B /* MainNavigationTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44920AB88000091AA2B /* MainNavigationTabViewController.swift */; };
 		8308B44D20AB8AD80091AA2B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44C20AB8AD80091AA2B /* WelcomeViewController.swift */; };
 		8308B45020AB92480091AA2B /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44F20AB92480091AA2B /* ServicesViewController.swift */; };
+		8308B45320AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B45220AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift */; };
 		8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309C44820A2946800C6D721 /* AppDelegate.swift */; };
 		8309C45020A2946800C6D721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8309C44F20A2946800C6D721 /* Assets.xcassets */; };
 		8309C45320A2946800C6D721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309C45120A2946800C6D721 /* LaunchScreen.storyboard */; };
@@ -90,6 +91,7 @@
 		8308B44920AB88000091AA2B /* MainNavigationTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationTabViewController.swift; sourceTree = "<group>"; };
 		8308B44C20AB8AD80091AA2B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8308B44F20AB92480091AA2B /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		8308B45220AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeShowcaseLastServiceTableViewCell.swift; sourceTree = "<group>"; };
 		8309C44520A2946800C6D721 /* motovoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = motovoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8309C44820A2946800C6D721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8309C44F20A2946800C6D721 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,6 +206,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		8308B45120AB9D200091AA2B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8308B45220AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		8309C43C20A2946700C6D721 = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +289,7 @@
 		83654CAA20A513CE009EE1E6 /* Garage */ = {
 			isa = PBXGroup;
 			children = (
+				8308B45120AB9D200091AA2B /* Cells */,
 				B969496220A68A7A005B75F7 /* GarageProtocolView.swift */,
 				B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */,
 				8308B44620AB63090091AA2B /* GarageViewController.swift */,
@@ -689,6 +700,7 @@
 				B90DE28720A7F13D0086AE95 /* ReservationProtocolView.swift in Sources */,
 				B9F71F2120A53D0200043633 /* RecoverPasswordProtocolView.swift in Sources */,
 				B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */,
+				8308B45320AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift in Sources */,
 				B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */,
 				B969496320A68A7A005B75F7 /* GarageProtocolView.swift in Sources */,
 				B9924A5A20A3CB3A00021473 /* UrlPath.swift in Sources */,
