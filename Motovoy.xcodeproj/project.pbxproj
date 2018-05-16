@@ -75,6 +75,7 @@
 		B9924A5F20A3D2D800021473 /* BikeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A5E20A3D2D800021473 /* BikeDetailModel.swift */; };
 		B9924A6220A4036200021473 /* BikeBrandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A6120A4036200021473 /* BikeBrandModel.swift */; };
 		B9924A6420A403C800021473 /* BikeModelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A6320A403C800021473 /* BikeModelModel.swift */; };
+		B99D17EA20ABF40300D8F962 /* MessageBikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D17E920ABF40300D8F962 /* MessageBikeModel.swift */; };
 		B9C3CA8720A50B0B0002C124 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8620A50B0B0002C124 /* LoginPresenter.swift */; };
 		B9C3CA8920A50B6B0002C124 /* LoginProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8820A50B6B0002C124 /* LoginProtocolView.swift */; };
 		B9C3CA8B20A51D390002C124 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8A20A51D390002C124 /* UserDefaultsKeys.swift */; };
@@ -159,6 +160,7 @@
 		B9924A5E20A3D2D800021473 /* BikeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDetailModel.swift; sourceTree = "<group>"; };
 		B9924A6120A4036200021473 /* BikeBrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeBrandModel.swift; sourceTree = "<group>"; };
 		B9924A6320A403C800021473 /* BikeModelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeModelModel.swift; sourceTree = "<group>"; };
+		B99D17E920ABF40300D8F962 /* MessageBikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBikeModel.swift; sourceTree = "<group>"; };
 		B9C3CA8620A50B0B0002C124 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		B9C3CA8820A50B6B0002C124 /* LoginProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocolView.swift; sourceTree = "<group>"; };
 		B9C3CA8A20A51D390002C124 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 				B958836720A6CEE700FE38E5 /* MessageModel.swift */,
 				B966D35220A7E912006F59A5 /* MessageBodyModel.swift */,
 				B958836F20A6D84600FE38E5 /* MessageCustomerModel.swift */,
+				B99D17E920ABF40300D8F962 /* MessageBikeModel.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -567,7 +570,6 @@
 				8309C44220A2946800C6D721 /* Frameworks */,
 				8309C44320A2946800C6D721 /* Resources */,
 				C08EB29D6DA5922BC270BB1C /* [CP] Embed Pods Frameworks */,
-				D38EC9A2931D0228662E614D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -676,21 +678,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-motovoy/Pods-motovoy-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D38EC9A2931D0228662E614D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-motovoy/Pods-motovoy-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -762,6 +749,7 @@
 				8308B45020AB92480091AA2B /* ServicesViewController.swift in Sources */,
 				8308B44D20AB8AD80091AA2B /* WelcomeViewController.swift in Sources */,
 				83570DAC20A42E3B0057D63D /* RecoverPasswordViewController.swift in Sources */,
+				B99D17EA20ABF40300D8F962 /* MessageBikeModel.swift in Sources */,
 				83A19DF920A6D2D300AC980F /* MainProfileViewController.swift in Sources */,
 				83CD10F020A553B9006BB4B9 /* BikeSelectionTableViewCell.swift in Sources */,
 				8308B44720AB63090091AA2B /* GarageViewController.swift in Sources */,
@@ -943,10 +931,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 264Z4X7CV7;
+				DEVELOPMENT_TEAM = AUFZ67XMVW;
 				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.persona;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -959,10 +947,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 264Z4X7CV7;
+				DEVELOPMENT_TEAM = AUFZ67XMVW;
 				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.persona;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

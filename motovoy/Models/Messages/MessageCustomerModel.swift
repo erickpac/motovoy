@@ -35,8 +35,12 @@ struct MessageCustomer: Codable {
     var notificationEmail: Bool?
     var notificationPush: Bool?
     var notificationSms: Bool?
-    var rememberToken: Bool?
-    var bike: BikeBody?
+    var rememberToken: String?
+    var message: String?
+    var type: String?
+    var objectId: Int?
+    var objectType: String?
+    var bike: MessageBike?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -68,6 +72,10 @@ struct MessageCustomer: Codable {
         case notificationPush = "notificaciones_push"
         case notificationSms = "notificaciones_sms"
         case rememberToken = "remember_token"
+        case message
+        case type
+        case objectId = "object_id"
+        case objectType = "object_type"
         case bike = "object"
     }
 }
