@@ -19,12 +19,11 @@ class RecoverPasswordViewController: UIViewController {
     @IBAction func recoverAction(_ sender: Any) {
         showLoader(show: true)
         let phone: String = phoneField.text!
-        recoverPasswordPresenter.recoverPasswordProcess(phone: phone)
+        recoverPasswordPresenter.getConfirmationCode(phone: phone)
     }
 }
 
 extension RecoverPasswordViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -51,7 +50,7 @@ extension RecoverPasswordViewController: RecoverPasswordView {
         SVProgressHUD.showError(withStatus: message)
     }
     
-    func recoverySuccess() {
+    func getConfirmationCodeSuccess(phone: String) {
         
     }
 }

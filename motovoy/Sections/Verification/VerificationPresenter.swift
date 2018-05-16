@@ -8,18 +8,40 @@
 
 class VerificationPresenter {
     fileprivate let apiManager: APIManager
-    fileprivate var verificationView: VerificationView?
+    fileprivate var view: VerificationView?
+    fileprivate var confirmationCode: String = ""
     
     init(apiManager: APIManager) {
         self.apiManager = apiManager
     }
     
     func attachView(_ view: VerificationView) {
-        verificationView = view
+        self.view = view
     }
     
     func detachView() {
-        verificationView = nil
+        view = nil
+    }
+    
+    func getConfirmationCode(phone: String) -> Void {
+        let params: [String: Any]
+        params = ["mobile": phone]
+        
+        apiManager.postServiceModel(urlService: UrlPath.getConfirmationCode, params: params, onSuccess: { (status: GenericResponse) in
+            if let localStatus = status.status {
+                if localStatus.code == 200 {
+                    self.view?.showLoader(show: false)
+                } else {
+                    self.view?.showLoader(show: false)
+                    if let errorMessage = localStatus.message {
+                        self.view?.errorMessage(message: errorMessage)
+                    }
+                }
+            }
+        }) { (error) in
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: error.debugDescription)
+        }
     }
     
     func verificationAccount(mobile: String, textMessage: String) -> Void {
@@ -29,20 +51,21 @@ class VerificationPresenter {
             "text_message": textMessage
         ]
         
-        apiManager.postServiceModel(urlService: UrlPath.verifyAccount, params: params, onSuccess: { (status: GenericResponse) in
+        apiManager.postServiceModel(urlService: UrlPath.verifyAccount, params: params, onSuccess: { (status: ConfirmationCode) in
             if let status = status.status {
                 if status.code == 200 {
-                    self.verificationView?.verificationSuccess()
-                    self.verificationView?.showLoader(show: false)
+                    self.view?.verificationSuccess()
+                    self.view?.showLoader(show: false)
                 } else {
-                    self.verificationView?.showLoader(show: false)
+                    self.view?.showLoader(show: false)
                     if let errorMessage = status.message {
-                        self.verificationView?.errorMessage(message: errorMessage)
+                        self.view?.errorMessage(message: errorMessage)
                     }
                 }
             }
         }) { (error) in
-            
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: error.debugDescription)
         }
     }
 }

@@ -8,37 +8,37 @@
 
 class MessagesPresenter {
     fileprivate let apiManager: APIManager
-    fileprivate var messagesView: MessagesView?
+    fileprivate var view: MessagesView?
     
     init(apiManager: APIManager) {
         self.apiManager = apiManager
     }
     
     func attachView(_ view: MessagesView) {
-        messagesView = view
+        self.view = view
     }
     
     func detachView() {
-        messagesView = nil
+        view = nil
     }
     
     func getMessages() -> Void {
-        self.messagesView?.showLoader(show: true)
+        self.view?.showLoader(show: true)
         apiManager.postServiceModel(urlService: UrlPath.getMessages, params: [:], onSuccess: { (message: Message) in
             if let status = message.status {
                 if status.code == 200 {
-                    self.messagesView?.showLoader(show: false)
-                    self.messagesView?.getMessagesSuccess(messages: message.notifications ?? [])
+                    self.view?.showLoader(show: false)
+                    self.view?.getMessagesSuccess(messages: message.notifications ?? [])
                 } else {
-                    self.messagesView?.showLoader(show: false)
+                    self.view?.showLoader(show: false)
                     if let errorMessage = status.message {
-                        self.messagesView?.errorMessage(message: errorMessage)
+                        self.view?.errorMessage(message: errorMessage)
                     }
                 }
             }
         }) { (error) in
-            self.messagesView?.showLoader(show: false)
-            self.messagesView?.errorMessage(message: error.debugDescription)
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: error.debugDescription)
         }
     }
     
@@ -51,17 +51,17 @@ class MessagesPresenter {
         apiManager.postServiceModel(urlService: UrlPath.getMessages, params: params, onSuccess: { (message: Message) in
             if let status = message.status {
                 if status.code == 200 {
-                    self.messagesView?.showLoader(show: false)
+                    self.view?.showLoader(show: false)
                 } else {
-                    self.messagesView?.showLoader(show: false)
+                    self.view?.showLoader(show: false)
                     if let errorMessage = status.message {
-                        self.messagesView?.errorMessage(message: errorMessage)
+                        self.view?.errorMessage(message: errorMessage)
                     }
                 }
             }
         }) { (error) in
-            self.messagesView?.showLoader(show: false)
-            self.messagesView?.errorMessage(message: error.debugDescription)
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: error.debugDescription)
         }
     }
 }

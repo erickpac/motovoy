@@ -8,39 +8,39 @@
 
 class GaragePresenter {
     fileprivate let apiManager: APIManager
-    fileprivate var garageView: GarageView?
+    fileprivate var view: GarageView?
     
     init(apiManager: APIManager) {
         self.apiManager = apiManager
     }
     
     func attachView(_ view: GarageView) {
-        garageView = view
+        self.view = view
     }
     
     func detachView() {
-        garageView = nil
+        view = nil
     }
     
     func getBikes() -> Void {
-        self.garageView?.showLoader(show: true)
+        self.view?.showLoader(show: true)
         apiManager.postServiceModel(urlService: UrlPath.getBikes, params: [:], onSuccess: { (bike: Bike) in
             if let status = bike.status {
                 if status.code == 200 {
                     if let bikes = bike.moto {
-                        self.garageView?.getBikeSuccess(bikes: bikes)
-                        self.garageView?.showLoader(show: false)
+                        self.view?.getBikeSuccess(bikes: bikes)
+                        self.view?.showLoader(show: false)
                     }
                 } else {
-                    self.garageView?.showLoader(show: false)
+                    self.view?.showLoader(show: false)
                     if let errorMessage = status.message {
-                        self.garageView?.errorMessage(message: errorMessage)
+                        self.view?.errorMessage(message: errorMessage)
                     }
                 }
             }
         }) { (error) in
-            self.garageView?.showLoader(show: false)
-            self.garageView?.errorMessage(message: error.debugDescription)
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: error.debugDescription)
         }
     }
     
@@ -86,18 +86,18 @@ class GaragePresenter {
         apiManager.postServiceModel(urlService: UrlPath.addEditBike, params: params, onSuccess: { (user: User) in
             if let status = user.status {
                 if status.code == 200 {
-                    self.garageView?.updateBikeSuccess()
-                    self.garageView?.showLoader(show: false)
+                    self.view?.updateBikeSuccess()
+                    self.view?.showLoader(show: false)
                 } else {
-                    self.garageView?.showLoader(show: false)
+                    self.view?.showLoader(show: false)
                     if let errorMessage = status.message {
-                        self.garageView?.errorMessage(message: errorMessage)
+                        self.view?.errorMessage(message: errorMessage)
                     }
                 }
             }
         }) { (error) in
-            self.garageView?.showLoader(show: false)
-            self.garageView?.errorMessage(message: error.debugDescription)
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: error.debugDescription)
         }
     }
     
@@ -108,18 +108,18 @@ class GaragePresenter {
         apiManager.postServiceModel(urlService: UrlPath.deleteBike, params: params, onSuccess: { (user: User) in
             if let status = user.status {
                 if status.code == 200 {
-                    self.garageView?.deleteBikeSuccess()
-                    self.garageView?.showLoader(show: false)
+                    self.view?.deleteBikeSuccess()
+                    self.view?.showLoader(show: false)
                 } else {
-                    self.garageView?.showLoader(show: false)
+                    self.view?.showLoader(show: false)
                     if let errorMessage = status.message {
-                        self.garageView?.errorMessage(message: errorMessage)
+                        self.view?.errorMessage(message: errorMessage)
                     }
                 }
             }
         }) { (error) in
-            self.garageView?.showLoader(show: false)
-            self.garageView?.errorMessage(message: error.debugDescription)
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: error.debugDescription)
         }
     }
 }

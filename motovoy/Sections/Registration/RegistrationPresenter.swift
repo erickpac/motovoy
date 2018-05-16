@@ -11,7 +11,7 @@ import CoreLocation
 
 class RegistrationPresenter {
     fileprivate let apiManager: APIManager
-    fileprivate var registrationView: RegistrationView?
+    fileprivate var view: RegistrationView?
     fileprivate let locationManager = CLLocationManager()
     
     init(apiManager: APIManager) {
@@ -20,11 +20,11 @@ class RegistrationPresenter {
     }
     
     func attachView(_ view: RegistrationView) {
-        registrationView = view
+        self.view = view
     }
     
     func detachView() {
-        registrationView = nil
+        view = nil
     }
     
     func registrationProcess(name: String, email: String, phone: String, password: String) -> Void {
@@ -56,18 +56,18 @@ class RegistrationPresenter {
                 if let status = user.status {
                     if status.code == 200 {
                         let _ = Utils.saveInUserDefaults(key: UserDefaultsKeys.USER_KEY, data: userString)
-                        self.registrationView?.showLoader(show: false)
+                        self.view?.showLoader(show: false)
                     } else {
-                        self.registrationView?.showLoader(show: false)
+                        self.view?.showLoader(show: false)
                         if let errorMessage = status.message {
-                            self.registrationView?.errorMessage(message: errorMessage)
+                            self.view?.errorMessage(message: errorMessage)
                         }
                     }
                 }
             }
         }) { (error) in
-            self.registrationView?.showLoader(show: false)
-            self.registrationView?.errorMessage(message: error.debugDescription)
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: error.debugDescription)
         }
     }
 }

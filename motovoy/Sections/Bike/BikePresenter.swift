@@ -8,23 +8,23 @@
 
 class BikePresenter {
     fileprivate let apiManager: APIManager
-    fileprivate var bikeView: BikeView?
+    fileprivate var view: BikeView?
     
     init(apiManager: APIManager) {
         self.apiManager = apiManager
     }
     
     func attachView(_ view: BikeView) {
-        bikeView = view
+        self.view = view
     }
     
     func detachView() {
-        bikeView = nil
+        view = nil
     }
     
     func getBrands(phone: String) -> Void {
         apiManager.getServiceModel(urlService: UrlPath.brandResources, onSuccess: { (brands: BrandResources) in
-            self.bikeView?.getBikeResourcesSuccess(brandResources: brands)
+            self.view?.getBikeResourcesSuccess(brandResources: brands)
         }) { (error) in
             
         }
@@ -43,17 +43,17 @@ class BikePresenter {
         apiManager.postServiceModel(urlService: UrlPath.addEditBike, params: params, onSuccess: { (user: User) in
             if let status = user.status {
                 if status.code == 200 {
-                    self.bikeView?.showLoader(show: false)
+                    self.view?.showLoader(show: false)
                 } else {
-                    self.bikeView?.showLoader(show: false)
+                    self.view?.showLoader(show: false)
                     if let errorMessage = status.message {
-                        self.bikeView?.errorMessage(message: errorMessage)
+                        self.view?.errorMessage(message: errorMessage)
                     }
                 }
             }
         }) { (error) in
-            self.bikeView?.showLoader(show: false)
-            self.bikeView?.errorMessage(message: error.debugDescription)
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: error.debugDescription)
         }
     }
     
@@ -71,17 +71,17 @@ class BikePresenter {
         apiManager.postServiceModel(urlService: UrlPath.addEditBike, params: params, onSuccess: { (user: User) in
             if let status = user.status {
                 if status.code == 200 {
-                    self.bikeView?.showLoader(show: false)
+                    self.view?.showLoader(show: false)
                 } else {
-                    self.bikeView?.showLoader(show: false)
+                    self.view?.showLoader(show: false)
                     if let errorMessage = status.message {
-                        self.bikeView?.errorMessage(message: errorMessage)
+                        self.view?.errorMessage(message: errorMessage)
                     }
                 }
             }
         }) { (error) in
-            self.bikeView?.showLoader(show: false)
-            self.bikeView?.errorMessage(message: error.debugDescription)
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: error.debugDescription)
         }
     }
 }

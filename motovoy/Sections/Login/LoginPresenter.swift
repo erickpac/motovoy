@@ -8,18 +8,18 @@
 
 class LoginPresenter {
     fileprivate let apiManager: APIManager
-    fileprivate var loginView: LoginView?
+    fileprivate var view: LoginView?
     
     init(apiManager: APIManager) {
         self.apiManager = apiManager
     }
     
     func attachView(_ view: LoginView) {
-        loginView = view
+        self.view = view
     }
     
     func detachView() {
-        loginView = nil
+        view = nil
     }
     
     func loginProcess(emailPhone: String, password: String) -> Void {
@@ -37,19 +37,19 @@ class LoginPresenter {
                 if let status = userObject.status {
                     if status.code == 200 {
                         let _ = Utils.saveInUserDefaults(key: UserDefaultsKeys.USER_KEY, data: user)
-                        self.loginView?.showLoader(show: false)
-                        self.loginView?.loginSuccess()
+                        self.view?.showLoader(show: false)
+                        self.view?.loginSuccess()
                     } else {
-                        self.loginView?.showLoader(show: false)
+                        self.view?.showLoader(show: false)
                         if let errorMessage = status.message {
-                            self.loginView?.errorMessage(message: errorMessage)
+                            self.view?.errorMessage(message: errorMessage)
                         }
                     }
                 }
             }
         }) { (error) in
-            self.loginView?.showLoader(show: false)
-            self.loginView?.errorMessage(message: error.debugDescription)
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: error.debugDescription)
         }
     }
 }

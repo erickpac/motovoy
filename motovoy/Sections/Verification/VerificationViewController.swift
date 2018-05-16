@@ -12,12 +12,17 @@ import Material
 
 class VerificationViewController: UIViewController {
     @IBOutlet weak var messageField: TextField!
-    @IBOutlet weak var mobileField: TextField!
     fileprivate let presenter = VerificationPresenter(apiManager: APIManager.default)
+    fileprivate let mobile: String = ""
     
     @IBAction func loginAction(_ sender: Any) {
         showLoader(show: true)
-        let mobile: String = mobileField.text!
+        let message: String = messageField.text!
+        presenter.verificationAccount(mobile: mobile, textMessage: message)
+    }
+    
+    @IBAction func resendAction(_ sender: Any) {
+        showLoader(show: true)
         let message: String = messageField.text!
         presenter.verificationAccount(mobile: mobile, textMessage: message)
     }
@@ -42,7 +47,15 @@ extension VerificationViewController: VerificationView {
         SVProgressHUD.showError(withStatus: message)
     }
     
+    func confirmationCodeSuccess() {
+        
+    }
+    
     func verificationSuccess() {
+        
+    }
+    
+    func resetPasswordSuccess(smsReset: String, tokenReset: String) {
         
     }
 }

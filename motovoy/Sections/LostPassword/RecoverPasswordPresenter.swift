@@ -9,6 +9,7 @@
 class RecoverPasswordPresenter {
     fileprivate let apiManager: APIManager
     fileprivate var recoverPasswordView: RecoverPasswordView?
+    fileprivate var phone: String = ""
     
     init(apiManager: APIManager) {
         self.apiManager = apiManager
@@ -22,7 +23,8 @@ class RecoverPasswordPresenter {
         recoverPasswordView = nil
     }
     
-    func recoverPasswordProcess(phone: String) -> Void {
+    func getConfirmationCode(phone: String) -> Void {
+        self.phone = phone
         let params: [String: Any]
         params = ["mobile": phone]
         
@@ -30,6 +32,7 @@ class RecoverPasswordPresenter {
             if let status = user.status {
                 if status.code == 200 {
                     self.recoverPasswordView?.showLoader(show: false)
+                    self.recoverPasswordView?.getConfirmationCodeSuccess(phone: self.phone)
                 } else {
                     self.recoverPasswordView?.showLoader(show: false)
                     if let errorMessage = status.message {

@@ -68,6 +68,10 @@
 		B95DBD0120ACC8A800A2244D /* VerificationProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DBD0020ACC8A800A2244D /* VerificationProtocolView.swift */; };
 		B95DBD0320ACC8B100A2244D /* VerificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DBD0220ACC8B100A2244D /* VerificationPresenter.swift */; };
 		B95DBD0520ACC8C900A2244D /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DBD0420ACC8C900A2244D /* VerificationViewController.swift */; };
+		B95DBD0820ACDCBB00A2244D /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DBD0720ACDCBB00A2244D /* ChangePasswordViewController.swift */; };
+		B95DBD0A20ACDCD200A2244D /* ChangePasswordProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DBD0920ACDCD200A2244D /* ChangePasswordProtocolView.swift */; };
+		B95DBD0C20ACDCE200A2244D /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DBD0B20ACDCE200A2244D /* ChangePasswordPresenter.swift */; };
+		B95DBD1020ACE07100A2244D /* ConfirmationCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DBD0F20ACE07100A2244D /* ConfirmationCodeModel.swift */; };
 		B966D35320A7E912006F59A5 /* MessageBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966D35220A7E912006F59A5 /* MessageBodyModel.swift */; };
 		B966D35520A7EA68006F59A5 /* BIkeBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966D35420A7EA68006F59A5 /* BIkeBodyModel.swift */; };
 		B967A27320AB8601007E2C0C /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967A27220AB8601007E2C0C /* DateModel.swift */; };
@@ -157,6 +161,10 @@
 		B95DBD0020ACC8A800A2244D /* VerificationProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationProtocolView.swift; sourceTree = "<group>"; };
 		B95DBD0220ACC8B100A2244D /* VerificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPresenter.swift; sourceTree = "<group>"; };
 		B95DBD0420ACC8C900A2244D /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		B95DBD0720ACDCBB00A2244D /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		B95DBD0920ACDCD200A2244D /* ChangePasswordProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordProtocolView.swift; sourceTree = "<group>"; };
+		B95DBD0B20ACDCE200A2244D /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
+		B95DBD0F20ACE07100A2244D /* ConfirmationCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationCodeModel.swift; sourceTree = "<group>"; };
 		B966D35220A7E912006F59A5 /* MessageBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBodyModel.swift; sourceTree = "<group>"; };
 		B966D35420A7EA68006F59A5 /* BIkeBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIkeBodyModel.swift; sourceTree = "<group>"; };
 		B967A27220AB8601007E2C0C /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
@@ -403,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				B9093A2720A2A911001DF9B2 /* LocalMappable.swift */,
+				B95DBD0D20ACDFFF00A2244D /* Generic */,
 				B9093A2F20A2B0BB001DF9B2 /* Status */,
 				B967A27120AB85E4007E2C0C /* Date */,
 				B9924A6520A4066500021473 /* User */,
@@ -410,7 +419,7 @@
 				B9924A5B20A3CEBE00021473 /* Bike */,
 				B9924A6020A4034B00021473 /* Brand */,
 				B958836620A6CECE00FE38E5 /* Messages */,
-				83C20A7320ACAE9800292EE5 /* GenericResponse.swift */,
+				B95DBD0E20ACE00D00A2244D /* ConfirmationCode */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -435,6 +444,7 @@
 				83654CAA20A513CE009EE1E6 /* Garage */,
 				B969496420A68AC2005B75F7 /* Bike */,
 				83A19DF320A6BCF900AC980F /* Reservation */,
+				B95DBD0620ACDC9E00A2244D /* ChangePassword */,
 				83570DAA20A42E1B0057D63D /* LostPassword */,
 				B9093A2120A2A66E001DF9B2 /* Login */,
 				B95DBCFF20ACC88D00A2244D /* Verification */,
@@ -491,6 +501,32 @@
 				B95DBD0420ACC8C900A2244D /* VerificationViewController.swift */,
 			);
 			path = Verification;
+			sourceTree = "<group>";
+		};
+		B95DBD0620ACDC9E00A2244D /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				B95DBD0920ACDCD200A2244D /* ChangePasswordProtocolView.swift */,
+				B95DBD0B20ACDCE200A2244D /* ChangePasswordPresenter.swift */,
+				B95DBD0720ACDCBB00A2244D /* ChangePasswordViewController.swift */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		B95DBD0D20ACDFFF00A2244D /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				83C20A7320ACAE9800292EE5 /* GenericResponse.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		B95DBD0E20ACE00D00A2244D /* ConfirmationCode */ = {
+			isa = PBXGroup;
+			children = (
+				B95DBD0F20ACE07100A2244D /* ConfirmationCodeModel.swift */,
+			);
+			path = ConfirmationCode;
 			sourceTree = "<group>";
 		};
 		B967A27120AB85E4007E2C0C /* Date */ = {
@@ -713,6 +749,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B95DBD0A20ACDCD200A2244D /* ChangePasswordProtocolView.swift in Sources */,
 				B9093A2620A2A6AC001DF9B2 /* APIManager.swift in Sources */,
 				B9ECC8D120A6C25A00EBC8EC /* GaragePresenter.swift in Sources */,
 				83A19E2C20A7781900AC980F /* MessagesViewController.swift in Sources */,
@@ -747,6 +784,7 @@
 				B914ED9820A678FD009A9291 /* BrandModelObjectModel.swift in Sources */,
 				B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */,
 				8308B44A20AB88000091AA2B /* MainNavigationTabViewController.swift in Sources */,
+				B95DBD0C20ACDCE200A2244D /* ChangePasswordPresenter.swift in Sources */,
 				B9924A5D20A3CED200021473 /* BikeModel.swift in Sources */,
 				83654CAC20A513E2009EE1E6 /* MainGarageViewController.swift in Sources */,
 				B914ED9220A66245009A9291 /* BrandResourcesModel.swift in Sources */,
@@ -768,7 +806,9 @@
 				B914ED8E20A66177009A9291 /* BrandModel.swift in Sources */,
 				B914ED9620A678D1009A9291 /* BrandVehicleModel.swift in Sources */,
 				83570DA920A42A300057D63D /* RegistrationViewController.swift in Sources */,
+				B95DBD0820ACDCBB00A2244D /* ChangePasswordViewController.swift in Sources */,
 				B9C3CA8B20A51D390002C124 /* UserDefaultsKeys.swift in Sources */,
+				B95DBD1020ACE07100A2244D /* ConfirmationCodeModel.swift in Sources */,
 				B9F71F2320A53D4000043633 /* RecoverPasswordPresenter.swift in Sources */,
 				B9924A6220A4036200021473 /* BikeBrandModel.swift in Sources */,
 				B9924A6420A403C800021473 /* BikeModelModel.swift in Sources */,

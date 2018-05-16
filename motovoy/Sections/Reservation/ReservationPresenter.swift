@@ -8,17 +8,17 @@
 
 class ReservationPresenter {
     fileprivate let apiManager: APIManager
-    fileprivate var reservationView: ReservationView?
+    fileprivate var view: ReservationView?
     
     init(apiManager: APIManager) {
         self.apiManager = apiManager
     }
     
     func attachView(_ view: ReservationView) {
-        reservationView = view
+        self.view = view
     }
     
     func detachView() {
-        reservationView = nil
+        view = nil
     }
 }
