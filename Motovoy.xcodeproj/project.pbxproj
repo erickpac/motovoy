@@ -12,6 +12,7 @@
 		8308B44D20AB8AD80091AA2B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44C20AB8AD80091AA2B /* WelcomeViewController.swift */; };
 		8308B45020AB92480091AA2B /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44F20AB92480091AA2B /* ServicesViewController.swift */; };
 		8308B45320AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B45220AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift */; };
+		8308B45520ABA22A0091AA2B /* BikeShowcaseOngoingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B45420ABA22A0091AA2B /* BikeShowcaseOngoingTableViewCell.swift */; };
 		8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309C44820A2946800C6D721 /* AppDelegate.swift */; };
 		8309C45020A2946800C6D721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8309C44F20A2946800C6D721 /* Assets.xcassets */; };
 		8309C45320A2946800C6D721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309C45120A2946800C6D721 /* LaunchScreen.storyboard */; };
@@ -29,6 +30,7 @@
 		83A19E2E20A778A200AC980F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19E2D20A778A200AC980F /* ProfileViewController.swift */; };
 		83A19E3020A778AE00AC980F /* BillingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19E2F20A778AE00AC980F /* BillingViewController.swift */; };
 		83A19E3220A778C500AC980F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19E3120A778C500AC980F /* PaymentViewController.swift */; };
+		83C20A7420ACAE9800292EE5 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C20A7320ACAE9800292EE5 /* GenericResponse.swift */; };
 		83CD10EA20A54FF3006BB4B9 /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CD10E820A54FF3006BB4B9 /* Alerts.storyboard */; };
 		83CD10ED20A5528E006BB4B9 /* BikeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD10EC20A5528E006BB4B9 /* BikeSelectionViewController.swift */; };
 		83CD10F020A553B9006BB4B9 /* BikeSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD10EF20A553B9006BB4B9 /* BikeSelectionTableViewCell.swift */; };
@@ -92,6 +94,7 @@
 		8308B44C20AB8AD80091AA2B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8308B44F20AB92480091AA2B /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		8308B45220AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeShowcaseLastServiceTableViewCell.swift; sourceTree = "<group>"; };
+		8308B45420ABA22A0091AA2B /* BikeShowcaseOngoingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeShowcaseOngoingTableViewCell.swift; sourceTree = "<group>"; };
 		8309C44520A2946800C6D721 /* motovoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = motovoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8309C44820A2946800C6D721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8309C44F20A2946800C6D721 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 		83A19E2D20A778A200AC980F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		83A19E2F20A778AE00AC980F /* BillingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingViewController.swift; sourceTree = "<group>"; };
 		83A19E3120A778C500AC980F /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		83C20A7320ACAE9800292EE5 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		83CD10E920A54FF3006BB4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Alerts.storyboard; sourceTree = "<group>"; };
 		83CD10EC20A5528E006BB4B9 /* BikeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeSelectionViewController.swift; sourceTree = "<group>"; };
 		83CD10EF20A553B9006BB4B9 /* BikeSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeSelectionTableViewCell.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				8308B45220AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift */,
+				8308B45420ABA22A0091AA2B /* BikeShowcaseOngoingTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 				B9924A5B20A3CEBE00021473 /* Bike */,
 				B9924A6020A4034B00021473 /* Brand */,
 				B958836620A6CECE00FE38E5 /* Messages */,
+				83C20A7320ACAE9800292EE5 /* GenericResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -715,6 +721,7 @@
 				B969496820A68AF6005B75F7 /* BikePresenter.swift in Sources */,
 				B90DE28720A7F13D0086AE95 /* ReservationProtocolView.swift in Sources */,
 				B9F71F2120A53D0200043633 /* RecoverPasswordProtocolView.swift in Sources */,
+				8308B45520ABA22A0091AA2B /* BikeShowcaseOngoingTableViewCell.swift in Sources */,
 				B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */,
 				8308B45320AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift in Sources */,
 				B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */,
@@ -727,6 +734,7 @@
 				83654CAC20A513E2009EE1E6 /* MainGarageViewController.swift in Sources */,
 				B914ED9220A66245009A9291 /* BrandResourcesModel.swift in Sources */,
 				B9ECC8CF20A6C15E00EBC8EC /* BikeVehicleModel.swift in Sources */,
+				83C20A7420ACAE9800292EE5 /* GenericResponse.swift in Sources */,
 				B914ED9020A661CC009A9291 /* BrandCategoryModel.swift in Sources */,
 				B9093A3120A2B0C8001DF9B2 /* StatusModel.swift in Sources */,
 				83CD10ED20A5528E006BB4B9 /* BikeSelectionViewController.swift in Sources */,

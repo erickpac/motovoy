@@ -1,5 +1,5 @@
 //
-//  BikeShowcaseLastServiceTableViewCell.swift
+//  BikeShowcaseOngoingTableViewCell.swift
 //  motovoy
 //
 //  Created by Jose Quintero on 5/15/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BikeShowcaseLastServiceTableViewCell: UITableViewCell {
+class BikeShowcaseOngoingTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var serviceLabel: UILabel!
@@ -17,7 +17,7 @@ class BikeShowcaseLastServiceTableViewCell: UITableViewCell {
         didSet {
             if (data != nil) {
                 titleLabel.text = data?.name
-                serviceLabel.text = data?.lastRevision?.date ?? "No se ha realizado ningún servicio."
+                serviceLabel.text = data?.lastItv
             }
         }
     }

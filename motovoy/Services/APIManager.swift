@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import SVProgressHUD
 
 class APIManager {
     static var `default` = APIManager()
@@ -15,6 +16,20 @@ class APIManager {
     let DEVICE_TYPE = "iOS"
     let DEVICE_ID = "1"
     let API_VERSION = "1"
+    
+    func validate(response: DataResponse<String>) -> Bool {
+        if let obj = GenericResponse(jsonString: response.result.value ?? "") {
+            if obj.status?.code == 165 {
+                NotificationCenter.default.post(Notification.init(name: Notification.Name.init("LOGOUT_NOTIFICATION")))
+                SVProgressHUD.dismiss()
+                return false
+            }else {
+                return true
+            }
+        }
+        
+        return true
+    }
     
     func postServiceModel<T: LocalMappable>(urlService: UrlPath, params: [String: Any], onSuccess: @escaping(_ response: T) -> Void, onFailure: @escaping(_ error: Error?) -> Void) -> Void {
         let urlString: String = URL_SERVICE + urlService.rawValue
@@ -40,6 +55,9 @@ class APIManager {
         urlRequest.httpBody = try! JSONSerialization.data(withJSONObject: customParams, options: [])
         
         Alamofire.request(urlRequest).responseString { (response) in
+            if (!self.validate(response: response)) {
+                return
+            }
             switch response.result {
             case .success(let jsonString):
                 onSuccess(T(jsonString: jsonString)!)
@@ -73,6 +91,9 @@ class APIManager {
         urlRequest.httpBody = try! JSONSerialization.data(withJSONObject: customParams, options: [])
         
         Alamofire.request(urlRequest).responseString { (response) in
+            if (!self.validate(response: response)) {
+                return
+            }
             switch response.result {
             case .success(let jsonString):
                 onSuccess(jsonString)
@@ -90,6 +111,9 @@ class APIManager {
         urlRequest.httpMethod = "GET"
         
         Alamofire.request(urlRequest).responseString { (response) in
+            if (!self.validate(response: response)) {
+                return
+            }
             switch response.result {
             case .success(let jsonString):
                 onSuccess(T(jsonString: jsonString)!)

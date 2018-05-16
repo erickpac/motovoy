@@ -29,6 +29,9 @@ class MainNavigationTabViewController: UITabBarController {
     
     override func viewDidLoad() {
         view.backgroundColor = UIColor.white
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.init("LOGOUT_NOTIFICATION"), object: nil, queue: nil) { (notification) in
+            self.performSegue(withIdentifier: "RegistrationSegue", sender: nil)
+        }
         super.viewDidLoad()
     }
     

@@ -50,7 +50,11 @@ extension BikeCreationViewController {
         brandField.inputView = UIView()
         modelField.inputView = UIView()
         cilinderField.inputView = UIView()
-        yearField.inputView = UIView()
+        yearField.delegate = self
+        brandField.delegate = self
+        modelField.delegate = self
+        cilinderField.delegate = self
+        yearField.delegate = self
     }
 }
 

@@ -23,6 +23,7 @@ class GaragePresenter {
     }
     
     func getBikes() -> Void {
+        self.garageView?.showLoader(show: true)
         apiManager.postServiceModel(urlService: UrlPath.getBikes, params: [:], onSuccess: { (bike: Bike) in
             if let status = bike.status {
                 if status.code == 200 {

@@ -75,7 +75,9 @@ extension MainGarageViewController: BikeSelectionDelegate {
     }
     
     func createBike() {
-        performSegue(withIdentifier: "BikeCreationSegue", sender: nil)
+        dismiss(animated: true) {
+            self.performSegue(withIdentifier: "BikeCreationSegue", sender: nil)
+        }
     }
     
 }

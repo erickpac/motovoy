@@ -18,6 +18,7 @@ class GarageViewController: BaseNavigationViewController {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
+            tableView.estimatedRowHeight = 300
             tableView.reloadData()
         }
     }
@@ -76,7 +77,12 @@ extension GarageViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = bikes[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BikeShowcaseLastService")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BikeShowcaseLastService") as? BikeShowcaseLastServiceTableViewCell
+        cell?.data = data
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }
