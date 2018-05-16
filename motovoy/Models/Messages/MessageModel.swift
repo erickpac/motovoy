@@ -24,6 +24,6 @@ struct Message: LocalMappable {
         case nif
         case creditCards = "credit_cards"
         case status
-        case notifications
+        case notifications = "notifications"
     }
 }
