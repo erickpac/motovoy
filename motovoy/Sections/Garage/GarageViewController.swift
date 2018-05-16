@@ -25,12 +25,8 @@ class GarageViewController: BaseNavigationViewController {
 }
 
 extension GarageViewController {
-    override func viewDidLoad() {
-        if (!isReady) {
-            return
-        }
-        
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         presenter.attachView(self)
         presenter.getBikes()
     }
@@ -39,6 +35,9 @@ extension GarageViewController {
 extension GarageViewController: GarageView {
     func showLoader(show: Bool) {
         if show {
+            if (bikes.count != 0) {
+                return;
+            }
             SVProgressHUD.show()
         } else {
             SVProgressHUD.dismiss()

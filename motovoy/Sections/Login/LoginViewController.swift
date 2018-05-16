@@ -63,6 +63,8 @@ extension LoginViewController: LoginView {
     }
     
     func loginSuccess() {
+        Utils.currentUser = nil
+        
         if (onLogin != nil) {
             onLogin?(self)
             return

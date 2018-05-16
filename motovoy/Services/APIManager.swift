@@ -20,6 +20,7 @@ class APIManager {
     func validate(response: DataResponse<String>) -> Bool {
         if let obj = GenericResponse(jsonString: response.result.value ?? "") {
             if obj.status?.code == 165 {
+                Utils.currentUser = nil
                 NotificationCenter.default.post(Notification.init(name: Notification.Name.init("LOGOUT_NOTIFICATION")))
                 SVProgressHUD.dismiss()
                 return false

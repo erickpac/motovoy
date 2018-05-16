@@ -17,6 +17,7 @@ class MessagesViewController: BaseNavigationViewController {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
+            tableView.estimatedRowHeight = 100
             tableView.reloadData()
         }
     }
@@ -27,13 +28,9 @@ class MessagesViewController: BaseNavigationViewController {
 }
 
 extension MessagesViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        messagesPresenter.attachView(self)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        messagesPresenter.attachView(self)
         messagesPresenter.getMessages()
     }
 }
@@ -49,14 +46,22 @@ extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = messages[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BikeShowcaseLastService")
-        return cell!
+        let cell: MessageTableViewCell = tableView.dequeueReusableCell(withIdentifier: data.readAt == nil ? "MessageOn" : "MessageOff") as! MessageTableViewCell
+        cell.data = data
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }
 
 extension MessagesViewController: MessagesView {
     func showLoader(show: Bool) {
         if show {
+            if (messages.count != 0) {
+                return;
+            }
             SVProgressHUD.show()
         } else {
             SVProgressHUD.dismiss()

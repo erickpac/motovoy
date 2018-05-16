@@ -23,10 +23,12 @@ class MessagesPresenter {
     }
     
     func getMessages() -> Void {
+        self.messagesView?.showLoader(show: true)
         apiManager.postServiceModel(urlService: UrlPath.getMessages, params: [:], onSuccess: { (message: Message) in
             if let status = message.status {
                 if status.code == 200 {
                     self.messagesView?.showLoader(show: false)
+                    self.messagesView?.getMessagesSuccess(messages: message.notifications ?? [])
                 } else {
                     self.messagesView?.showLoader(show: false)
                     if let errorMessage = status.message {
