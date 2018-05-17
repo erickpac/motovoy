@@ -9,5 +9,5 @@
 protocol RecoverPasswordView {
     func showLoader(show: Bool)
     func errorMessage(message: String)
-    func getConfirmationCodeSuccess(phone: String)
+    func getConfirmationCodeSuccess()
 }

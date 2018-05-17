@@ -27,9 +27,10 @@ class VerificationPresenter {
         let params: [String: Any]
         params = ["mobile": phone]
         
-        apiManager.postServiceModel(urlService: UrlPath.getConfirmationCode, params: params, onSuccess: { (status: GenericResponse) in
-            if let localStatus = status.status {
+        apiManager.postServiceModel(urlService: UrlPath.getConfirmationCode, params: params, onSuccess: { (response: ConfirmationCode) in
+            if let localStatus = response.status {
                 if localStatus.code == 200 {
+                    print("SMS => \(response.smsRegister?.first?.smsRegister ?? "")")
                     self.view?.showLoader(show: false)
                 } else {
                     self.view?.showLoader(show: false)
@@ -44,7 +45,7 @@ class VerificationPresenter {
         }
     }
     
-    func verificationAccount(mobile: String, textMessage: String) -> Void {
+    func verificationAccount(mobile: String, textMessage: String, isRecoveryPassword: Bool) -> Void {
         var params: [String: Any]
         params = [
             "mobile": mobile,
@@ -54,7 +55,12 @@ class VerificationPresenter {
         apiManager.postServiceModel(urlService: UrlPath.verifyAccount, params: params, onSuccess: { (status: ConfirmationCode) in
             if let status = status.status {
                 if status.code == 200 {
-                    self.view?.verificationSuccess()
+                    if isRecoveryPassword {
+                         self.view?.verificationChangePasswordSuccess()
+                    } else {
+                        self.view?.verificationAccountSuccess()
+                    }
+                   
                     self.view?.showLoader(show: false)
                 } else {
                     self.view?.showLoader(show: false)

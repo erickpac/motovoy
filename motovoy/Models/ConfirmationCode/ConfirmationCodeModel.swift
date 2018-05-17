@@ -17,6 +17,7 @@ struct ConfirmationCode: LocalMappable {
     var loginToken: String?
     var tokenReset: String?
     var smsReset: String?
+    var smsRegister: [ConfirmationCodeSms]?
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -29,5 +30,6 @@ struct ConfirmationCode: LocalMappable {
         case loginToken = "login_token"
         case tokenReset = "token_reset"
         case smsReset = "sms_reset"
+        case smsRegister = "sms_register"
     }
 }

@@ -72,4 +72,8 @@ extension LoginViewController: LoginView {
         
         performSegue(withIdentifier: "ShowMain", sender: nil)
     }
+    
+    func loginAccountNotConfirm() {
+        performSegue(withIdentifier: "VerificationSegue", sender: nil)
+    }
 }

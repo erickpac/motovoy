@@ -35,11 +35,14 @@ class LoginPresenter {
         apiManager.postServiceString(urlService: UrlPath.login, params: params, onSuccess: { (user) in
             if let userObject = User(jsonString: user) {
                 if let status = userObject.status {
-                    if status.code == 200 {
+                    if status.code == 102 {
+                        self.view?.showLoader(show: false)
+                        self.view?.loginAccountNotConfirm()
+                    } else if status.code == 200 {
                         let _ = Utils.saveInUserDefaults(key: UserDefaultsKeys.USER_KEY, data: user)
                         self.view?.showLoader(show: false)
                         self.view?.loginSuccess()
-                    } else {
+                    }else {
                         self.view?.showLoader(show: false)
                         if let errorMessage = status.message {
                             self.view?.errorMessage(message: errorMessage)

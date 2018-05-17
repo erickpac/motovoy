@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uQn-5R-kfT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uQn-5R-kfT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -306,7 +306,6 @@
                         <outlet property="titleBarView" destination="bwe-Cp-T6Q" id="dpH-Rf-Iz3"/>
                         <outlet property="userField" destination="9r9-ko-ta5" id="m08-sg-yZE"/>
                         <segue destination="PlR-58-gdi" kind="show" identifier="ShowMain" id="KbB-D7-qXp"/>
-                        <segue destination="S6a-5p-uY5" kind="show" identifier="VerificationSegue" id="Gbk-OD-xgD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1y-Iw-blR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -614,7 +613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iS8-yB-ngV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="296"/>
+            <point key="canvasLocation" x="1724" y="752"/>
         </scene>
         <!--Main-->
         <scene sceneID="DBv-vC-yuu">
@@ -622,7 +621,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="PlR-58-gdi" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dl-ta-x7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2307" y="298"/>
+            <point key="canvasLocation" x="984" y="1329"/>
         </scene>
         <!--Recover Password View Controller-->
         <scene sceneID="q7T-c6-CMM">
@@ -769,17 +768,17 @@ verificación por SMS.</string>
                     <connections>
                         <outlet property="phoneField" destination="4kC-Zc-8zS" id="30u-7C-oNk"/>
                         <outlet property="titleBarView" destination="P6v-be-2FB" id="NN1-Iv-bkj"/>
-                        <segue destination="Vfs-ga-a6g" kind="show" identifier="RestorePasswordSegue" id="hAD-dC-5cp"/>
+                        <segue destination="S6a-5p-uY5" kind="show" identifier="RecoveryPasswordSegue" id="Lgs-SZ-jUg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2e-xX-oSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="-395.35232383808096"/>
+            <point key="canvasLocation" x="1724" y="-6"/>
         </scene>
-        <!--Recover Password View Controller-->
+        <!--Verification View Controller-->
         <scene sceneID="rFG-yu-P0a">
             <objects>
-                <viewController id="S6a-5p-uY5" customClass="RecoverPasswordViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="S6a-5p-uY5" customClass="VerificationViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MWI-FV-fJY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -799,12 +798,14 @@ verificación por SMS.</string>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPQ-vi-Moc">
                                                 <rect key="frame" x="20" y="182" width="335" height="72"/>
-                                                <string key="text">Te hemos enviado un código de verificación por SMS, por favor,introdúcelo aquí.</string>
+                                                <string key="text">Te hemos enviado un código de 
+verificación por SMS, por favor,
+introdúcelo aquí.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Teléfono" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pkm-GU-DJC" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Código" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pkm-GU-DJC" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="20" y="274" width="335" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="m4o-r5-Ehd"/>
@@ -842,7 +843,7 @@ verificación por SMS.</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="recoverAction:" destination="S6a-5p-uY5" eventType="touchUpInside" id="zhX-Vs-PAj"/>
+                                                    <action selector="verifyAccountAction:" destination="S6a-5p-uY5" eventType="touchUpInside" id="JUs-DC-p8G"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wP-zu-i5Z" customClass="FlatButton" customModule="Material">
@@ -865,9 +866,6 @@ verificación por SMS.</string>
                                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="recoverAction:" destination="S6a-5p-uY5" eventType="touchUpInside" id="M5k-t4-7Bq"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -944,18 +942,18 @@ verificación por SMS.</string>
                         <viewLayoutGuide key="safeArea" id="Bl4-BA-M38"/>
                     </view>
                     <connections>
-                        <outlet property="phoneField" destination="Pkm-GU-DJC" id="gcv-qT-YGx"/>
-                        <outlet property="titleBarView" destination="gh0-xF-LK5" id="TNu-Pa-rcx"/>
+                        <outlet property="messageField" destination="Pkm-GU-DJC" id="LFK-xc-s7N"/>
+                        <segue destination="Vfs-ga-a6g" kind="show" identifier="ChangePasswordSegue" id="2hR-wH-xjn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GE7-HJ-ryH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2380" y="-395"/>
+            <point key="canvasLocation" x="2548" y="-6"/>
         </scene>
-        <!--Recover Password View Controller-->
+        <!--Change Password View Controller-->
         <scene sceneID="8m7-NE-LXR">
             <objects>
-                <viewController id="Vfs-ga-a6g" customClass="RecoverPasswordViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vfs-ga-a6g" customClass="ChangePasswordViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rgo-6n-bAU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -973,20 +971,20 @@ verificación por SMS.</string>
                                                     <constraint firstAttribute="width" secondItem="4zO-H7-pLa" secondAttribute="height" id="mLE-xB-PZt"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce aqui tu nueva contraseña." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imk-fZ-LfR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce aquí tu nueva contraseña." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imk-fZ-LfR">
                                                 <rect key="frame" x="20" y="182" width="335" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Teléfono" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DzA-BF-AOa" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DzA-BF-AOa" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="20" y="226" width="335" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Kuf-eP-pAX"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="tel"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
                                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1018,7 +1016,7 @@ verificación por SMS.</string>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="RESTABLECER"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="recoverAction:" destination="Vfs-ga-a6g" eventType="touchUpInside" id="nVc-lV-xT8"/>
+                                                    <action selector="changePasswordAction:" destination="Vfs-ga-a6g" eventType="touchUpInside" id="7ma-sk-2ZR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1093,13 +1091,12 @@ verificación por SMS.</string>
                         <viewLayoutGuide key="safeArea" id="KnB-Rh-B1p"/>
                     </view>
                     <connections>
-                        <outlet property="phoneField" destination="DzA-BF-AOa" id="wHM-rH-h8N"/>
-                        <outlet property="titleBarView" destination="g0o-4c-W81" id="hfa-sX-abI"/>
+                        <outlet property="passwrodField" destination="DzA-BF-AOa" id="1Nt-dk-wxg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="drB-M2-1ML" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3081" y="-395"/>
+            <point key="canvasLocation" x="3350" y="-6"/>
         </scene>
     </scenes>
     <resources>
@@ -1111,6 +1108,6 @@ verificación por SMS.</string>
         <image name="sms" width="121" height="121"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KbB-D7-qXp"/>
+        <segue reference="cC7-gM-u8T"/>
     </inferredMetricsTieBreakers>
 </document>

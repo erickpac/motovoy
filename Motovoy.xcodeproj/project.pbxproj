@@ -53,6 +53,7 @@
 		B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A2B20A2AA78001DF9B2 /* CustomerCreditCardModel.swift */; };
 		B9093A2E20A2ACFA001DF9B2 /* CustomerDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A2D20A2ACFA001DF9B2 /* CustomerDetailModel.swift */; };
 		B9093A3120A2B0C8001DF9B2 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A3020A2B0C8001DF9B2 /* StatusModel.swift */; };
+		B90C057620ACF9FC005F79CC /* ConfirmationCodeSmsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90C057520ACF9FC005F79CC /* ConfirmationCodeSmsModel.swift */; };
 		B90DE28320A7EFB40086AE95 /* MessagesProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90DE28220A7EFB40086AE95 /* MessagesProtocolView.swift */; };
 		B90DE28520A7EFD50086AE95 /* MessagesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90DE28420A7EFD50086AE95 /* MessagesPresenter.swift */; };
 		B90DE28720A7F13D0086AE95 /* ReservationProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90DE28620A7F13D0086AE95 /* ReservationProtocolView.swift */; };
@@ -146,6 +147,7 @@
 		B9093A2B20A2AA78001DF9B2 /* CustomerCreditCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCreditCardModel.swift; sourceTree = "<group>"; };
 		B9093A2D20A2ACFA001DF9B2 /* CustomerDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailModel.swift; sourceTree = "<group>"; };
 		B9093A3020A2B0C8001DF9B2 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
+		B90C057520ACF9FC005F79CC /* ConfirmationCodeSmsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationCodeSmsModel.swift; sourceTree = "<group>"; };
 		B90DE28220A7EFB40086AE95 /* MessagesProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesProtocolView.swift; sourceTree = "<group>"; };
 		B90DE28420A7EFD50086AE95 /* MessagesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesPresenter.swift; sourceTree = "<group>"; };
 		B90DE28620A7F13D0086AE95 /* ReservationProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationProtocolView.swift; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				B95DBD0F20ACE07100A2244D /* ConfirmationCodeModel.swift */,
+				B90C057520ACF9FC005F79CC /* ConfirmationCodeSmsModel.swift */,
 			);
 			path = ConfirmationCode;
 			sourceTree = "<group>";
@@ -777,6 +780,7 @@
 				8308B45520ABA22A0091AA2B /* BikeShowcaseOngoingTableViewCell.swift in Sources */,
 				B95DBD0120ACC8A800A2244D /* VerificationProtocolView.swift in Sources */,
 				B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */,
+				B90C057620ACF9FC005F79CC /* ConfirmationCodeSmsModel.swift in Sources */,
 				8308B45320AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift in Sources */,
 				B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */,
 				B969496320A68A7A005B75F7 /* GarageProtocolView.swift in Sources */,

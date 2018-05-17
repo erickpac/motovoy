@@ -13,13 +13,13 @@ import SVProgressHUD
 class RecoverPasswordViewController: UIViewController {
     @IBOutlet weak var phoneField: TextField!
     @IBOutlet weak var titleBarView: NavigationShadowedView!
+    fileprivate var phone: String?
 
     fileprivate let recoverPasswordPresenter = RecoverPasswordPresenter(apiManager: APIManager.default)
     
     @IBAction func recoverAction(_ sender: Any) {
         showLoader(show: true)
-        let phone: String = phoneField.text!
-        recoverPasswordPresenter.getConfirmationCode(phone: phone)
+        recoverPasswordPresenter.getConfirmationCode(phone: phoneField.text!)
     }
 }
 
@@ -34,6 +34,15 @@ extension RecoverPasswordViewController {
         phoneField.dividerActiveColor = UIColor.lightGray
         phoneField.textAlignment = .center
         phoneField.text = "+34373737"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "RecoveryPasswordSegue" {
+            if let vc = segue.destination as? VerificationViewController {
+                vc.phone = phoneField.text!
+                vc.isRecoveryPassword = true
+            }
+        }
     }
 }
 
@@ -50,7 +59,7 @@ extension RecoverPasswordViewController: RecoverPasswordView {
         SVProgressHUD.showError(withStatus: message)
     }
     
-    func getConfirmationCodeSuccess(phone: String) {
-        
+    func getConfirmationCodeSuccess() {
+        self.performSegue(withIdentifier: "RecoveryPasswordSegue", sender: nil)
     }
 }

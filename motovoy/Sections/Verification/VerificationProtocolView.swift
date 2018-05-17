@@ -10,5 +10,6 @@ protocol VerificationView {
     func showLoader(show: Bool)
     func errorMessage(message: String)
     func confirmationCodeSuccess()
-    func verificationSuccess()
+    func verificationChangePasswordSuccess()
+    func verificationAccountSuccess()
 }

@@ -13,24 +13,37 @@ import Material
 class VerificationViewController: UIViewController {
     @IBOutlet weak var messageField: TextField!
     fileprivate let presenter = VerificationPresenter(apiManager: APIManager.default)
-    fileprivate let mobile: String = ""
+    var phone: String?
+    var isRecoveryPassword: Bool = false
     
-    @IBAction func loginAction(_ sender: Any) {
+    @IBAction func verifyAccountAction(_ sender: Any) {
         showLoader(show: true)
-        let message: String = messageField.text!
-        presenter.verificationAccount(mobile: mobile, textMessage: message)
-    }
-    
-    @IBAction func resendAction(_ sender: Any) {
-        showLoader(show: true)
-        let message: String = messageField.text!
-        presenter.verificationAccount(mobile: mobile, textMessage: message)
+        if let phone = self.phone {
+            presenter.verificationAccount(mobile: phone, textMessage:  messageField.text!, isRecoveryPassword: isRecoveryPassword)
+        }
     }
 }
 
 extension VerificationViewController {
     override func viewDidLoad() {
+        configure()
         presenter.attachView(self)
+    }
+    
+    func configure() {
+        messageField.dividerActiveColor = UIColor.lightGray
+        messageField.textAlignment = .center
+        messageField.text = "9613"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ChangePasswordSegue" {
+            if let vc = segue.destination as? ChangePasswordViewController {
+                if let localPhone = phone {
+                    vc.phone = localPhone
+                }
+            }
+        }
     }
 }
 
@@ -51,11 +64,11 @@ extension VerificationViewController: VerificationView {
         
     }
     
-    func verificationSuccess() {
-        
+    func verificationChangePasswordSuccess() {
+        self.performSegue(withIdentifier: "ChangePasswordSegue", sender: nil)
     }
     
-    func resetPasswordSuccess(smsReset: String, tokenReset: String) {
+    func verificationAccountSuccess() {
         
     }
 }

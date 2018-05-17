@@ -64,6 +64,8 @@ extension RegistrationViewController: RegistrationView {
     }
     
     func registrationSuccess() {
-        performSegue(withIdentifier: "ShowMain", sender: nil)
+        if let navController = self.navigationController {
+            navigationController?.popViewController(animated: true)
+        }
     }
 }

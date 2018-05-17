@@ -28,10 +28,16 @@ class ChangePasswordViewController: UIViewController {
 
 extension ChangePasswordViewController {
     override func viewDidLoad() {
+        configure()
         presenter.attachView(self)
         if let phone = self.phone {
             presenter.resetPassword(phone: phone)
         }
+    }
+    
+    func configure() {
+        passwrodField.dividerActiveColor = UIColor.lightGray
+        passwrodField.textAlignment = .center
     }
 }
 

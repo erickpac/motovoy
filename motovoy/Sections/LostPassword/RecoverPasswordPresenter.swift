@@ -8,7 +8,7 @@
 
 class RecoverPasswordPresenter {
     fileprivate let apiManager: APIManager
-    fileprivate var recoverPasswordView: RecoverPasswordView?
+    fileprivate var view: RecoverPasswordView?
     fileprivate var phone: String = ""
     
     init(apiManager: APIManager) {
@@ -16,11 +16,11 @@ class RecoverPasswordPresenter {
     }
     
     func attachView(_ view: RecoverPasswordView) {
-        recoverPasswordView = view
+        self.view = view
     }
     
     func detachView() {
-        recoverPasswordView = nil
+        view = nil
     }
     
     func getConfirmationCode(phone: String) -> Void {
@@ -28,21 +28,22 @@ class RecoverPasswordPresenter {
         let params: [String: Any]
         params = ["mobile": phone]
         
-        apiManager.postServiceModel(urlService: UrlPath.getConfirmationCode, params: params, onSuccess: { (user: User) in
-            if let status = user.status {
+        apiManager.postServiceModel(urlService: UrlPath.getConfirmationCode, params: params, onSuccess: { (response: ConfirmationCode) in
+            if let status = response.status {
                 if status.code == 200 {
-                    self.recoverPasswordView?.showLoader(show: false)
-                    self.recoverPasswordView?.getConfirmationCodeSuccess(phone: self.phone)
+                    print("SMS => \(response.smsRegister?.first?.smsRegister ?? "")")
+                    self.view?.showLoader(show: false)
+                    self.view?.getConfirmationCodeSuccess()
                 } else {
-                    self.recoverPasswordView?.showLoader(show: false)
+                    self.view?.showLoader(show: false)
                     if let errorMessage = status.message {
-                        self.recoverPasswordView?.errorMessage(message: errorMessage)
+                        self.view?.errorMessage(message: errorMessage)
                     }
                 }
             }
         }) { (error) in
-            self.recoverPasswordView?.showLoader(show: false)
-            self.recoverPasswordView?.errorMessage(message: error.debugDescription)
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: error.debugDescription)
         }
     }
 }

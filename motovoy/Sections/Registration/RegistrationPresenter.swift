@@ -51,17 +51,15 @@ class RegistrationPresenter {
             "lng": longitude
         ]
         
-        apiManager.postServiceString(urlService: UrlPath.register, params: params, onSuccess: { (userString) in
-            if let user = User(jsonString: userString) {
-                if let status = user.status {
-                    if status.code == 200 {
-                        let _ = Utils.saveInUserDefaults(key: UserDefaultsKeys.USER_KEY, data: userString)
-                        self.view?.showLoader(show: false)
-                    } else {
-                        self.view?.showLoader(show: false)
-                        if let errorMessage = status.message {
-                            self.view?.errorMessage(message: errorMessage)
-                        }
+        apiManager.postServiceModel(urlService: UrlPath.register, params: params, onSuccess: { (response: User) in
+            if let status = response.status {
+                if status.code == 200 {
+                    self.view?.showLoader(show: false)
+                    self.view?.registrationSuccess()
+                } else {
+                    self.view?.showLoader(show: false)
+                    if let errorMessage = status.message {
+                        self.view?.errorMessage(message: errorMessage)
                     }
                 }
             }
