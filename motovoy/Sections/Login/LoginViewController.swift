@@ -41,11 +41,8 @@ extension LoginViewController {
     func configure() {
         registerButton.borderColor = MColor.blue
         registerButton.borderWidthPreset = .border4
-        
         userField.dividerActiveColor = UIColor.lightGray
         passwordField.dividerActiveColor = UIColor.lightGray
-        userField.text = "+34373737"
-        passwordField.text = "prueba"
     }
 }
 

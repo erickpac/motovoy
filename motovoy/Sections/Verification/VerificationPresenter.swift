@@ -6,6 +6,8 @@
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
+import Foundation
+
 class VerificationPresenter {
     fileprivate let apiManager: APIManager
     fileprivate var view: VerificationView?
@@ -45,22 +47,43 @@ class VerificationPresenter {
         }
     }
     
-    func verificationAccount(mobile: String, textMessage: String, isRecoveryPassword: Bool) -> Void {
+    func verificationAccount(phone: String, textMessage: String, isRecoveryPassword: Bool) -> Void {
         var params: [String: Any]
         params = [
-            "mobile": mobile,
+            "mobile": phone,
             "text_message": textMessage
         ]
         
-        apiManager.postServiceModel(urlService: UrlPath.verifyAccount, params: params, onSuccess: { (status: ConfirmationCode) in
-            if let status = status.status {
+        apiManager.postServiceModel(urlService: UrlPath.verifyAccount, params: params, onSuccess: { (response: ConfirmationCode) in
+            if let status = response.status {
                 if status.code == 200 {
                     if isRecoveryPassword {
-                         self.view?.verificationChangePasswordSuccess()
+                        self.view?.verificationChangePasswordSuccess()
                     } else {
+                        if let loginToken = response.loginToken {
+                            let userData: [String: Any]
+                            userData = [
+                                "name": response.name ?? "",
+                                "mobile": response.mobile ?? "",
+                                "email": response.email ?? "",
+                                "user_id": response.userId ?? 0,
+                                "nif": response.nif ?? "",
+                                "credit_cards": response.creditCards ?? [],
+                                "status": [
+                                    "code": status.code ?? 200,
+                                    "message": status.message ?? "",
+                                    "login_token": loginToken
+                                ]
+                            ]
+                            
+                            let jsonData = try? JSONSerialization.data(withJSONObject: userData, options: [])
+                            let jsonString: String = String(data: jsonData!, encoding: .utf8)!
+                            let _ = Utils.saveInUserDefaults(key: UserDefaultsKeys.USER_KEY, data: jsonString)
+                        }
+                        
                         self.view?.verificationAccountSuccess()
                     }
-                   
+                    
                     self.view?.showLoader(show: false)
                 } else {
                     self.view?.showLoader(show: false)
