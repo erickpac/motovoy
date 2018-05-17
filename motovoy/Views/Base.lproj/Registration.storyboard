@@ -89,7 +89,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email o Telefono" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9m-0e-kw7">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email o teléfono" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9m-0e-kw7">
                                                 <rect key="frame" x="20" y="85" width="335" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <nil key="textColor"/>
@@ -109,7 +109,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="mB6-AL-97p"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ingresa Email o Teléfono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9r9-ko-ta5" customClass="TextField" customModule="Material">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ingresa email o teléfono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9r9-ko-ta5" customClass="TextField" customModule="Material">
                                                 <rect key="frame" x="20" y="106.5" width="335" height="50"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -768,7 +768,7 @@ verificación por SMS.</string>
                     <connections>
                         <outlet property="phoneField" destination="4kC-Zc-8zS" id="30u-7C-oNk"/>
                         <outlet property="titleBarView" destination="P6v-be-2FB" id="NN1-Iv-bkj"/>
-                        <segue destination="S6a-5p-uY5" kind="show" identifier="RecoveryPasswordSegue" id="Lgs-SZ-jUg"/>
+                        <segue destination="S6a-5p-uY5" kind="show" identifier="VerificationRecoveryPasswordSegue" id="Lgs-SZ-jUg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2e-xX-oSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1046,8 +1046,8 @@ introdúcelo aquí.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0o-4c-W81" customClass="NavigationShadowedView" customModule="motovoy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="-30" width="375" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restablecer Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbh-mL-nuY">
-                                        <rect key="frame" x="93.5" y="58" width="188.5" height="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restablecer contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbh-mL-nuY">
+                                        <rect key="frame" x="95" y="58" width="186" height="34"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1108,6 +1108,6 @@ introdúcelo aquí.</string>
         <image name="sms" width="121" height="121"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cC7-gM-u8T"/>
+        <segue reference="KbB-D7-qXp"/>
     </inferredMetricsTieBreakers>
 </document>

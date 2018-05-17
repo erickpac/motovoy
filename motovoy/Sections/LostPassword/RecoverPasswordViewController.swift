@@ -37,7 +37,7 @@ extension RecoverPasswordViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "RecoveryPasswordSegue" {
+        if segue.identifier == "VerificationRecoveryPasswordSegue" {
             if let vc = segue.destination as? VerificationViewController {
                 vc.phone = phoneField.text!
                 vc.isRecoveryPassword = true
@@ -60,6 +60,6 @@ extension RecoverPasswordViewController: RecoverPasswordView {
     }
     
     func getConfirmationCodeSuccess() {
-        self.performSegue(withIdentifier: "RecoveryPasswordSegue", sender: nil)
+        self.performSegue(withIdentifier: "VerificationRecoveryPasswordSegue", sender: nil)
     }
 }
