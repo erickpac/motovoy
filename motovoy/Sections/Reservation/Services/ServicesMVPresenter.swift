@@ -22,24 +22,25 @@ class ServicesMVPresenter {
         view = nil
     }
     
-    func getServices() -> Void {
-        let services: [ServicesMV] = [
-            ServicesMV(name: "REVISIÓN", subServices: [SubServiceMV(name: "MOTOVOY BÁSICA"),
-                                                        SubServiceMV(name: "MOTOVOY A PUNTO"),
-                                                        SubServiceMV(name: "MOTOVOY SEGURIDAD")], expand: true),
-            ServicesMV(name: "CAMBIAR ACEITE", subServices: [SubServiceMV()], expand: false),
-            ServicesMV(name: "PASAR ITV", subServices: [SubServiceMV(name: "COM REVISIÓN PRE-ITV (PVP €)"),
-                                                         SubServiceMV(name: "SÓLO PASAR ITV (PVP €)")], expand: true),
-            ServicesMV(name: "PASTILLAS DE FRENO", subServices: [SubServiceMV(name: "PASTILLA DELANTERA (PVP €)"),
-                                                                  SubServiceMV(name: "PASTILLA TRASERA (PVP €)"),
-                                                                  SubServiceMV(name: "AMBAS (PVP €)")], expand: true),
-            ServicesMV(name: "CAMBIAR NEUMÁTICOS", subServices: [SubServiceMV(name: "NEUMÁTICO DELANTERO"),
-                                                                  SubServiceMV(name: "NEUMÁTICO TRASERO"),
-                                                                SubServiceMV(name: "AMBOS")], expand: true),
-            ServicesMV(name: "CAMBIAR BATERÍA", subServices: [SubServiceMV(name: "CAMBIAR BATERÍA (PVP €)")], expand: true),
-            ServicesMV(name: "OTROS", subServices: [SubServiceMV()], expand: false),
-        ]
+    func getServices(motoId: String) -> Void {
+        let params: [String: Any]
+        params = ["moto_id": motoId]
         
-        view?.getServicesSuccess(services: services)
+        apiManager.postServiceModel(urlService: UrlPath.changePassword, params: params, onSuccess: { (response: ServiceMV) in
+            if let status = response.status, let services = response.kits {
+                if status.code == 200 {
+                    self.view?.getServicesSuccess(services: services)
+                    self.view?.showLoader(show: false)
+                } else {
+                    self.view?.showLoader(show: false)
+                    if let errorMessage = status.message {
+                        self.view?.errorMessage(message: errorMessage)
+                    }
+                }
+            }
+        }) { (error) in
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: error.debugDescription)
+        }
     }
 }

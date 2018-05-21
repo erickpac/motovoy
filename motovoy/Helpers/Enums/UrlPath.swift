@@ -20,4 +20,5 @@ enum UrlPath: String {
     case deleteBike = "/api/motos/delete"
     case getMessages = "/api/notifications/getNotifications"
     case markAsReadMessage = "/api/notifications/markAsRead"
+    case getKitsToService = "/api/kits/getKits"
 }

@@ -13,8 +13,9 @@ class ServicesMVViewController: BaseNavigationViewController {
     @IBOutlet weak var emptyStateView: UIView!
     @IBOutlet weak var tableView: UITableView!
     fileprivate let presenter = ServicesMVPresenter(apiManager: APIManager.default)
+    var motoId: String?
     
-    var services: [ServicesMV] = [ServicesMV]() {
+    var services: [ServiceMVKit] = [ServiceMVKit]() {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
@@ -27,7 +28,9 @@ class ServicesMVViewController: BaseNavigationViewController {
 extension ServicesMVViewController {
     override func viewDidLoad() {
         presenter.attachView(self)
-        presenter.getServices()
+        if let motoId = motoId {
+            presenter.getServices(motoId: motoId)
+        }
     }
 }
 
@@ -44,7 +47,7 @@ extension ServicesMVViewController: ServicesMVView {
         SVProgressHUD.showError(withStatus: message)
     }
     
-    func getServicesSuccess(services: [ServicesMV]) {
+    func getServicesSuccess(services: [ServiceMVKit]) {
         self.services = services
     }
 }

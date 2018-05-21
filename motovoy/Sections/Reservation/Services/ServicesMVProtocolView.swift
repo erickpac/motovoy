@@ -9,5 +9,5 @@
 protocol ServicesMVView {
     func showLoader(show: Bool)
     func errorMessage(message: String)
-    func getServicesSuccess(services: [ServicesMV])
+    func getServicesSuccess(services: [ServiceMVKit])
 }
