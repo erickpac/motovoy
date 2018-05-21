@@ -22,7 +22,7 @@ class ServicesMVPresenter {
         view = nil
     }
     
-    func getServices(motoId: String) -> Void {
+    func getServices(motoId: Int) -> Void {
         let params: [String: Any]
         params = ["moto_id": motoId]
         
