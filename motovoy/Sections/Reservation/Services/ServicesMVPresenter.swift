@@ -26,7 +26,7 @@ class ServicesMVPresenter {
         let params: [String: Any]
         params = ["moto_id": motoId]
         
-        apiManager.postServiceModel(urlService: UrlPath.changePassword, params: params, onSuccess: { (response: ServiceMV) in
+        apiManager.postServiceModel(urlService: UrlPath.getKitsToService, params: params, onSuccess: { (response: ServiceMV) in
             if let status = response.status, let services = response.kits {
                 if status.code == 200 {
                     self.view?.getServicesSuccess(services: services)
