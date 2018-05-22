@@ -94,6 +94,8 @@
 		B9ECC8CD20A6C05B00EBC8EC /* BikeSubmodelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8CC20A6C05B00EBC8EC /* BikeSubmodelModel.swift */; };
 		B9ECC8CF20A6C15E00EBC8EC /* BikeVehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8CE20A6C15E00EBC8EC /* BikeVehicleModel.swift */; };
 		B9ECC8D120A6C25A00EBC8EC /* GaragePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */; };
+		B9F49C7B20B3BCD900BBF3A5 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F49C7A20B3BCD900BBF3A5 /* AddressModel.swift */; };
+		B9F49C7D20B3BCEE00BBF3A5 /* AddressBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F49C7C20B3BCEE00BBF3A5 /* AddressBodyModel.swift */; };
 		B9F71F2120A53D0200043633 /* RecoverPasswordProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71F2020A53D0200043633 /* RecoverPasswordProtocolView.swift */; };
 		B9F71F2320A53D4000043633 /* RecoverPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71F2220A53D4000043633 /* RecoverPasswordPresenter.swift */; };
 		B9FADCC920B25DBE00C63B3D /* BillingProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FADCC820B25DBE00C63B3D /* BillingProtocolView.swift */; };
@@ -200,6 +202,8 @@
 		B9ECC8CC20A6C05B00EBC8EC /* BikeSubmodelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeSubmodelModel.swift; sourceTree = "<group>"; };
 		B9ECC8CE20A6C15E00EBC8EC /* BikeVehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeVehicleModel.swift; sourceTree = "<group>"; };
 		B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaragePresenter.swift; sourceTree = "<group>"; };
+		B9F49C7A20B3BCD900BBF3A5 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
+		B9F49C7C20B3BCEE00BBF3A5 /* AddressBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBodyModel.swift; sourceTree = "<group>"; };
 		B9F71F2020A53D0200043633 /* RecoverPasswordProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordProtocolView.swift; sourceTree = "<group>"; };
 		B9F71F2220A53D4000043633 /* RecoverPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordPresenter.swift; sourceTree = "<group>"; };
 		B9FADCC820B25DBE00C63B3D /* BillingProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingProtocolView.swift; sourceTree = "<group>"; };
@@ -441,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				B9093A2720A2A911001DF9B2 /* LocalMappable.swift */,
+				B9F49C7920B3BCC100BBF3A5 /* Address */,
 				B9FADCDB20B2604800C63B3D /* ServiceMV */,
 				B95DBD0D20ACDFFF00A2244D /* Generic */,
 				B9093A2F20A2B0BB001DF9B2 /* Status */,
@@ -646,6 +651,15 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		B9F49C7920B3BCC100BBF3A5 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				B9F49C7A20B3BCD900BBF3A5 /* AddressModel.swift */,
+				B9F49C7C20B3BCEE00BBF3A5 /* AddressBodyModel.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
 		B9FADCC520B25D9700C63B3D /* Payment */ = {
 			isa = PBXGroup;
 			children = (
@@ -830,6 +844,7 @@
 			files = (
 				B9FADCDD20B2606500C63B3D /* ServiceMVModel.swift in Sources */,
 				B95DBD0A20ACDCD200A2244D /* ChangePasswordProtocolView.swift in Sources */,
+				B9F49C7B20B3BCD900BBF3A5 /* AddressModel.swift in Sources */,
 				B9093A2620A2A6AC001DF9B2 /* APIManager.swift in Sources */,
 				B9ECC8D120A6C25A00EBC8EC /* GaragePresenter.swift in Sources */,
 				83A19E2C20A7781900AC980F /* MessagesViewController.swift in Sources */,
@@ -866,6 +881,7 @@
 				B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */,
 				B969496320A68A7A005B75F7 /* GarageProtocolView.swift in Sources */,
 				B9924A5A20A3CB3A00021473 /* UrlPath.swift in Sources */,
+				B9F49C7D20B3BCEE00BBF3A5 /* AddressBodyModel.swift in Sources */,
 				B914ED9820A678FD009A9291 /* BrandModelObjectModel.swift in Sources */,
 				B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */,
 				8308B44A20AB88000091AA2B /* MainNavigationTabViewController.swift in Sources */,
@@ -1098,7 +1114,7 @@
 				DEVELOPMENT_TEAM = AUFZ67XMVW;
 				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1114,7 +1130,7 @@
 				DEVELOPMENT_TEAM = AUFZ67XMVW;
 				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
