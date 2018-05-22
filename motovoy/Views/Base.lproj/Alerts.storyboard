@@ -44,14 +44,27 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yct-nh-0Cj">
                                                             <rect key="frame" x="27" y="11" width="221" height="54"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="dVL-fh-1ud"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3g-1K-lh9">
+                                                            <rect key="frame" x="20" y="75" width="235" height="1"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="tcC-74-vjO"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="Yct-nh-0Cj" firstAttribute="bottom" secondItem="9gA-nm-AIo" secondAttribute="bottomMargin" id="4O6-bZ-iaK"/>
+                                                        <constraint firstItem="B3g-1K-lh9" firstAttribute="leading" secondItem="9gA-nm-AIo" secondAttribute="leading" constant="20" id="S5I-2g-7Yh"/>
+                                                        <constraint firstAttribute="trailing" secondItem="B3g-1K-lh9" secondAttribute="trailing" constant="20" id="aX0-Rd-y36"/>
                                                         <constraint firstItem="Yct-nh-0Cj" firstAttribute="leading" secondItem="9gA-nm-AIo" secondAttribute="leadingMargin" constant="12" id="flo-FE-Kbb"/>
+                                                        <constraint firstAttribute="bottom" secondItem="B3g-1K-lh9" secondAttribute="bottom" id="jpO-ra-wGH"/>
                                                         <constraint firstItem="Yct-nh-0Cj" firstAttribute="trailing" secondItem="9gA-nm-AIo" secondAttribute="trailingMargin" constant="-12" id="q9l-KF-XUI"/>
                                                         <constraint firstItem="Yct-nh-0Cj" firstAttribute="top" secondItem="9gA-nm-AIo" secondAttribute="topMargin" id="ryv-M4-Czx"/>
                                                     </constraints>
@@ -62,15 +75,25 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECCIONAR MOTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2t-oy-XaH">
-                                        <rect key="frame" x="20" y="19.5" width="235" height="20"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pnz-1M-ITm" customClass="NavigationShadowedView" customModule="motovoy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-0.5" width="275" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECCIONAR MOTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2t-oy-XaH">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="60"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="6Vn-GH-Osq"/>
+                                            <constraint firstAttribute="bottom" secondItem="w2t-oy-XaH" secondAttribute="bottom" id="GkO-Q9-EZr"/>
+                                            <constraint firstAttribute="trailing" secondItem="w2t-oy-XaH" secondAttribute="trailing" id="Zrj-72-eSA"/>
+                                            <constraint firstAttribute="height" constant="60" id="bXb-vb-fV1"/>
+                                            <constraint firstItem="w2t-oy-XaH" firstAttribute="top" secondItem="pnz-1M-ITm" secondAttribute="top" id="bpl-6V-mA4"/>
+                                            <constraint firstItem="w2t-oy-XaH" firstAttribute="leading" secondItem="pnz-1M-ITm" secondAttribute="leading" id="v9n-AA-YSV"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlA-hu-Xiz" customClass="NavigationShadowedView" customModule="motovoy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="249.5" width="275" height="50"/>
                                         <subviews>
@@ -97,17 +120,17 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="w2t-oy-XaH" secondAttribute="trailing" constant="20" id="7oD-kz-5Oo"/>
+                                    <constraint firstItem="pnz-1M-ITm" firstAttribute="top" secondItem="Y5O-Im-ybs" secondAttribute="top" id="3g6-kF-6go"/>
+                                    <constraint firstItem="pnz-1M-ITm" firstAttribute="leading" secondItem="Y5O-Im-ybs" secondAttribute="leading" id="4qV-rO-0tu"/>
                                     <constraint firstAttribute="bottom" secondItem="DlA-hu-Xiz" secondAttribute="bottom" id="9aU-W0-BnM"/>
                                     <constraint firstItem="DlA-hu-Xiz" firstAttribute="leading" secondItem="Y5O-Im-ybs" secondAttribute="leading" id="FXc-wP-CDT"/>
-                                    <constraint firstItem="Krv-l8-Aa3" firstAttribute="top" secondItem="w2t-oy-XaH" secondAttribute="bottom" constant="20" id="Lh0-Wt-jzK"/>
+                                    <constraint firstAttribute="trailing" secondItem="pnz-1M-ITm" secondAttribute="trailing" id="MWe-WZ-fgO"/>
                                     <constraint firstItem="Krv-l8-Aa3" firstAttribute="leading" secondItem="Y5O-Im-ybs" secondAttribute="leading" id="Pfg-1K-8qz"/>
-                                    <constraint firstItem="w2t-oy-XaH" firstAttribute="top" secondItem="Y5O-Im-ybs" secondAttribute="top" constant="20" id="d3x-hW-88y"/>
                                     <constraint firstAttribute="trailing" secondItem="Krv-l8-Aa3" secondAttribute="trailing" id="dJV-gL-f4P"/>
                                     <constraint firstAttribute="height" constant="300" id="dZ3-z8-28v"/>
                                     <constraint firstItem="DlA-hu-Xiz" firstAttribute="top" secondItem="Krv-l8-Aa3" secondAttribute="bottom" id="eYH-2r-Zex"/>
+                                    <constraint firstItem="Krv-l8-Aa3" firstAttribute="top" secondItem="pnz-1M-ITm" secondAttribute="bottom" id="hSJ-tZ-V7e"/>
                                     <constraint firstAttribute="trailing" secondItem="DlA-hu-Xiz" secondAttribute="trailing" id="iuH-LH-Ezb"/>
-                                    <constraint firstItem="w2t-oy-XaH" firstAttribute="leading" secondItem="Y5O-Im-ybs" secondAttribute="leading" constant="20" id="lCi-cp-XBf"/>
                                 </constraints>
                             </view>
                         </subviews>

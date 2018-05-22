@@ -25,7 +25,7 @@ class ServicesMVPresenter {
     func getServices(motoId: Int) -> Void {
         let params: [String: Any]
         params = ["moto_id": motoId]
-        
+        self.view?.showLoader(show: true)
         apiManager.postServiceModel(urlService: UrlPath.getKitsToService, params: params, onSuccess: { (response: ServiceMV) in
             if let status = response.status, let services = response.kits {
                 if status.code == 200 {

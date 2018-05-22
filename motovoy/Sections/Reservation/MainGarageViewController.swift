@@ -7,21 +7,27 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 protocol BikeSelectionDelegate {
-    func didSelect(bike: Bike)
+    func didSelect(bike: BikeBody)
     func createBike()
 }
 
 class MainGarageViewController: BaseNavigationViewController {
     @IBOutlet weak var mainLabel: ActiveLabel!
-    var currentBike: Bike? = nil
+    var currentBike: BikeBody? = nil
+    var bikes: [BikeBody] = []
     var currentServices: [String] = ["servicio"]
+    
+    var bikesPresenter: GaragePresenter = GaragePresenter(apiManager: APIManager.default)
 }
 
 extension MainGarageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        bikesPresenter.attachView(self)
+        bikesPresenter.getBikes()
         configure()
     }
     
@@ -46,7 +52,13 @@ extension MainGarageViewController {
                     self.selectBike()
                 }else {
                     if let index = self.currentServices.index(of: element) {
-                        self.currentServices.remove(at: index)
+                        if element == "servicio" {
+                            self.selectService()
+                        }else {
+                            self.currentServices.remove(at: index)
+                        }
+                    }else {
+                        self.selectService()
                     }
                 }
             }
@@ -68,10 +80,43 @@ extension MainGarageViewController {
     
 }
 
+extension MainGarageViewController: GarageView {
+    
+    func showLoader(show: Bool) {
+        if show {
+            SVProgressHUD.show()
+        }else {
+            SVProgressHUD.dismiss()
+        }
+    }
+    
+    func errorMessage(message: String) {
+        SVProgressHUD.showError(withStatus: message)
+    }
+    
+    func getBikeSuccess(bikes: [BikeBody]) {
+        self.bikes = bikes
+    }
+    
+    func getHistorySuccess() {
+        
+    }
+    
+    func updateBikeSuccess() {
+        
+    }
+    
+    func deleteBikeSuccess() {
+        
+    }
+    
+}
+
 extension MainGarageViewController: BikeSelectionDelegate {
     
-    func didSelect(bike: Bike) {
+    func didSelect(bike: BikeBody) {
         self.currentBike = bike
+        self.configureLabel()
     }
     
     func createBike() {
@@ -87,7 +132,11 @@ extension MainGarageViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "BikeSelectionSegue" {
             let bikeSelectionController = segue.destination as! BikeSelectionViewController
+            bikeSelectionController.data = self.bikes
             bikeSelectionController.delegate = self
+        }else if segue.identifier == "ServiceSelectionSegue" {
+            let serviceSelectionController = segue.destination as! ServicesMVViewController
+            serviceSelectionController.motoId = currentBike?.id?.description ?? ""
         }
     }
     
@@ -100,7 +149,10 @@ extension MainGarageViewController {
     }
     
     func selectService() {
-        
+        if currentBike == nil {
+            return
+        }
+        performSegue(withIdentifier: "ServiceSelectionSegue", sender: nil)
     }
     
 }

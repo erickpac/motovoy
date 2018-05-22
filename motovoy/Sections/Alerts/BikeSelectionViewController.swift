@@ -19,12 +19,7 @@ class BikeSelectionViewController: UIViewController {
     var buttonTitle: String? = "ANADIR NUEVA MOTO"
     
     var delegate: BikeSelectionDelegate? = nil
-    var data: [Bike]! {
-        didSet {
-            tableView.delegate = self
-            tableView.dataSource = self
-        }
-    }
+    var data: [BikeBody]!
 
 }
 
@@ -37,6 +32,8 @@ extension BikeSelectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         configureAlert()
     }
     
@@ -99,6 +96,9 @@ extension BikeSelectionViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let moto = data[indexPath.row]
         delegate?.didSelect(bike: moto)
+        DispatchQueue.main.async {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
 }

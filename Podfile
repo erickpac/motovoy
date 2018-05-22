@@ -11,4 +11,5 @@ target 'motovoy' do
   pod 'SwiftPhoneNumberFormatter'
   pod 'IQKeyboardManagerSwift'
   pod 'SVProgressHUD'
+  pod 'Kingfisher'
 end
