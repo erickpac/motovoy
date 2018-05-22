@@ -7,26 +7,37 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var navigation: UINavigationController!
-    
+    fileprivate let presenter = ProfilePresenter(apiManager: APIManager.default)
+    var address: [AddressBody] = [AddressBody]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     var user: User? {
         get {
             return Utils.currentUser
         }
     }
-
 }
 
 extension ProfileViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
         prepareTabItem()
+        presenter.attachView(self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showLoader(show: true)
+        presenter.getAddress()
     }
     
     func configureTable() {
@@ -55,7 +66,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         return [
             0: 4,
             1: 1,
-            2: 1,
+            2: address.count,
             3: 1,
             4: 1,
             5: 1
@@ -84,9 +95,15 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             cell.titleLabel.text = "DIRECCIONES"
             return cell
         case 2:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileAddressCell") as! AddressTableViewCell
-            let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyStateCell")
-            return cell!
+            if address.count > 0 {
+                let data = address[indexPath.row]
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileAddressCell") as! AddressTableViewCell
+                cell.setData(data: data)
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyStateCell")
+                return cell!
+            }
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileAddAddressCell") as! ActionTableViewCell
             cell.action = {
@@ -110,11 +127,32 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         return [
             0: 50,
             1: 60,
-            2: 100,//UITableViewAutomaticDimension,
+            2: address.count == 0 ? 100 : UITableViewAutomaticDimension,
             3: 72,
             4: 72,
             5: 72
             ][indexPath.section] ?? 0
     }
+}
+
+extension ProfileViewController: ProfileView {
+    func showLoader(show: Bool) {
+        if show {
+            SVProgressHUD.show()
+        } else {
+            SVProgressHUD.dismiss()
+        }
+    }
     
+    func errorMessage(message: String) {
+        SVProgressHUD.showError(withStatus: message)
+    }
+    
+    func getAddressSuccess(address: [AddressBody]) {
+        self.address = address
+    }
+    
+    func deleteAddressSuccess() {
+        
+    }
 }

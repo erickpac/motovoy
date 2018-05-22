@@ -17,7 +17,7 @@ class AddBillingRecordViewController: UIViewController {
     @IBOutlet weak var phoneField: TextField!
     @IBOutlet weak var emailField: TextField!
     
-    fileprivate let addressPresenter = BikePresenter(apiManager: APIManager())
+//    fileprivate let presenter = AddressPresenter(apiManager: APIManager.default)
     
     @IBAction func createAction(_ sender: Any) {
         let name: String = nameField.text!
@@ -32,7 +32,7 @@ extension AddBillingRecordViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        addressPresenter.attachView(self)
+//        presenter.attachView(self)
     }
     
     func configure() {
@@ -41,19 +41,5 @@ extension AddBillingRecordViewController {
         nifField.dividerActiveColor = UIColor.lightGray
         phoneField.dividerActiveColor = UIColor.lightGray
         emailField.dividerActiveColor = UIColor.lightGray
-    }
-}
-
-extension AddBillingRecordViewController: BikeView {
-    func showLoader(show: Bool) {
-        
-    }
-    
-    func errorMessage(message: String) {
-        
-    }
-    
-    func getBikeResourcesSuccess(brandResources: BrandResources) {
-        
     }
 }

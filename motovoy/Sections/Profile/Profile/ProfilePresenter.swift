@@ -43,36 +43,6 @@ class ProfilePresenter {
         }
     }
     
-    func addAddress(address: String, city: String, postalCode: String, name: String, clientName: String, mobile: String, casaNo: String) -> Void {
-        let params: [String: Any]
-        params = [
-            "address": address,
-            "city": city,
-            "postal_code": postalCode,
-            "name": name,
-            "client_name": clientName,
-            "mobile": mobile,
-            "casa_no": casaNo
-        ]
-        
-        apiManager.postServiceModel(urlService: UrlPath.addAddress, params: params, onSuccess: { (response: GenericResponse) in
-            if let status = response.status {
-                if status.code == 200 {
-                    self.view?.showLoader(show: false)
-                    self.view?.addAddressSuccess()
-                } else {
-                    self.view?.showLoader(show: false)
-                    if let errorMessage = status.message {
-                        self.view?.errorMessage(message: errorMessage)
-                    }
-                }
-            }
-        }) { (error) in
-            self.view?.showLoader(show: false)
-            self.view?.errorMessage(message: error.debugDescription)
-        }
-    }
-    
     func deleteAddress(addressId: Int) -> Void {
         let params: [String: Any]
         params = ["address_id": addressId]

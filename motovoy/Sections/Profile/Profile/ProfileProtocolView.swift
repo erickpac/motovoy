@@ -10,7 +10,6 @@ protocol ProfileView {
     func showLoader(show: Bool)
     func errorMessage(message: String)
     func getAddressSuccess(address: [AddressBody])
-    func addAddressSuccess()
     func deleteAddressSuccess()
 }
 
