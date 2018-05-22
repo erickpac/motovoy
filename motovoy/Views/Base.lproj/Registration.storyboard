@@ -609,6 +609,7 @@
                         <outlet property="registerButton" destination="mXG-eK-iDN" id="zbb-ak-FmZ"/>
                         <outlet property="titleBarView" destination="gEh-Vf-0M4" id="nke-Ha-ofH"/>
                         <segue destination="PlR-58-gdi" kind="show" identifier="ShowMain" id="cC7-gM-u8T"/>
+                        <segue destination="S6a-5p-uY5" kind="show" identifier="RegistrationVerificationSegue" id="Tcu-HX-pFc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iS8-yB-ngV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -866,6 +867,9 @@ introdúcelo aquí.</string>
                                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="getConfirmationCodeAction:" destination="S6a-5p-uY5" eventType="touchUpInside" id="ts7-ga-g5I"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1108,6 +1112,7 @@ introdúcelo aquí.</string>
         <image name="sms" width="121" height="121"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KbB-D7-qXp"/>
+        <segue reference="Tcu-HX-pFc"/>
+        <segue reference="cC7-gM-u8T"/>
     </inferredMetricsTieBreakers>
 </document>

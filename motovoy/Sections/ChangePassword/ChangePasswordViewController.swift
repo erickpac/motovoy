@@ -60,6 +60,6 @@ extension ChangePasswordViewController: ChangePasswordView {
     }
     
     func changePasswordSuccess() {
-        
+        self.dismiss(animated: true, completion: nil)
     }
 }

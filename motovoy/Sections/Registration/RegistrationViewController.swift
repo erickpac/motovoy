@@ -42,11 +42,18 @@ extension RegistrationViewController {
     func configure() {
         loginButton.borderColor = MColor.blue
         loginButton.borderWidthPreset = .border4
-        
         nameField.dividerActiveColor = UIColor.lightGray
         emailField.dividerActiveColor = UIColor.lightGray
         phoneField.dividerActiveColor = UIColor.lightGray
         passwordField.dividerActiveColor = UIColor.lightGray
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "RegistrationVerificationSegue" {
+            if let vc = segue.destination as? VerificationViewController {
+                vc.phone = phoneField.text!
+            }
+        }
     }
 }
 
@@ -64,8 +71,6 @@ extension RegistrationViewController: RegistrationView {
     }
     
     func registrationSuccess() {
-        if let navController = self.navigationController {
-            navigationController?.popViewController(animated: true)
-        }
+        performSegue(withIdentifier: "RegistrationVerificationSegue", sender: nil)
     }
 }

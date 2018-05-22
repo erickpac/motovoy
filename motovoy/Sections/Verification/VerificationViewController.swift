@@ -19,7 +19,14 @@ class VerificationViewController: UIViewController {
     @IBAction func verifyAccountAction(_ sender: Any) {
         showLoader(show: true)
         if let phone = self.phone {
-            presenter.verificationAccount(mobile: phone, textMessage:  messageField.text!, isRecoveryPassword: isRecoveryPassword)
+            presenter.verificationAccount(phone: phone, textMessage:  messageField.text!, isRecoveryPassword: isRecoveryPassword)
+        }
+    }
+    
+    @IBAction func getConfirmationCodeAction(_ sender: Any) {
+        showLoader(show: true)
+        if let phone = self.phone {
+            presenter.getConfirmationCode(phone: phone)
         }
     }
 }
@@ -28,12 +35,14 @@ extension VerificationViewController {
     override func viewDidLoad() {
         configure()
         presenter.attachView(self)
+        if phone != nil && !isRecoveryPassword {
+            presenter.getConfirmationCode(phone: phone!)
+        }
     }
     
     func configure() {
         messageField.dividerActiveColor = UIColor.lightGray
         messageField.textAlignment = .center
-        messageField.text = "9613"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -69,6 +78,6 @@ extension VerificationViewController: VerificationView {
     }
     
     func verificationAccountSuccess() {
-        
+        self.dismiss(animated: true, completion: nil)
     }
 }

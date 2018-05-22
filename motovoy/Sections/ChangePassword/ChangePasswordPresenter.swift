@@ -5,6 +5,7 @@
 //  Created by Erick Pac on 5/16/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
+import Foundation
 
 class ChangePasswordPresenter {
     fileprivate let apiManager: APIManager
@@ -59,13 +60,34 @@ class ChangePasswordPresenter {
         ]
         
         apiManager.postServiceModel(urlService: UrlPath.changePassword, params: params, onSuccess: { (response: ConfirmationCode) in
-            if let localStatus = response.status {
-                if localStatus.code == 200 {
+            if let status = response.status {
+                if status.code == 200 {
+                    if let loginToken = response.loginToken {
+                        let userData: [String: Any]
+                        userData = [
+                            "name": response.name ?? "",
+                            "mobile": response.mobile ?? "",
+                            "email": response.email ?? "",
+                            "user_id": response.userId ?? 0,
+                            "nif": response.nif ?? "",
+                            "credit_cards": response.creditCards ?? [],
+                            "status": [
+                                "code": status.code ?? 200,
+                                "message": status.message ?? "",
+                                "login_token": loginToken
+                            ]
+                        ]
+                        
+                        let jsonData = try? JSONSerialization.data(withJSONObject: userData, options: [])
+                        let jsonString: String = String(data: jsonData!, encoding: .utf8)!
+                        let _ = Utils.saveInUserDefaults(key: UserDefaultsKeys.USER_KEY, data: jsonString)
+                    }
+                    
                     self.view?.changePasswordSuccess()
                     self.view?.showLoader(show: false)
                 } else {
                     self.view?.showLoader(show: false)
-                    if let errorMessage = localStatus.message {
+                    if let errorMessage = status.message {
                         self.view?.errorMessage(message: errorMessage)
                     }
                 }
