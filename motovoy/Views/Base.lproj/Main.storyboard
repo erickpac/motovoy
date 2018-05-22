@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Px1-eD-Y7L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jfq-7u-KbI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -184,6 +184,14 @@
             </objects>
             <point key="canvasLocation" x="-1154" y="555"/>
         </scene>
+        <!--ServiceSelection-->
+        <scene sceneID="yy2-ov-FLk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Reservation" referencedIdentifier="ServiceSelection" id="tN5-yX-kZR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zsp-Kk-QIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621" y="-2263"/>
+        </scene>
         <!--BikeCreation-->
         <scene sceneID="hm9-H5-tJm">
             <objects>
@@ -330,6 +338,7 @@ en Barcelona.</string>
                         <outlet property="mainLabel" destination="YNI-sm-Yvk" id="yZB-CM-5Og"/>
                         <segue destination="Rbp-0s-tc5" kind="presentation" identifier="BikeSelectionSegue" animates="NO" id="WKk-Ld-qYJ"/>
                         <segue destination="eRb-gi-1xO" kind="show" identifier="BikeCreationSegue" id="Yos-AI-VMR"/>
+                        <segue destination="tN5-yX-kZR" kind="show" identifier="ServiceSelectionSegue" id="fkI-tk-mjF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDw-SS-FrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -919,10 +928,26 @@ EN ESTE MOMENTO</string>
             </objects>
             <point key="canvasLocation" x="-1322" y="-1550"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lun-Ii-7yo">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="Jfq-7u-KbI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="luG-YD-LvT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Px1-eD-Y7L" kind="relationship" relationship="rootViewController" id="mpN-60-dge"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPw-5O-Fs2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2046" y="-1118"/>
+        </scene>
         <!--Main Navigation Tab View Controller-->
         <scene sceneID="sIi-zA-woo">
             <objects>
                 <tabBarController id="Px1-eD-Y7L" customClass="MainNavigationTabViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aN7-V7-ZfP"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uSI-u4-giG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -946,7 +971,7 @@ EN ESTE MOMENTO</string>
         <!--PERFIL-->
         <scene sceneID="YYE-AP-YWl">
             <objects>
-                <viewController id="6uT-2T-Icq" customClass="ProfileViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6uT-2T-Icq" customClass="MainProfileViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kGA-14-Tme">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -956,7 +981,7 @@ EN ESTE MOMENTO</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBt-gu-6Cr" customClass="NavigationShadowedView" customModule="motovoy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="-30" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="-30" width="375" height="149"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSolo" translatesAutoresizingMaskIntoConstraints="NO" id="eHJ-JB-F04">
                                         <rect key="frame" x="162" y="50" width="50" height="50"/>
@@ -964,19 +989,29 @@ EN ESTE MOMENTO</string>
                                             <constraint firstAttribute="width" secondItem="eHJ-JB-F04" secondAttribute="height" id="tHK-hj-RaD"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArF-Yc-Yrp">
+                                        <rect key="frame" x="0.0" y="100" width="375" height="49"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="rQx-4L-bwU"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="eHJ-JB-F04" firstAttribute="centerX" secondItem="FBt-gu-6Cr" secondAttribute="centerX" id="1UC-rk-ykr"/>
+                                    <constraint firstAttribute="bottom" secondItem="ArF-Yc-Yrp" secondAttribute="bottom" id="9M4-4U-THR"/>
+                                    <constraint firstItem="ArF-Yc-Yrp" firstAttribute="leading" secondItem="FBt-gu-6Cr" secondAttribute="leading" id="BHJ-bD-Iwz"/>
                                     <constraint firstItem="eHJ-JB-F04" firstAttribute="top" secondItem="FBt-gu-6Cr" secondAttribute="top" constant="50" id="W85-1w-J2i"/>
-                                    <constraint firstAttribute="bottom" secondItem="eHJ-JB-F04" secondAttribute="bottom" id="c94-6L-xy9"/>
-                                    <constraint firstAttribute="height" constant="100" id="hOf-Sq-8d2"/>
+                                    <constraint firstAttribute="trailing" secondItem="ArF-Yc-Yrp" secondAttribute="trailing" id="gGj-qP-tTQ"/>
+                                    <constraint firstAttribute="height" constant="149" id="hOf-Sq-8d2"/>
+                                    <constraint firstItem="ArF-Yc-Yrp" firstAttribute="top" secondItem="eHJ-JB-F04" secondAttribute="bottom" id="mVa-PC-K3C"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="68z-rd-QRJ" firstAttribute="top" secondItem="FBt-gu-6Cr" secondAttribute="bottom" id="4NV-rd-S4B"/>
+                            <constraint firstItem="68z-rd-QRJ" firstAttribute="top" secondItem="FBt-gu-6Cr" secondAttribute="bottom" constant="-49" id="4NV-rd-S4B"/>
                             <constraint firstItem="FBt-gu-6Cr" firstAttribute="top" secondItem="bhq-0S-MML" secondAttribute="top" constant="-50" id="ARf-cR-F0O"/>
                             <constraint firstItem="FBt-gu-6Cr" firstAttribute="leading" secondItem="kGA-14-Tme" secondAttribute="leading" id="Epc-sR-JBg"/>
                             <constraint firstItem="68z-rd-QRJ" firstAttribute="leading" secondItem="bhq-0S-MML" secondAttribute="leading" id="Qz2-zc-DVu"/>
@@ -987,10 +1022,15 @@ EN ESTE MOMENTO</string>
                         <viewLayoutGuide key="safeArea" id="bhq-0S-MML"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="PERFIL" image="perfilOn" selectedImage="perfilOn" id="5Pa-4G-xb9"/>
+                    <connections>
+                        <outlet property="container" destination="68z-rd-QRJ" id="qcw-QT-mNe"/>
+                        <outlet property="navigationBar" destination="FBt-gu-6Cr" id="BB6-GQ-bE0"/>
+                        <outlet property="tabBarContainer" destination="ArF-Yc-Yrp" id="rUs-Rq-fLK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8xN-pE-y8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="766"/>
+            <point key="canvasLocation" x="968.79999999999995" y="765.96701649175418"/>
         </scene>
     </scenes>
     <resources>

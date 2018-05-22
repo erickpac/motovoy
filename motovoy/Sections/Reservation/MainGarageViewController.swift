@@ -47,6 +47,8 @@ extension MainGarageViewController {
                 }else {
                     if let index = self.currentServices.index(of: element) {
                         self.currentServices.remove(at: index)
+                    }else {
+                        self.addService()
                     }
                 }
             }
@@ -78,6 +80,10 @@ extension MainGarageViewController: BikeSelectionDelegate {
         dismiss(animated: true) {
             self.performSegue(withIdentifier: "BikeCreationSegue", sender: nil)
         }
+    }
+    
+    func addService() {
+        self.performSegue(withIdentifier: "ServiceSelectionSegue", sender: nil)
     }
     
 }
