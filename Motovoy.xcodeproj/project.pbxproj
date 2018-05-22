@@ -32,8 +32,9 @@
 		837A9EDC20B38B9900BB160B /* AddBillingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837A9EDB20B38B9900BB160B /* AddBillingRecordViewController.swift */; };
 		837A9EDE20B394D100BB160B /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837A9EDD20B394D100BB160B /* CardTableViewCell.swift */; };
 		837A9EE120B3988200BB160B /* Reservation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837A9EDF20B3988200BB160B /* Reservation.storyboard */; };
-		837A9EE320B39A4E00BB160B /* ServiceSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837A9EE220B39A4E00BB160B /* ServiceSelectionViewController.swift */; };
 		837A9EE620B39B8100BB160B /* ServiceSelectionInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837A9EE520B39B8100BB160B /* ServiceSelectionInfoTableViewCell.swift */; };
+		837A9EE820B3A13B00BB160B /* ServiceHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837A9EE720B3A13B00BB160B /* ServiceHeaderTableViewCell.swift */; };
+		837A9EEB20B3B26D00BB160B /* ServiceSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 837A9EEA20B3B26D00BB160B /* ServiceSectionHeaderView.xib */; };
 		83A19DF620A6D00500AC980F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A19DF420A6D00500AC980F /* Profile.storyboard */; };
 		83A19DF920A6D2D300AC980F /* MainProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19DF820A6D2D300AC980F /* MainProfileViewController.swift */; };
 		83A19E2C20A7781900AC980F /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19E2B20A7781900AC980F /* MessagesViewController.swift */; };
@@ -148,8 +149,9 @@
 		837A9EDB20B38B9900BB160B /* AddBillingRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillingRecordViewController.swift; sourceTree = "<group>"; };
 		837A9EDD20B394D100BB160B /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		837A9EE020B3988200BB160B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Reservation.storyboard; sourceTree = "<group>"; };
-		837A9EE220B39A4E00BB160B /* ServiceSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSelectionViewController.swift; sourceTree = "<group>"; };
 		837A9EE520B39B8100BB160B /* ServiceSelectionInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSelectionInfoTableViewCell.swift; sourceTree = "<group>"; };
+		837A9EE720B3A13B00BB160B /* ServiceHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		837A9EEA20B3B26D00BB160B /* ServiceSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceSectionHeaderView.xib; sourceTree = "<group>"; };
 		83A19DF520A6D00500AC980F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		83A19DF820A6D2D300AC980F /* MainProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewController.swift; sourceTree = "<group>"; };
 		83A19E2B20A7781900AC980F /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -382,8 +384,17 @@
 			isa = PBXGroup;
 			children = (
 				837A9EE520B39B8100BB160B /* ServiceSelectionInfoTableViewCell.swift */,
+				837A9EE720B3A13B00BB160B /* ServiceHeaderTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		837A9EE920B3B25600BB160B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				837A9EEA20B3B26D00BB160B /* ServiceSectionHeaderView.xib */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		83A19DF320A6BCF900AC980F /* Reservation */ = {
@@ -394,7 +405,6 @@
 				B90DE28620A7F13D0086AE95 /* ReservationProtocolView.swift */,
 				B90DE28820A7F14B0086AE95 /* ReservationPresenter.swift */,
 				83654CAB20A513E2009EE1E6 /* MainGarageViewController.swift */,
-				837A9EE220B39A4E00BB160B /* ServiceSelectionViewController.swift */,
 			);
 			path = Reservation;
 			sourceTree = "<group>";
@@ -627,6 +637,7 @@
 		B98DA0EC20A295BC000E3AAE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				837A9EE920B3B25600BB160B /* CustomViews */,
 				8309C45120A2946800C6D721 /* LaunchScreen.storyboard */,
 				83570DA120A2B1B20057D63D /* Registration.storyboard */,
 				83654CA520A50B09009EE1E6 /* Main.storyboard */,
@@ -808,6 +819,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837A9EEB20B3B26D00BB160B /* ServiceSectionHeaderView.xib in Resources */,
 				8309C45320A2946800C6D721 /* LaunchScreen.storyboard in Resources */,
 				83CD110320A6546E006BB4B9 /* Garage.storyboard in Resources */,
 				83570DA320A2B1B20057D63D /* Registration.storyboard in Resources */,
@@ -849,6 +861,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-motovoy/Pods-motovoy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -858,6 +871,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -878,7 +892,6 @@
 				B9FADCDD20B2606500C63B3D /* ServiceMVModel.swift in Sources */,
 				B95DBD0A20ACDCD200A2244D /* ChangePasswordProtocolView.swift in Sources */,
 				B9093A2620A2A6AC001DF9B2 /* APIManager.swift in Sources */,
-				837A9EE320B39A4E00BB160B /* ServiceSelectionViewController.swift in Sources */,
 				B9ECC8D120A6C25A00EBC8EC /* GaragePresenter.swift in Sources */,
 				83A19E2C20A7781900AC980F /* MessagesViewController.swift in Sources */,
 				83654CA920A50BD7009EE1E6 /* NavigationShadowedView.swift in Sources */,
@@ -914,6 +927,7 @@
 				B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */,
 				837A9ED420AE388400BB160B /* SectionTitleTableViewCell.swift in Sources */,
 				B90C057620ACF9FC005F79CC /* ConfirmationCodeSmsModel.swift in Sources */,
+				837A9EE820B3A13B00BB160B /* ServiceHeaderTableViewCell.swift in Sources */,
 				8308B45320AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift in Sources */,
 				B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */,
 				B969496320A68A7A005B75F7 /* GarageProtocolView.swift in Sources */,

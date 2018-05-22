@@ -61,19 +61,17 @@ class VerificationPresenter {
                         self.view?.verificationChangePasswordSuccess()
                     } else {
                         if let loginToken = response.loginToken {
-                            let userData: [String: Any]
-                            userData = [
-                                "name": response.name ?? "",
-                                "mobile": response.mobile ?? "",
-                                "email": response.email ?? "",
-                                "user_id": response.userId ?? 0,
-                                "nif": response.nif ?? "",
-                                "credit_cards": response.creditCards ?? [],
-                                "status": [
-                                    "code": status.code ?? 200,
-                                    "message": status.message ?? "",
-                                    "login_token": loginToken
-                                ]
+                            var userData: [String: Any] = [:]
+                            userData["name"] = response.name ?? ""
+                            userData["mobile"] = response.mobile ?? ""
+                            userData["email"] = response.email ?? ""
+                            userData["user_id"] = response.userId ?? 0
+                            userData["nif"] = response.nif ?? ""
+                            userData["credit_cards"] = response.creditCards ?? []
+                            userData["status"] = [
+                                "code": status.code ?? 200,
+                                "message": status.message ?? "",
+                                "login_token": loginToken
                             ]
                             
                             let jsonData = try? JSONSerialization.data(withJSONObject: userData, options: [])
