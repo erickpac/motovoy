@@ -11,13 +11,11 @@ import UIKit
 class BillingViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
     var user: User? {
         get {
             return Utils.currentUser
         }
     }
-    
 }
 
 extension BillingViewController {

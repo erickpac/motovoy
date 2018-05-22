@@ -25,7 +25,7 @@ struct CustomerDetail: Codable {
     var invoiceContact: String?
     var invoicePhone: String?
     var invoiceCif: Int?
-    var cifNif: Int?
+    var cifNif: String?
     var payment: String?
     var status: String?
     var customerType: String?

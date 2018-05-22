@@ -57,7 +57,6 @@ extension ProfileViewController {
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 6
     }
@@ -132,6 +131,18 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             4: 72,
             5: 72
             ][indexPath.section] ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 5:
+            if indexPath.row == 0 {
+                Utils.logOut()
+            }
+            break
+        default:
+            break
+        }
     }
 }
 

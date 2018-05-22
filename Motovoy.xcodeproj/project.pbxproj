@@ -111,10 +111,10 @@
 		B9F49C7D20B3BCEE00BBF3A5 /* AddressBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F49C7C20B3BCEE00BBF3A5 /* AddressBodyModel.swift */; };
 		B9F71F2120A53D0200043633 /* RecoverPasswordProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71F2020A53D0200043633 /* RecoverPasswordProtocolView.swift */; };
 		B9F71F2320A53D4000043633 /* RecoverPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F71F2220A53D4000043633 /* RecoverPasswordPresenter.swift */; };
-		B9FADCC920B25DBE00C63B3D /* BillingProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FADCC820B25DBE00C63B3D /* BillingProtocolView.swift */; };
+		B9FADCC920B25DBE00C63B3D /* AddBillingProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FADCC820B25DBE00C63B3D /* AddBillingProtocolView.swift */; };
 		B9FADCCB20B25DCA00C63B3D /* ProfileProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FADCCA20B25DCA00C63B3D /* ProfileProtocolView.swift */; };
 		B9FADCCD20B25DDC00C63B3D /* PaymentProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FADCCC20B25DDC00C63B3D /* PaymentProtocolView.swift */; };
-		B9FADCCF20B25DEB00C63B3D /* BillingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FADCCE20B25DEB00C63B3D /* BillingPresenter.swift */; };
+		B9FADCCF20B25DEB00C63B3D /* AddBillingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FADCCE20B25DEB00C63B3D /* AddBillingPresenter.swift */; };
 		B9FADCD120B25DF700C63B3D /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FADCD020B25DF700C63B3D /* ProfilePresenter.swift */; };
 		B9FADCD320B25E0000C63B3D /* PaymentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FADCD220B25E0000C63B3D /* PaymentPresenter.swift */; };
 		B9FADCD620B2600B00C63B3D /* ServicesMVProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FADCD520B2600B00C63B3D /* ServicesMVProtocolView.swift */; };
@@ -232,10 +232,10 @@
 		B9F49C7C20B3BCEE00BBF3A5 /* AddressBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBodyModel.swift; sourceTree = "<group>"; };
 		B9F71F2020A53D0200043633 /* RecoverPasswordProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordProtocolView.swift; sourceTree = "<group>"; };
 		B9F71F2220A53D4000043633 /* RecoverPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordPresenter.swift; sourceTree = "<group>"; };
-		B9FADCC820B25DBE00C63B3D /* BillingProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingProtocolView.swift; sourceTree = "<group>"; };
+		B9FADCC820B25DBE00C63B3D /* AddBillingProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillingProtocolView.swift; sourceTree = "<group>"; };
 		B9FADCCA20B25DCA00C63B3D /* ProfileProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocolView.swift; sourceTree = "<group>"; };
 		B9FADCCC20B25DDC00C63B3D /* PaymentProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProtocolView.swift; sourceTree = "<group>"; };
-		B9FADCCE20B25DEB00C63B3D /* BillingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingPresenter.swift; sourceTree = "<group>"; };
+		B9FADCCE20B25DEB00C63B3D /* AddBillingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillingPresenter.swift; sourceTree = "<group>"; };
 		B9FADCD020B25DF700C63B3D /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		B9FADCD220B25E0000C63B3D /* PaymentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresenter.swift; sourceTree = "<group>"; };
 		B9FADCD520B2600B00C63B3D /* ServicesMVProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesMVProtocolView.swift; sourceTree = "<group>"; };
@@ -585,6 +585,8 @@
 		B934943F20B3C92A00F4D181 /* Add billing */ = {
 			isa = PBXGroup;
 			children = (
+				B9FADCC820B25DBE00C63B3D /* AddBillingProtocolView.swift */,
+				B9FADCCE20B25DEB00C63B3D /* AddBillingPresenter.swift */,
 				837A9EDB20B38B9900BB160B /* AddBillingRecordViewController.swift */,
 			);
 			path = "Add billing";
@@ -759,8 +761,6 @@
 			isa = PBXGroup;
 			children = (
 				B934943F20B3C92A00F4D181 /* Add billing */,
-				B9FADCC820B25DBE00C63B3D /* BillingProtocolView.swift */,
-				B9FADCCE20B25DEB00C63B3D /* BillingPresenter.swift */,
 				83A19E2F20A778AE00AC980F /* BillingViewController.swift */,
 			);
 			path = Billing;
@@ -956,7 +956,7 @@
 				837A9EDE20B394D100BB160B /* CardTableViewCell.swift in Sources */,
 				83A19E3220A778C500AC980F /* PaymentViewController.swift in Sources */,
 				B969496820A68AF6005B75F7 /* BikePresenter.swift in Sources */,
-				B9FADCCF20B25DEB00C63B3D /* BillingPresenter.swift in Sources */,
+				B9FADCCF20B25DEB00C63B3D /* AddBillingPresenter.swift in Sources */,
 				B90DE28720A7F13D0086AE95 /* ReservationProtocolView.swift in Sources */,
 				B9FADCE120B26DC100C63B3D /* ServiceMVSubKitModel.swift in Sources */,
 				B9F71F2120A53D0200043633 /* RecoverPasswordProtocolView.swift in Sources */,
@@ -1001,7 +1001,7 @@
 				B95DBD0820ACDCBB00A2244D /* ChangePasswordViewController.swift in Sources */,
 				B9FADCD320B25E0000C63B3D /* PaymentPresenter.swift in Sources */,
 				B9C3CA8B20A51D390002C124 /* UserDefaultsKeys.swift in Sources */,
-				B9FADCC920B25DBE00C63B3D /* BillingProtocolView.swift in Sources */,
+				B9FADCC920B25DBE00C63B3D /* AddBillingProtocolView.swift in Sources */,
 				B95DBD1020ACE07100A2244D /* ConfirmationCodeModel.swift in Sources */,
 				B9F71F2320A53D4000043633 /* RecoverPasswordPresenter.swift in Sources */,
 				B9924A6220A4036200021473 /* BikeBrandModel.swift in Sources */,
