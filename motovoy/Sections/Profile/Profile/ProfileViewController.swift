@@ -98,6 +98,13 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                 let data = address[indexPath.row]
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileAddressCell") as! AddressTableViewCell
                 cell.setData(data: data)
+                
+                cell.deleteAction = {
+                    if let addressId = data.id {
+                        self.deleteAddressAlert(addressId: addressId)
+                    }
+                }
+                
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyStateCell")
@@ -116,6 +123,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 5:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileSignOutCell") as! ActionTableViewCell
+            cell.action = {
+                Utils.logOut()
+            }
             return cell
         default:
             return UITableViewCell()
@@ -131,18 +141,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             4: 72,
             5: 72
             ][indexPath.section] ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.section {
-        case 5:
-            if indexPath.row == 0 {
-                Utils.logOut()
-            }
-            break
-        default:
-            break
-        }
     }
 }
 
@@ -164,6 +162,17 @@ extension ProfileViewController: ProfileView {
     }
     
     func deleteAddressSuccess() {
+        self.presenter.getAddress()
+    }
+    
+    func deleteAddressAlert(addressId: Int) -> Void {
+        let alert = UIAlertController.init(title: "Eliminar dirección", message: "¿Estás seguro de eliminar ésta dirección?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Eliminar", style: .destructive, handler: { (action) in
+            self.presenter.deleteAddress(addressId: addressId)
+        }))
         
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
     }
 }

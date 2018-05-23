@@ -33,7 +33,6 @@ extension RecoverPasswordViewController {
     func configure() {
         phoneField.dividerActiveColor = UIColor.lightGray
         phoneField.textAlignment = .center
-        phoneField.text = "+34373737"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -16,6 +16,7 @@ struct User: LocalMappable {
     var detail: CustomerDetail?
     var status: Status?
     var motos: [Bike]?
+    var customer: CustomerDetail?
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -27,5 +28,6 @@ struct User: LocalMappable {
         case detail = "client"
         case status
         case motos
+        case customer = "Client"
     }
 }
