@@ -36,14 +36,14 @@ class ServiceHeaderTableViewCell: UITableViewHeaderFooterView {
     func update(with value: Bool) {
         if value {
             expandImageView.image = #imageLiteral(resourceName: "less")
-            UIView.animate(withDuration: 0.3, animations: {
-                self.shadowedView.alpha = 1
-            })
+//            UIView.animate(withDuration: 1, animations: {
+//                self.shadowedView.alpha = 1
+//            })
         }else {
             expandImageView.image = #imageLiteral(resourceName: "plusSmall")
-            UIView.animate(withDuration: 0.3, animations: {
-                self.shadowedView.alpha = 0
-            })
+//            UIView.animate(withDuration: 1, animations: {
+//                self.shadowedView.alpha = 0
+//            })
         }
     }
 
