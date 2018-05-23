@@ -1,22 +1,20 @@
 //
-//  UserModel.swift
+//  AddressModel.swift
 //  motovoy
 //
-//  Created by Erick Pac on 5/9/18.
+//  Created by Erick Pac on 5/21/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct User: LocalMappable {
+struct Address: LocalMappable {
     var name: String?
     var mobile: String?
     var email: String?
     var userId: Int?
     var nif: String?
     var creditCards: [CustomerCreditCard]?
-    var detail: CustomerDetail?
     var status: Status?
-    var motos: [Bike]?
-    var customer: CustomerDetail?
+    var address: [AddressBody]?
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -25,9 +23,7 @@ struct User: LocalMappable {
         case userId = "user_id"
         case nif
         case creditCards = "credit_cards"
-        case detail = "client"
         case status
-        case motos
-        case customer = "Client"
+        case address
     }
 }

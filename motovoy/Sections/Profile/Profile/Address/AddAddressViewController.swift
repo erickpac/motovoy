@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import SVProgressHUD
 
 class AddAddressViewController: UIViewController {
     @IBOutlet weak var titleBarView: NavigationShadowedView!
@@ -17,14 +18,17 @@ class AddAddressViewController: UIViewController {
     @IBOutlet weak var postalCodeField: TextField!
     @IBOutlet weak var provinceField: TextField!
     
-    fileprivate let addressPresenter = BikePresenter(apiManager: APIManager())
+    fileprivate let presenter = AddressPresenter(apiManager: APIManager.default)
     
     @IBAction func createAction(_ sender: Any) {
+        showLoader(show: true)
         let name: String = nameField.text!
         let street: String = streetField.text!
-        let streetNumber: Int = Int(streetNumberField.text!) ?? 0
-        let postalCode: Int = Int(postalCodeField.text!) ?? 0
+        let streetNumber: String = streetNumberField.text!
+        let postalCode: String = postalCodeField.text!
         let province: String = provinceField.text!
+        
+        presenter.addAddress(address: street, streetNumber: streetNumber, city: province, postalCode: postalCode, name: name)
     }
 }
 
@@ -32,7 +36,7 @@ extension AddAddressViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        addressPresenter.attachView(self)
+        presenter.attachView(self)
     }
     
     func configure() {
@@ -44,16 +48,22 @@ extension AddAddressViewController {
     }
 }
 
-extension AddAddressViewController: BikeView {
+extension AddAddressViewController: AddressView {
     func showLoader(show: Bool) {
-        
+        if show {
+            SVProgressHUD.show()
+        } else {
+            SVProgressHUD.dismiss()
+        }
     }
     
     func errorMessage(message: String) {
-        
+        SVProgressHUD.showError(withStatus: message)
     }
     
-    func getBikeResourcesSuccess(brandResources: BrandResources) {
-        
+    func addAddressSuccess() {
+        if let navController = self.navigationController {
+            navController.popViewController(animated: true)
+        }
     }
 }

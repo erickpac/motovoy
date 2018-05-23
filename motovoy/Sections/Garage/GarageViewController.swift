@@ -13,7 +13,6 @@ class GarageViewController: BaseNavigationViewController {
     @IBOutlet weak var emptyStateView: UIView!
     @IBOutlet weak var tableView: UITableView!
     fileprivate let presenter = GaragePresenter(apiManager: APIManager.default)
-    
     var bikes: [BikeBody] = [BikeBody]() {
         didSet {
             tableView.delegate = self

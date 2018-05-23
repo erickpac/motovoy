@@ -7,26 +7,37 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var navigation: UINavigationController!
-    
+    fileprivate let presenter = ProfilePresenter(apiManager: APIManager.default)
+    var address: [AddressBody] = [AddressBody]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     var user: User? {
         get {
             return Utils.currentUser
         }
     }
-
 }
 
 extension ProfileViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
         prepareTabItem()
+        presenter.attachView(self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showLoader(show: true)
+        presenter.getAddress()
     }
     
     func configureTable() {
@@ -46,7 +57,6 @@ extension ProfileViewController {
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 6
     }
@@ -55,7 +65,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         return [
             0: 4,
             1: 1,
-            2: 1,
+            2: address.count,
             3: 1,
             4: 1,
             5: 1
@@ -84,9 +94,22 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             cell.titleLabel.text = "DIRECCIONES"
             return cell
         case 2:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileAddressCell") as! AddressTableViewCell
-            let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyStateCell")
-            return cell!
+            if address.count > 0 {
+                let data = address[indexPath.row]
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileAddressCell") as! AddressTableViewCell
+                cell.setData(data: data)
+                
+                cell.deleteAction = {
+                    if let addressId = data.id {
+                        self.deleteAddressAlert(addressId: addressId)
+                    }
+                }
+                
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyStateCell")
+                return cell!
+            }
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileAddAddressCell") as! ActionTableViewCell
             cell.action = {
@@ -100,6 +123,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 5:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileSignOutCell") as! ActionTableViewCell
+            cell.action = {
+                Utils.logOut()
+            }
             return cell
         default:
             return UITableViewCell()
@@ -110,11 +136,43 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         return [
             0: 50,
             1: 60,
-            2: 100,//UITableViewAutomaticDimension,
+            2: address.count == 0 ? 100 : UITableViewAutomaticDimension,
             3: 72,
             4: 72,
             5: 72
             ][indexPath.section] ?? 0
     }
+}
+
+extension ProfileViewController: ProfileView {
+    func showLoader(show: Bool) {
+        if show {
+            SVProgressHUD.show()
+        } else {
+            SVProgressHUD.dismiss()
+        }
+    }
     
+    func errorMessage(message: String) {
+        SVProgressHUD.showError(withStatus: message)
+    }
+    
+    func getAddressSuccess(address: [AddressBody]) {
+        self.address = address
+    }
+    
+    func deleteAddressSuccess() {
+        self.presenter.getAddress()
+    }
+    
+    func deleteAddressAlert(addressId: Int) -> Void {
+        let alert = UIAlertController.init(title: "Eliminar dirección", message: "¿Estás seguro de eliminar ésta dirección?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Eliminar", style: .destructive, handler: { (action) in
+            self.presenter.deleteAddress(addressId: addressId)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
+    }
 }

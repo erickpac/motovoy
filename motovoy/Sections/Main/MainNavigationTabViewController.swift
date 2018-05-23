@@ -20,7 +20,6 @@ class BaseNavigationViewController: UIViewController, BaseNavigationControllerDe
     func setReady() {
         isReady = true
     }
-    
 }
 
 class MainNavigationTabViewController: UITabBarController {

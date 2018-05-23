@@ -21,4 +21,8 @@ enum UrlPath: String {
     case getMessages = "/api/notifications/getNotifications"
     case markAsReadMessage = "/api/notifications/markAsRead"
     case getKitsToService = "/api/kits/getKits"
+    case getAddress = "/api/address/getAddress"
+    case addAddress = "/api/addresses"
+    case deleteAddress = "/api/address/delete"
+    case editProfile = "/api/client/edit_profile"
 }

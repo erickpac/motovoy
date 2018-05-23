@@ -11,13 +11,11 @@ import UIKit
 class BillingViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
     var user: User? {
         get {
             return Utils.currentUser
         }
     }
-    
 }
 
 extension BillingViewController {
@@ -36,13 +34,12 @@ extension BillingViewController {
     }
     
     fileprivate func prepareTabItem() {
-        tabItem.title = "FACTURACION"
+        tabItem.title = "FACTURACIÓN"
         tabItem.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         tabItem.setTabItemColor(UIColor.darkGray, for: .normal)
         tabItem.setTabItemColor(UIColor.darkGray, for: .highlighted)
         tabItem.setTabItemColor(MColor.orange, for: .selected)
     }
-    
 }
 
 extension BillingViewController: UITableViewDelegate, UITableViewDataSource {
