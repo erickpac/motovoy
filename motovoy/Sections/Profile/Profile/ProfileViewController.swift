@@ -65,7 +65,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         return [
             0: 4,
             1: 1,
-            2: address.count,
+            2: address.count > 0 ? address.count : 1,
             3: 1,
             4: 1,
             5: 1
