@@ -13,12 +13,12 @@ struct ServiceMVKitVariation: Codable {
     var description: String?
     var minCC: Int?
     var maxCC: Int?
-    var kitPrice: Int?
+    var kitPrice: Float?
     var createdAt: String?
     var updatedAt: String?
     var deletedAt: String?
     var fallback: Int?
-    var calculatedPrice: Int?
+    var calculatedPrice: Float?
     
     enum CodingKeys: String, CodingKey {
         case id
