@@ -184,6 +184,14 @@
             </objects>
             <point key="canvasLocation" x="-1154" y="555"/>
         </scene>
+        <!--ServiceReservationType-->
+        <scene sceneID="kFm-pd-gd9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Reservation" referencedIdentifier="ServiceReservationType" id="a3a-17-IJf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="270-nS-Ghc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="-2330"/>
+        </scene>
         <!--ServiceSelection-->
         <scene sceneID="yy2-ov-FLk">
             <objects>
@@ -275,6 +283,9 @@ en Barcelona.</string>
                                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="a3a-17-IJf" kind="show" id="ZQo-st-MPA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

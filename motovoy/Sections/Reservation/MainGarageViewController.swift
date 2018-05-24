@@ -70,7 +70,12 @@ extension MainGarageViewController {
         
         var title = "Mi \(currentBike?.name ?? "moto") necesita" + "\n"
         for service in currentServices {
-            title = title + "\(service)" + "\n"
+            let colon: String = {
+                var c = ""
+                c.append(currentServices.index(of: service) == (currentServices.count - 1) ? "" : ",")
+                return c
+            }()
+            title = title + "\(service)\(colon)" + "\n"
         }
         title = title + "en Barcelona."
     
