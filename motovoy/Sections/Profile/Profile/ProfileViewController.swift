@@ -124,7 +124,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case 5:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileSignOutCell") as! ActionTableViewCell
             cell.action = {
-                Utils.logOut()
+                self.closeSession()
             }
             return cell
         default:
@@ -169,6 +169,17 @@ extension ProfileViewController: ProfileView {
         let alert = UIAlertController.init(title: "Eliminar dirección", message: "¿Estás seguro de eliminar ésta dirección?", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Eliminar", style: .destructive, handler: { (action) in
             self.presenter.deleteAddress(addressId: addressId)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func closeSession() -> Void {
+        let alert = UIAlertController.init(title: "Cerrar sesión", message: "¿Estás seguro de cerrar sesión?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { (action) in
+            Utils.logOut()
         }))
         
         alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
