@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -288,7 +288,7 @@
         <!--Services Selection Info View Controller-->
         <scene sceneID="zna-UA-Xr4">
             <objects>
-                <viewController storyboardIdentifier="ServiceSelectionDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dDq-iM-9s4" customClass="ServicesSelectionInfoViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServiceWorkshopDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dDq-iM-9s4" customClass="ServicesSelectionInfoViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z1F-k2-z5w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -457,7 +457,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La revisión Motovoy Básica incluye:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdA-AW-pmA">
-                                                    <rect key="frame" x="20" y="11" width="335" height="49"/>
+                                                    <rect key="frame" x="20" y="8" width="335" height="54.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="JhK-w7-HIv"/>
                                                     </constraints>
@@ -567,7 +567,7 @@
         <!--Services Selection Info View Controller-->
         <scene sceneID="Siq-7X-x1E">
             <objects>
-                <viewController storyboardIdentifier="ServiceSelectionDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4do-aj-Nsh" customClass="ServicesSelectionInfoViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServiceEnded" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4do-aj-Nsh" customClass="ServicesSelectionInfoViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hpo-gz-KBW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -799,7 +799,7 @@
         <!--Services Selection Info View Controller-->
         <scene sceneID="Iiq-DB-fxe">
             <objects>
-                <viewController storyboardIdentifier="ServiceSelectionDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gSh-xL-rfL" customClass="ServicesSelectionInfoViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServiceSummary" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gSh-xL-rfL" customClass="ServicesSelectionInfoViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NkP-ji-VfO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -932,7 +932,7 @@
         <!--Services Selection Info View Controller-->
         <scene sceneID="Byy-Wn-prn">
             <objects>
-                <viewController storyboardIdentifier="ServiceSelectionDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IBZ-oB-B8n" customClass="ServicesSelectionInfoViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServicePaymentCard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IBZ-oB-B8n" customClass="ServicesSelectionInfoViewController" customModule="motovoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P8c-XS-k4F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -992,9 +992,6 @@
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="triggerAction" destination="eom-cD-oDf" eventType="touchUpInside" id="P4Y-Sf-lZp"/>
-                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IEL-4I-q9T">
                                 <rect key="frame" x="0.0" y="70" width="375" height="507"/>
@@ -1145,7 +1142,7 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwZ-Sr-kJW">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="534"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="533.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Válida hasta" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPA-aU-83y">
                                                 <rect key="frame" x="20" y="196" width="335" height="22"/>
@@ -1154,13 +1151,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre y apellido impreso en la tarjeta" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4z-Vs-lLf">
-                                                <rect key="frame" x="20" y="284.5" width="335" height="22"/>
+                                                <rect key="frame" x="20" y="284.5" width="335" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKn-79-z1H" customClass="FlatButton" customModule="Material">
-                                                <rect key="frame" x="20" y="464" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="463.5" width="335" height="50"/>
                                                 <color key="backgroundColor" red="0.93724673989999996" green="0.56052607300000001" blue="0.29795375470000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="EkU-gI-KIa"/>
@@ -1179,9 +1176,6 @@
                                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="editAction:" destination="NFj-lE-P76" eventType="touchUpInside" id="hNm-wP-w8P"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codigo de seguridad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4b-L4-tgk">
                                                 <rect key="frame" x="20" y="108" width="335" height="22"/>
@@ -1251,7 +1245,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ingresa tu teléfono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gv-sw-gZu" customClass="TextField" customModule="Material">
-                                                <rect key="frame" x="20" y="306" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="305.5" width="335" height="50"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="cqa-D3-Q63"/>
@@ -1269,13 +1263,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVz-iE-57e">
-                                                <rect key="frame" x="20" y="372" width="161.5" height="22"/>
+                                                <rect key="frame" x="20" y="371.5" width="161.5" height="22"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ingresa correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qJh-TF-wnj" customClass="TextField" customModule="Material">
-                                                <rect key="frame" x="20" y="394" width="161.5" height="50"/>
+                                                <rect key="frame" x="20" y="393.5" width="161.5" height="50"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="hC0-RU-G4i"/>
@@ -1311,13 +1305,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Documento" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atW-wN-jfy">
-                                                <rect key="frame" x="193.5" y="372" width="97" height="22"/>
+                                                <rect key="frame" x="193.5" y="371.5" width="97" height="22"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ingresa correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="21V-FR-ulT" customClass="TextField" customModule="Material">
-                                                <rect key="frame" x="194" y="394" width="161" height="50"/>
+                                                <rect key="frame" x="194" y="393.5" width="161" height="50"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="WhS-Jm-QgD"/>
@@ -1672,7 +1666,7 @@
         <!--View Controller-->
         <scene sceneID="56E-2g-Tej">
             <objects>
-                <viewController storyboardIdentifier="ServiceReservationTicket" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VuG-Rt-3nh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServiceReservationTicketThanks" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VuG-Rt-3nh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nSY-gg-Bvt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1700,7 +1694,8 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6I-FO-vy2">
                                         <rect key="frame" x="20" y="408.5" width="335" height="36"/>
-                                        <string key="text">Hemos recibido tu valoracióny comentario.</string>
+                                        <string key="text">Hemos recibido tu valoración
+y comentario.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>

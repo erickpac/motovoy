@@ -38,7 +38,7 @@
 		8397E48D20B67E68001D5250 /* ReservationTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E48C20B67E68001D5250 /* ReservationTypeViewController.swift */; };
 		8397E49020B68D6C001D5250 /* Services.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8397E48E20B68D6C001D5250 /* Services.storyboard */; };
 		8397E49320B68E2B001D5250 /* InfoPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E49220B68E2B001D5250 /* InfoPriceTableViewCell.swift */; };
-		8397E49520B68EB2001D5250 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E49420B68EB2001D5250 /* InfoTableViewCell.swift */; };
+		8397E49520B68EB2001D5250 /* ServiceInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E49420B68EB2001D5250 /* ServiceInfoTableViewCell.swift */; };
 		8397E49720B69150001D5250 /* MapInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E49620B69150001D5250 /* MapInfoTableViewCell.swift */; };
 		83A19DF620A6D00500AC980F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A19DF420A6D00500AC980F /* Profile.storyboard */; };
 		83A19DF920A6D2D300AC980F /* MainProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19DF820A6D2D300AC980F /* MainProfileViewController.swift */; };
@@ -193,7 +193,7 @@
 		8397E48C20B67E68001D5250 /* ReservationTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTypeViewController.swift; sourceTree = "<group>"; };
 		8397E48F20B68D6C001D5250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Services.storyboard; sourceTree = "<group>"; };
 		8397E49220B68E2B001D5250 /* InfoPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPriceTableViewCell.swift; sourceTree = "<group>"; };
-		8397E49420B68EB2001D5250 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		8397E49420B68EB2001D5250 /* ServiceInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInfoTableViewCell.swift; sourceTree = "<group>"; };
 		8397E49620B69150001D5250 /* MapInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoTableViewCell.swift; sourceTree = "<group>"; };
 		83A19DF520A6D00500AC980F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		83A19DF820A6D2D300AC980F /* MainProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewController.swift; sourceTree = "<group>"; };
@@ -492,7 +492,7 @@
 			isa = PBXGroup;
 			children = (
 				8397E49220B68E2B001D5250 /* InfoPriceTableViewCell.swift */,
-				8397E49420B68EB2001D5250 /* InfoTableViewCell.swift */,
+				8397E49420B68EB2001D5250 /* ServiceInfoTableViewCell.swift */,
 				8397E49620B69150001D5250 /* MapInfoTableViewCell.swift */,
 			);
 			path = Cells;
@@ -1077,7 +1077,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83DFCF6620B645F500E7CADC /* InfoCheckServiceTableViewCell.swift in Sources */,
-				8397E49520B68EB2001D5250 /* InfoTableViewCell.swift in Sources */,
+				8397E49520B68EB2001D5250 /* ServiceInfoTableViewCell.swift in Sources */,
 				B9FADCDD20B2606500C63B3D /* ServiceMVModel.swift in Sources */,
 				B95DBD0A20ACDCD200A2244D /* ChangePasswordProtocolView.swift in Sources */,
 				B9D94A1120B66ADF00A24AB5 /* BudgetBodyAppointmentModel.swift in Sources */,
