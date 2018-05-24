@@ -40,10 +40,10 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let reservationCount = services.filter({ service in service.status == "pending_approval"}).count
-        let approvedCount = services.filter({ service in service.status == "approved" || service.status == "in_progress"}).count
-        let closedCount = services.filter({ service in service.status == "closed"}).count
-        let historyCount = services.filter({ service in service.status != "pending_approval" || service.status != "in_progress" || service.status != "closed" || service.status != "approved"}).count
+        let reservationCount = services.filter({ service in return service.status == "pending_approval"}).count
+        let approvedCount = services.filter({ service in return service.status == "approved" || service.status == "in_progress"}).count
+        let closedCount = services.filter({ service in return service.status == "closed"}).count
+        let historyCount = services.filter({ service in return (service.status != "pending_approval" || service.status != "in_progress" || service.status != "closed" || service.status != "approved")}).count
         return [
             reservationCount == 0 ? 1 : reservationCount,
             approvedCount == 0 ? 1 : approvedCount,
@@ -54,10 +54,10 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let d = [
-            services.filter({ service in service.status == "pending_approval"}),
-            services.filter({ service in service.status == "approved" || service.status == "in_progress"}),
-            services.filter({ service in service.status == "closed"}),
-            services.filter({ service in service.status != "pending_approval" || service.status != "in_progress" || service.status != "closed" || service.status != "approved"})
+            services.filter({ service in return service.status == "pending_approval"}),
+            services.filter({ service in return service.status == "approved" || service.status == "in_progress"}),
+            services.filter({ service in return service.status == "closed"}),
+            services.filter({ service in return (service.status != "pending_approval" || service.status != "in_progress" || service.status != "closed" || service.status != "approved")})
         ][indexPath.section]
         var data: ServiceBody? = nil
         if d.count != 0 {
@@ -105,12 +105,49 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
         return view
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let d = [
+            services.filter({ service in return service.status == "pending_approval"}),
+            services.filter({ service in return service.status == "approved" || service.status == "in_progress"}),
+            services.filter({ service in return service.status == "closed"}),
+            services.filter({ service in return (service.status != "pending_approval" || service.status != "in_progress" || service.status != "closed" || service.status != "approved")})
+        ]
+        
+        let data = d[indexPath.section]
+        let hasData = data.count > 0
+        if !hasData {
+            return
+        }
+        
+        switch indexPath.section {
+        case 0:
+            performSegue(withIdentifier: "", sender: nil)
+        case 1:
+            performSegue(withIdentifier: "ServiceOngoingSegue", sender: data[indexPath.row])
+        case 2:
+            performSegue(withIdentifier: "ServiceEndedSegue", sender: data[indexPath.row])
+        case 3:
+            performSegue(withIdentifier: "ServiceEndedSegue", sender: data[indexPath.row])
+        default:
+            break;
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
+    }
+}
+
+extension ServicesViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ServiceOngoingSegue" || segue.identifier == "ServiceEndedSegue" {
+            let viewController = segue.destination as! OngoingServiceViewController
+            viewController.data = sender as? ServiceBody
+        }
     }
 }
 

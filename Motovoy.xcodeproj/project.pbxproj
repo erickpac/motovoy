@@ -45,6 +45,7 @@
 		8397E49F20B6A6A0001D5250 /* ReservationServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E49E20B6A6A0001D5250 /* ReservationServiceTableViewCell.swift */; };
 		8397E4A120B6A75A001D5250 /* OngoingDiagnosticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E4A020B6A75A001D5250 /* OngoingDiagnosticTableViewCell.swift */; };
 		8397E4A320B6A77D001D5250 /* ServiceHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E4A220B6A77D001D5250 /* ServiceHistoryTableViewCell.swift */; };
+		8397E4DB20B757E9001D5250 /* OngoingServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E4DA20B757E9001D5250 /* OngoingServiceViewController.swift */; };
 		83A19DF620A6D00500AC980F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A19DF420A6D00500AC980F /* Profile.storyboard */; };
 		83A19DF920A6D2D300AC980F /* MainProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19DF820A6D2D300AC980F /* MainProfileViewController.swift */; };
 		83A19E2C20A7781900AC980F /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19E2B20A7781900AC980F /* MessagesViewController.swift */; };
@@ -205,6 +206,7 @@
 		8397E49E20B6A6A0001D5250 /* ReservationServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationServiceTableViewCell.swift; sourceTree = "<group>"; };
 		8397E4A020B6A75A001D5250 /* OngoingDiagnosticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingDiagnosticTableViewCell.swift; sourceTree = "<group>"; };
 		8397E4A220B6A77D001D5250 /* ServiceHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		8397E4DA20B757E9001D5250 /* OngoingServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingServiceViewController.swift; sourceTree = "<group>"; };
 		83A19DF520A6D00500AC980F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		83A19DF820A6D2D300AC980F /* MainProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewController.swift; sourceTree = "<group>"; };
 		83A19E2B20A7781900AC980F /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 		8308B44E20AB92340091AA2B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8397E4D920B757D4001D5250 /* Ongoing Detail */,
 				8397E49120B68E1D001D5250 /* Cells */,
 				B9DC3A9420B68CDB00A54FAE /* ServicesProtocolView.swift */,
 				B9DC3A9620B68CE800A54FAE /* ServicesPresenter.swift */,
@@ -511,6 +514,14 @@
 				8397E4A220B6A77D001D5250 /* ServiceHistoryTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		8397E4D920B757D4001D5250 /* Ongoing Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8397E4DA20B757E9001D5250 /* OngoingServiceViewController.swift */,
+			);
+			path = "Ongoing Detail";
 			sourceTree = "<group>";
 		};
 		83A19DF320A6BCF900AC980F /* Reservation */ = {
@@ -1114,6 +1125,7 @@
 				8397E49D20B6A5EA001D5250 /* ServiceTabSectionHeader.swift in Sources */,
 				8397E49F20B6A6A0001D5250 /* ReservationServiceTableViewCell.swift in Sources */,
 				B969496620A68AD2005B75F7 /* BikeProtocolView.swift in Sources */,
+				8397E4DB20B757E9001D5250 /* OngoingServiceViewController.swift in Sources */,
 				B9D94A1520B66B9A00A24AB5 /* BudgetBodyDiagnosticModel.swift in Sources */,
 				B9C3CA8920A50B6B0002C124 /* LoginProtocolView.swift in Sources */,
 				B9FADCDF20B2607B00C63B3D /* ServiceMVKitModel.swift in Sources */,

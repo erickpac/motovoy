@@ -23,6 +23,7 @@ class ServicesPresenter {
     }
     
     func getBudgets() -> Void {
+        self.view?.showLoader(show: true)
         apiManager.postServiceModel(urlService: UrlPath.getBudgets, params: [:], onSuccess: { (response: Service) in
             if let status = response.status {
                 if status.code == 200 {

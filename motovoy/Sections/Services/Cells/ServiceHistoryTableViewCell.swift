@@ -19,7 +19,7 @@ class ServiceHistoryTableViewCell: UITableViewCell {
         didSet {
             emptyView.isHidden = data != nil
             if data != nil {
-                titleLabel.text = data?.budgetLines?.first?.reference
+                titleLabel.text = "\(data?.budgetLines?.count ?? 0) Servicios"
                 detailLabel.text = data?.locator
                 workshopLabel.text = data?.observations
             }
