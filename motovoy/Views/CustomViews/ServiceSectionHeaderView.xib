@@ -55,6 +55,20 @@
                         <action selector="performAction" destination="7hH-rb-xCg" eventType="touchUpInside" id="u1e-ye-nvC"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysG-mE-hBE">
+                    <rect key="frame" x="0.0" y="666" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="Zhy-x4-6lq"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zr3-Sg-QpO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="j1Z-IR-KnV"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -62,6 +76,7 @@
                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="JAz-LN-kRU" secondAttribute="bottom" id="9ON-u2-5ye"/>
                 <constraint firstItem="lkd-nx-HDl" firstAttribute="leading" secondItem="7hH-rb-xCg" secondAttribute="leading" id="Aay-mm-OSK"/>
                 <constraint firstAttribute="trailing" secondItem="lkd-nx-HDl" secondAttribute="trailing" id="ApC-6G-nKG"/>
+                <constraint firstItem="Zr3-Sg-QpO" firstAttribute="leading" secondItem="7hH-rb-xCg" secondAttribute="leading" id="Dfu-Dk-dGk"/>
                 <constraint firstAttribute="bottom" secondItem="lkd-nx-HDl" secondAttribute="bottom" id="ERz-Bl-iMA"/>
                 <constraint firstAttribute="trailing" secondItem="9cH-xS-ffk" secondAttribute="trailing" id="Fgc-1x-zBe"/>
                 <constraint firstItem="Zhc-Ma-JWg" firstAttribute="trailing" secondItem="lkd-nx-HDl" secondAttribute="trailing" id="Fkb-kR-YxT"/>
@@ -69,6 +84,8 @@
                 <constraint firstItem="Zhc-Ma-JWg" firstAttribute="bottom" secondItem="lkd-nx-HDl" secondAttribute="top" id="LlM-ic-7R8"/>
                 <constraint firstItem="9cH-xS-ffk" firstAttribute="top" secondItem="7hH-rb-xCg" secondAttribute="top" id="MAm-TU-j9N"/>
                 <constraint firstItem="zn5-32-pmi" firstAttribute="leading" secondItem="mKY-nF-7cM" secondAttribute="trailing" constant="8" id="OM9-Qv-PfZ"/>
+                <constraint firstItem="ysG-mE-hBE" firstAttribute="bottom" secondItem="e4z-Gy-aBF" secondAttribute="bottom" id="YFk-3M-ESs"/>
+                <constraint firstItem="ysG-mE-hBE" firstAttribute="trailing" secondItem="e4z-Gy-aBF" secondAttribute="trailing" id="aYp-0P-VzQ"/>
                 <constraint firstItem="mKY-nF-7cM" firstAttribute="leading" secondItem="JAz-LN-kRU" secondAttribute="trailing" constant="8" id="bDn-je-emu"/>
                 <constraint firstItem="9cH-xS-ffk" firstAttribute="leading" secondItem="7hH-rb-xCg" secondAttribute="leading" id="blY-Ta-s0g"/>
                 <constraint firstItem="zn5-32-pmi" firstAttribute="centerY" secondItem="JAz-LN-kRU" secondAttribute="centerY" id="hip-Gl-Iy1"/>
@@ -77,6 +94,9 @@
                 <constraint firstAttribute="bottom" secondItem="9cH-xS-ffk" secondAttribute="bottom" id="p8i-XG-Fpe"/>
                 <constraint firstItem="JAz-LN-kRU" firstAttribute="leading" secondItem="7hH-rb-xCg" secondAttribute="leadingMargin" constant="12" id="qsv-l3-4Ij"/>
                 <constraint firstItem="JAz-LN-kRU" firstAttribute="centerY" secondItem="7hH-rb-xCg" secondAttribute="centerY" id="sBd-ou-HMo"/>
+                <constraint firstAttribute="trailing" secondItem="Zr3-Sg-QpO" secondAttribute="trailing" id="uML-6M-UsU"/>
+                <constraint firstItem="ysG-mE-hBE" firstAttribute="leading" secondItem="e4z-Gy-aBF" secondAttribute="leading" id="y8Y-g4-FQM"/>
+                <constraint firstItem="Zr3-Sg-QpO" firstAttribute="top" secondItem="9cH-xS-ffk" secondAttribute="top" id="yJC-KJ-xJt"/>
                 <constraint firstAttribute="bottomMargin" secondItem="mKY-nF-7cM" secondAttribute="bottom" constant="12" id="yPV-CU-TMN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="e4z-Gy-aBF"/>
@@ -86,7 +106,7 @@
                 <outlet property="shadowedView" destination="lkd-nx-HDl" id="Ffg-t0-7TO"/>
                 <outlet property="titleLabel" destination="mKY-nF-7cM" id="LG1-jB-qky"/>
             </connections>
-            <point key="canvasLocation" x="-24" y="67"/>
+            <point key="canvasLocation" x="-24.5" y="66.5"/>
         </view>
     </objects>
     <resources>

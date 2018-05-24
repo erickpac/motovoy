@@ -23,7 +23,18 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginAction(_ sender: Any) {
         showLoader(show: true)
-        let emailPhone: String = userField.text!
+        let emailPhone: String = {
+            let number = {
+                return ((userField.text?.contains("+34") ?? false) ?
+                    "" :
+                    "+34"
+                ).appending(userField.text ?? "")
+            }()
+            
+            let email = userField.text ?? ""
+            
+            return ((userField.text?.contains("@") ?? false) ? email : number)
+        }()
         let password: String = passwordField.text!
         loginPresenter.loginProcess(emailPhone: emailPhone, password: password)
     }
