@@ -25,7 +25,7 @@ enum UrlPath: String {
     case addAddress = "/api/addresses"
     case deleteAddress = "/api/address/delete"
     case editProfile = "/api/client/edit_profile"
-    case getBudget = "/api/budgets/getBudgets"
+    case getBudgets = "/api/budgets/getBudgets"
     case createBudget = "/api/budgets/createBudget"
     case addImagesToBudget = "/api/budgets/addImages"
     case addCommentToBudget = "/api/budgets/addNoteToBudget"

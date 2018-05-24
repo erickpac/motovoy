@@ -126,6 +126,14 @@
 		B9D94A1E20B6798300A24AB5 /* GarageBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A1D20B6798300A24AB5 /* GarageBodyModel.swift */; };
 		B9DC3A9120B6874000A54FAE /* ReservationTypeProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC3A9020B6874000A54FAE /* ReservationTypeProtocolView.swift */; };
 		B9DC3A9320B6874B00A54FAE /* ReservationTypePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC3A9220B6874B00A54FAE /* ReservationTypePresenter.swift */; };
+		B9DC3A9520B68CDB00A54FAE /* ServicesProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC3A9420B68CDB00A54FAE /* ServicesProtocolView.swift */; };
+		B9DC3A9720B68CE800A54FAE /* ServicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC3A9620B68CE800A54FAE /* ServicesPresenter.swift */; };
+		B9DC3A9A20B68F3B00A54FAE /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC3A9920B68F3B00A54FAE /* ServiceModel.swift */; };
+		B9DC3A9C20B6900700A54FAE /* ServiceBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC3A9B20B6900700A54FAE /* ServiceBodyModel.swift */; };
+		B9DC3A9E20B6904900A54FAE /* ServiceBodyAppointmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC3A9D20B6904900A54FAE /* ServiceBodyAppointmentModel.swift */; };
+		B9DC3AA020B690F800A54FAE /* ServiceBodyBikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC3A9F20B690F800A54FAE /* ServiceBodyBikeModel.swift */; };
+		B9DC3AA220B6917D00A54FAE /* ServiceBodyCustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC3AA120B6917D00A54FAE /* ServiceBodyCustomerModel.swift */; };
+		B9DC3AA620B6964E00A54FAE /* ServiceBodyBudgetLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC3AA520B6964E00A54FAE /* ServiceBodyBudgetLineModel.swift */; };
 		B9ECC8CD20A6C05B00EBC8EC /* BikeSubmodelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8CC20A6C05B00EBC8EC /* BikeSubmodelModel.swift */; };
 		B9ECC8CF20A6C15E00EBC8EC /* BikeVehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8CE20A6C15E00EBC8EC /* BikeVehicleModel.swift */; };
 		B9ECC8D120A6C25A00EBC8EC /* GaragePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */; };
@@ -269,6 +277,14 @@
 		B9D94A1D20B6798300A24AB5 /* GarageBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageBodyModel.swift; sourceTree = "<group>"; };
 		B9DC3A9020B6874000A54FAE /* ReservationTypeProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTypeProtocolView.swift; sourceTree = "<group>"; };
 		B9DC3A9220B6874B00A54FAE /* ReservationTypePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTypePresenter.swift; sourceTree = "<group>"; };
+		B9DC3A9420B68CDB00A54FAE /* ServicesProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProtocolView.swift; sourceTree = "<group>"; };
+		B9DC3A9620B68CE800A54FAE /* ServicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesPresenter.swift; sourceTree = "<group>"; };
+		B9DC3A9920B68F3B00A54FAE /* ServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
+		B9DC3A9B20B6900700A54FAE /* ServiceBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBodyModel.swift; sourceTree = "<group>"; };
+		B9DC3A9D20B6904900A54FAE /* ServiceBodyAppointmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBodyAppointmentModel.swift; sourceTree = "<group>"; };
+		B9DC3A9F20B690F800A54FAE /* ServiceBodyBikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBodyBikeModel.swift; sourceTree = "<group>"; };
+		B9DC3AA120B6917D00A54FAE /* ServiceBodyCustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBodyCustomerModel.swift; sourceTree = "<group>"; };
+		B9DC3AA520B6964E00A54FAE /* ServiceBodyBudgetLineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBodyBudgetLineModel.swift; sourceTree = "<group>"; };
 		B9ECC8CC20A6C05B00EBC8EC /* BikeSubmodelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeSubmodelModel.swift; sourceTree = "<group>"; };
 		B9ECC8CE20A6C15E00EBC8EC /* BikeVehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeVehicleModel.swift; sourceTree = "<group>"; };
 		B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaragePresenter.swift; sourceTree = "<group>"; };
@@ -323,6 +339,8 @@
 		8308B44E20AB92340091AA2B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B9DC3A9420B68CDB00A54FAE /* ServicesProtocolView.swift */,
+				B9DC3A9620B68CE800A54FAE /* ServicesPresenter.swift */,
 				8308B44F20AB92480091AA2B /* ServicesViewController.swift */,
 			);
 			path = Services;
@@ -558,6 +576,7 @@
 			children = (
 				B9093A2720A2A911001DF9B2 /* LocalMappable.swift */,
 				B9D94A1A20B6796800A24AB5 /* Garage */,
+				B9DC3A9820B68F2C00A54FAE /* Services */,
 				B9D94A0520B6698F00A24AB5 /* Budget */,
 				B9F49C7920B3BCC100BBF3A5 /* Address */,
 				B9FADCDB20B2604800C63B3D /* ServiceMV */,
@@ -823,6 +842,19 @@
 			path = Garage;
 			sourceTree = "<group>";
 		};
+		B9DC3A9820B68F2C00A54FAE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B9DC3A9920B68F3B00A54FAE /* ServiceModel.swift */,
+				B9DC3A9B20B6900700A54FAE /* ServiceBodyModel.swift */,
+				B9DC3A9D20B6904900A54FAE /* ServiceBodyAppointmentModel.swift */,
+				B9DC3A9F20B690F800A54FAE /* ServiceBodyBikeModel.swift */,
+				B9DC3AA120B6917D00A54FAE /* ServiceBodyCustomerModel.swift */,
+				B9DC3AA520B6964E00A54FAE /* ServiceBodyBudgetLineModel.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B9F49C7920B3BCC100BBF3A5 /* Address */ = {
 			isa = PBXGroup;
 			children = (
@@ -1039,6 +1071,7 @@
 				B9D94A1320B66B1400A24AB5 /* BudgetBodyLineModel.swift in Sources */,
 				B9FADCD120B25DF700C63B3D /* ProfilePresenter.swift in Sources */,
 				B9093A2A20A2AA23001DF9B2 /* CustomerModel.swift in Sources */,
+				B9DC3AA020B690F800A54FAE /* ServiceBodyBikeModel.swift in Sources */,
 				B969496620A68AD2005B75F7 /* BikeProtocolView.swift in Sources */,
 				B9D94A1520B66B9A00A24AB5 /* BudgetBodyDiagnosticModel.swift in Sources */,
 				B9C3CA8920A50B6B0002C124 /* LoginProtocolView.swift in Sources */,
@@ -1058,9 +1091,11 @@
 				B9924A5F20A3D2D800021473 /* BikeDetailModel.swift in Sources */,
 				B9D94A0F20B66A4A00A24AB5 /* BudgetBodyCustomerModel.swift in Sources */,
 				B958836820A6CEE700FE38E5 /* MessageModel.swift in Sources */,
+				B9DC3AA620B6964E00A54FAE /* ServiceBodyBudgetLineModel.swift in Sources */,
 				837A9ED220AE356700BB160B /* InfoTableViewCell.swift in Sources */,
 				B9DC3A9120B6874000A54FAE /* ReservationTypeProtocolView.swift in Sources */,
 				837A9EDE20B394D100BB160B /* CardTableViewCell.swift in Sources */,
+				B9DC3A9720B68CE800A54FAE /* ServicesPresenter.swift in Sources */,
 				83A19E3220A778C500AC980F /* PaymentViewController.swift in Sources */,
 				B969496820A68AF6005B75F7 /* BikePresenter.swift in Sources */,
 				B9FADCCF20B25DEB00C63B3D /* AddBillingPresenter.swift in Sources */,
@@ -1081,6 +1116,7 @@
 				B9F49C7D20B3BCEE00BBF3A5 /* AddressBodyModel.swift in Sources */,
 				B914ED9820A678FD009A9291 /* BrandModelObjectModel.swift in Sources */,
 				B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */,
+				B9DC3A9E20B6904900A54FAE /* ServiceBodyAppointmentModel.swift in Sources */,
 				8308B44A20AB88000091AA2B /* MainNavigationTabViewController.swift in Sources */,
 				8397E48D20B67E68001D5250 /* ReservationTypeViewController.swift in Sources */,
 				B95DBD0C20ACDCE200A2244D /* ChangePasswordPresenter.swift in Sources */,
@@ -1095,6 +1131,7 @@
 				83C20A7420ACAE9800292EE5 /* GenericResponse.swift in Sources */,
 				B95DBD0320ACC8B100A2244D /* VerificationPresenter.swift in Sources */,
 				B914ED9020A661CC009A9291 /* BrandCategoryModel.swift in Sources */,
+				B9DC3A9C20B6900700A54FAE /* ServiceBodyModel.swift in Sources */,
 				B9093A3120A2B0C8001DF9B2 /* StatusModel.swift in Sources */,
 				83CD10ED20A5528E006BB4B9 /* BikeSelectionViewController.swift in Sources */,
 				B9093A2820A2A911001DF9B2 /* LocalMappable.swift in Sources */,
@@ -1105,6 +1142,7 @@
 				B914ED9420A662F9009A9291 /* BrandWorkshopModel.swift in Sources */,
 				B9C3CA8D20A51D660002C124 /* Utils.swift in Sources */,
 				83CD10FF20A562AD006BB4B9 /* ActiveBuilder.swift in Sources */,
+				B9DC3A9520B68CDB00A54FAE /* ServicesProtocolView.swift in Sources */,
 				83CD10F420A560E3006BB4B9 /* UserModel.swift in Sources */,
 				B95DBD0520ACC8C900A2244D /* VerificationViewController.swift in Sources */,
 				83CD110020A562AD006BB4B9 /* ActiveType.swift in Sources */,
@@ -1120,6 +1158,7 @@
 				B95DBD1020ACE07100A2244D /* ConfirmationCodeModel.swift in Sources */,
 				B9F71F2320A53D4000043633 /* RecoverPasswordPresenter.swift in Sources */,
 				B9924A6220A4036200021473 /* BikeBrandModel.swift in Sources */,
+				B9DC3AA220B6917D00A54FAE /* ServiceBodyCustomerModel.swift in Sources */,
 				B9FADCD620B2600B00C63B3D /* ServicesMVProtocolView.swift in Sources */,
 				B9924A6420A403C800021473 /* BikeModelModel.swift in Sources */,
 				B9D94A1C20B6797800A24AB5 /* GarageModel.swift in Sources */,
@@ -1139,6 +1178,7 @@
 				83570DAC20A42E3B0057D63D /* RecoverPasswordViewController.swift in Sources */,
 				B99D17EA20ABF40300D8F962 /* MessageBikeModel.swift in Sources */,
 				B934943C20B3C7A100F4D181 /* AddressProtocolView.swift in Sources */,
+				B9DC3A9A20B68F3B00A54FAE /* ServiceModel.swift in Sources */,
 				83A19DF920A6D2D300AC980F /* MainProfileViewController.swift in Sources */,
 				837A9EDA20B3836200BB160B /* AddAddressViewController.swift in Sources */,
 				B9FADCCB20B25DCA00C63B3D /* ProfileProtocolView.swift in Sources */,
