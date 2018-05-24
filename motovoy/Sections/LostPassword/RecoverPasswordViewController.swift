@@ -15,11 +15,11 @@ class RecoverPasswordViewController: UIViewController {
     @IBOutlet weak var titleBarView: NavigationShadowedView!
     fileprivate var phone: String?
 
-    fileprivate let recoverPasswordPresenter = RecoverPasswordPresenter(apiManager: APIManager.default)
+    fileprivate let presenter = RecoverPasswordPresenter(apiManager: APIManager.default)
     
     @IBAction func recoverAction(_ sender: Any) {
         showLoader(show: true)
-        recoverPasswordPresenter.getConfirmationCode(phone: phoneField.text!)
+        presenter.getConfirmationCode(phone: phoneField.text!)
     }
 }
 
@@ -27,7 +27,7 @@ extension RecoverPasswordViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        recoverPasswordPresenter.attachView(self)
+        presenter.attachView(self)
     }
     
     func configure() {

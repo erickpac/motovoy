@@ -19,7 +19,7 @@ class BikeCreationViewController: UIViewController {
     @IBOutlet weak var plateField: TextField!
     @IBOutlet weak var createButton: FlatButton!
     
-    fileprivate let bikePresenter = BikePresenter(apiManager: APIManager())
+    fileprivate let presenter = BikePresenter(apiManager: APIManager())
     
     @IBAction func createAction(_ sender: Any) {
         let name: String = nameField.text!
@@ -29,7 +29,7 @@ class BikeCreationViewController: UIViewController {
         let year: Int = Int(yearField.text!) ?? 0
         let registrationNumber: String = plateField.text!
         
-        bikePresenter.newBike(name: name, brandId: brandId, model: model, cylinderCapacity: cylinderCapacity, year: year, registrationNumber: registrationNumber)
+        presenter.newBike(name: name, brandId: brandId, model: model, cylinderCapacity: cylinderCapacity, year: year, registrationNumber: registrationNumber)
     }
 }
 
@@ -37,7 +37,7 @@ extension BikeCreationViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        bikePresenter.attachView(self)
+        presenter.attachView(self)
     }
     
     func configure() {

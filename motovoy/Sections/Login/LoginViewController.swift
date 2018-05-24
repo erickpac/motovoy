@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerButton: FlatButton!
     @IBOutlet weak var loginButton: FlatButton!
     
-    fileprivate let loginPresenter = LoginPresenter(apiManager: APIManager.default)
+    fileprivate let presenter = LoginPresenter(apiManager: APIManager.default)
     
     var onLogin: ((UIViewController) -> ())? = nil
     
@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
             return ((userField.text?.contains("@") ?? false) ? email : number)
         }()
         let password: String = passwordField.text!
-        loginPresenter.loginProcess(emailPhone: emailPhone, password: password)
+        presenter.loginProcess(emailPhone: emailPhone, password: password)
     }
 }
 
@@ -46,7 +46,7 @@ extension LoginViewController {
         super.viewDidLoad()
         configure()
         
-        loginPresenter.attachView(self)
+        presenter.attachView(self)
     }
     
     func configure() {
