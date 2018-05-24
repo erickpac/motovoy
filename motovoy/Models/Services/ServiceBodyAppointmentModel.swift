@@ -20,6 +20,7 @@ struct ServiceBodyAppointment: Codable {
     let deletedAt: String?
     let deposit: String?
     let shipping: String?
+    let calendar: ServiceBodyCalendar?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -35,5 +36,6 @@ struct ServiceBodyAppointment: Codable {
         case deletedAt = "deleted_at"
         case deposit = "deposit"
         case shipping = "shipping"
+        case calendar = "calendar"
     }
 }
