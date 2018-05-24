@@ -40,6 +40,11 @@
 		8397E49320B68E2B001D5250 /* InfoPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E49220B68E2B001D5250 /* InfoPriceTableViewCell.swift */; };
 		8397E49520B68EB2001D5250 /* ServiceInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E49420B68EB2001D5250 /* ServiceInfoTableViewCell.swift */; };
 		8397E49720B69150001D5250 /* MapInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E49620B69150001D5250 /* MapInfoTableViewCell.swift */; };
+		8397E49B20B6A5A3001D5250 /* ServiceTabSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8397E49A20B6A5A3001D5250 /* ServiceTabSectionHeaderView.xib */; };
+		8397E49D20B6A5EA001D5250 /* ServiceTabSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E49C20B6A5EA001D5250 /* ServiceTabSectionHeader.swift */; };
+		8397E49F20B6A6A0001D5250 /* ReservationServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E49E20B6A6A0001D5250 /* ReservationServiceTableViewCell.swift */; };
+		8397E4A120B6A75A001D5250 /* OngoingDiagnosticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E4A020B6A75A001D5250 /* OngoingDiagnosticTableViewCell.swift */; };
+		8397E4A320B6A77D001D5250 /* ServiceHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397E4A220B6A77D001D5250 /* ServiceHistoryTableViewCell.swift */; };
 		83A19DF620A6D00500AC980F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A19DF420A6D00500AC980F /* Profile.storyboard */; };
 		83A19DF920A6D2D300AC980F /* MainProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19DF820A6D2D300AC980F /* MainProfileViewController.swift */; };
 		83A19E2C20A7781900AC980F /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A19E2B20A7781900AC980F /* MessagesViewController.swift */; };
@@ -195,6 +200,11 @@
 		8397E49220B68E2B001D5250 /* InfoPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPriceTableViewCell.swift; sourceTree = "<group>"; };
 		8397E49420B68EB2001D5250 /* ServiceInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInfoTableViewCell.swift; sourceTree = "<group>"; };
 		8397E49620B69150001D5250 /* MapInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoTableViewCell.swift; sourceTree = "<group>"; };
+		8397E49A20B6A5A3001D5250 /* ServiceTabSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceTabSectionHeaderView.xib; sourceTree = "<group>"; };
+		8397E49C20B6A5EA001D5250 /* ServiceTabSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTabSectionHeader.swift; sourceTree = "<group>"; };
+		8397E49E20B6A6A0001D5250 /* ReservationServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationServiceTableViewCell.swift; sourceTree = "<group>"; };
+		8397E4A020B6A75A001D5250 /* OngoingDiagnosticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingDiagnosticTableViewCell.swift; sourceTree = "<group>"; };
+		8397E4A220B6A77D001D5250 /* ServiceHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		83A19DF520A6D00500AC980F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		83A19DF820A6D2D300AC980F /* MainProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewController.swift; sourceTree = "<group>"; };
 		83A19E2B20A7781900AC980F /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -347,9 +357,9 @@
 		8308B44E20AB92340091AA2B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8397E49120B68E1D001D5250 /* Cells */,
 				B9DC3A9420B68CDB00A54FAE /* ServicesProtocolView.swift */,
 				B9DC3A9620B68CE800A54FAE /* ServicesPresenter.swift */,
-				8397E49120B68E1D001D5250 /* Cells */,
 				8308B44F20AB92480091AA2B /* ServicesViewController.swift */,
 			);
 			path = Services;
@@ -474,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				837A9EEA20B3B26D00BB160B /* ServiceSectionHeaderView.xib */,
+				8397E49A20B6A5A3001D5250 /* ServiceTabSectionHeaderView.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -494,6 +505,10 @@
 				8397E49220B68E2B001D5250 /* InfoPriceTableViewCell.swift */,
 				8397E49420B68EB2001D5250 /* ServiceInfoTableViewCell.swift */,
 				8397E49620B69150001D5250 /* MapInfoTableViewCell.swift */,
+				8397E49C20B6A5EA001D5250 /* ServiceTabSectionHeader.swift */,
+				8397E49E20B6A6A0001D5250 /* ReservationServiceTableViewCell.swift */,
+				8397E4A020B6A75A001D5250 /* OngoingDiagnosticTableViewCell.swift */,
+				8397E4A220B6A77D001D5250 /* ServiceHistoryTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1013,6 +1028,7 @@
 				8309C45020A2946800C6D721 /* Assets.xcassets in Resources */,
 				83CD10EA20A54FF3006BB4B9 /* Alerts.storyboard in Resources */,
 				83A19DF620A6D00500AC980F /* Profile.storyboard in Resources */,
+				8397E49B20B6A5A3001D5250 /* ServiceTabSectionHeaderView.xib in Resources */,
 				83654CA720A50B09009EE1E6 /* Main.storyboard in Resources */,
 				837A9EE120B3988200BB160B /* Reservation.storyboard in Resources */,
 			);
@@ -1086,6 +1102,7 @@
 				B9093A2620A2A6AC001DF9B2 /* APIManager.swift in Sources */,
 				B9ECC8D120A6C25A00EBC8EC /* GaragePresenter.swift in Sources */,
 				83A19E2C20A7781900AC980F /* MessagesViewController.swift in Sources */,
+				8397E4A120B6A75A001D5250 /* OngoingDiagnosticTableViewCell.swift in Sources */,
 				83654CA920A50BD7009EE1E6 /* NavigationShadowedView.swift in Sources */,
 				B9C3CA8F20A525640002C124 /* RegistrationProtocolView.swift in Sources */,
 				B90DE28520A7EFD50086AE95 /* MessagesPresenter.swift in Sources */,
@@ -1094,6 +1111,8 @@
 				B9FADCD120B25DF700C63B3D /* ProfilePresenter.swift in Sources */,
 				B9093A2A20A2AA23001DF9B2 /* CustomerModel.swift in Sources */,
 				B9DC3AA020B690F800A54FAE /* ServiceBodyBikeModel.swift in Sources */,
+				8397E49D20B6A5EA001D5250 /* ServiceTabSectionHeader.swift in Sources */,
+				8397E49F20B6A6A0001D5250 /* ReservationServiceTableViewCell.swift in Sources */,
 				B969496620A68AD2005B75F7 /* BikeProtocolView.swift in Sources */,
 				B9D94A1520B66B9A00A24AB5 /* BudgetBodyDiagnosticModel.swift in Sources */,
 				B9C3CA8920A50B6B0002C124 /* LoginProtocolView.swift in Sources */,
@@ -1186,6 +1205,7 @@
 				B9FADCD620B2600B00C63B3D /* ServicesMVProtocolView.swift in Sources */,
 				B9924A6420A403C800021473 /* BikeModelModel.swift in Sources */,
 				B9D94A1C20B6797800A24AB5 /* GarageModel.swift in Sources */,
+				8397E4A320B6A77D001D5250 /* ServiceHistoryTableViewCell.swift in Sources */,
 				83DFCF6420B6413100E7CADC /* ServicesSelectionInfoViewController.swift in Sources */,
 				B9DC3A9320B6874B00A54FAE /* ReservationTypePresenter.swift in Sources */,
 				837A9ED620AE3AC500BB160B /* AddressTableViewCell.swift in Sources */,
