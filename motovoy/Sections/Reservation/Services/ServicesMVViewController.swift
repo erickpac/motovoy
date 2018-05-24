@@ -25,6 +25,7 @@ class ServicesMVViewController: BaseNavigationViewController {
             tableView.reloadData()
         }
     }
+    var delegate: ServicesSelectionInfoDelegate? = nil
 }
 
 extension ServicesMVViewController {
@@ -69,6 +70,10 @@ extension ServicesMVViewController: UITableViewDelegate, UITableViewDataSource {
         cell.section = section
         cell.data = services[section]
         cell.action = { section in
+            if self.services[section].id == 2 {
+                self.performSegue(withIdentifier: "ServiceSegue", sender: nil)
+                return self.activeSections[section]
+            }
             self.activeSections[section] = !self.activeSections[section]
             tableView.reloadSections([section], with: UITableViewRowAnimation.automatic)
             return self.activeSections[section]
@@ -82,6 +87,11 @@ extension ServicesMVViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.data = services[indexPath.section].subKits?[indexPath.row]
         return cell!
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.didSelect(service: services[indexPath.section].subKits?[indexPath.row].name ?? "")
+        navigationController?.popToRootViewController(animated: true)
+    }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
@@ -90,4 +100,15 @@ extension ServicesMVViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 76
     }
+}
+
+extension ServicesMVViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ServiceSegue" {
+            let viewController = segue.destination as! ServicesSelectionInfoViewController
+            viewController.delegate = self.delegate
+        }
+    }
+    
 }

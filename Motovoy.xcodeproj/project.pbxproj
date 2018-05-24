@@ -55,6 +55,9 @@
 		83CD110320A6546E006BB4B9 /* Garage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CD110120A6546E006BB4B9 /* Garage.storyboard */; };
 		83CD110720A6569C006BB4B9 /* BikeCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD110620A6569C006BB4B9 /* BikeCreationViewController.swift */; };
 		83CD110920A65AE4006BB4B9 /* OptionSelectionAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD110820A65AE4006BB4B9 /* OptionSelectionAlertViewController.swift */; };
+		83DFCF6420B6413100E7CADC /* ServicesSelectionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFCF6320B6413100E7CADC /* ServicesSelectionInfoViewController.swift */; };
+		83DFCF6620B645F500E7CADC /* InfoCheckServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFCF6520B645F500E7CADC /* InfoCheckServiceTableViewCell.swift */; };
+		83DFCF6820B6460300E7CADC /* InfoCheckableServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFCF6720B6460300E7CADC /* InfoCheckableServiceTableViewCell.swift */; };
 		B4880FE079159604E19862DF /* Pods_motovoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA6D36DD4A7C96499A01999 /* Pods_motovoy.framework */; };
 		B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A1D20A2A43E001DF9B2 /* CustomerAddressModel.swift */; };
 		B9093A2320A2A683001DF9B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093A2220A2A683001DF9B2 /* LoginViewController.swift */; };
@@ -176,6 +179,9 @@
 		83CD110220A6546E006BB4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Garage.storyboard; sourceTree = "<group>"; };
 		83CD110620A6569C006BB4B9 /* BikeCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeCreationViewController.swift; sourceTree = "<group>"; };
 		83CD110820A65AE4006BB4B9 /* OptionSelectionAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectionAlertViewController.swift; sourceTree = "<group>"; };
+		83DFCF6320B6413100E7CADC /* ServicesSelectionInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSelectionInfoViewController.swift; sourceTree = "<group>"; };
+		83DFCF6520B645F500E7CADC /* InfoCheckServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCheckServiceTableViewCell.swift; sourceTree = "<group>"; };
+		83DFCF6720B6460300E7CADC /* InfoCheckableServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCheckableServiceTableViewCell.swift; sourceTree = "<group>"; };
 		8BA6D36DD4A7C96499A01999 /* Pods_motovoy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_motovoy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9093A1D20A2A43E001DF9B2 /* CustomerAddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerAddressModel.swift; sourceTree = "<group>"; };
 		B9093A2220A2A683001DF9B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -393,6 +399,8 @@
 			children = (
 				837A9EE520B39B8100BB160B /* ServiceSelectionInfoTableViewCell.swift */,
 				837A9EE720B3A13B00BB160B /* ServiceHeaderTableViewCell.swift */,
+				83DFCF6520B645F500E7CADC /* InfoCheckServiceTableViewCell.swift */,
+				83DFCF6720B6460300E7CADC /* InfoCheckableServiceTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -772,6 +780,7 @@
 				B9FADCD520B2600B00C63B3D /* ServicesMVProtocolView.swift */,
 				B9FADCD920B2602800C63B3D /* ServicesMVPresenter.swift */,
 				B9FADCD720B2601B00C63B3D /* ServicesMVViewController.swift */,
+				83DFCF6320B6413100E7CADC /* ServicesSelectionInfoViewController.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -925,6 +934,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83DFCF6620B645F500E7CADC /* InfoCheckServiceTableViewCell.swift in Sources */,
 				B9FADCDD20B2606500C63B3D /* ServiceMVModel.swift in Sources */,
 				B95DBD0A20ACDCD200A2244D /* ChangePasswordProtocolView.swift in Sources */,
 				B9F49C7B20B3BCD900BBF3A5 /* AddressModel.swift in Sources */,
@@ -1007,7 +1017,9 @@
 				B9924A6220A4036200021473 /* BikeBrandModel.swift in Sources */,
 				B9FADCD620B2600B00C63B3D /* ServicesMVProtocolView.swift in Sources */,
 				B9924A6420A403C800021473 /* BikeModelModel.swift in Sources */,
+				83DFCF6420B6413100E7CADC /* ServicesSelectionInfoViewController.swift in Sources */,
 				837A9ED620AE3AC500BB160B /* AddressTableViewCell.swift in Sources */,
+				83DFCF6820B6460300E7CADC /* InfoCheckableServiceTableViewCell.swift in Sources */,
 				B966D35320A7E912006F59A5 /* MessageBodyModel.swift in Sources */,
 				B90DE28320A7EFB40086AE95 /* MessagesProtocolView.swift in Sources */,
 				B9FADCCD20B25DDC00C63B3D /* PaymentProtocolView.swift in Sources */,
