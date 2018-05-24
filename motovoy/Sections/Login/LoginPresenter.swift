@@ -42,7 +42,7 @@ class LoginPresenter {
                         let _ = Utils.saveInUserDefaults(key: UserDefaultsKeys.USER_KEY, data: user)
                         self.view?.showLoader(show: false)
                         self.view?.loginSuccess()
-                    }else {
+                    } else {
                         self.view?.showLoader(show: false)
                         if let errorMessage = status.message {
                             self.view?.errorMessage(message: errorMessage)
@@ -52,7 +52,7 @@ class LoginPresenter {
             }
         }) { (error) in
             self.view?.showLoader(show: false)
-            self.view?.errorMessage(message: error.debugDescription)
+            self.view?.errorMessage(message: "Ooooooops sucedió un error")
         }
     }
 }

@@ -14,6 +14,10 @@ protocol LocalMappable: Decodable {
 
 extension LocalMappable {
     init?(jsonString: String) {
+        guard jsonString.count > 0 else {
+            return nil
+        }
+        
         guard let data = jsonString.data(using: .utf8) else {
             return nil
         }

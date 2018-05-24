@@ -33,11 +33,11 @@ struct BikeBody: Codable {
     var lastRevisionFormatted: String {
         let dateFormatterGet = DateFormatter()
         let dateFormatterPrint = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        dateFormatterPrint.dateFormat = "dd MMMM, yyyy"
-        dateFormatterPrint.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+        dateFormatterPrint.dateFormat = "EEEE, dd MMMM yyyy"
+        dateFormatterPrint.locale = Locale(identifier: "es_ES")
         
-        if let date = dateFormatterGet.date(from: "2016-02-29 12:24:26") {
+        if let date = dateFormatterGet.date(from: lastRevision?.date ?? "") {
             let dateString = dateFormatterPrint.string(from: date)
             return dateString
         }

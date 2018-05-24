@@ -17,7 +17,7 @@ class BikeShowcaseLastServiceTableViewCell: UITableViewCell {
         didSet {
             if (data != nil) {
                 titleLabel.text = data?.name
-                serviceLabel.text = data?.lastRevisionFormatted ?? "No se ha realizado ningún servicio."
+                serviceLabel.text = (data?.lastRevisionFormatted.count)! > 0 ? data?.lastRevisionFormatted : "No se ha realizado ningún servicio."
             }
         }
     }

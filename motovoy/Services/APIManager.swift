@@ -53,6 +53,7 @@ class APIManager {
         var urlRequest = URLRequest(url: urlType)
         urlRequest.addValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
         urlRequest.httpMethod = "POST"
+        urlRequest.timeoutInterval = 60
         urlRequest.httpBody = try! JSONSerialization.data(withJSONObject: customParams, options: [])
         
         Alamofire.request(urlRequest).responseString { (response) in
@@ -89,6 +90,7 @@ class APIManager {
         var urlRequest = URLRequest(url: urlType)
         urlRequest.addValue("application/json;charset=UTF-8", forHTTPHeaderField: "Content-Type")
         urlRequest.httpMethod = "POST"
+        urlRequest.timeoutInterval = 60
         urlRequest.httpBody = try! JSONSerialization.data(withJSONObject: customParams, options: [])
         
         Alamofire.request(urlRequest).responseString { (response) in
@@ -110,6 +112,7 @@ class APIManager {
         
         var urlRequest = URLRequest(url: urlType)
         urlRequest.httpMethod = "GET"
+        urlRequest.timeoutInterval = 60
         
         Alamofire.request(urlRequest).responseString { (response) in
             if (!self.validate(response: response)) {
