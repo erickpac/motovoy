@@ -7,12 +7,12 @@
 //
 
 struct BudgetAppointment: Codable {
-    var id: Int?
-    var pickUpDateTime: String?
-    var pickUpAddress: String?
+    let id: Int?
+    let pickUpDateTime: String?
+    let pickUpAddress: String?
     
     enum CodingKeys: String, CodingKey {
-        case id
+        case id = "id"
         case pickUpDateTime = "pick_up_date_time"
         case pickUpAddress = "pick_up_address"
     }
