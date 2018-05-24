@@ -9,15 +9,15 @@
 import UIKit
 
 class ReservationTypeViewController: UIViewController {
-
     @IBOutlet var viewsCollection: [UIView]!
-
+    var garages: [GarageBody]?
+    fileprivate let presenter = ReservationTypePresenter(apiManager: APIManager.default)
 }
 
 extension ReservationTypeViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.attachView(self)
         configure()
     }
     
@@ -26,5 +26,18 @@ extension ReservationTypeViewController {
             view.cornerRadiusPreset = .cornerRadius2
         }
     }
+}
+
+extension ReservationTypeViewController: ReservationTypeView {
+    func showLoader(show: Bool) {
+        
+    }
     
+    func errorMessage(message: String) {
+        
+    }
+    
+    func getGaragesSuccess(garages: [GarageBody]) {
+        self.garages = garages
+    }
 }

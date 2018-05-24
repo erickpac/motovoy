@@ -65,7 +65,7 @@ class RegistrationPresenter {
             }
         }) { (error) in
             self.view?.showLoader(show: false)
-            self.view?.errorMessage(message: "Ooooooops sucedió un error")
+            self.view?.errorMessage(message: "Whoops, looks like something went wrong.")
         }
     }
 }

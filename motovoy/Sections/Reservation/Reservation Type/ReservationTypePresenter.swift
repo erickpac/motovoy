@@ -1,20 +1,20 @@
 //
-//  AddBillingPresenter.swift
+//  ReservationTypePresenter.swift
 //  motovoy
 //
-//  Created by Erick Pac on 5/20/18.
+//  Created by Erick Pac on 5/23/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-class AddBillingPresenter {
+class ReservationTypePresenter {
     fileprivate let apiManager: APIManager
-    fileprivate var view: AddBillingView?
+    fileprivate var view: ReservationTypeView?
     
     init(apiManager: APIManager) {
         self.apiManager = apiManager
     }
     
-    func attachView(_ view: AddBillingView) {
+    func attachView(_ view: ReservationTypeView) {
         self.view = view
     }
     
@@ -22,21 +22,14 @@ class AddBillingPresenter {
         view = nil
     }
     
-    func editProfile(name: String, lastName: String, nif: String, phone: String, email: String) -> Void {
-        let params: [String: Any]
-        params = [
-            "name": name,
-            "surnames": lastName,
-            "nif": nif,
-            "mobile": phone,
-            "email": email
-        ]
-        
-        apiManager.postServiceModel(urlService: UrlPath.editProfile, params: params, onSuccess: { (response: User) in
+    func getGarages() -> Void {
+        apiManager.postServiceModel(urlService: UrlPath.getGarages, params: [:], onSuccess: { (response: Garage) in
             if let status = response.status {
                 if status.code == 200 {
+                    if let garages = response.workshops {
+                        self.view?.getGaragesSuccess(garages: garages)
+                    }
                     self.view?.showLoader(show: false)
-                    self.view?.editProfileSuccess(user: response)
                 } else {
                     self.view?.showLoader(show: false)
                     if let errorMessage = status.message {
