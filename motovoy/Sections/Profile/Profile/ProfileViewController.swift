@@ -97,7 +97,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             if address.count > 0 {
                 let data = address[indexPath.row]
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileAddressCell") as! AddressTableViewCell
-                cell.setData(data: data)
+                cell.data = data
                 
                 cell.deleteAction = {
                     if let addressId = data.id {
@@ -168,6 +168,7 @@ extension ProfileViewController: ProfileView {
     func deleteAddressAlert(addressId: Int) -> Void {
         let alert = UIAlertController.init(title: "Eliminar dirección", message: "¿Estás seguro de eliminar ésta dirección?", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Eliminar", style: .destructive, handler: { (action) in
+            self.showLoader(show: true)
             self.presenter.deleteAddress(addressId: addressId)
         }))
         

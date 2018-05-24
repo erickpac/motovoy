@@ -15,15 +15,18 @@ class AddressTableViewCell: UITableViewCell {
     @IBOutlet weak var deleteButton: UIButton!
     
     var deleteAction: (() -> ())? = nil
+    var data: AddressBody? = nil {
+        didSet {
+            if (data != nil) {
+                titleLabel.text = data?.name
+                detailLabel.text = data?.address
+            }
+        }
+    }
 }
 
 extension AddressTableViewCell {
     @IBAction func triggerAction() {
         deleteAction?()
-    }
-    
-    func setData(data: AddressBody) -> Void {
-        titleLabel.text = data.name
-        detailLabel.text = data.address
     }
 }

@@ -5,6 +5,7 @@
 //  Created by Erick Pac on 5/12/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
+import Foundation
 
 struct BikeBody: Codable {
     var id: Int?
@@ -29,6 +30,20 @@ struct BikeBody: Codable {
     var subModel: BikeSubmodel?
     var customer: CustomerDetail?
     var customerBike: CustomerDetail?
+    var lastRevisionFormatted: String {
+        let dateFormatterGet = DateFormatter()
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatterPrint.dateFormat = "dd MMMM, yyyy"
+        dateFormatterPrint.locale = Locale(identifier: "en_US_POSIX")
+        
+        if let date = dateFormatterGet.date(from: "2016-02-29 12:24:26") {
+            let dateString = dateFormatterPrint.string(from: date)
+            return dateString
+        }
+        
+        return ""
+    }
     
     enum CodingKeys: String, CodingKey {
         case id
