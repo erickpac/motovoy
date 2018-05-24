@@ -121,6 +121,8 @@
 		B9D94A1520B66B9A00A24AB5 /* BudgetBodyDiagnosticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A1420B66B9A00A24AB5 /* BudgetBodyDiagnosticModel.swift */; };
 		B9D94A1720B66BB000A24AB5 /* BudgetBodyInvoiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A1620B66BB000A24AB5 /* BudgetBodyInvoiceModel.swift */; };
 		B9D94A1920B66BCB00A24AB5 /* BudgetAppointmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A1820B66BCB00A24AB5 /* BudgetAppointmentModel.swift */; };
+		B9D94A1C20B6797800A24AB5 /* GarageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A1B20B6797800A24AB5 /* GarageModel.swift */; };
+		B9D94A1E20B6798300A24AB5 /* GarageBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A1D20B6798300A24AB5 /* GarageBodyModel.swift */; };
 		B9ECC8CD20A6C05B00EBC8EC /* BikeSubmodelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8CC20A6C05B00EBC8EC /* BikeSubmodelModel.swift */; };
 		B9ECC8CF20A6C15E00EBC8EC /* BikeVehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8CE20A6C15E00EBC8EC /* BikeVehicleModel.swift */; };
 		B9ECC8D120A6C25A00EBC8EC /* GaragePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */; };
@@ -259,6 +261,8 @@
 		B9D94A1420B66B9A00A24AB5 /* BudgetBodyDiagnosticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetBodyDiagnosticModel.swift; sourceTree = "<group>"; };
 		B9D94A1620B66BB000A24AB5 /* BudgetBodyInvoiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetBodyInvoiceModel.swift; sourceTree = "<group>"; };
 		B9D94A1820B66BCB00A24AB5 /* BudgetAppointmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetAppointmentModel.swift; sourceTree = "<group>"; };
+		B9D94A1B20B6797800A24AB5 /* GarageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageModel.swift; sourceTree = "<group>"; };
+		B9D94A1D20B6798300A24AB5 /* GarageBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageBodyModel.swift; sourceTree = "<group>"; };
 		B9ECC8CC20A6C05B00EBC8EC /* BikeSubmodelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeSubmodelModel.swift; sourceTree = "<group>"; };
 		B9ECC8CE20A6C15E00EBC8EC /* BikeVehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeVehicleModel.swift; sourceTree = "<group>"; };
 		B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaragePresenter.swift; sourceTree = "<group>"; };
@@ -536,6 +540,7 @@
 			isa = PBXGroup;
 			children = (
 				B9093A2720A2A911001DF9B2 /* LocalMappable.swift */,
+				B9D94A1A20B6796800A24AB5 /* Garage */,
 				B9D94A0520B6698F00A24AB5 /* Budget */,
 				B9F49C7920B3BCC100BBF3A5 /* Address */,
 				B9FADCDB20B2604800C63B3D /* ServiceMV */,
@@ -792,6 +797,15 @@
 			path = Budget;
 			sourceTree = "<group>";
 		};
+		B9D94A1A20B6796800A24AB5 /* Garage */ = {
+			isa = PBXGroup;
+			children = (
+				B9D94A1B20B6797800A24AB5 /* GarageModel.swift */,
+				B9D94A1D20B6798300A24AB5 /* GarageBodyModel.swift */,
+			);
+			path = Garage;
+			sourceTree = "<group>";
+		};
 		B9F49C7920B3BCC100BBF3A5 /* Address */ = {
 			isa = PBXGroup;
 			children = (
@@ -1045,6 +1059,7 @@
 				B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */,
 				B969496320A68A7A005B75F7 /* GarageProtocolView.swift in Sources */,
 				B9924A5A20A3CB3A00021473 /* UrlPath.swift in Sources */,
+				B9D94A1E20B6798300A24AB5 /* GarageBodyModel.swift in Sources */,
 				B9F49C7D20B3BCEE00BBF3A5 /* AddressBodyModel.swift in Sources */,
 				B914ED9820A678FD009A9291 /* BrandModelObjectModel.swift in Sources */,
 				B9093A1E20A2A43E001DF9B2 /* CustomerAddressModel.swift in Sources */,
@@ -1088,6 +1103,7 @@
 				B9924A6220A4036200021473 /* BikeBrandModel.swift in Sources */,
 				B9FADCD620B2600B00C63B3D /* ServicesMVProtocolView.swift in Sources */,
 				B9924A6420A403C800021473 /* BikeModelModel.swift in Sources */,
+				B9D94A1C20B6797800A24AB5 /* GarageModel.swift in Sources */,
 				83DFCF6420B6413100E7CADC /* ServicesSelectionInfoViewController.swift in Sources */,
 				837A9ED620AE3AC500BB160B /* AddressTableViewCell.swift in Sources */,
 				83DFCF6820B6460300E7CADC /* InfoCheckableServiceTableViewCell.swift in Sources */,

@@ -1,23 +1,21 @@
 //
-//  BudgetModel.swift
+//  GarageModel.swift
 //  motovoy
 //
 //  Created by Erick Pac on 5/23/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct Budget: LocalMappable {
+struct Garage: LocalMappable {
     let name: String?
     let mobile: String?
     let email: String?
-    let userId: Int?
+    let userID: Int?
     let nif: String?
     let apiVersion: String?
     let creditCards: [CustomerCreditCard]?
     let status: Status?
-    let workshop: BudgetGarage?
-    let budget: BudgetBody?
-    let appointment: BudgetAppointment?
+    let workshops: [GarageBody]?
     
     enum CodingKeys: String, CodingKey {
         case name = "name"
@@ -28,8 +26,6 @@ struct Budget: LocalMappable {
         case apiVersion = "api_version"
         case creditCards = "credit_cards"
         case status = "status"
-        case workshop = "workshop"
-        case budget = "budget"
-        case appointment = "appointment"
+        case workshops = "workshops"
     }
 }

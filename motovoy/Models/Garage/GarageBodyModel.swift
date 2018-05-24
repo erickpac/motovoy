@@ -1,12 +1,13 @@
 //
-//  BudgetGarageModel.swift
+//  GarageBodyModel.swift
 //  motovoy
 //
 //  Created by Erick Pac on 5/23/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct BudgetGarage: Codable {
+
+struct GarageBody: Codable {
     let id: Int?
     let code: String?
     let name: String?
