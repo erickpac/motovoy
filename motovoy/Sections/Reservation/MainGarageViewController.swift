@@ -27,8 +27,12 @@ extension MainGarageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bikesPresenter.attachView(self)
-        bikesPresenter.getBikes()
         configure()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        bikesPresenter.getBikes()
     }
     
     func configureLabel() {
@@ -52,7 +56,7 @@ extension MainGarageViewController {
                     self.selectBike()
                 }else {
                     if let index = self.currentServices.index(of: element) {
-                        if element == "servicio" {
+                        if element == "servicio" || element == "agregar servicio" {
                             self.selectService()
                         }else {
                             self.currentServices.remove(at: index)
@@ -64,11 +68,11 @@ extension MainGarageViewController {
             }
         }
         
-        var title = "Mi \(currentBike?.name ?? "moto") necesita"
+        var title = "Mi \(currentBike?.name ?? "moto") necesita" + "\n"
         for service in currentServices {
-            title = title + " \(service)"
+            title = title + "\(service)" + "\n"
         }
-        title = title + " en Barcelona."
+        title = title + "en Barcelona."
     
 
         mainLabel.text = title
@@ -84,6 +88,9 @@ extension MainGarageViewController: GarageView {
     
     func showLoader(show: Bool) {
         if show {
+            if bikes.count != 0 {
+                return
+            }
             SVProgressHUD.show()
         }else {
             SVProgressHUD.dismiss()
@@ -137,6 +144,7 @@ extension MainGarageViewController {
         }else if segue.identifier == "ServiceSelectionSegue" {
             let serviceSelectionController = segue.destination as! ServicesMVViewController
             serviceSelectionController.motoId = currentBike?.id?.description ?? ""
+            serviceSelectionController.delegate = self
         }
     }
     
@@ -155,4 +163,30 @@ extension MainGarageViewController {
         performSegue(withIdentifier: "ServiceSelectionSegue", sender: nil)
     }
     
+}
+
+extension MainGarageViewController: ServicesSelectionInfoDelegate {
+    func didSelect(service: String) {
+        if self.currentServices.index(of: "servicio") != nil {
+            self.currentServices = []
+            self.currentServices.append(service.lowercased())
+            if let idx = self.currentServices.index(of: "agregar servicio") {
+                self.currentServices.remove(at: idx)
+            }else if let idx = self.currentServices.index(of: "servicio") {
+                self.currentServices.remove(at: idx)
+            }
+            self.currentServices.append("agregar servicio")
+        }else if self.currentServices.index(of: "agregar servicio") != nil {
+            var contents = self.currentServices
+            if let idx = contents.index(of: "agregar servicio") {
+                contents.remove(at: idx)
+            }else if let idx = contents.index(of: "servicio") {
+                contents.remove(at: idx)
+            }
+            contents.append(contentsOf: [service.lowercased(), "agregar servicio"])
+            self.currentServices = contents
+        }
+        
+        configureLabel()
+    }
 }

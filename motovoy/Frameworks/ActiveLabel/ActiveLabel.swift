@@ -286,6 +286,10 @@ typealias ElementTuple = (range: NSRange, element: ActiveElement, type: ActiveTy
         }
 
         addLinkAttribute(mutAttrString)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 0
+        mutAttrString.addAttribute(.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, mutAttrString.length))
+
         textStorage.setAttributedString(mutAttrString)
         _customizing = true
         text = mutAttrString.string
