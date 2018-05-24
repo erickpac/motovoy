@@ -128,6 +128,8 @@
 		B9D94A1920B66BCB00A24AB5 /* BudgetAppointmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A1820B66BCB00A24AB5 /* BudgetAppointmentModel.swift */; };
 		B9D94A1C20B6797800A24AB5 /* GarageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A1B20B6797800A24AB5 /* GarageModel.swift */; };
 		B9D94A1E20B6798300A24AB5 /* GarageBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A1D20B6798300A24AB5 /* GarageBodyModel.swift */; };
+		B9DC3A9120B6874000A54FAE /* ReservationTypeProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC3A9020B6874000A54FAE /* ReservationTypeProtocolView.swift */; };
+		B9DC3A9320B6874B00A54FAE /* ReservationTypePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC3A9220B6874B00A54FAE /* ReservationTypePresenter.swift */; };
 		B9ECC8CD20A6C05B00EBC8EC /* BikeSubmodelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8CC20A6C05B00EBC8EC /* BikeSubmodelModel.swift */; };
 		B9ECC8CF20A6C15E00EBC8EC /* BikeVehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8CE20A6C15E00EBC8EC /* BikeVehicleModel.swift */; };
 		B9ECC8D120A6C25A00EBC8EC /* GaragePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */; };
@@ -273,6 +275,8 @@
 		B9D94A1820B66BCB00A24AB5 /* BudgetAppointmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetAppointmentModel.swift; sourceTree = "<group>"; };
 		B9D94A1B20B6797800A24AB5 /* GarageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageModel.swift; sourceTree = "<group>"; };
 		B9D94A1D20B6798300A24AB5 /* GarageBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageBodyModel.swift; sourceTree = "<group>"; };
+		B9DC3A9020B6874000A54FAE /* ReservationTypeProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTypeProtocolView.swift; sourceTree = "<group>"; };
+		B9DC3A9220B6874B00A54FAE /* ReservationTypePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTypePresenter.swift; sourceTree = "<group>"; };
 		B9ECC8CC20A6C05B00EBC8EC /* BikeSubmodelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeSubmodelModel.swift; sourceTree = "<group>"; };
 		B9ECC8CE20A6C15E00EBC8EC /* BikeVehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeVehicleModel.swift; sourceTree = "<group>"; };
 		B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaragePresenter.swift; sourceTree = "<group>"; };
@@ -459,6 +463,8 @@
 		8397E48B20B67E4E001D5250 /* Reservation Type */ = {
 			isa = PBXGroup;
 			children = (
+				B9DC3A9020B6874000A54FAE /* ReservationTypeProtocolView.swift */,
+				B9DC3A9220B6874B00A54FAE /* ReservationTypePresenter.swift */,
 				8397E48C20B67E68001D5250 /* ReservationTypeViewController.swift */,
 			);
 			path = "Reservation Type";
@@ -1076,6 +1082,7 @@
 				B9D94A0F20B66A4A00A24AB5 /* BudgetBodyCustomerModel.swift in Sources */,
 				B958836820A6CEE700FE38E5 /* MessageModel.swift in Sources */,
 				837A9ED220AE356700BB160B /* InfoTableViewCell.swift in Sources */,
+				B9DC3A9120B6874000A54FAE /* ReservationTypeProtocolView.swift in Sources */,
 				837A9EDE20B394D100BB160B /* CardTableViewCell.swift in Sources */,
 				83A19E3220A778C500AC980F /* PaymentViewController.swift in Sources */,
 				B969496820A68AF6005B75F7 /* BikePresenter.swift in Sources */,
@@ -1141,6 +1148,7 @@
 				B9924A6420A403C800021473 /* BikeModelModel.swift in Sources */,
 				B9D94A1C20B6797800A24AB5 /* GarageModel.swift in Sources */,
 				83DFCF6420B6413100E7CADC /* ServicesSelectionInfoViewController.swift in Sources */,
+				B9DC3A9320B6874B00A54FAE /* ReservationTypePresenter.swift in Sources */,
 				837A9ED620AE3AC500BB160B /* AddressTableViewCell.swift in Sources */,
 				83DFCF6820B6460300E7CADC /* InfoCheckableServiceTableViewCell.swift in Sources */,
 				B966D35320A7E912006F59A5 /* MessageBodyModel.swift in Sources */,
