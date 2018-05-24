@@ -97,7 +97,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             if address.count > 0 {
                 let data = address[indexPath.row]
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileAddressCell") as! AddressTableViewCell
-                cell.setData(data: data)
+                cell.data = data
                 
                 cell.deleteAction = {
                     if let addressId = data.id {
@@ -124,7 +124,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case 5:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileSignOutCell") as! ActionTableViewCell
             cell.action = {
-                Utils.logOut()
+                self.closeSession()
             }
             return cell
         default:
@@ -168,7 +168,19 @@ extension ProfileViewController: ProfileView {
     func deleteAddressAlert(addressId: Int) -> Void {
         let alert = UIAlertController.init(title: "Eliminar dirección", message: "¿Estás seguro de eliminar ésta dirección?", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Eliminar", style: .destructive, handler: { (action) in
+            self.showLoader(show: true)
             self.presenter.deleteAddress(addressId: addressId)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func closeSession() -> Void {
+        let alert = UIAlertController.init(title: "Cerrar sesión", message: "¿Estás seguro de cerrar sesión?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { (action) in
+            Utils.logOut()
         }))
         
         alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))

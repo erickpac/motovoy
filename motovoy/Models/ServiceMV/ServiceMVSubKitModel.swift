@@ -12,6 +12,7 @@ struct ServiceMVSubKit: Codable {
     var icon: String?
     var description: String?
     var iconPath: String?
+    var kitVariations: [ServiceMVKitVariation]?
     var createdAt: String?
     var updatedAt: String?
     var deletedAt: String?
@@ -22,6 +23,7 @@ struct ServiceMVSubKit: Codable {
         case icon
         case description = "user_id"
         case iconPath = "icon_path"
+        case kitVariations = "kit_variations"
         case createdAt = "created_at"
         case updatedAt = "updated_at"
         case deletedAt = "deleted_at"

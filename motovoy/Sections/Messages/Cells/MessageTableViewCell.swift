@@ -22,7 +22,7 @@ class MessageTableViewCell: UITableViewCell {
     }
     
     func configure() {
-        dateLabel.text = data?.createdAt
+        dateLabel.text = data?.createdAtFormatted ?? ""
         titleLabel.text = data?.customer?.message?.split(separator: ".").last?.split(separator: "_").joined(separator: " ").capitalized
         detailLabel.text = data?.customer?.bike?.name
     }

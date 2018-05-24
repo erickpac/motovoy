@@ -107,6 +107,10 @@
 		B9C3CA8D20A51D660002C124 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8C20A51D660002C124 /* Utils.swift */; };
 		B9C3CA8F20A525640002C124 /* RegistrationProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8E20A525640002C124 /* RegistrationProtocolView.swift */; };
 		B9C3CA9120A525D40002C124 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA9020A525D40002C124 /* RegistrationPresenter.swift */; };
+		B9D949FE20B6598600A24AB5 /* RegistrationDetailProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D949FD20B6598600A24AB5 /* RegistrationDetailProtocolView.swift */; };
+		B9D94A0020B659AF00A24AB5 /* RegistrationDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D949FF20B659AF00A24AB5 /* RegistrationDetailPresenter.swift */; };
+		B9D94A0220B659C200A24AB5 /* RegistrationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A0120B659C200A24AB5 /* RegistrationDetailViewController.swift */; };
+		B9D94A0420B663BC00A24AB5 /* ServiceMVKitVariationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A0320B663BC00A24AB5 /* ServiceMVKitVariationModel.swift */; };
 		B9ECC8CD20A6C05B00EBC8EC /* BikeSubmodelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8CC20A6C05B00EBC8EC /* BikeSubmodelModel.swift */; };
 		B9ECC8CF20A6C15E00EBC8EC /* BikeVehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8CE20A6C15E00EBC8EC /* BikeVehicleModel.swift */; };
 		B9ECC8D120A6C25A00EBC8EC /* GaragePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */; };
@@ -231,6 +235,10 @@
 		B9C3CA8C20A51D660002C124 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B9C3CA8E20A525640002C124 /* RegistrationProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationProtocolView.swift; sourceTree = "<group>"; };
 		B9C3CA9020A525D40002C124 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		B9D949FD20B6598600A24AB5 /* RegistrationDetailProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetailProtocolView.swift; sourceTree = "<group>"; };
+		B9D949FF20B659AF00A24AB5 /* RegistrationDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetailPresenter.swift; sourceTree = "<group>"; };
+		B9D94A0120B659C200A24AB5 /* RegistrationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetailViewController.swift; sourceTree = "<group>"; };
+		B9D94A0320B663BC00A24AB5 /* ServiceMVKitVariationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMVKitVariationModel.swift; sourceTree = "<group>"; };
 		B9ECC8CC20A6C05B00EBC8EC /* BikeSubmodelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeSubmodelModel.swift; sourceTree = "<group>"; };
 		B9ECC8CE20A6C15E00EBC8EC /* BikeVehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeVehicleModel.swift; sourceTree = "<group>"; };
 		B9ECC8D020A6C25A00EBC8EC /* GaragePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaragePresenter.swift; sourceTree = "<group>"; };
@@ -416,6 +424,7 @@
 		83A19DF320A6BCF900AC980F /* Reservation */ = {
 			isa = PBXGroup;
 			children = (
+				B9D949FC20B6588100A24AB5 /* ReservationDetail */,
 				837A9EE420B39B6700BB160B /* Cells */,
 				B9FADCD420B25FF200C63B3D /* Services */,
 				B90DE28620A7F13D0086AE95 /* ReservationProtocolView.swift */,
@@ -735,6 +744,16 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		B9D949FC20B6588100A24AB5 /* ReservationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B9D949FD20B6598600A24AB5 /* RegistrationDetailProtocolView.swift */,
+				B9D949FF20B659AF00A24AB5 /* RegistrationDetailPresenter.swift */,
+				B9D94A0120B659C200A24AB5 /* RegistrationDetailViewController.swift */,
+			);
+			path = ReservationDetail;
+			sourceTree = "<group>";
+		};
 		B9F49C7920B3BCC100BBF3A5 /* Address */ = {
 			isa = PBXGroup;
 			children = (
@@ -791,6 +810,7 @@
 				B9FADCDC20B2606500C63B3D /* ServiceMVModel.swift */,
 				B9FADCDE20B2607B00C63B3D /* ServiceMVKitModel.swift */,
 				B9FADCE020B26DC100C63B3D /* ServiceMVSubKitModel.swift */,
+				B9D94A0320B663BC00A24AB5 /* ServiceMVKitVariationModel.swift */,
 			);
 			path = ServiceMV;
 			sourceTree = "<group>";
@@ -959,6 +979,7 @@
 				83CD10FC20A562AD006BB4B9 /* ActiveLabel.swift in Sources */,
 				83C20A7720ACB52200292EE5 /* MessageTableViewCell.swift in Sources */,
 				83CD10FE20A562AD006BB4B9 /* StringTrimExtension.swift in Sources */,
+				B9D94A0420B663BC00A24AB5 /* ServiceMVKitVariationModel.swift in Sources */,
 				83CD110920A65AE4006BB4B9 /* OptionSelectionAlertViewController.swift in Sources */,
 				B9924A5F20A3D2D800021473 /* BikeDetailModel.swift in Sources */,
 				B958836820A6CEE700FE38E5 /* MessageModel.swift in Sources */,
@@ -999,6 +1020,7 @@
 				B9093A2820A2A911001DF9B2 /* LocalMappable.swift in Sources */,
 				B958837020A6D84600FE38E5 /* MessageCustomerModel.swift in Sources */,
 				83A19E2E20A778A200AC980F /* ProfileViewController.swift in Sources */,
+				B9D94A0220B659C200A24AB5 /* RegistrationDetailViewController.swift in Sources */,
 				B914ED9420A662F9009A9291 /* BrandWorkshopModel.swift in Sources */,
 				B9C3CA8D20A51D660002C124 /* Utils.swift in Sources */,
 				83CD10FF20A562AD006BB4B9 /* ActiveBuilder.swift in Sources */,
@@ -1009,6 +1031,7 @@
 				B914ED9620A678D1009A9291 /* BrandVehicleModel.swift in Sources */,
 				83570DA920A42A300057D63D /* RegistrationViewController.swift in Sources */,
 				B95DBD0820ACDCBB00A2244D /* ChangePasswordViewController.swift in Sources */,
+				B9D94A0020B659AF00A24AB5 /* RegistrationDetailPresenter.swift in Sources */,
 				B9FADCD320B25E0000C63B3D /* PaymentPresenter.swift in Sources */,
 				B9C3CA8B20A51D390002C124 /* UserDefaultsKeys.swift in Sources */,
 				B9FADCC920B25DBE00C63B3D /* AddBillingProtocolView.swift in Sources */,
@@ -1039,6 +1062,7 @@
 				8308B44720AB63090091AA2B /* GarageViewController.swift in Sources */,
 				837A9EE620B39B8100BB160B /* ServiceSelectionInfoTableViewCell.swift in Sources */,
 				B90DE28920A7F14B0086AE95 /* ReservationPresenter.swift in Sources */,
+				B9D949FE20B6598600A24AB5 /* RegistrationDetailProtocolView.swift in Sources */,
 				83CD110720A6569C006BB4B9 /* BikeCreationViewController.swift in Sources */,
 				B966D35520A7EA68006F59A5 /* BIkeBodyModel.swift in Sources */,
 				837A9EDC20B38B9900BB160B /* AddBillingRecordViewController.swift in Sources */,
@@ -1225,10 +1249,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 264Z4X7CV7;
+				DEVELOPMENT_TEAM = AUFZ67XMVW;
 				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.persona;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1241,10 +1265,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 264Z4X7CV7;
+				DEVELOPMENT_TEAM = AUFZ67XMVW;
 				INFOPLIST_FILE = "$(SRCROOT)/motovoy/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.persona;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextdots.motovoy.personall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

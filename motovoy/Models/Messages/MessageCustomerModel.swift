@@ -23,8 +23,8 @@ struct MessageCustomer: Codable {
     var invoiceCity: String?
     var invoiceContact: String?
     var invoicePhone: String?
-    var invoiceCif: Int?
-    var cifNif: Int?
+    var invoiceCif: String?
+    var cifNif: String?
     var payment: String?
     var status: String?
     var customerType: String?

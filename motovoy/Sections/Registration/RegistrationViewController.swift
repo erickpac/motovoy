@@ -19,7 +19,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var registerButton: FlatButton!
     @IBOutlet weak var loginButton: FlatButton!
     
-    fileprivate let registrationPresenter = RegistrationPresenter(apiManager: APIManager.default)
+    fileprivate let presenter = RegistrationPresenter(apiManager: APIManager.default)
     
     @IBAction func registrationAction(_ sender: Any) {
         showLoader(show: true)
@@ -28,7 +28,7 @@ class RegistrationViewController: UIViewController {
         let phone: String = phoneField.text!
         let password: String = passwordField.text!
         
-        registrationPresenter.registrationProcess(name: name, email: email, phone: phone, password: password)
+        presenter.registrationProcess(name: name, email: email, phone: phone, password: password)
     }
 }
 
@@ -36,7 +36,7 @@ extension RegistrationViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        registrationPresenter.attachView(self)
+        presenter.attachView(self)
     }
     
     func configure() {

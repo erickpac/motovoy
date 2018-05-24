@@ -92,7 +92,7 @@ class ChangePasswordPresenter {
             }
         }) { (error) in
             self.view?.showLoader(show: false)
-            self.view?.errorMessage(message: error.debugDescription)
+            self.view?.errorMessage(message: "Ooooooops sucedió un error")
         }
     }
 }

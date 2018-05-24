@@ -12,7 +12,7 @@ import SVProgressHUD
 class MessagesViewController: BaseNavigationViewController {
     @IBOutlet weak var emptyStateView: UIView!
     @IBOutlet weak var tableView: UITableView!
-    fileprivate let messagesPresenter = MessagesPresenter(apiManager: APIManager.default)
+    fileprivate let presenter = MessagesPresenter(apiManager: APIManager.default)
     var messages: [MessageBody] = [MessageBody]() {
         didSet {
             tableView.delegate = self
@@ -23,15 +23,15 @@ class MessagesViewController: BaseNavigationViewController {
     }
     
     @IBAction func markAasReadAction(_ sender: Any) {
-        messagesPresenter.markAsRead(idArray: [""])
+        presenter.markAsRead(idArray: [""])
     }
 }
 
 extension MessagesViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        messagesPresenter.attachView(self)
-        messagesPresenter.getMessages()
+        presenter.attachView(self)
+        presenter.getMessages()
     }
 }
 

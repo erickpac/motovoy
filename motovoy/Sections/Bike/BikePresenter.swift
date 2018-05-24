@@ -53,7 +53,7 @@ class BikePresenter {
             }
         }) { (error) in
             self.view?.showLoader(show: false)
-            self.view?.errorMessage(message: error.debugDescription)
+            self.view?.errorMessage(message: "Ooooooops sucedió un error")
         }
     }
     
@@ -81,7 +81,7 @@ class BikePresenter {
             }
         }) { (error) in
             self.view?.showLoader(show: false)
-            self.view?.errorMessage(message: error.debugDescription)
+            self.view?.errorMessage(message: "Ooooooops sucedió un error")
         }
     }
 }
