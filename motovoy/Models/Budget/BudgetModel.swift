@@ -23,7 +23,7 @@ struct Budget: LocalMappable {
         case name = "name"
         case mobile = "mobile"
         case email = "email"
-        case userID = "user_id"
+        case userId = "user_id"
         case nif = "nif"
         case apiVersion = "api_version"
         case creditCards = "credit_cards"

@@ -563,39 +563,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HEV-X0-1gt" customClass="NavigationShadowedView" customModule="motovoy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="-30" width="375" height="100"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Con recogida y entrega" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoX-LQ-vrn">
-                                        <rect key="frame" x="96" y="58" width="183" height="34"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNp-Ev-aSu">
-                                        <rect key="frame" x="16" y="58" width="34" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="ZNp-Ev-aSu" secondAttribute="height" id="MKs-MH-1CE"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="back2"/>
-                                        <connections>
-                                            <action selector="motionDismissViewController" destination="BEl-ti-J7f" eventType="touchUpInside" id="O3v-r1-yfl"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.13844276959999999" green="0.3334891498" blue="0.61576926710000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="PoX-LQ-vrn" secondAttribute="bottom" constant="8" id="2Dp-Qu-dBv"/>
-                                    <constraint firstItem="ZNp-Ev-aSu" firstAttribute="top" secondItem="HEV-X0-1gt" secondAttribute="top" constant="58" id="Dwf-eU-Idw"/>
-                                    <constraint firstItem="PoX-LQ-vrn" firstAttribute="centerX" secondItem="HEV-X0-1gt" secondAttribute="centerX" id="GVq-fj-AhQ"/>
-                                    <constraint firstItem="ZNp-Ev-aSu" firstAttribute="leading" secondItem="HEV-X0-1gt" secondAttribute="leading" constant="16" id="PoQ-DR-23v"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZNp-Ev-aSu" secondAttribute="bottom" constant="8" id="SIp-qB-ipq"/>
-                                    <constraint firstItem="PoX-LQ-vrn" firstAttribute="top" secondItem="HEV-X0-1gt" secondAttribute="top" constant="58" id="cXK-4B-a4s"/>
-                                    <constraint firstAttribute="height" constant="100" id="lco-rP-MoC"/>
-                                </constraints>
-                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRl-DV-r0k">
                                 <rect key="frame" x="0.0" y="70" width="375" height="930"/>
                                 <subviews>
@@ -862,6 +829,39 @@
                                     <constraint firstAttribute="trailing" secondItem="e57-Xf-CEH" secondAttribute="trailing" id="aKv-QU-i8e"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HEV-X0-1gt" customClass="NavigationShadowedView" customModule="motovoy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-30" width="375" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Con recogida y entrega" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoX-LQ-vrn">
+                                        <rect key="frame" x="96" y="58" width="183" height="34"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNp-Ev-aSu">
+                                        <rect key="frame" x="16" y="58" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZNp-Ev-aSu" secondAttribute="height" id="MKs-MH-1CE"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="back2"/>
+                                        <connections>
+                                            <action selector="motionDismissViewController" destination="BEl-ti-J7f" eventType="touchUpInside" id="O3v-r1-yfl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13844276959999999" green="0.3334891498" blue="0.61576926710000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="PoX-LQ-vrn" secondAttribute="bottom" constant="8" id="2Dp-Qu-dBv"/>
+                                    <constraint firstItem="ZNp-Ev-aSu" firstAttribute="top" secondItem="HEV-X0-1gt" secondAttribute="top" constant="58" id="Dwf-eU-Idw"/>
+                                    <constraint firstItem="PoX-LQ-vrn" firstAttribute="centerX" secondItem="HEV-X0-1gt" secondAttribute="centerX" id="GVq-fj-AhQ"/>
+                                    <constraint firstItem="ZNp-Ev-aSu" firstAttribute="leading" secondItem="HEV-X0-1gt" secondAttribute="leading" constant="16" id="PoQ-DR-23v"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZNp-Ev-aSu" secondAttribute="bottom" constant="8" id="SIp-qB-ipq"/>
+                                    <constraint firstItem="PoX-LQ-vrn" firstAttribute="top" secondItem="HEV-X0-1gt" secondAttribute="top" constant="58" id="cXK-4B-a4s"/>
+                                    <constraint firstAttribute="height" constant="100" id="lco-rP-MoC"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -878,7 +878,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
-                        <segue destination="BNO-5q-nNG" kind="show" identifier="Ticket" id="zUH-u1-7T3"/>
+                        <segue destination="BNO-5q-nNG" kind="show" identifier="Ticket" id="Q1n-Wz-dAv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHf-Cd-ffM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -893,37 +893,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVd-dG-Zyx" customClass="NavigationShadowedView" customModule="motovoy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="-30" width="375" height="100"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yo la llevo al taller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUG-fF-G83">
-                                        <rect key="frame" x="118" y="58" width="139" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkN-PZ-q1A">
-                                        <rect key="frame" x="16" y="58" width="34" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="HkN-PZ-q1A" secondAttribute="height" id="5Tk-5m-YJL"/>
-                                        </constraints>
-                                        <state key="normal" image="back2"/>
-                                        <connections>
-                                            <action selector="motionDismissViewController" destination="0ub-di-F5Y" eventType="touchUpInside" id="Q8e-xG-iqT"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.93725514409999999" green="0.56058579679999998" blue="0.29804959889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="6Sq-1A-gMc"/>
-                                    <constraint firstItem="HkN-PZ-q1A" firstAttribute="leading" secondItem="BVd-dG-Zyx" secondAttribute="leading" constant="16" id="B8h-CO-79J"/>
-                                    <constraint firstItem="HkN-PZ-q1A" firstAttribute="top" secondItem="BVd-dG-Zyx" secondAttribute="top" constant="58" id="JLs-5I-ZXG"/>
-                                    <constraint firstAttribute="bottom" secondItem="HkN-PZ-q1A" secondAttribute="bottom" constant="8" id="S3G-dV-YD5"/>
-                                    <constraint firstAttribute="bottom" secondItem="tUG-fF-G83" secondAttribute="bottom" constant="8" id="pRw-l2-dQD"/>
-                                    <constraint firstItem="tUG-fF-G83" firstAttribute="centerX" secondItem="BVd-dG-Zyx" secondAttribute="centerX" id="ydb-qN-ohx"/>
-                                    <constraint firstItem="tUG-fF-G83" firstAttribute="top" secondItem="BVd-dG-Zyx" secondAttribute="top" constant="58" id="ynG-UJ-Z5i"/>
-                                </constraints>
-                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFd-bu-wqd">
                                 <rect key="frame" x="0.0" y="70" width="375" height="930"/>
                                 <subviews>
@@ -1183,6 +1152,37 @@
                                     <constraint firstItem="PcV-gN-taZ" firstAttribute="top" secondItem="mFd-bu-wqd" secondAttribute="top" id="qX3-Iv-2Qj"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVd-dG-Zyx" customClass="NavigationShadowedView" customModule="motovoy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-30" width="375" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yo la llevo al taller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUG-fF-G83">
+                                        <rect key="frame" x="118" y="58" width="139" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkN-PZ-q1A">
+                                        <rect key="frame" x="16" y="58" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="HkN-PZ-q1A" secondAttribute="height" id="5Tk-5m-YJL"/>
+                                        </constraints>
+                                        <state key="normal" image="back2"/>
+                                        <connections>
+                                            <action selector="motionDismissViewController" destination="0ub-di-F5Y" eventType="touchUpInside" id="Q8e-xG-iqT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725514409999999" green="0.56058579679999998" blue="0.29804959889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6Sq-1A-gMc"/>
+                                    <constraint firstItem="HkN-PZ-q1A" firstAttribute="leading" secondItem="BVd-dG-Zyx" secondAttribute="leading" constant="16" id="B8h-CO-79J"/>
+                                    <constraint firstItem="HkN-PZ-q1A" firstAttribute="top" secondItem="BVd-dG-Zyx" secondAttribute="top" constant="58" id="JLs-5I-ZXG"/>
+                                    <constraint firstAttribute="bottom" secondItem="HkN-PZ-q1A" secondAttribute="bottom" constant="8" id="S3G-dV-YD5"/>
+                                    <constraint firstAttribute="bottom" secondItem="tUG-fF-G83" secondAttribute="bottom" constant="8" id="pRw-l2-dQD"/>
+                                    <constraint firstItem="tUG-fF-G83" firstAttribute="centerX" secondItem="BVd-dG-Zyx" secondAttribute="centerX" id="ydb-qN-ohx"/>
+                                    <constraint firstItem="tUG-fF-G83" firstAttribute="top" secondItem="BVd-dG-Zyx" secondAttribute="top" constant="58" id="ynG-UJ-Z5i"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1498,6 +1498,6 @@
         <image name="reservar2" width="26" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zUH-u1-7T3"/>
+        <segue reference="Q1n-Wz-dAv"/>
     </inferredMetricsTieBreakers>
 </document>

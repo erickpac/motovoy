@@ -10,15 +10,14 @@ struct BudgetBodyAppointment: Codable {
     let id: Int?
     let budgetID: Int?
     let calendarID: Int?
-    let depositID: JSONNull?
+    let depositID: String?
     let datetime: String?
     let status: String?
     let type: String?
     let pickUpDateTime: String?
     let createdAt: String?
     let updatedAt: String?
-    let deletedAt: JSONNull?
-    let calendar: Calendar?
+    let deletedAt: String?
     let deposit: String?
     let shipping: String?
     
@@ -34,7 +33,6 @@ struct BudgetBodyAppointment: Codable {
         case createdAt = "created_at"
         case updatedAt = "updated_at"
         case deletedAt = "deleted_at"
-        case calendar = "calendar"
         case deposit = "deposit"
         case shipping = "shipping"
     }

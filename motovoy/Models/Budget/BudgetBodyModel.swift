@@ -14,7 +14,7 @@ struct BudgetBody: Codable {
     let reference: String?
     let status: String?
     let observations: String?
-    let moto: Moto?
+    let moto: BudgetBodyBike?
     let appointment: [BudgetBodyAppointment]?
     let price: String?
     let budgetLines: [BudgetBodyLine]?
