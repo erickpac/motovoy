@@ -91,6 +91,8 @@
 		B914ED9820A678FD009A9291 /* BrandModelObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B914ED9720A678FD009A9291 /* BrandModelObjectModel.swift */; };
 		B934943C20B3C7A100F4D181 /* AddressProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934943B20B3C7A100F4D181 /* AddressProtocolView.swift */; };
 		B934943E20B3C83B00F4D181 /* AddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934943D20B3C83B00F4D181 /* AddressPresenter.swift */; };
+		B935D5C620B7548100E41B6E /* ServiceBodyGarageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B935D5C520B7548100E41B6E /* ServiceBodyGarageModel.swift */; };
+		B935D5C820B754CD00E41B6E /* ServiceBodyCalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B935D5C720B754CD00E41B6E /* ServiceBodyCalendarModel.swift */; };
 		B958836820A6CEE700FE38E5 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B958836720A6CEE700FE38E5 /* MessageModel.swift */; };
 		B958837020A6D84600FE38E5 /* MessageCustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B958836F20A6D84600FE38E5 /* MessageCustomerModel.swift */; };
 		B95DBD0120ACC8A800A2244D /* VerificationProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DBD0020ACC8A800A2244D /* VerificationProtocolView.swift */; };
@@ -252,6 +254,8 @@
 		B914ED9720A678FD009A9291 /* BrandModelObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandModelObjectModel.swift; sourceTree = "<group>"; };
 		B934943B20B3C7A100F4D181 /* AddressProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressProtocolView.swift; sourceTree = "<group>"; };
 		B934943D20B3C83B00F4D181 /* AddressPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressPresenter.swift; sourceTree = "<group>"; };
+		B935D5C520B7548100E41B6E /* ServiceBodyGarageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBodyGarageModel.swift; sourceTree = "<group>"; };
+		B935D5C720B754CD00E41B6E /* ServiceBodyCalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBodyCalendarModel.swift; sourceTree = "<group>"; };
 		B958836720A6CEE700FE38E5 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		B958836F20A6D84600FE38E5 /* MessageCustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCustomerModel.swift; sourceTree = "<group>"; };
 		B95DBD0020ACC8A800A2244D /* VerificationProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationProtocolView.swift; sourceTree = "<group>"; };
@@ -897,6 +901,8 @@
 				B9DC3A9F20B690F800A54FAE /* ServiceBodyBikeModel.swift */,
 				B9DC3AA120B6917D00A54FAE /* ServiceBodyCustomerModel.swift */,
 				B9DC3AA520B6964E00A54FAE /* ServiceBodyBudgetLineModel.swift */,
+				B935D5C520B7548100E41B6E /* ServiceBodyGarageModel.swift */,
+				B935D5C720B754CD00E41B6E /* ServiceBodyCalendarModel.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1145,6 +1151,7 @@
 				B9924A5F20A3D2D800021473 /* BikeDetailModel.swift in Sources */,
 				B9D94A0F20B66A4A00A24AB5 /* BudgetBodyCustomerModel.swift in Sources */,
 				B958836820A6CEE700FE38E5 /* MessageModel.swift in Sources */,
+				B935D5C820B754CD00E41B6E /* ServiceBodyCalendarModel.swift in Sources */,
 				B9DC3AA620B6964E00A54FAE /* ServiceBodyBudgetLineModel.swift in Sources */,
 				837A9ED220AE356700BB160B /* InfoTableViewCell.swift in Sources */,
 				B9DC3A9120B6874000A54FAE /* ReservationTypeProtocolView.swift in Sources */,
@@ -1166,6 +1173,7 @@
 				B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */,
 				B969496320A68A7A005B75F7 /* GarageProtocolView.swift in Sources */,
 				B9924A5A20A3CB3A00021473 /* UrlPath.swift in Sources */,
+				B935D5C620B7548100E41B6E /* ServiceBodyGarageModel.swift in Sources */,
 				B9D94A1E20B6798300A24AB5 /* GarageBodyModel.swift in Sources */,
 				B9F49C7D20B3BCEE00BBF3A5 /* AddressBodyModel.swift in Sources */,
 				B914ED9820A678FD009A9291 /* BrandModelObjectModel.swift in Sources */,
