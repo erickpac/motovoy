@@ -128,9 +128,9 @@
 		B9C3CA8D20A51D660002C124 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8C20A51D660002C124 /* Utils.swift */; };
 		B9C3CA8F20A525640002C124 /* RegistrationProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8E20A525640002C124 /* RegistrationProtocolView.swift */; };
 		B9C3CA9120A525D40002C124 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA9020A525D40002C124 /* RegistrationPresenter.swift */; };
-		B9D949FE20B6598600A24AB5 /* RegistrationDetailProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D949FD20B6598600A24AB5 /* RegistrationDetailProtocolView.swift */; };
-		B9D94A0020B659AF00A24AB5 /* RegistrationDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D949FF20B659AF00A24AB5 /* RegistrationDetailPresenter.swift */; };
-		B9D94A0220B659C200A24AB5 /* RegistrationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A0120B659C200A24AB5 /* RegistrationDetailViewController.swift */; };
+		B9D949FE20B6598600A24AB5 /* ReservationDetailProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D949FD20B6598600A24AB5 /* ReservationDetailProtocolView.swift */; };
+		B9D94A0020B659AF00A24AB5 /* ReservationDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D949FF20B659AF00A24AB5 /* ReservationDetailPresenter.swift */; };
+		B9D94A0220B659C200A24AB5 /* ReservationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A0120B659C200A24AB5 /* ReservationDetailViewController.swift */; };
 		B9D94A0420B663BC00A24AB5 /* ServiceMVKitVariationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A0320B663BC00A24AB5 /* ServiceMVKitVariationModel.swift */; };
 		B9D94A0720B669AB00A24AB5 /* BudgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A0620B669AB00A24AB5 /* BudgetModel.swift */; };
 		B9D94A0920B669E500A24AB5 /* BudgetGarageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D94A0820B669E500A24AB5 /* BudgetGarageModel.swift */; };
@@ -299,9 +299,9 @@
 		B9C3CA8C20A51D660002C124 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B9C3CA8E20A525640002C124 /* RegistrationProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationProtocolView.swift; sourceTree = "<group>"; };
 		B9C3CA9020A525D40002C124 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
-		B9D949FD20B6598600A24AB5 /* RegistrationDetailProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetailProtocolView.swift; sourceTree = "<group>"; };
-		B9D949FF20B659AF00A24AB5 /* RegistrationDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetailPresenter.swift; sourceTree = "<group>"; };
-		B9D94A0120B659C200A24AB5 /* RegistrationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDetailViewController.swift; sourceTree = "<group>"; };
+		B9D949FD20B6598600A24AB5 /* ReservationDetailProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailProtocolView.swift; sourceTree = "<group>"; };
+		B9D949FF20B659AF00A24AB5 /* ReservationDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailPresenter.swift; sourceTree = "<group>"; };
+		B9D94A0120B659C200A24AB5 /* ReservationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailViewController.swift; sourceTree = "<group>"; };
 		B9D94A0320B663BC00A24AB5 /* ServiceMVKitVariationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMVKitVariationModel.swift; sourceTree = "<group>"; };
 		B9D94A0620B669AB00A24AB5 /* BudgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetModel.swift; sourceTree = "<group>"; };
 		B9D94A0820B669E500A24AB5 /* BudgetGarageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetGarageModel.swift; sourceTree = "<group>"; };
@@ -907,9 +907,9 @@
 		B9D949FC20B6588100A24AB5 /* Reservation Detail */ = {
 			isa = PBXGroup;
 			children = (
-				B9D949FD20B6598600A24AB5 /* RegistrationDetailProtocolView.swift */,
-				B9D949FF20B659AF00A24AB5 /* RegistrationDetailPresenter.swift */,
-				B9D94A0120B659C200A24AB5 /* RegistrationDetailViewController.swift */,
+				B9D949FD20B6598600A24AB5 /* ReservationDetailProtocolView.swift */,
+				B9D949FF20B659AF00A24AB5 /* ReservationDetailPresenter.swift */,
+				B9D94A0120B659C200A24AB5 /* ReservationDetailViewController.swift */,
 			);
 			path = "Reservation Detail";
 			sourceTree = "<group>";
@@ -1250,7 +1250,7 @@
 				B9093A2820A2A911001DF9B2 /* LocalMappable.swift in Sources */,
 				B958837020A6D84600FE38E5 /* MessageCustomerModel.swift in Sources */,
 				83A19E2E20A778A200AC980F /* ProfileViewController.swift in Sources */,
-				B9D94A0220B659C200A24AB5 /* RegistrationDetailViewController.swift in Sources */,
+				B9D94A0220B659C200A24AB5 /* ReservationDetailViewController.swift in Sources */,
 				B9D94A1920B66BCB00A24AB5 /* BudgetAppointmentModel.swift in Sources */,
 				B914ED9420A662F9009A9291 /* BrandWorkshopModel.swift in Sources */,
 				B9C3CA8D20A51D660002C124 /* Utils.swift in Sources */,
@@ -1265,7 +1265,7 @@
 				83570DA920A42A300057D63D /* RegistrationViewController.swift in Sources */,
 				B9D94A0720B669AB00A24AB5 /* BudgetModel.swift in Sources */,
 				B95DBD0820ACDCBB00A2244D /* ChangePasswordViewController.swift in Sources */,
-				B9D94A0020B659AF00A24AB5 /* RegistrationDetailPresenter.swift in Sources */,
+				B9D94A0020B659AF00A24AB5 /* ReservationDetailPresenter.swift in Sources */,
 				B9FADCD320B25E0000C63B3D /* PaymentPresenter.swift in Sources */,
 				B9C3CA8B20A51D390002C124 /* UserDefaultsKeys.swift in Sources */,
 				8397E49320B68E2B001D5250 /* InfoPriceTableViewCell.swift in Sources */,
@@ -1305,7 +1305,7 @@
 				8308B44720AB63090091AA2B /* GarageViewController.swift in Sources */,
 				837A9EE620B39B8100BB160B /* ServiceSelectionInfoTableViewCell.swift in Sources */,
 				B90DE28920A7F14B0086AE95 /* ReservationPresenter.swift in Sources */,
-				B9D949FE20B6598600A24AB5 /* RegistrationDetailProtocolView.swift in Sources */,
+				B9D949FE20B6598600A24AB5 /* ReservationDetailProtocolView.swift in Sources */,
 				83CD110720A6569C006BB4B9 /* BikeCreationViewController.swift in Sources */,
 				B966D35520A7EA68006F59A5 /* BIkeBodyModel.swift in Sources */,
 				B9B8CA7320B7C43F0061B2E4 /* ServiceTicketViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  RegistrationDetailPresenter.swift
+//  ReservationDetailPresenter.swift
 //  motovoy
 //
 //  Created by Erick Pac on 5/23/18.
@@ -39,11 +39,11 @@ class ReservationDetailPresenter {
             params["pickup_calendar_slot_id"] = pickCalendarSlotId
         }
         
-        apiManager.postServiceModel(urlService: UrlPath.createBudget, params: params, onSuccess: { (response: GenericResponse) in
+        apiManager.postServiceModel(urlService: UrlPath.createBudget, params: params, onSuccess: { (response: Budget) in
             if let status = response.status {
                 if status.code == 200 {
                     self.view?.showLoader(show: false)
-                    self.view?.createBudgetSuccess()
+                    self.view?.createBudgetSuccess(budget: response)
                 } else {
                     self.view?.showLoader(show: false)
                     if let errorMessage = status.message {
@@ -86,34 +86,15 @@ class ReservationDetailPresenter {
         }
     }
     
-    func getAvailablePickupSlots(garageId: Int) -> Void {
+    func getAvailableSlots(garageId: Int, isPickup: Bool) -> Void {
         let params: [String: Any]
         params = ["workshop_id": garageId]
         
-        apiManager.postServiceModel(urlService: UrlPath.getAvailablePickup, params: params, onSuccess: { (response: DateSlot) in
-            if response.success {
+        apiManager.postServiceModel(urlService: isPickup ? UrlPath.getAvailablePickup : UrlPath.getAvailableGarage, params: params, onSuccess: { (response: DateSlot) in
+            if let _ = response.success {
                 self.view?.showLoader(show: false)
                 if let slots = response.data {
-                    self.view?.getAvailablePickupSlotsSuccess(slots: slots)
-                }
-            } else {
-                self.view?.showLoader(show: false)
-            }
-        }) { (error) in
-            self.view?.showLoader(show: false)
-            self.view?.errorMessage(message: "Whoops, looks like something went wrong.")
-        }
-    }
-    
-    func getAvaliableGarageSlots(garageId: Int) -> Void {
-        let params: [String: Any]
-        params = ["workshop_id": garageId]
-        
-        apiManager.postServiceModel(urlService: UrlPath.getAvailableGarage, params: params, onSuccess: { (response: DateSlot) in
-            if response.success {
-                self.view?.showLoader(show: false)
-                if let slots = response.data {
-                    self.view?.getAvaliableGarageSlotsSuccess(slots: slots)
+                    self.view?.getAvailableSlotsSuccess(slots: slots)
                 }
             } else {
                 self.view?.showLoader(show: false)

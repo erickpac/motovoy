@@ -1,5 +1,5 @@
 //
-//  RegistrationDetailProtocolView.swift
+//  ReservationDetailProtocolView.swift
 //  motovoy
 //
 //  Created by Erick Pac on 5/23/18.
@@ -9,9 +9,8 @@
 protocol ReservationDetailView {
     func showLoader(show: Bool)
     func errorMessage(message: String)
-    func createBudgetSuccess()
+    func createBudgetSuccess(budget: Budget)
     func addImagesToBudgetSuccess()
     func addCommentToBudgetSuccess()
-    func getAvailablePickupSlotsSuccess(slots: [DateSlotItem])
-    func getAvaliableGarageSlotsSuccess(slots: [DateSlotItem])
+    func getAvailableSlotsSuccess(slots: [DateSlotItem])
 }
