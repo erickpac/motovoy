@@ -7,16 +7,23 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class OngoingServiceViewController: UIViewController {
-
     @IBOutlet weak var tableView: UITableView!
-    
     var data: ServiceBody? = nil
+    fileprivate let presenter = OngoingPresenter(apiManager: APIManager.default)
     
+    @IBAction func approveAction(_ sender: Any) {
+        let budgetId: Int = 0
+        presenter.approveBudget(budgetId: budgetId)
+    }
 }
 
 extension OngoingServiceViewController {
+    override func viewDidLoad() {
+        presenter.attachView(self)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -25,7 +32,6 @@ extension OngoingServiceViewController {
             tableView.dataSource = self
         }
     }
-    
 }
 
 extension OngoingServiceViewController: UITableViewDelegate, UITableViewDataSource {
@@ -68,5 +74,22 @@ extension OngoingServiceViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 1
     }
+}
+
+extension OngoingServiceViewController: OngoingView {
+    func showLoader(show: Bool) {
+        if show {
+            SVProgressHUD.show()
+        } else {
+            SVProgressHUD.dismiss()
+        }
+    }
     
+    func errorMessage(message: String) {
+        SVProgressHUD.showError(withStatus: message)
+    }
+    
+    func approveBudgetSuccess() {
+        
+    }
 }

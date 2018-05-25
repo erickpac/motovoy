@@ -114,6 +114,8 @@
 		B9924A6220A4036200021473 /* BikeBrandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A6120A4036200021473 /* BikeBrandModel.swift */; };
 		B9924A6420A403C800021473 /* BikeModelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9924A6320A403C800021473 /* BikeModelModel.swift */; };
 		B99D17EA20ABF40300D8F962 /* MessageBikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D17E920ABF40300D8F962 /* MessageBikeModel.swift */; };
+		B9B8CA6E20B7BF180061B2E4 /* OngoingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B8CA6D20B7BF180061B2E4 /* OngoingViewProtocol.swift */; };
+		B9B8CA7020B7BF290061B2E4 /* OngoingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B8CA6F20B7BF290061B2E4 /* OngoingPresenter.swift */; };
 		B9C3CA8720A50B0B0002C124 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8620A50B0B0002C124 /* LoginPresenter.swift */; };
 		B9C3CA8920A50B6B0002C124 /* LoginProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8820A50B6B0002C124 /* LoginProtocolView.swift */; };
 		B9C3CA8B20A51D390002C124 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8A20A51D390002C124 /* UserDefaultsKeys.swift */; };
@@ -277,6 +279,8 @@
 		B9924A6120A4036200021473 /* BikeBrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeBrandModel.swift; sourceTree = "<group>"; };
 		B9924A6320A403C800021473 /* BikeModelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeModelModel.swift; sourceTree = "<group>"; };
 		B99D17E920ABF40300D8F962 /* MessageBikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBikeModel.swift; sourceTree = "<group>"; };
+		B9B8CA6D20B7BF180061B2E4 /* OngoingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingViewProtocol.swift; sourceTree = "<group>"; };
+		B9B8CA6F20B7BF290061B2E4 /* OngoingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingPresenter.swift; sourceTree = "<group>"; };
 		B9C3CA8620A50B0B0002C124 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		B9C3CA8820A50B6B0002C124 /* LoginProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocolView.swift; sourceTree = "<group>"; };
 		B9C3CA8A20A51D390002C124 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
@@ -523,6 +527,8 @@
 		8397E4D920B757D4001D5250 /* Ongoing Detail */ = {
 			isa = PBXGroup;
 			children = (
+				B9B8CA6D20B7BF180061B2E4 /* OngoingViewProtocol.swift */,
+				B9B8CA6F20B7BF290061B2E4 /* OngoingPresenter.swift */,
 				8397E4DA20B757E9001D5250 /* OngoingServiceViewController.swift */,
 			);
 			path = "Ongoing Detail";
@@ -1223,9 +1229,11 @@
 				B9924A6220A4036200021473 /* BikeBrandModel.swift in Sources */,
 				B9DC3AA220B6917D00A54FAE /* ServiceBodyCustomerModel.swift in Sources */,
 				B9FADCD620B2600B00C63B3D /* ServicesMVProtocolView.swift in Sources */,
+				B9B8CA7020B7BF290061B2E4 /* OngoingPresenter.swift in Sources */,
 				B9924A6420A403C800021473 /* BikeModelModel.swift in Sources */,
 				B9D94A1C20B6797800A24AB5 /* GarageModel.swift in Sources */,
 				8397E4A320B6A77D001D5250 /* ServiceHistoryTableViewCell.swift in Sources */,
+				B9B8CA6E20B7BF180061B2E4 /* OngoingViewProtocol.swift in Sources */,
 				83DFCF6420B6413100E7CADC /* ServicesSelectionInfoViewController.swift in Sources */,
 				B9DC3A9320B6874B00A54FAE /* ReservationTypePresenter.swift in Sources */,
 				837A9ED620AE3AC500BB160B /* AddressTableViewCell.swift in Sources */,

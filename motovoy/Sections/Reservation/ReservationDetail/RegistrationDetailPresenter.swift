@@ -35,9 +35,20 @@ class ReservationDetailPresenter {
         ]
         
         apiManager.postServiceModel(urlService: UrlPath.createBudget, params: params, onSuccess: { (response: GenericResponse) in
-            
+            if let status = response.status {
+                if status.code == 200 {
+                    self.view?.showLoader(show: false)
+                    self.view?.createBudgetSuccess()
+                } else {
+                    self.view?.showLoader(show: false)
+                    if let errorMessage = status.message {
+                        self.view?.errorMessage(message: errorMessage)
+                    }
+                }
+            }
         }) { (error) in
-            
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: "Whoops, looks like something went wrong.")
         }
     }
     
@@ -45,7 +56,28 @@ class ReservationDetailPresenter {
         
     }
     
-    func addCommentToBudget() -> Void {
+    func addCommentToBudget(budgetId: Int, observations: String) -> Void {
+        let params: [String: Any]
+        params = [
+            "budget_id": budgetId,
+            "observations": observations
+        ]
         
+        apiManager.postServiceModel(urlService: UrlPath.addCommentToBudget, params: params, onSuccess: { (response: GenericResponse) in
+            if let status = response.status {
+                if status.code == 200 {
+                    self.view?.showLoader(show: false)
+                    self.view?.addCommentToBudgetSuccess()
+                } else {
+                    self.view?.showLoader(show: false)
+                    if let errorMessage = status.message {
+                        self.view?.errorMessage(message: errorMessage)
+                    }
+                }
+            }
+        }) { (error) in
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: "Whoops, looks like something went wrong.")
+        }
     }
 }
