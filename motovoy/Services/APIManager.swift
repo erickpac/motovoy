@@ -24,7 +24,7 @@ class APIManager {
                 NotificationCenter.default.post(Notification.init(name: Notification.Name.init("LOGOUT_NOTIFICATION")))
                 SVProgressHUD.dismiss()
                 return false
-            }else {
+            } else {
                 return true
             }
         }
@@ -83,7 +83,7 @@ class APIManager {
             }
             
             if let userToken = user.status?.loginToken {
-                 customParams["login_token"] = userToken
+                customParams["login_token"] = userToken
             }
         }
         
@@ -130,6 +130,7 @@ class APIManager {
     func postServiceMultipartModel<T: LocalMappable>(urlService: UrlPath, params: [String: Any], images: [ImageData], onSuccess: @escaping(_ response: T) -> Void, onFailure: @escaping(_ error: Error?) -> Void) -> Void {
         let urlString: String = URL_SERVICE + urlService.rawValue
         guard let urlType = URL(string: urlString) else { return }
+        
         var urlRequest = URLRequest(url: urlType)
         urlRequest.addValue("multipart/form-data", forHTTPHeaderField: "Content-Type")
         urlRequest.httpMethod = "POST"
@@ -139,6 +140,7 @@ class APIManager {
         customParams["device_type"] = DEVICE_TYPE
         customParams["device_id"] = DEVICE_ID
         customParams["api_version"] = API_VERSION
+        
         if let user = Utils.getLoggedUser() {
             if let userId = user.userId {
                 customParams["client_id"] = userId
@@ -149,31 +151,29 @@ class APIManager {
             }
         }
         
-//
-//        Alamofire.upload(multipartFormData: { (multipartFormData) in
-//            for (key, value) in parameters {
-//                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
-//            }
-//
-//            if let data = imageData{
-//                multipartFormData.append(data, withName: "image", fileName: "image.png", mimeType: "image/png")
-//            }
-//
-//        }, usingThreshold: UInt64.init(), to: url, method: .post, headers: headers) { (result) in
-//            switch result{
-//            case .success(let upload, _, _):
-//                upload.responseJSON { response in
-//                    print("Succesfully uploaded")
-//                    if let err = response.error{
-//                        onError?(err)
-//                        return
-//                    }
-//                    onCompletion?(nil)
-//                }
-//            case .failure(let error):
-//                print("Error in upload: \(error.localizedDescription)")
-//                onError?(error)
-//            }
-//        }
+        Alamofire.upload(multipartFormData: { (formData) in
+            for (key, value) in customParams {
+                formData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+            }
+            
+            images.forEach({ (image) in
+                formData.append(image.imageData!, withName: image.name!, fileName: image.fileName!, mimeType: image.mimeType!)
+            })
+        }, with: urlRequest, encodingCompletion: { (result) in
+            switch result {
+            case .success(let response, _, _):
+                response.responseString(completionHandler: { (response) in
+                    switch response.result {
+                    case .success(let jsonString):
+                        onSuccess(T(jsonString: jsonString)!)
+                    case .failure(let error):
+                        onFailure(error)
+                    }
+                })
+            case .failure(let error):
+                print("Mutlipart error => \(error.localizedDescription)")
+                onFailure(error)
+            }
+        })
     }
 }
