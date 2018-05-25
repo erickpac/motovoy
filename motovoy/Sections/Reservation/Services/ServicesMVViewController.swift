@@ -13,6 +13,7 @@ class ServicesMVViewController: BaseNavigationViewController {
     @IBOutlet weak var emptyStateView: UIView!
     @IBOutlet weak var tableView: UITableView!
     fileprivate let presenter = ServicesMVPresenter(apiManager: APIManager.default)
+    var disabledKits: [ServiceMVSubKit] = []
     var motoId: String?
     var activeSections: [Bool] = []
     var services: [ServiceMVKit] = [ServiceMVKit]() {
@@ -41,8 +42,6 @@ extension ServicesMVViewController: ServicesMVView {
     func showLoader(show: Bool) {
         if show {
             SVProgressHUD.show()
-        } else {
-            SVProgressHUD.dismiss()
         }
     }
     
@@ -85,12 +84,28 @@ extension ServicesMVViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceInfoCell") as? ServiceSelectionInfoTableViewCell
         cell?.data = services[indexPath.section].subKits?[indexPath.row]
+        if disabledKits.contains(where: { (kit) -> Bool in
+            return kit.id == cell?.data?.id
+        }) {
+            cell?.titleLabel.alpha = 0.3
+        }else {
+            cell?.titleLabel.alpha = 1
+        }
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didSelect(service: services[indexPath.section].subKits?[indexPath.row].name ?? "")
-        navigationController?.popToRootViewController(animated: true)
+        
+        if let value = services[indexPath.section].subKits?[indexPath.row] {
+            if disabledKits.contains(where: { (kit) -> Bool in
+                return kit.id == value.id
+            }){
+                SVProgressHUD.showError(withStatus: "Servicio ya seleccionado previamente.")
+            }else {
+                delegate?.didSelect(service: value.name ?? "", value: value)
+                navigationController?.popToRootViewController(animated: true)
+            }
+        }
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

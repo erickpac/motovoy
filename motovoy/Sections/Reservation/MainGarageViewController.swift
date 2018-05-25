@@ -19,6 +19,7 @@ class MainGarageViewController: BaseNavigationViewController {
     var currentBike: BikeBody? = nil
     var bikes: [BikeBody] = []
     var currentServices: [String] = ["servicio"]
+    var currentKits: [String: ServiceMVSubKit] = [:]
     
     var bikesPresenter: GaragePresenter = GaragePresenter(apiManager: APIManager.default)
 }
@@ -60,6 +61,7 @@ extension MainGarageViewController {
                             self.selectService()
                         }else {
                             self.currentServices.remove(at: index)
+                            self.currentKits.removeValue(forKey: element)
                         }
                     }else {
                         self.selectService()
@@ -150,6 +152,10 @@ extension MainGarageViewController {
             let serviceSelectionController = segue.destination as! ServicesMVViewController
             serviceSelectionController.motoId = currentBike?.id?.description ?? ""
             serviceSelectionController.delegate = self
+            serviceSelectionController.disabledKits = self.currentKits.map({return $0.value})
+        }else if segue.identifier == "" {
+            let viewController = segue.destination as! ReservationTypeViewController
+            viewController.kits = self.currentKits
         }
     }
     
@@ -171,10 +177,11 @@ extension MainGarageViewController {
 }
 
 extension MainGarageViewController: ServicesSelectionInfoDelegate {
-    func didSelect(service: String) {
+    func didSelect(service: String, value: ServiceMVSubKit) {
         if self.currentServices.index(of: "servicio") != nil {
             self.currentServices = []
             self.currentServices.append(service.lowercased())
+            self.currentKits[service.lowercased()] = value
             if let idx = self.currentServices.index(of: "agregar servicio") {
                 self.currentServices.remove(at: idx)
             }else if let idx = self.currentServices.index(of: "servicio") {
@@ -189,6 +196,7 @@ extension MainGarageViewController: ServicesSelectionInfoDelegate {
                 contents.remove(at: idx)
             }
             contents.append(contentsOf: [service.lowercased(), "agregar servicio"])
+            self.currentKits[service.lowercased()] = value
             self.currentServices = contents
         }
         

@@ -7,10 +7,20 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ReservationTypeViewController: UIViewController {
     @IBOutlet var viewsCollection: [UIView]!
-    var garages: [GarageBody]?
+    var garage: GarageBody? {
+        didSet {
+            viewsCollection.forEach { (view) in
+                if let titleLabel = view.viewWithTag(-1) as? UILabel {
+                    titleLabel.text = garage?.name ?? "Sin disponibilidad"
+                }
+            }
+        }
+    }
+    var kits: [String: ServiceMVSubKit] = [:]
     fileprivate let presenter = ReservationTypePresenter(apiManager: APIManager.default)
 }
 
@@ -30,14 +40,14 @@ extension ReservationTypeViewController {
 
 extension ReservationTypeViewController: ReservationTypeView {
     func showLoader(show: Bool) {
-        
+        show ? SVProgressHUD.show() : SVProgressHUD.dismiss()
     }
     
     func errorMessage(message: String) {
-        
+        SVProgressHUD.showError(withStatus: message)
     }
     
     func getGaragesSuccess(garages: [GarageBody]) {
-        self.garages = garages
+        self.garage = garages.first
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ServicesSelectionInfoDelegate {
-    func didSelect(service: String)
+    func didSelect(service: String, value: ServiceMVSubKit)
 }
 
 class ServicesSelectionInfoViewController: UIViewController {
@@ -22,6 +22,7 @@ class ServicesSelectionInfoViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var delegate: ServicesSelectionInfoDelegate? = nil
+    var kit: ServiceMVSubKit!
     
 }
 
@@ -75,7 +76,7 @@ extension ServicesSelectionInfoViewController: UITableViewDelegate, UITableViewD
         case 4:
             if let c = tableView.dequeueReusableCell(withIdentifier: "ServiceActionCell") as? ActionTableViewCell {
                 c.action = {
-                    self.delegate?.didSelect(service: "\(self.oilMarca[self.arrayCheck.index(of: true) ?? 0]) \(self.oilTypes[self.arrayCheck.index(of: true) ?? 0])")
+                    self.delegate?.didSelect(service: "\(self.oilMarca[self.arrayCheck.index(of: true) ?? 0]) \(self.oilTypes[self.arrayCheck.index(of: true) ?? 0])", value: self.kit)
                     self.navigationController?.popToRootViewController(animated: true)
                 }
                 cell = c
