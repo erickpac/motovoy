@@ -57,8 +57,8 @@ class ReservationDetailPresenter {
         }
     }
     
-    func addImagesToBudget() -> Void {
-        
+    func addImagesToBudget(budgetId: Int, images: [ImageData]) -> Void {
+        self.view?.addImagesToBudgetSuccess()
     }
     
     func addCommentToBudget(budgetId: Int, observations: String) -> Void {

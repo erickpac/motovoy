@@ -91,6 +91,7 @@
 		B914ED9820A678FD009A9291 /* BrandModelObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B914ED9720A678FD009A9291 /* BrandModelObjectModel.swift */; };
 		B934943C20B3C7A100F4D181 /* AddressProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934943B20B3C7A100F4D181 /* AddressProtocolView.swift */; };
 		B934943E20B3C83B00F4D181 /* AddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934943D20B3C83B00F4D181 /* AddressPresenter.swift */; };
+		B9351CFC20B8711400C588FB /* ImageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9351CFB20B8711400C588FB /* ImageDataModel.swift */; };
 		B935D5C620B7548100E41B6E /* ServiceBodyGarageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B935D5C520B7548100E41B6E /* ServiceBodyGarageModel.swift */; };
 		B935D5C820B754CD00E41B6E /* ServiceBodyCalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B935D5C720B754CD00E41B6E /* ServiceBodyCalendarModel.swift */; };
 		B958836820A6CEE700FE38E5 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B958836720A6CEE700FE38E5 /* MessageModel.swift */; };
@@ -261,6 +262,7 @@
 		B914ED9720A678FD009A9291 /* BrandModelObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandModelObjectModel.swift; sourceTree = "<group>"; };
 		B934943B20B3C7A100F4D181 /* AddressProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressProtocolView.swift; sourceTree = "<group>"; };
 		B934943D20B3C83B00F4D181 /* AddressPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressPresenter.swift; sourceTree = "<group>"; };
+		B9351CFB20B8711400C588FB /* ImageDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataModel.swift; sourceTree = "<group>"; };
 		B935D5C520B7548100E41B6E /* ServiceBodyGarageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBodyGarageModel.swift; sourceTree = "<group>"; };
 		B935D5C720B754CD00E41B6E /* ServiceBodyCalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBodyCalendarModel.swift; sourceTree = "<group>"; };
 		B958836720A6CEE700FE38E5 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
@@ -641,6 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				B9093A2720A2A911001DF9B2 /* LocalMappable.swift */,
+				B9351CFA20B870FF00C588FB /* Image Data */,
 				B963410820B7E63D00B3A3A1 /* Slots */,
 				B9D94A1A20B6796800A24AB5 /* Garage */,
 				B9DC3A9820B68F2C00A54FAE /* Services */,
@@ -736,6 +739,14 @@
 				837A9EDB20B38B9900BB160B /* AddBillingRecordViewController.swift */,
 			);
 			path = "Add billing";
+			sourceTree = "<group>";
+		};
+		B9351CFA20B870FF00C588FB /* Image Data */ = {
+			isa = PBXGroup;
+			children = (
+				B9351CFB20B8711400C588FB /* ImageDataModel.swift */,
+			);
+			path = "Image Data";
 			sourceTree = "<group>";
 		};
 		B958836620A6CECE00FE38E5 /* Messages */ = {
@@ -1211,6 +1222,7 @@
 				8308B45320AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift in Sources */,
 				B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */,
 				B969496320A68A7A005B75F7 /* GarageProtocolView.swift in Sources */,
+				B9351CFC20B8711400C588FB /* ImageDataModel.swift in Sources */,
 				B9924A5A20A3CB3A00021473 /* UrlPath.swift in Sources */,
 				B935D5C620B7548100E41B6E /* ServiceBodyGarageModel.swift in Sources */,
 				B9D94A1E20B6798300A24AB5 /* GarageBodyModel.swift in Sources */,
