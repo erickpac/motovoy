@@ -5,6 +5,7 @@
 //  Created by Erick Pac on 5/23/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
+import UIKit
 
 class ReservationDetailPresenter {
     fileprivate let apiManager: APIManager
@@ -57,8 +58,31 @@ class ReservationDetailPresenter {
         }
     }
     
-    func addImagesToBudget(budgetId: Int, images: [ImageData]) -> Void {
-        self.view?.addImagesToBudgetSuccess()
+    func addImagesToBudget(budgetId: Int, images: [UIImage]) -> Void {
+        let params: [String: Any]
+        params = ["budget_id": budgetId]
+        
+        var sendImages: [ImageData] = []
+        for (index, image) in images.enumerated() {
+            sendImages.append(ImageData(name: "images[\(index)]", fileName: "image.jpeg", mimeType: "image/jpeg", imageData: UIImageJPEGRepresentation(image, 0.5)))
+        }
+        
+        apiManager.postServiceMultipartModel(urlService: UrlPath.addImagesToBudget, params: params, images: sendImages, onSuccess: { (response: GenericResponse) in
+            if let status = response.status {
+                if status.code == 200 {
+                    self.view?.showLoader(show: false)
+                    self.view?.addImagesToBudgetSuccess()
+                } else {
+                    self.view?.showLoader(show: false)
+                    if let errorMessage = status.message {
+                        self.view?.errorMessage(message: errorMessage)
+                    }
+                }
+            }
+        }) { (error) in
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: "Whoops, looks like something went wrong.")
+        }
     }
     
     func addCommentToBudget(budgetId: Int, observations: String) -> Void {
