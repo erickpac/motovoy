@@ -91,9 +91,9 @@ class ReservationDetailPresenter {
         params = ["workshop_id": garageId]
         
         apiManager.postServiceModel(urlService: UrlPath.getAvailablePickup, params: params, onSuccess: { (response: DateSlot) in
-            if let status = response.success {
+            if response.success {
                 self.view?.showLoader(show: false)
-                if slots = response.data {
+                if let slots = response.data {
                     self.view?.getAvailablePickupSlotsSuccess(slots: slots)
                 }
             } else {
@@ -110,9 +110,9 @@ class ReservationDetailPresenter {
         params = ["workshop_id": garageId]
         
         apiManager.postServiceModel(urlService: UrlPath.getAvailableGarage, params: params, onSuccess: { (response: DateSlot) in
-            if let status = response.success {
+            if response.success {
                 self.view?.showLoader(show: false)
-                if slots = response.data {
+                if let slots = response.data {
                     self.view?.getAvaliableGarageSlotsSuccess(slots: slots)
                 }
             } else {

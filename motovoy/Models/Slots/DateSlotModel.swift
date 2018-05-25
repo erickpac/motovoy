@@ -6,7 +6,7 @@
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
 
-struct DateSlot: LocalDate {
+struct DateSlot: LocalMappable {
     let success: Bool?
     let data: [DateSlotItem]?
     let message: String?

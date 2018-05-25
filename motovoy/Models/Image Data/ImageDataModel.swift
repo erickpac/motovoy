@@ -5,6 +5,7 @@
 //  Created by Erick Pac on 5/25/18.
 //  Copyright © 2018 Nextdots. All rights reserved.
 //
+import Foundation
 
 struct ImageData {
     let name: String?

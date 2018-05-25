@@ -126,4 +126,54 @@ class APIManager {
             }
         }
     }
+    
+    func postServiceMultipartModel<T: LocalMappable>(urlService: UrlPath, params: [String: Any], images: [ImageData], onSuccess: @escaping(_ response: T) -> Void, onFailure: @escaping(_ error: Error?) -> Void) -> Void {
+        let urlString: String = URL_SERVICE + urlService.rawValue
+        guard let urlType = URL(string: urlString) else { return }
+        var urlRequest = URLRequest(url: urlType)
+        urlRequest.addValue("multipart/form-data", forHTTPHeaderField: "Content-Type")
+        urlRequest.httpMethod = "POST"
+        urlRequest.timeoutInterval = 60
+        
+        var customParams: [String: Any] = params
+        customParams["device_type"] = DEVICE_TYPE
+        customParams["device_id"] = DEVICE_ID
+        customParams["api_version"] = API_VERSION
+        if let user = Utils.getLoggedUser() {
+            if let userId = user.userId {
+                customParams["client_id"] = userId
+            }
+            
+            if let userToken = user.status?.loginToken {
+                customParams["login_token"] = userToken
+            }
+        }
+        
+//
+//        Alamofire.upload(multipartFormData: { (multipartFormData) in
+//            for (key, value) in parameters {
+//                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+//            }
+//
+//            if let data = imageData{
+//                multipartFormData.append(data, withName: "image", fileName: "image.png", mimeType: "image/png")
+//            }
+//
+//        }, usingThreshold: UInt64.init(), to: url, method: .post, headers: headers) { (result) in
+//            switch result{
+//            case .success(let upload, _, _):
+//                upload.responseJSON { response in
+//                    print("Succesfully uploaded")
+//                    if let err = response.error{
+//                        onError?(err)
+//                        return
+//                    }
+//                    onCompletion?(nil)
+//                }
+//            case .failure(let error):
+//                print("Error in upload: \(error.localizedDescription)")
+//                onError?(error)
+//            }
+//        }
+    }
 }
