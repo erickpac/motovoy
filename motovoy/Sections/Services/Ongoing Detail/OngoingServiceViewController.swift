@@ -22,6 +22,7 @@ class OngoingServiceViewController: UIViewController {
 
 extension OngoingServiceViewController {
     override func viewDidLoad() {
+        super.viewDidLoad()
         presenter.attachView(self)
     }
     

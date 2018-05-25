@@ -116,6 +116,9 @@
 		B99D17EA20ABF40300D8F962 /* MessageBikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D17E920ABF40300D8F962 /* MessageBikeModel.swift */; };
 		B9B8CA6E20B7BF180061B2E4 /* OngoingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B8CA6D20B7BF180061B2E4 /* OngoingViewProtocol.swift */; };
 		B9B8CA7020B7BF290061B2E4 /* OngoingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B8CA6F20B7BF290061B2E4 /* OngoingPresenter.swift */; };
+		B9B8CA7320B7C43F0061B2E4 /* ServiceTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B8CA7220B7C43F0061B2E4 /* ServiceTicketViewController.swift */; };
+		B9B8CA7520B7C4560061B2E4 /* ServiceTicketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B8CA7420B7C4560061B2E4 /* ServiceTicketPresenter.swift */; };
+		B9B8CA7720B7C4680061B2E4 /* ServiceTicketProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B8CA7620B7C4680061B2E4 /* ServiceTicketProtocolView.swift */; };
 		B9C3CA8720A50B0B0002C124 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8620A50B0B0002C124 /* LoginPresenter.swift */; };
 		B9C3CA8920A50B6B0002C124 /* LoginProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8820A50B6B0002C124 /* LoginProtocolView.swift */; };
 		B9C3CA8B20A51D390002C124 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3CA8A20A51D390002C124 /* UserDefaultsKeys.swift */; };
@@ -281,6 +284,9 @@
 		B99D17E920ABF40300D8F962 /* MessageBikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBikeModel.swift; sourceTree = "<group>"; };
 		B9B8CA6D20B7BF180061B2E4 /* OngoingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingViewProtocol.swift; sourceTree = "<group>"; };
 		B9B8CA6F20B7BF290061B2E4 /* OngoingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingPresenter.swift; sourceTree = "<group>"; };
+		B9B8CA7220B7C43F0061B2E4 /* ServiceTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTicketViewController.swift; sourceTree = "<group>"; };
+		B9B8CA7420B7C4560061B2E4 /* ServiceTicketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTicketPresenter.swift; sourceTree = "<group>"; };
+		B9B8CA7620B7C4680061B2E4 /* ServiceTicketProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTicketProtocolView.swift; sourceTree = "<group>"; };
 		B9C3CA8620A50B0B0002C124 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		B9C3CA8820A50B6B0002C124 /* LoginProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocolView.swift; sourceTree = "<group>"; };
 		B9C3CA8A20A51D390002C124 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
@@ -367,6 +373,7 @@
 		8308B44E20AB92340091AA2B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B9B8CA7120B7C4240061B2E4 /* Service Ticket */,
 				8397E4D920B757D4001D5250 /* Ongoing Detail */,
 				8397E49120B68E1D001D5250 /* Cells */,
 				B9DC3A9420B68CDB00A54FAE /* ServicesProtocolView.swift */,
@@ -538,7 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				8397E48B20B67E4E001D5250 /* Reservation Type */,
-				B9D949FC20B6588100A24AB5 /* ReservationDetail */,
+				B9D949FC20B6588100A24AB5 /* Reservation Detail */,
 				837A9EE420B39B6700BB160B /* Cells */,
 				B9FADCD420B25FF200C63B3D /* Services */,
 				B90DE28620A7F13D0086AE95 /* ReservationProtocolView.swift */,
@@ -862,14 +869,24 @@
 			path = User;
 			sourceTree = "<group>";
 		};
-		B9D949FC20B6588100A24AB5 /* ReservationDetail */ = {
+		B9B8CA7120B7C4240061B2E4 /* Service Ticket */ = {
+			isa = PBXGroup;
+			children = (
+				B9B8CA7620B7C4680061B2E4 /* ServiceTicketProtocolView.swift */,
+				B9B8CA7420B7C4560061B2E4 /* ServiceTicketPresenter.swift */,
+				B9B8CA7220B7C43F0061B2E4 /* ServiceTicketViewController.swift */,
+			);
+			path = "Service Ticket";
+			sourceTree = "<group>";
+		};
+		B9D949FC20B6588100A24AB5 /* Reservation Detail */ = {
 			isa = PBXGroup;
 			children = (
 				B9D949FD20B6598600A24AB5 /* RegistrationDetailProtocolView.swift */,
 				B9D949FF20B659AF00A24AB5 /* RegistrationDetailPresenter.swift */,
 				B9D94A0120B659C200A24AB5 /* RegistrationDetailViewController.swift */,
 			);
-			path = ReservationDetail;
+			path = "Reservation Detail";
 			sourceTree = "<group>";
 		};
 		B9D94A0520B6698F00A24AB5 /* Budget */ = {
@@ -1123,6 +1140,7 @@
 				B9D94A1720B66BB000A24AB5 /* BudgetBodyInvoiceModel.swift in Sources */,
 				B9F49C7B20B3BCD900BBF3A5 /* AddressModel.swift in Sources */,
 				B9093A2620A2A6AC001DF9B2 /* APIManager.swift in Sources */,
+				B9B8CA7720B7C4680061B2E4 /* ServiceTicketProtocolView.swift in Sources */,
 				B9ECC8D120A6C25A00EBC8EC /* GaragePresenter.swift in Sources */,
 				83A19E2C20A7781900AC980F /* MessagesViewController.swift in Sources */,
 				8397E4A120B6A75A001D5250 /* OngoingDiagnosticTableViewCell.swift in Sources */,
@@ -1163,6 +1181,7 @@
 				B9DC3A9120B6874000A54FAE /* ReservationTypeProtocolView.swift in Sources */,
 				837A9EDE20B394D100BB160B /* CardTableViewCell.swift in Sources */,
 				B9DC3A9720B68CE800A54FAE /* ServicesPresenter.swift in Sources */,
+				B9B8CA7520B7C4560061B2E4 /* ServiceTicketPresenter.swift in Sources */,
 				83A19E3220A778C500AC980F /* PaymentViewController.swift in Sources */,
 				B969496820A68AF6005B75F7 /* BikePresenter.swift in Sources */,
 				B9FADCCF20B25DEB00C63B3D /* AddBillingPresenter.swift in Sources */,
@@ -1261,6 +1280,7 @@
 				B9D949FE20B6598600A24AB5 /* RegistrationDetailProtocolView.swift in Sources */,
 				83CD110720A6569C006BB4B9 /* BikeCreationViewController.swift in Sources */,
 				B966D35520A7EA68006F59A5 /* BIkeBodyModel.swift in Sources */,
+				B9B8CA7320B7C43F0061B2E4 /* ServiceTicketViewController.swift in Sources */,
 				837A9EDC20B38B9900BB160B /* AddBillingRecordViewController.swift in Sources */,
 				83570DA620A414E00057D63D /* Color.swift in Sources */,
 			);
