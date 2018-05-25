@@ -12,4 +12,6 @@ protocol ReservationDetailView {
     func createBudgetSuccess()
     func addImagesToBudgetSuccess()
     func addCommentToBudgetSuccess()
+    func getAvailablePickupSlotsSuccess(slots: [DateSlotItem])
+    func getAvaliableGarageSlotsSuccess(slots: [DateSlotItem])
 }
