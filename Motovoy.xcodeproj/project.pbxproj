@@ -102,6 +102,8 @@
 		B95DBD0A20ACDCD200A2244D /* ChangePasswordProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DBD0920ACDCD200A2244D /* ChangePasswordProtocolView.swift */; };
 		B95DBD0C20ACDCE200A2244D /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DBD0B20ACDCE200A2244D /* ChangePasswordPresenter.swift */; };
 		B95DBD1020ACE07100A2244D /* ConfirmationCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DBD0F20ACE07100A2244D /* ConfirmationCodeModel.swift */; };
+		B963410A20B7E66400B3A3A1 /* DateSlotItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963410920B7E66400B3A3A1 /* DateSlotItemModel.swift */; };
+		B963410C20B7E66F00B3A3A1 /* DateSlotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963410B20B7E66F00B3A3A1 /* DateSlotModel.swift */; };
 		B966D35320A7E912006F59A5 /* MessageBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966D35220A7E912006F59A5 /* MessageBodyModel.swift */; };
 		B966D35520A7EA68006F59A5 /* BIkeBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966D35420A7EA68006F59A5 /* BIkeBodyModel.swift */; };
 		B967A27320AB8601007E2C0C /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967A27220AB8601007E2C0C /* DateModel.swift */; };
@@ -270,6 +272,8 @@
 		B95DBD0920ACDCD200A2244D /* ChangePasswordProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordProtocolView.swift; sourceTree = "<group>"; };
 		B95DBD0B20ACDCE200A2244D /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
 		B95DBD0F20ACE07100A2244D /* ConfirmationCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationCodeModel.swift; sourceTree = "<group>"; };
+		B963410920B7E66400B3A3A1 /* DateSlotItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSlotItemModel.swift; sourceTree = "<group>"; };
+		B963410B20B7E66F00B3A3A1 /* DateSlotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSlotModel.swift; sourceTree = "<group>"; };
 		B966D35220A7E912006F59A5 /* MessageBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBodyModel.swift; sourceTree = "<group>"; };
 		B966D35420A7EA68006F59A5 /* BIkeBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIkeBodyModel.swift; sourceTree = "<group>"; };
 		B967A27220AB8601007E2C0C /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
@@ -637,6 +641,7 @@
 			isa = PBXGroup;
 			children = (
 				B9093A2720A2A911001DF9B2 /* LocalMappable.swift */,
+				B963410820B7E63D00B3A3A1 /* Slots */,
 				B9D94A1A20B6796800A24AB5 /* Garage */,
 				B9DC3A9820B68F2C00A54FAE /* Services */,
 				B9D94A0520B6698F00A24AB5 /* Budget */,
@@ -779,6 +784,15 @@
 				B90C057520ACF9FC005F79CC /* ConfirmationCodeSmsModel.swift */,
 			);
 			path = ConfirmationCode;
+			sourceTree = "<group>";
+		};
+		B963410820B7E63D00B3A3A1 /* Slots */ = {
+			isa = PBXGroup;
+			children = (
+				B963410B20B7E66F00B3A3A1 /* DateSlotModel.swift */,
+				B963410920B7E66400B3A3A1 /* DateSlotItemModel.swift */,
+			);
+			path = Slots;
 			sourceTree = "<group>";
 		};
 		B967A27120AB85E4007E2C0C /* Date */ = {
@@ -1228,6 +1242,7 @@
 				B9D94A1920B66BCB00A24AB5 /* BudgetAppointmentModel.swift in Sources */,
 				B914ED9420A662F9009A9291 /* BrandWorkshopModel.swift in Sources */,
 				B9C3CA8D20A51D660002C124 /* Utils.swift in Sources */,
+				B963410A20B7E66400B3A3A1 /* DateSlotItemModel.swift in Sources */,
 				83CD10FF20A562AD006BB4B9 /* ActiveBuilder.swift in Sources */,
 				B9DC3A9520B68CDB00A54FAE /* ServicesProtocolView.swift in Sources */,
 				83CD10F420A560E3006BB4B9 /* UserModel.swift in Sources */,
@@ -1267,6 +1282,7 @@
 				8308B45020AB92480091AA2B /* ServicesViewController.swift in Sources */,
 				8308B44D20AB8AD80091AA2B /* WelcomeViewController.swift in Sources */,
 				83570DAC20A42E3B0057D63D /* RecoverPasswordViewController.swift in Sources */,
+				B963410C20B7E66F00B3A3A1 /* DateSlotModel.swift in Sources */,
 				B99D17EA20ABF40300D8F962 /* MessageBikeModel.swift in Sources */,
 				B934943C20B3C7A100F4D181 /* AddressProtocolView.swift in Sources */,
 				B9DC3A9A20B68F3B00A54FAE /* ServiceModel.swift in Sources */,

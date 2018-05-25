@@ -32,4 +32,6 @@ enum UrlPath: String {
     case approveBudget = "/api/budgets/approveBudget"
     case getGarages = "/api/workshop/getWorkshops"
     case rateService = "/api/valorations/rateService"
+    case getAvailablePickup = "/api/services/getAvaliablePickupSlots"
+    case getAvailableGarage = "/api/services/getAvaliableWorkshopSlots"
 }
