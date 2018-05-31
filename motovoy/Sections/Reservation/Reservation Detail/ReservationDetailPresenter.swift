@@ -40,6 +40,7 @@ class ReservationDetailPresenter {
             params["pickup_calendar_slot_id"] = pickCalendarSlotId
         }
         
+        self.view?.showLoader(show: true)
         apiManager.postServiceModel(urlService: UrlPath.createBudget, params: params, onSuccess: { (response: Budget) in
             if let status = response.status {
                 if status.code == 200 {
@@ -58,16 +59,16 @@ class ReservationDetailPresenter {
         }
     }
     
-    func addImagesToBudget(budgetId: Int, images: [UIImage]) -> Void {
+    func addImagesToBudget(budgetId: Int, images: [ImageData]) -> Void {
         let params: [String: Any]
         params = ["budget_id": budgetId]
         
-        var sendImages: [ImageData] = []
+        var imgs: [ImageData] = []
         for (index, image) in images.enumerated() {
-            sendImages.append(ImageData(name: "images[\(index)]", fileName: "image.jpeg", mimeType: "image/jpeg", imageData: UIImageJPEGRepresentation(image, 0.5)))
+            imgs.append(ImageData(name: "images[\(index)]", fileName: image.fileName ?? "", mimeType: image.mimeType ?? "", imageData: image.imageData ?? Data()))
         }
-        
-        apiManager.postServiceMultipartModel(urlService: UrlPath.addImagesToBudget, params: params, images: sendImages, onSuccess: { (response: GenericResponse) in
+        self.view?.showLoader(show: true)
+        apiManager.postServiceMultipartModel(urlService: UrlPath.addImagesToBudget, params: params, images: imgs, onSuccess: { (response: GenericResponse) in
             if let status = response.status {
                 if status.code == 200 {
                     self.view?.showLoader(show: false)
@@ -91,7 +92,7 @@ class ReservationDetailPresenter {
             "budget_id": budgetId,
             "observations": observations
         ]
-        
+        self.view?.showLoader(show: true)
         apiManager.postServiceModel(urlService: UrlPath.addCommentToBudget, params: params, onSuccess: { (response: GenericResponse) in
             if let status = response.status {
                 if status.code == 200 {
@@ -113,7 +114,7 @@ class ReservationDetailPresenter {
     func getAvailableSlots(garageId: Int, isPickup: Bool) -> Void {
         let params: [String: Any]
         params = ["workshop_id": garageId]
-        
+        self.view?.showLoader(show: true)
         apiManager.postServiceModel(urlService: isPickup ? UrlPath.getAvailablePickup : UrlPath.getAvailableGarage, params: params, onSuccess: { (response: DateSlot) in
             if let _ = response.success {
                 self.view?.showLoader(show: false)

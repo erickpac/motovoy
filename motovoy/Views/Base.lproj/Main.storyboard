@@ -284,7 +284,7 @@ en Barcelona.</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="a3a-17-IJf" kind="show" id="ZQo-st-MPA"/>
+                                                    <segue destination="a3a-17-IJf" kind="show" identifier="TypeSegue" id="ZQo-st-MPA"/>
                                                 </connections>
                                             </button>
                                         </subviews>

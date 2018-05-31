@@ -143,6 +143,16 @@ extension MainGarageViewController: BikeSelectionDelegate {
 
 extension MainGarageViewController {
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "TypeSegue" {
+            return currentKits.count != 0
+        }else if identifier == "ServiceSelectionSegue" {
+            return currentBike != nil
+        }else{
+            return true
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "BikeSelectionSegue" {
             let bikeSelectionController = segue.destination as! BikeSelectionViewController
@@ -153,9 +163,10 @@ extension MainGarageViewController {
             serviceSelectionController.motoId = currentBike?.id?.description ?? ""
             serviceSelectionController.delegate = self
             serviceSelectionController.disabledKits = self.currentKits.map({return $0.value})
-        }else if segue.identifier == "" {
+        }else if segue.identifier == "TypeSegue" {
             let viewController = segue.destination as! ReservationTypeViewController
             viewController.kits = self.currentKits
+            viewController.bike = self.currentBike!
         }
     }
     

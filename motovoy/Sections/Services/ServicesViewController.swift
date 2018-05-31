@@ -32,6 +32,10 @@ extension ServicesViewController {
         
         tableView.register(UINib.init(nibName: "ServiceTabSectionHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderView")
     }
+    
+    func reloadBugets() {
+        presenter.getBudgets()
+    }
 }
 
 extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -123,7 +127,12 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             performSegue(withIdentifier: "", sender: nil)
         case 1:
-            performSegue(withIdentifier: "ServiceOngoingSegue", sender: data[indexPath.row])
+            let value = data[indexPath.row]
+            if value.status == "approved" {
+                performSegue(withIdentifier: "ServiceEndedSegue", sender: value)
+            }else{
+                performSegue(withIdentifier: "ServiceOngoingSegue", sender: value)
+            }
         case 2:
             performSegue(withIdentifier: "ServiceEndedSegue", sender: data[indexPath.row])
         case 3:
@@ -147,6 +156,7 @@ extension ServicesViewController {
         if segue.identifier == "ServiceOngoingSegue" || segue.identifier == "ServiceEndedSegue" {
             let viewController = segue.destination as! OngoingServiceViewController
             viewController.data = sender as? ServiceBody
+            viewController.serviceView = self
         }
     }
 }

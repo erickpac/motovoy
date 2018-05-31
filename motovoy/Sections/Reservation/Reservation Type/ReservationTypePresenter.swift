@@ -23,6 +23,7 @@ class ReservationTypePresenter {
     }
     
     func getGarages() -> Void {
+        self.view?.showLoader(show: true)
         apiManager.postServiceModel(urlService: UrlPath.getGarages, params: [:], onSuccess: { (response: Garage) in
             if let status = response.status {
                 if status.code == 200 {

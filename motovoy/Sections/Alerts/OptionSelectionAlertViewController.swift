@@ -9,6 +9,10 @@
 import UIKit
 import Material
 
+protocol OptionSelectionAlertDelegate {
+    func didSelect(option: Int)
+}
+
 class OptionSelectionAlertViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,13 +25,9 @@ class OptionSelectionAlertViewController: UIViewController, UITableViewDelegate,
     var modalTitle: String? = "SELECCIONAR MOTO"
     var buttonTitle: String? = "ANADIR NUEVA MOTO"
     
-    var delegate: (() -> ())? = nil
-    var data: [String]! {
-        didSet {
-            tableView.delegate = self
-            tableView.dataSource = self
-        }
-    }
+    var delegate: ((Int) -> ())? = nil
+    var buttonAction: (() -> ())? = nil
+    var data: [String] = []
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -38,6 +38,8 @@ class OptionSelectionAlertViewController: UIViewController, UITableViewDelegate,
         super.viewDidLoad()
         configureAlert()
         configureTitles()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     func configureTitles() {
@@ -72,7 +74,6 @@ class OptionSelectionAlertViewController: UIViewController, UITableViewDelegate,
     
     @IBAction func createBike() {
         UIView.animate(withDuration: 0.3, animations: {
-//            self.delegate?.createBike()
             self.view.backgroundColor = UIColor.darkGray.withAlphaComponent(0)
             self.centerConstraint.constant = 500
             self.view.layoutIfNeeded()
@@ -92,14 +93,14 @@ class OptionSelectionAlertViewController: UIViewController, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BikeSelection") as? BikeSelectionTableViewCell
-//        cell?.data = data[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OptionSelection") as? InfoTableViewCell
+        let key = data[indexPath.row]
+        cell?.data = (key, key)
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let moto = data[indexPath.row]
-//        delegate?.didSelect(bike: moto)
+        delegate?(indexPath.row)
     }
     
 }

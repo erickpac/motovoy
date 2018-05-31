@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8306F2E120BCC18400E42576 /* ReservationImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306F2E020BCC18400E42576 /* ReservationImageCollectionViewCell.swift */; };
 		8308B44720AB63090091AA2B /* GarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44620AB63090091AA2B /* GarageViewController.swift */; };
 		8308B44A20AB88000091AA2B /* MainNavigationTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44920AB88000091AA2B /* MainNavigationTabViewController.swift */; };
 		8308B44D20AB8AD80091AA2B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308B44C20AB8AD80091AA2B /* WelcomeViewController.swift */; };
@@ -16,6 +17,8 @@
 		8309C44920A2946800C6D721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8309C44820A2946800C6D721 /* AppDelegate.swift */; };
 		8309C45020A2946800C6D721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8309C44F20A2946800C6D721 /* Assets.xcassets */; };
 		8309C45320A2946800C6D721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8309C45120A2946800C6D721 /* LaunchScreen.storyboard */; };
+		832B92FA20BE5E230077F925 /* ReservationConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B92F920BE5E230077F925 /* ReservationConfirmationViewController.swift */; };
+		832B92FD20BE66900077F925 /* ServicePaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B92FC20BE66900077F925 /* ServicePaymentViewController.swift */; };
 		83570DA320A2B1B20057D63D /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83570DA120A2B1B20057D63D /* Registration.storyboard */; };
 		83570DA620A414E00057D63D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83570DA520A414E00057D63D /* Color.swift */; };
 		83570DA920A42A300057D63D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83570DA820A42A300057D63D /* RegistrationViewController.swift */; };
@@ -176,6 +179,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8306F2E020BCC18400E42576 /* ReservationImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		8308B44620AB63090091AA2B /* GarageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageViewController.swift; sourceTree = "<group>"; };
 		8308B44920AB88000091AA2B /* MainNavigationTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationTabViewController.swift; sourceTree = "<group>"; };
 		8308B44C20AB8AD80091AA2B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 		8309C44F20A2946800C6D721 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8309C45220A2946800C6D721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8309C45420A2946800C6D721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		832B92F920BE5E230077F925 /* ReservationConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationConfirmationViewController.swift; sourceTree = "<group>"; };
+		832B92FC20BE66900077F925 /* ServicePaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePaymentViewController.swift; sourceTree = "<group>"; };
 		83570DA220A2B1B20057D63D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Registration.storyboard; sourceTree = "<group>"; };
 		83570DA520A414E00057D63D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		83570DA820A42A300057D63D /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -379,6 +385,7 @@
 		8308B44E20AB92340091AA2B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				832B92FB20BE667D0077F925 /* Payment */,
 				B9B8CA7120B7C4240061B2E4 /* Service Ticket */,
 				8397E4D920B757D4001D5250 /* Ongoing Detail */,
 				8397E49120B68E1D001D5250 /* Cells */,
@@ -428,6 +435,22 @@
 				B98DA0EE20A295E0000E3AAE /* Resources */,
 			);
 			path = motovoy;
+			sourceTree = "<group>";
+		};
+		832B92F820BE5E0F0077F925 /* Reservation Confirmation */ = {
+			isa = PBXGroup;
+			children = (
+				832B92F920BE5E230077F925 /* ReservationConfirmationViewController.swift */,
+			);
+			path = "Reservation Confirmation";
+			sourceTree = "<group>";
+		};
+		832B92FB20BE667D0077F925 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				832B92FC20BE66900077F925 /* ServicePaymentViewController.swift */,
+			);
+			path = Payment;
 			sourceTree = "<group>";
 		};
 		83570DA420A414D20057D63D /* Helpers */ = {
@@ -500,6 +523,7 @@
 				837A9EE720B3A13B00BB160B /* ServiceHeaderTableViewCell.swift */,
 				83DFCF6520B645F500E7CADC /* InfoCheckServiceTableViewCell.swift */,
 				83DFCF6720B6460300E7CADC /* InfoCheckableServiceTableViewCell.swift */,
+				8306F2E020BCC18400E42576 /* ReservationImageCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -550,6 +574,7 @@
 		83A19DF320A6BCF900AC980F /* Reservation */ = {
 			isa = PBXGroup;
 			children = (
+				832B92F820BE5E0F0077F925 /* Reservation Confirmation */,
 				8397E48B20B67E4E001D5250 /* Reservation Type */,
 				B9D949FC20B6588100A24AB5 /* Reservation Detail */,
 				837A9EE420B39B6700BB160B /* Cells */,
@@ -1221,6 +1246,7 @@
 				837A9EE820B3A13B00BB160B /* ServiceHeaderTableViewCell.swift in Sources */,
 				8308B45320AB9D410091AA2B /* BikeShowcaseLastServiceTableViewCell.swift in Sources */,
 				B9093A2C20A2AA78001DF9B2 /* CustomerCreditCardModel.swift in Sources */,
+				832B92FD20BE66900077F925 /* ServicePaymentViewController.swift in Sources */,
 				B969496320A68A7A005B75F7 /* GarageProtocolView.swift in Sources */,
 				B9351CFC20B8711400C588FB /* ImageDataModel.swift in Sources */,
 				B9924A5A20A3CB3A00021473 /* UrlPath.swift in Sources */,
@@ -1253,6 +1279,7 @@
 				B9D94A0220B659C200A24AB5 /* ReservationDetailViewController.swift in Sources */,
 				B9D94A1920B66BCB00A24AB5 /* BudgetAppointmentModel.swift in Sources */,
 				B914ED9420A662F9009A9291 /* BrandWorkshopModel.swift in Sources */,
+				832B92FA20BE5E230077F925 /* ReservationConfirmationViewController.swift in Sources */,
 				B9C3CA8D20A51D660002C124 /* Utils.swift in Sources */,
 				B963410A20B7E66400B3A3A1 /* DateSlotItemModel.swift in Sources */,
 				83CD10FF20A562AD006BB4B9 /* ActiveBuilder.swift in Sources */,
@@ -1283,6 +1310,7 @@
 				83DFCF6420B6413100E7CADC /* ServicesSelectionInfoViewController.swift in Sources */,
 				B9DC3A9320B6874B00A54FAE /* ReservationTypePresenter.swift in Sources */,
 				837A9ED620AE3AC500BB160B /* AddressTableViewCell.swift in Sources */,
+				8306F2E120BCC18400E42576 /* ReservationImageCollectionViewCell.swift in Sources */,
 				83DFCF6820B6460300E7CADC /* InfoCheckableServiceTableViewCell.swift in Sources */,
 				B966D35320A7E912006F59A5 /* MessageBodyModel.swift in Sources */,
 				B90DE28320A7EFB40086AE95 /* MessagesProtocolView.swift in Sources */,

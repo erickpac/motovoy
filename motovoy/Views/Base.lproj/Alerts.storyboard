@@ -182,7 +182,7 @@
                                         <rect key="frame" x="0.0" y="60" width="275" height="190"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BikeSelection" rowHeight="76" id="44V-Ao-CKD" customClass="BikeSelectionTableViewCell" customModule="motovoy" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="OptionSelection" rowHeight="76" id="44V-Ao-CKD" customClass="InfoTableViewCell" customModule="motovoy" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="275" height="76"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="44V-Ao-CKD" id="eaW-iM-qUj">
@@ -204,7 +204,8 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="label" destination="4bv-dn-aM5" id="vUK-kC-lrY"/>
+                                                    <outlet property="detailLabel" destination="4bv-dn-aM5" id="kW4-c1-LHN"/>
+                                                    <outlet property="titleLabel" destination="4bv-dn-aM5" id="DWT-Ga-rKE"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>

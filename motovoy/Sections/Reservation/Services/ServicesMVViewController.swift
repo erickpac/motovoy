@@ -19,7 +19,10 @@ class ServicesMVViewController: BaseNavigationViewController {
     var services: [ServiceMVKit] = [ServiceMVKit]() {
         didSet {
             activeSections = services.map { service in return false }
-            tableView.register(UINib.init(nibName: "ServiceSectionHeaderView", bundle: Bundle.main), forHeaderFooterViewReuseIdentifier: "ServiceHeaderCell")
+            tableView.register(
+                UINib.init(nibName: "ServiceSectionHeaderView", bundle: Bundle.main),
+                forHeaderFooterViewReuseIdentifier: "ServiceHeaderCell"
+            )
             tableView.delegate = self
             tableView.dataSource = self
             tableView.estimatedRowHeight = 300
@@ -42,6 +45,8 @@ extension ServicesMVViewController: ServicesMVView {
     func showLoader(show: Bool) {
         if show {
             SVProgressHUD.show()
+        }else {
+            SVProgressHUD.dismiss()
         }
     }
     
@@ -102,7 +107,9 @@ extension ServicesMVViewController: UITableViewDelegate, UITableViewDataSource {
             }){
                 SVProgressHUD.showError(withStatus: "Servicio ya seleccionado previamente.")
             }else {
-                delegate?.didSelect(service: value.name ?? "", value: value)
+                var v = value
+                v.id = value.kitVariations?.first?.id ?? value.id
+                delegate?.didSelect(service: value.name ?? "", value: v)
                 navigationController?.popToRootViewController(animated: true)
             }
         }

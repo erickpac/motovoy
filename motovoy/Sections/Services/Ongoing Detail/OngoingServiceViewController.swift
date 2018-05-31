@@ -12,11 +12,11 @@ import SVProgressHUD
 class OngoingServiceViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var data: ServiceBody? = nil
+    var serviceView: ServicesViewController!
     fileprivate let presenter = OngoingPresenter(apiManager: APIManager.default)
     
     @IBAction func approveAction(_ sender: Any) {
-        let budgetId: Int = 0
-        presenter.approveBudget(budgetId: budgetId)
+        presenter.approveBudget(budgetId: data?.id ?? 0)
     }
 }
 
@@ -77,6 +77,16 @@ extension OngoingServiceViewController: UITableViewDelegate, UITableViewDataSour
     }
 }
 
+extension OngoingServiceViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? ServicePaymentViewController {
+            viewController.data = self.data
+        }
+    }
+    
+}
+
 extension OngoingServiceViewController: OngoingView {
     func showLoader(show: Bool) {
         if show {
@@ -91,6 +101,7 @@ extension OngoingServiceViewController: OngoingView {
     }
     
     func approveBudgetSuccess() {
-        
+        serviceView.reloadBugets()
+        navigationController?.popViewController(animated: true)
     }
 }

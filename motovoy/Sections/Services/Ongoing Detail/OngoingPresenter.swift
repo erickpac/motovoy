@@ -25,7 +25,7 @@ class OngoingPresenter {
     func approveBudget(budgetId: Int) -> Void {
         let params: [String: Any]
         params = ["budget_id": budgetId]
-        
+        view?.showLoader(show: true)
         apiManager.postServiceModel(urlService: UrlPath.approveBudget, params: params, onSuccess: { (response: GenericResponse) in
             if let status = response.status {
                 if status.code == 200 {
