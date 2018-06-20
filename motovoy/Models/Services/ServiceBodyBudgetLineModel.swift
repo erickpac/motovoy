@@ -12,8 +12,8 @@ struct ServiceBodyBudgetLine: Codable {
     let reference: String?
     let status: String?
     let description: String?
-    let discount: String?
-    let tax: String?
+    let discount: Float?
+    let tax: Float?
     let quantity: String?
     let price: String?
     let amount: String?

@@ -12,8 +12,8 @@ struct BudgetBodyLine: Codable {
     var reference: String?
     var status: String?
     var description: String?
-    var discount: String?
-    var tax: String?
+    var discount: Float?
+    var tax: Float?
     var quantity: String?
     var price: String?
     var amount: String?
