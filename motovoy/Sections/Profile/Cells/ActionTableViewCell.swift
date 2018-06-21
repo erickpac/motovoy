@@ -15,5 +15,4 @@ class ActionTableViewCell: UITableViewCell {
     @IBAction func triggerAction() {
         action?()
     }
-
 }

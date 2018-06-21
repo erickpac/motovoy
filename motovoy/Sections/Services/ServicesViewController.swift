@@ -29,7 +29,6 @@ extension ServicesViewController {
         super.viewWillAppear(animated)
         presenter.attachView(self)
         presenter.getBudgets()
-        
         tableView.register(UINib.init(nibName: "ServiceTabSectionHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderView")
     }
     
