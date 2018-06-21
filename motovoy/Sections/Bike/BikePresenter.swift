@@ -22,11 +22,14 @@ class BikePresenter {
         view = nil
     }
     
-    func getBrands(phone: String) -> Void {
+    func getBrands() -> Void {
+        self.view?.showLoader(show: true)
         apiManager.getServiceModel(urlService: UrlPath.brandResources, onSuccess: { (brands: BrandResources) in
+            self.view?.showLoader(show: false)
             self.view?.getBikeResourcesSuccess(brandResources: brands)
         }) { (error) in
-            
+            self.view?.showLoader(show: false)
+            self.view?.errorMessage(message: "Whoops, looks like something went wrong.")
         }
     }
     
@@ -39,6 +42,8 @@ class BikePresenter {
             "year": year,
             "matricula": registrationNumber
         ]
+        
+        self.view?.showLoader(show: true)
         
         apiManager.postServiceModel(urlService: UrlPath.addEditBike, params: params, onSuccess: { (user: User) in
             if let status = user.status {

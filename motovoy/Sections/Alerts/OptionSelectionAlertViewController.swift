@@ -32,6 +32,7 @@ class OptionSelectionAlertViewController: UIViewController, UITableViewDelegate,
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         configure()
+        reload()
     }
     
     override func viewDidLoad() {
@@ -60,6 +61,10 @@ class OptionSelectionAlertViewController: UIViewController, UITableViewDelegate,
         }
     }
     
+    func reload(){
+        tableView.reloadData()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         UIView.animate(withDuration: 0.3, animations: {
             self.view.backgroundColor = UIColor.darkGray.withAlphaComponent(0)
@@ -70,6 +75,10 @@ class OptionSelectionAlertViewController: UIViewController, UITableViewDelegate,
                 super.viewWillDisappear(animated)
             }
         }
+    }
+    
+    func dismissView() {
+        createBike()
     }
     
     @IBAction func createBike() {

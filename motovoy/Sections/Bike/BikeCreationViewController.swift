@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import SVProgressHUD
 
 class BikeCreationViewController: UIViewController {
     @IBOutlet weak var titleBarView: NavigationShadowedView!
@@ -21,12 +22,17 @@ class BikeCreationViewController: UIViewController {
     
     fileprivate let presenter = BikePresenter(apiManager: APIManager())
     
+    var brands: BrandResources? = nil
+    var brand: Brand? = nil
+    var model: BrandModel? = nil
+    var vehicle: BrandVehicle? = nil
+    
     @IBAction func createAction(_ sender: Any) {
         let name: String = nameField.text!
-        let brandId: String = brandField.text!
-        let model: Int = Int(modelField.text!) ?? 0
-        let cylinderCapacity: Int = Int(cilinderField.text!) ?? 0
-        let year: Int = Int(yearField.text!) ?? 0
+        let brandId: String = (brand?.id ?? 0).description
+        let model: Int = (self.model?.id ?? 0)
+        let cylinderCapacity: Int = (vehicle?.cc ?? 0)
+        let year: Int = (vehicle?.generalYearStart ?? 0)
         let registrationNumber: String = plateField.text!
         
         presenter.newBike(name: name, brandId: brandId, model: model, cylinderCapacity: cylinderCapacity, year: year, registrationNumber: registrationNumber)
@@ -38,6 +44,7 @@ extension BikeCreationViewController {
         super.viewDidLoad()
         configure()
         presenter.attachView(self)
+        presenter.getBrands()
     }
     
     func configure() {
@@ -76,18 +83,49 @@ extension BikeCreationViewController: UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OptionSelectionSegue" {
             let viewController = segue.destination as! OptionSelectionAlertViewController
+            viewController.buttonTitle = "CANCELAR"
             switch (sender as! TextField) {
             case brandField:
                 viewController.modalTitle = "MARCA"
+                viewController.data = brands?.brands?.map({ (brand) -> String in
+                    return brand.name ?? ""
+                }) ?? []
+                viewController.delegate = { index in
+                    self.brand = self.brands?.brands?.filter({ (brand) -> Bool in
+                        return brand.name == viewController.data[index]
+                    }).first
+                    self.brandField.text = self.brand?.name
+                    viewController.dismissView()
+                }
                 break;
             case modelField:
                 viewController.modalTitle = "MODELO"
+                viewController.data = brand?.models?.map({$0.name ?? ""}) ?? []
+                viewController.delegate = { index in
+                    self.model = self.brand?.models?.filter({$0.name == viewController.data[index]}).first
+                    self.modelField.text = self.model?.name
+                    viewController.dismissView()
+                }
                 break;
             case cilinderField:
                 viewController.modalTitle = "CILINDRAJE"
+                viewController.data = model?.vehicles?.map({($0.cc ?? 0).description}) ?? []
+                viewController.delegate = { index in
+                    self.vehicle = self.model?.vehicles?.filter({($0.cc?.description ?? "") == viewController.data[index]}).first
+                    self.cilinderField.text = self.vehicle?.cc?.description
+                    self.yearField.text = self.vehicle?.generalYearStart?.description
+                    viewController.dismissView()
+                }
                 break;
             case yearField:
                 viewController.modalTitle = "AñO".uppercased()
+                viewController.data = model?.vehicles?.map({($0.generalYearStart ?? 0).description}) ?? []
+                viewController.delegate = { index in
+                    self.vehicle = self.model?.vehicles?.filter({($0.generalYearStart?.description ?? "") == viewController.data[index]}).first
+                    self.yearField.text = self.vehicle?.generalYearStart?.description
+                    self.cilinderField.text = self.vehicle?.cc?.description
+                    viewController.dismissView()
+                }
                 break;
             default: break;
             }
@@ -97,14 +135,36 @@ extension BikeCreationViewController: UITextFieldDelegate {
 
 extension BikeCreationViewController: BikeView {
     func showLoader(show: Bool) {
-        
+        if show {
+            SVProgressHUD.show()
+        }else {
+            SVProgressHUD.dismiss()
+        }
     }
     
     func errorMessage(message: String) {
-        
+        SVProgressHUD.showError(withStatus: message)
     }
     
     func getBikeResourcesSuccess(brandResources: BrandResources) {
-        
+        self.brands = brandResources
+    }
+}
+
+extension BikeCreationViewController {
+    @IBAction func editBrands() {
+        performSegue(withIdentifier: "OptionSelectionSegue", sender: brandField)
+    }
+    
+    @IBAction func editModel() {
+        performSegue(withIdentifier: "OptionSelectionSegue", sender: modelField)
+    }
+    
+    @IBAction func editCilinders() {
+        performSegue(withIdentifier: "OptionSelectionSegue", sender: cilinderField)
+    }
+    
+    @IBAction func editYear() {
+        performSegue(withIdentifier: "OptionSelectionSegue", sender: yearField)
     }
 }
